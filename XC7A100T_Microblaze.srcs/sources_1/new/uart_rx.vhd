@@ -51,7 +51,7 @@ architecture Behavioral of uart_rx_module is
 
 begin
 
-    INST_MODULE3 : FIFO_MODULE
+    FIFO : FIFO_MODULE
     PORT MAP(
         SYSCLK        => SYSCLK,
         RESET         => RESET,

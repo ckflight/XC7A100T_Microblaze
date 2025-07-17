@@ -7,7 +7,7 @@
   **** SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
   **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
   **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-  **** Start of session at: Thu Jul 17 23:26:50 2025
+  **** Start of session at: Thu Jul 17 23:53:05 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -20,36 +20,41 @@ It is recommended to migrate these utility IPs to inline hdl  using the command 
 More information on inline hdl is available in UG994.
 Utility IP Component Instances:
  microblaze_microblaze_0_xlconcat_2
+Command: read_checkpoint -auto_incremental -incremental /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/utils_1/imports/synth_1/top_module.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/utils_1/imports/synth_1/top_module.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top top_module -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 16459
+INFO: [Synth 8-7075] Helper process launched with PID 23543
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2403.551 ; gain = 182.688 ; free physical = 49010 ; free virtual = 62394
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2407.426 ; gain = 187.773 ; free physical = 49446 ; free virtual = 62679
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'top_module' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/top_module.vhd:24]
 INFO: [Synth 8-3491] module 'microblaze_wrapper' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/hdl/microblaze_wrapper.vhd:15' bound to instance 'microblaze' of component 'microblaze_wrapper' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/top_module.vhd:113]
 INFO: [Synth 8-638] synthesizing module 'microblaze_wrapper' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/hdl/microblaze_wrapper.vhd:29]
 INFO: [Synth 8-3491] module 'microblaze' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:1639' bound to instance 'microblaze_i' of component 'microblaze' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/hdl/microblaze_wrapper.vhd:44]
 INFO: [Synth 8-638] synthesizing module 'microblaze' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:1657]
-INFO: [Synth 8-3491] module 'microblaze_axi_gpio_0_1' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_axi_gpio_0_1_stub.vhdl:6' bound to instance 'axi_gpio_0' of component 'microblaze_axi_gpio_0_1' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:2024]
-INFO: [Synth 8-638] synthesizing module 'microblaze_axi_gpio_0_1' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_axi_gpio_0_1_stub.vhdl:38]
-INFO: [Synth 8-3491] module 'microblaze_axi_quad_spi_0_1' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_axi_quad_spi_0_1_stub.vhdl:6' bound to instance 'axi_quad_spi_0' of component 'microblaze_axi_quad_spi_0_1' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:2047]
-INFO: [Synth 8-638] synthesizing module 'microblaze_axi_quad_spi_0_1' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_axi_quad_spi_0_1_stub.vhdl:51]
-INFO: [Synth 8-3491] module 'microblaze_axi_uartlite_0_1' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_axi_uartlite_0_1_stub.vhdl:6' bound to instance 'axi_uartlite_0' of component 'microblaze_axi_uartlite_0_1' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:2083]
-INFO: [Synth 8-638] synthesizing module 'microblaze_axi_uartlite_0_1' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_axi_uartlite_0_1_stub.vhdl:40]
-INFO: [Synth 8-3491] module 'microblaze_clk_wiz_1_2' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_clk_wiz_1_2_stub.vhdl:6' bound to instance 'clk_wiz_1' of component 'microblaze_clk_wiz_1_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:2108]
-INFO: [Synth 8-638] synthesizing module 'microblaze_clk_wiz_1_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_clk_wiz_1_2_stub.vhdl:18]
-INFO: [Synth 8-3491] module 'microblaze_mdm_1_2' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_mdm_1_2_stub.vhdl:6' bound to instance 'mdm_1' of component 'microblaze_mdm_1_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:2115]
-INFO: [Synth 8-638] synthesizing module 'microblaze_mdm_1_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_mdm_1_2_stub.vhdl:28]
-INFO: [Synth 8-3491] module 'microblaze_microblaze_0_3' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_microblaze_0_3_stub.vhdl:6' bound to instance 'microblaze_0' of component 'microblaze_microblaze_0_3' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:2128]
-INFO: [Synth 8-638] synthesizing module 'microblaze_microblaze_0_3' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_microblaze_0_3_stub.vhdl:70]
-INFO: [Synth 8-3491] module 'microblaze_microblaze_0_axi_intc_2' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_microblaze_0_axi_intc_2_stub.vhdl:6' bound to instance 'microblaze_0_axi_intc' of component 'microblaze_microblaze_0_axi_intc_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:2214]
-INFO: [Synth 8-638] synthesizing module 'microblaze_microblaze_0_axi_intc_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_microblaze_0_axi_intc_2_stub.vhdl:43]
+INFO: [Synth 8-3491] module 'microblaze_axi_gpio_0_1' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_axi_gpio_0_1_stub.vhdl:6' bound to instance 'axi_gpio_0' of component 'microblaze_axi_gpio_0_1' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:2024]
+INFO: [Synth 8-638] synthesizing module 'microblaze_axi_gpio_0_1' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_axi_gpio_0_1_stub.vhdl:38]
+INFO: [Synth 8-3491] module 'microblaze_axi_quad_spi_0_1' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_axi_quad_spi_0_1_stub.vhdl:6' bound to instance 'axi_quad_spi_0' of component 'microblaze_axi_quad_spi_0_1' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:2047]
+INFO: [Synth 8-638] synthesizing module 'microblaze_axi_quad_spi_0_1' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_axi_quad_spi_0_1_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'microblaze_axi_uartlite_0_1' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_axi_uartlite_0_1_stub.vhdl:6' bound to instance 'axi_uartlite_0' of component 'microblaze_axi_uartlite_0_1' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:2083]
+INFO: [Synth 8-638] synthesizing module 'microblaze_axi_uartlite_0_1' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_axi_uartlite_0_1_stub.vhdl:40]
+INFO: [Synth 8-3491] module 'microblaze_clk_wiz_1_2' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_clk_wiz_1_2_stub.vhdl:6' bound to instance 'clk_wiz_1' of component 'microblaze_clk_wiz_1_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:2108]
+INFO: [Synth 8-638] synthesizing module 'microblaze_clk_wiz_1_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_clk_wiz_1_2_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'microblaze_mdm_1_2' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_mdm_1_2_stub.vhdl:6' bound to instance 'mdm_1' of component 'microblaze_mdm_1_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:2115]
+INFO: [Synth 8-638] synthesizing module 'microblaze_mdm_1_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_mdm_1_2_stub.vhdl:28]
+INFO: [Synth 8-3491] module 'microblaze_microblaze_0_3' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_microblaze_0_3_stub.vhdl:6' bound to instance 'microblaze_0' of component 'microblaze_microblaze_0_3' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:2128]
+INFO: [Synth 8-638] synthesizing module 'microblaze_microblaze_0_3' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_microblaze_0_3_stub.vhdl:70]
+INFO: [Synth 8-3491] module 'microblaze_microblaze_0_axi_intc_2' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_microblaze_0_axi_intc_2_stub.vhdl:6' bound to instance 'microblaze_0_axi_intc' of component 'microblaze_microblaze_0_axi_intc_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:2214]
+INFO: [Synth 8-638] synthesizing module 'microblaze_microblaze_0_axi_intc_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_microblaze_0_axi_intc_2_stub.vhdl:43]
 INFO: [Synth 8-638] synthesizing module 'microblaze_microblaze_0_axi_periph_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:1196]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_2SZHJX' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:58]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_2SZHJX' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:58]
@@ -61,28 +66,28 @@ INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_19Z7TXZ' [/home/ck/Des
 INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_19Z7TXZ' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:361]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_SYAVRW' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:1028]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_SYAVRW' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:1028]
-INFO: [Synth 8-3491] module 'microblaze_microblaze_0_axi_periph_imp_xbar_2' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_microblaze_0_axi_periph_imp_xbar_2_stub.vhdl:6' bound to instance 'xbar' of component 'microblaze_microblaze_0_axi_periph_imp_xbar_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:1540]
-INFO: [Synth 8-638] synthesizing module 'microblaze_microblaze_0_axi_periph_imp_xbar_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_microblaze_0_axi_periph_imp_xbar_2_stub.vhdl:58]
+INFO: [Synth 8-3491] module 'microblaze_microblaze_0_axi_periph_imp_xbar_2' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_microblaze_0_axi_periph_imp_xbar_2_stub.vhdl:6' bound to instance 'xbar' of component 'microblaze_microblaze_0_axi_periph_imp_xbar_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:1540]
+INFO: [Synth 8-638] synthesizing module 'microblaze_microblaze_0_axi_periph_imp_xbar_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_microblaze_0_axi_periph_imp_xbar_2_stub.vhdl:58]
 INFO: [Synth 8-256] done synthesizing module 'microblaze_microblaze_0_axi_periph_2' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:1196]
 INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_HPR3PZ' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:445]
-INFO: [Synth 8-3491] module 'microblaze_dlmb_bram_if_cntlr_2' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_dlmb_bram_if_cntlr_2_stub.vhdl:6' bound to instance 'dlmb_bram_if_cntlr' of component 'microblaze_dlmb_bram_if_cntlr_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:625]
-INFO: [Synth 8-638] synthesizing module 'microblaze_dlmb_bram_if_cntlr_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_dlmb_bram_if_cntlr_2_stub.vhdl:40]
-INFO: [Synth 8-3491] module 'microblaze_dlmb_v10_2' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_dlmb_v10_2_stub.vhdl:6' bound to instance 'dlmb_v10' of component 'microblaze_dlmb_v10_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:689]
-INFO: [Synth 8-638] synthesizing module 'microblaze_dlmb_v10_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_dlmb_v10_2_stub.vhdl:43]
-INFO: [Synth 8-3491] module 'microblaze_ilmb_bram_if_cntlr_2' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_ilmb_bram_if_cntlr_2_stub.vhdl:6' bound to instance 'ilmb_bram_if_cntlr' of component 'microblaze_ilmb_bram_if_cntlr_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:717]
-INFO: [Synth 8-638] synthesizing module 'microblaze_ilmb_bram_if_cntlr_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_ilmb_bram_if_cntlr_2_stub.vhdl:40]
-INFO: [Synth 8-3491] module 'microblaze_ilmb_v10_2' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_ilmb_v10_2_stub.vhdl:6' bound to instance 'ilmb_v10' of component 'microblaze_ilmb_v10_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:781]
-INFO: [Synth 8-638] synthesizing module 'microblaze_ilmb_v10_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_ilmb_v10_2_stub.vhdl:43]
-INFO: [Synth 8-3491] module 'microblaze_lmb_bram_2' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_lmb_bram_2_stub.vhdl:6' bound to instance 'lmb_bram' of component 'microblaze_lmb_bram_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:809]
-INFO: [Synth 8-638] synthesizing module 'microblaze_lmb_bram_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_lmb_bram_2_stub.vhdl:34]
+INFO: [Synth 8-3491] module 'microblaze_dlmb_bram_if_cntlr_2' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_dlmb_bram_if_cntlr_2_stub.vhdl:6' bound to instance 'dlmb_bram_if_cntlr' of component 'microblaze_dlmb_bram_if_cntlr_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:625]
+INFO: [Synth 8-638] synthesizing module 'microblaze_dlmb_bram_if_cntlr_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_dlmb_bram_if_cntlr_2_stub.vhdl:40]
+INFO: [Synth 8-3491] module 'microblaze_dlmb_v10_2' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_dlmb_v10_2_stub.vhdl:6' bound to instance 'dlmb_v10' of component 'microblaze_dlmb_v10_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:689]
+INFO: [Synth 8-638] synthesizing module 'microblaze_dlmb_v10_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_dlmb_v10_2_stub.vhdl:43]
+INFO: [Synth 8-3491] module 'microblaze_ilmb_bram_if_cntlr_2' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_ilmb_bram_if_cntlr_2_stub.vhdl:6' bound to instance 'ilmb_bram_if_cntlr' of component 'microblaze_ilmb_bram_if_cntlr_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:717]
+INFO: [Synth 8-638] synthesizing module 'microblaze_ilmb_bram_if_cntlr_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_ilmb_bram_if_cntlr_2_stub.vhdl:40]
+INFO: [Synth 8-3491] module 'microblaze_ilmb_v10_2' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_ilmb_v10_2_stub.vhdl:6' bound to instance 'ilmb_v10' of component 'microblaze_ilmb_v10_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:781]
+INFO: [Synth 8-638] synthesizing module 'microblaze_ilmb_v10_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_ilmb_v10_2_stub.vhdl:43]
+INFO: [Synth 8-3491] module 'microblaze_lmb_bram_2' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_lmb_bram_2_stub.vhdl:6' bound to instance 'lmb_bram' of component 'microblaze_lmb_bram_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:809]
+INFO: [Synth 8-638] synthesizing module 'microblaze_lmb_bram_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_lmb_bram_2_stub.vhdl:34]
 INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_HPR3PZ' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:445]
 INFO: [Synth 8-3491] module 'microblaze_microblaze_0_xlconcat_2' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_xlconcat_2/synth/microblaze_microblaze_0_xlconcat_2.v:53' bound to instance 'microblaze_0_xlconcat' of component 'microblaze_microblaze_0_xlconcat_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:2369]
 INFO: [Synth 8-6157] synthesizing module 'microblaze_microblaze_0_xlconcat_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_xlconcat_2/synth/microblaze_microblaze_0_xlconcat_2.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_7_xlconcat' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/9c1a/hdl/xlconcat_v2_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_7_xlconcat' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/9c1a/hdl/xlconcat_v2_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'microblaze_microblaze_0_xlconcat_2' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_xlconcat_2/synth/microblaze_microblaze_0_xlconcat_2.v:53]
-INFO: [Synth 8-3491] module 'microblaze_rst_clk_wiz_1_100M_2' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_rst_clk_wiz_1_100M_2_stub.vhdl:6' bound to instance 'rst_clk_wiz_1_100M' of component 'microblaze_rst_clk_wiz_1_100M_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:2375]
-INFO: [Synth 8-638] synthesizing module 'microblaze_rst_clk_wiz_1_100M_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-16404-ck-MS-7E62/realtime/microblaze_rst_clk_wiz_1_100M_2_stub.vhdl:28]
+INFO: [Synth 8-3491] module 'microblaze_rst_clk_wiz_1_100M_2' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_rst_clk_wiz_1_100M_2_stub.vhdl:6' bound to instance 'rst_clk_wiz_1_100M' of component 'microblaze_rst_clk_wiz_1_100M_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:2375]
+INFO: [Synth 8-638] synthesizing module 'microblaze_rst_clk_wiz_1_100M_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/.Xil/Vivado-23484-ck-MS-7E62/realtime/microblaze_rst_clk_wiz_1_100M_2_stub.vhdl:28]
 INFO: [Synth 8-256] done synthesizing module 'microblaze' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/synth/microblaze.vhd:1657]
 INFO: [Synth 8-256] done synthesizing module 'microblaze_wrapper' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/hdl/microblaze_wrapper.vhd:29]
 INFO: [Synth 8-3491] module 'uart_tx_module' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/uart_tx.vhd:5' bound to instance 'uart_tx' of component 'uart_tx_module' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/top_module.vhd:126]
@@ -90,7 +95,11 @@ INFO: [Synth 8-638] synthesizing module 'uart_tx_module' [/home/ck/Desktop/Works
 INFO: [Synth 8-256] done synthesizing module 'uart_tx_module' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/uart_tx.vhd:21]
 INFO: [Synth 8-3491] module 'uart_rx_module' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/uart_rx.vhd:6' bound to instance 'uart_rx' of component 'uart_rx_module' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/top_module.vhd:137]
 INFO: [Synth 8-638] synthesizing module 'uart_rx_module' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/uart_rx.vhd:20]
-INFO: [Synth 8-637] synthesizing blackbox instance 'INST_MODULE3' of component 'FIFO_MODULE' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/uart_rx.vhd:54]
+INFO: [Synth 8-3491] module 'fifo_module' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/fifo.vhd:5' bound to instance 'FIFO' of component 'FIFO_MODULE' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/uart_rx.vhd:54]
+INFO: [Synth 8-638] synthesizing module 'fifo_module' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/fifo.vhd:22]
+	Parameter FIFO_DEPTH bound to: 256 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'fifo_module' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/fifo.vhd:22]
 INFO: [Synth 8-256] done synthesizing module 'uart_rx_module' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/uart_rx.vhd:20]
 INFO: [Synth 8-3491] module 'ssd_module' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/ssd.vhd:6' bound to instance 'ssd' of component 'ssd_module' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/top_module.vhd:147]
 INFO: [Synth 8-638] synthesizing module 'ssd_module' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/ssd.vhd:22]
@@ -199,18 +208,18 @@ WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_7_xlconcat is eith
 WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2500.520 ; gain = 279.656 ; free physical = 48931 ; free virtual = 62316
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2496.363 ; gain = 276.711 ; free physical = 49336 ; free virtual = 62570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2515.363 ; gain = 294.500 ; free physical = 48931 ; free virtual = 62316
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2511.207 ; gain = 291.555 ; free physical = 49336 ; free virtual = 62570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2515.363 ; gain = 294.500 ; free physical = 48931 ; free virtual = 62316
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2511.207 ; gain = 291.555 ; free physical = 49336 ; free virtual = 62570
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2515.363 ; gain = 0.000 ; free physical = 48931 ; free virtual = 62316
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2511.207 ; gain = 0.000 ; free physical = 49336 ; free virtual = 62570
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -251,28 +260,30 @@ Parsing XDC File [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A
 Finished Parsing XDC File [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2633.133 ; gain = 0.000 ; free physical = 48934 ; free virtual = 62320
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2632.945 ; gain = 0.000 ; free physical = 49328 ; free virtual = 62562
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2633.168 ; gain = 0.000 ; free physical = 48934 ; free virtual = 62320
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2632.980 ; gain = 0.000 ; free physical = 49328 ; free virtual = 62562
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'microblaze/microblaze_i/axi_quad_spi_0' at clock pin 'ext_spi_clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'microblaze/microblaze_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2633.168 ; gain = 412.305 ; free physical = 48947 ; free virtual = 62345
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2632.980 ; gain = 413.328 ; free physical = 49328 ; free virtual = 62561
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2641.137 ; gain = 420.273 ; free physical = 48947 ; free virtual = 62345
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2640.949 ; gain = 421.297 ; free physical = 49328 ; free virtual = 62561
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2641.137 ; gain = 420.273 ; free physical = 48947 ; free virtual = 62345
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2640.949 ; gain = 421.297 ; free physical = 49328 ; free virtual = 62561
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'UART_TX_Process.state_reg' in module 'uart_tx_module'
 INFO: [Synth 8-802] inferred FSM for state register 'UART_RX_Process.state_reg' in module 'uart_rx_module'
@@ -309,7 +320,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'UART_RX_Process.state_reg'
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'top_module'
 WARNING: [Synth 8-12595] Onehot encoded FSM with state register 'state_reg' is not having reset. This may cause incorrect behavior. User should consider using FSM_SAFE_STATE attribute on the register
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2641.137 ; gain = 420.273 ; free physical = 48960 ; free virtual = 62357
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2640.949 ; gain = 421.297 ; free physical = 49336 ; free virtual = 62570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -318,21 +329,24 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input   14 Bit       Adders := 1     
 	   2 Input   10 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 2     
 	   2 Input    4 Bit       Adders := 1     
 	   2 Input    3 Bit       Adders := 2     
 +---Registers : 
 	               14 Bit    Registers := 1     
 	               10 Bit    Registers := 2     
-	                8 Bit    Registers := 5     
+	                8 Bit    Registers := 7     
 	                4 Bit    Registers := 2     
 	                3 Bit    Registers := 2     
-	                1 Bit    Registers := 9     
+	                1 Bit    Registers := 12    
++---RAMs : 
+	               2K Bit	(256 X 8 bit)          RAMs := 1     
 +---Muxes : 
 	   2 Input   10 Bit        Muxes := 1     
 	   5 Input   10 Bit        Muxes := 1     
 	   6 Input   10 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 14    
 	   6 Input    8 Bit        Muxes := 1     
-	   2 Input    8 Bit        Muxes := 2     
 	   8 Input    8 Bit        Muxes := 1     
 	   4 Input    4 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 2     
@@ -340,8 +354,8 @@ Detailed RTL Component Info :
 	   5 Input    3 Bit        Muxes := 2     
 	   6 Input    3 Bit        Muxes := 2     
 	   5 Input    1 Bit        Muxes := 8     
+	   2 Input    1 Bit        Muxes := 7     
 	   6 Input    1 Bit        Muxes := 5     
-	   2 Input    1 Bit        Muxes := 1     
 	   8 Input    1 Bit        Muxes := 1     
 	   3 Input    1 Bit        Muxes := 2     
 	   4 Input    1 Bit        Muxes := 1     
@@ -362,25 +376,54 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2641.137 ; gain = 420.273 ; free physical = 48907 ; free virtual = 62336
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2640.949 ; gain = 421.297 ; free physical = 49328 ; free virtual = 62568
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+--------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                           | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+--------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|top_module  | uart_rx/FIFO/FIFO_Process.Memory_reg | 256 x 8(READ_FIRST)    | W |   | 256 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++------------+--------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2671.137 ; gain = 450.273 ; free physical = 48867 ; free virtual = 62296
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2674.949 ; gain = 455.297 ; free physical = 49253 ; free virtual = 62493
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2703.184 ; gain = 482.320 ; free physical = 48835 ; free virtual = 62264
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2710.996 ; gain = 491.344 ; free physical = 49253 ; free virtual = 62493
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+--------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object                           | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+--------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|top_module  | uart_rx/FIFO/FIFO_Process.Memory_reg | 256 x 8(READ_FIRST)    | W |   | 256 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++------------+--------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2704.191 ; gain = 483.328 ; free physical = 48835 ; free virtual = 62264
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2719.004 ; gain = 499.352 ; free physical = 49253 ; free virtual = 62493
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -398,37 +441,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2857.004 ; gain = 636.141 ; free physical = 48710 ; free virtual = 62142
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2865.816 ; gain = 646.164 ; free physical = 49167 ; free virtual = 62407
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2857.004 ; gain = 636.141 ; free physical = 48710 ; free virtual = 62142
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2865.816 ; gain = 646.164 ; free physical = 49167 ; free virtual = 62407
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2857.004 ; gain = 636.141 ; free physical = 48710 ; free virtual = 62142
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2865.816 ; gain = 646.164 ; free physical = 49167 ; free virtual = 62407
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2857.004 ; gain = 636.141 ; free physical = 48710 ; free virtual = 62142
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2865.816 ; gain = 646.164 ; free physical = 49167 ; free virtual = 62407
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2857.004 ; gain = 636.141 ; free physical = 48710 ; free virtual = 62142
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2868.785 ; gain = 649.133 ; free physical = 49167 ; free virtual = 62407
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2857.004 ; gain = 636.141 ; free physical = 48710 ; free virtual = 62142
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2868.785 ; gain = 649.133 ; free physical = 49167 ; free virtual = 62407
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -452,66 +495,64 @@ Report BlackBoxes:
 |12    |microblaze_ilmb_bram_if_cntlr_2               |         1|
 |13    |microblaze_ilmb_v10_2                         |         1|
 |14    |microblaze_lmb_bram_2                         |         1|
-|15    |FIFO_MODULE                                   |         1|
 +------+----------------------------------------------+----------+
 
 Report Cell Usage: 
 +------+---------------------------------------------------+------+
 |      |Cell                                               |Count |
 +------+---------------------------------------------------+------+
-|1     |FIFO_MODULE_bbox                                   |     1|
-|2     |microblaze_axi_gpio_0_1_bbox                       |     1|
-|3     |microblaze_axi_quad_spi_0_1_bbox                   |     1|
-|4     |microblaze_axi_uartlite_0_1_bbox                   |     1|
-|5     |microblaze_clk_wiz_1_2_bbox                        |     1|
-|6     |microblaze_dlmb_bram_if_cntlr_2_bbox               |     1|
-|7     |microblaze_dlmb_v10_2_bbox                         |     1|
-|8     |microblaze_ilmb_bram_if_cntlr_2_bbox               |     1|
-|9     |microblaze_ilmb_v10_2_bbox                         |     1|
-|10    |microblaze_lmb_bram_2_bbox                         |     1|
-|11    |microblaze_mdm_1_2_bbox                            |     1|
-|12    |microblaze_microblaze_0_3_bbox                     |     1|
-|13    |microblaze_microblaze_0_axi_intc_2_bbox            |     1|
-|14    |microblaze_microblaze_0_axi_periph_imp_xbar_2_bbox |     1|
-|15    |microblaze_rst_clk_wiz_1_100M_2_bbox               |     1|
-|16    |CARRY4                                             |     4|
-|17    |LUT1                                               |     4|
-|18    |LUT2                                               |    14|
-|19    |LUT3                                               |    19|
-|20    |LUT4                                               |    30|
-|21    |LUT5                                               |    15|
-|22    |LUT6                                               |    43|
-|23    |MUXF7                                              |     1|
-|24    |FDCE                                               |     6|
-|25    |FDRE                                               |   101|
-|26    |IBUF                                               |     2|
-|27    |OBUF                                               |    39|
+|1     |microblaze_axi_gpio_0_1_bbox                       |     1|
+|2     |microblaze_axi_quad_spi_0_1_bbox                   |     1|
+|3     |microblaze_axi_uartlite_0_1_bbox                   |     1|
+|4     |microblaze_clk_wiz_1_2_bbox                        |     1|
+|5     |microblaze_dlmb_bram_if_cntlr_2_bbox               |     1|
+|6     |microblaze_dlmb_v10_2_bbox                         |     1|
+|7     |microblaze_ilmb_bram_if_cntlr_2_bbox               |     1|
+|8     |microblaze_ilmb_v10_2_bbox                         |     1|
+|9     |microblaze_lmb_bram_2_bbox                         |     1|
+|10    |microblaze_mdm_1_2_bbox                            |     1|
+|11    |microblaze_microblaze_0_3_bbox                     |     1|
+|12    |microblaze_microblaze_0_axi_intc_2_bbox            |     1|
+|13    |microblaze_microblaze_0_axi_periph_imp_xbar_2_bbox |     1|
+|14    |microblaze_rst_clk_wiz_1_100M_2_bbox               |     1|
+|15    |CARRY4                                             |     4|
+|16    |LUT1                                               |     4|
+|17    |LUT2                                               |    22|
+|18    |LUT3                                               |    20|
+|19    |LUT4                                               |    45|
+|20    |LUT5                                               |    34|
+|21    |LUT6                                               |    65|
+|22    |RAMB18E1                                           |     1|
+|23    |FDCE                                               |     6|
+|24    |FDRE                                               |   112|
+|25    |IBUF                                               |     2|
+|26    |OBUF                                               |    39|
 +------+---------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2857.004 ; gain = 636.141 ; free physical = 48710 ; free virtual = 62142
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2868.785 ; gain = 649.133 ; free physical = 49167 ; free virtual = 62407
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2857.004 ; gain = 518.336 ; free physical = 48710 ; free virtual = 62142
-Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2857.012 ; gain = 636.141 ; free physical = 48710 ; free virtual = 62142
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2868.785 ; gain = 527.359 ; free physical = 49168 ; free virtual = 62408
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2868.793 ; gain = 649.133 ; free physical = 49168 ; free virtual = 62408
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2857.012 ; gain = 0.000 ; free physical = 48850 ; free virtual = 62282
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00 . Memory (MB): peak = 2868.793 ; gain = 0.000 ; free physical = 49323 ; free virtual = 62563
 INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2913.031 ; gain = 0.000 ; free physical = 48855 ; free virtual = 62290
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2924.812 ; gain = 0.000 ; free physical = 49323 ; free virtual = 62563
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: d05a7c8b
+Synth Design complete | Checksum: 3237bbc7
 INFO: [Common 17-83] Releasing license: Synthesis
-93 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
+101 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2913.066 ; gain = 1095.414 ; free physical = 48855 ; free virtual = 62290
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2240.749; main = 2029.763; forked = 274.456
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3795.953; main = 2913.035; forked = 964.758
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2937.043 ; gain = 0.000 ; free physical = 48855 ; free virtual = 62290
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:13 . Memory (MB): peak = 2924.848 ; gain = 1071.531 ; free physical = 49324 ; free virtual = 62564
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2261.663; main = 2057.895; forked = 274.367
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3796.766; main = 2924.816; forked = 964.758
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2948.824 ; gain = 0.000 ; free physical = 49324 ; free virtual = 62564
 INFO: [Common 17-1381] The checkpoint '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/top_module.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file top_module_utilization_synth.rpt -pb top_module_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jul 17 23:27:05 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 17 23:53:20 2025...
