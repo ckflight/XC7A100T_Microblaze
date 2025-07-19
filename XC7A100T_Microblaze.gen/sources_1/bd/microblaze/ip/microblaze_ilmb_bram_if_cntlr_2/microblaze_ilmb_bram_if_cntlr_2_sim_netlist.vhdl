@@ -4,9 +4,9 @@
 -- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
 -- Date        : Thu Jul 17 23:26:08 2025
 -- Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
--- Command     : write_vhdl -force -mode funcsim
---               /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_ilmb_bram_if_cntlr_2/microblaze_ilmb_bram_if_cntlr_2_sim_netlist.vhdl
--- Design      : microblaze_ilmb_bram_if_cntlr_2
+-- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_ilmb_bram_if_cntlr_2 -prefix
+--               microblaze_ilmb_bram_if_cntlr_2_ microblaze_dlmb_bram_if_cntlr_2_sim_netlist.vhdl
+-- Design      : microblaze_dlmb_bram_if_cntlr_2
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7a100tcsg324-1
@@ -18,72 +18,56 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_ilmb_bram_if_cntlr_2_MB_LUT6 is
   port (
     \Using_FPGA.Native_0\ : out STD_LOGIC;
-    CE : out STD_LOGIC;
-    \ECC.RdModifyWr_Modify\ : out STD_LOGIC;
-    S_4 : out STD_LOGIC;
-    S_29 : out STD_LOGIC;
-    \Using_FPGA.Native_1\ : out STD_LOGIC;
+    Sl_CE : out STD_LOGIC;
+    S_0 : out STD_LOGIC;
+    S_1 : out STD_LOGIC;
+    S_5 : out STD_LOGIC;
+    S_6 : out STD_LOGIC;
+    S_7 : out STD_LOGIC;
+    S_8 : out STD_LOGIC;
+    S_9 : out STD_LOGIC;
+    S_10 : out STD_LOGIC;
+    S_11 : out STD_LOGIC;
+    S_13 : out STD_LOGIC;
+    S_15 : out STD_LOGIC;
+    S_16 : out STD_LOGIC;
+    S_17 : out STD_LOGIC;
+    S_18 : out STD_LOGIC;
+    S_19 : out STD_LOGIC;
+    S_20 : out STD_LOGIC;
+    S_21 : out STD_LOGIC;
+    S_24 : out STD_LOGIC;
+    S_25 : out STD_LOGIC;
     \Handle_32.Decode_Bits.chk6_1\ : in STD_LOGIC_VECTOR ( 0 to 5 );
-    CE_0 : in STD_LOGIC;
     \ECC.full_word_write_access\ : in STD_LOGIC;
-    CE_1 : in STD_LOGIC;
+    Sl_CE_0 : in STD_LOGIC;
     CE_Q : in STD_LOGIC;
     p_1_in : in STD_LOGIC;
-    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i\ : in STD_LOGIC;
-    lmb_as : in STD_LOGIC;
-    \Using_FPGA.Native_2\ : in STD_LOGIC;
-    \Using_FPGA.Native_3\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \Using_FPGA.Native_1\ : in STD_LOGIC;
+    \Using_FPGA.Native_2\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \Using_FPGA.Native_3\ : in STD_LOGIC;
     \Using_FPGA.Native_4\ : in STD_LOGIC;
-    \Using_FPGA.Native_5\ : in STD_LOGIC;
-    Enable_ECC : in STD_LOGIC;
-    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC
+    \Using_FPGA.Native_5\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6 : entity is "MB_LUT6";
 end microblaze_ilmb_bram_if_cntlr_2_MB_LUT6;
 
 architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6 is
-  signal \^ecc.rdmodifywr_modify\ : STD_LOGIC;
   signal \^using_fpga.native_0\ : STD_LOGIC;
   attribute box_type : string;
   attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
 begin
-  \ECC.RdModifyWr_Modify\ <= \^ecc.rdmodifywr_modify\;
   \Using_FPGA.Native_0\ <= \^using_fpga.native_0\;
-CE_INST_0: unisim.vcomponents.LUT6
+Sl_CE_INST_0: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"2000200020202000"
+      INIT => X"40404440"
     )
         port map (
-      I0 => CE_0,
-      I1 => \ECC.full_word_write_access\,
-      I2 => CE_1,
-      I3 => CE_Q,
-      I4 => \^using_fpga.native_0\,
-      I5 => p_1_in,
-      O => CE
-    );
-\ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.CE_Q_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AAFFAA0008000800"
-    )
-        port map (
-      I0 => Enable_ECC,
-      I1 => \^using_fpga.native_0\,
-      I2 => p_1_in,
-      I3 => \^ecc.rdmodifywr_modify\,
-      I4 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      I5 => CE_Q,
-      O => \Using_FPGA.Native_1\
-    );
-\ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_i_1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"8"
-    )
-        port map (
-      I0 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i\,
-      I1 => lmb_as,
-      O => \^ecc.rdmodifywr_modify\
+      I0 => \ECC.full_word_write_access\,
+      I1 => Sl_CE_0,
+      I2 => CE_Q,
+      I3 => \^using_fpga.native_0\,
+      I4 => p_1_in,
+      O => Sl_CE
     );
 \Using_FPGA.Native\: unisim.vcomponents.LUT6
     generic map(
@@ -98,31 +82,252 @@ CE_INST_0: unisim.vcomponents.LUT6
       I5 => \Handle_32.Decode_Bits.chk6_1\(0),
       O => \^using_fpga.native_0\
     );
-\Using_FPGA.Native_i_1__31\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FF7FFFFFFFFFFFFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \Using_FPGA.Native_3\(1),
-      I2 => \Using_FPGA.Native_4\,
-      I3 => \Using_FPGA.Native_3\(0),
-      I4 => \Using_FPGA.Native_5\,
-      I5 => \Using_FPGA.Native_2\,
-      O => S_29
-    );
-\Using_FPGA.Native_i_1__6\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__10\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFFFFFFFFFFFF7"
     )
         port map (
       I0 => \^using_fpga.native_0\,
-      I1 => \Using_FPGA.Native_2\,
-      I2 => \Using_FPGA.Native_3\(0),
+      I1 => \Using_FPGA.Native_2\(0),
+      I2 => \Using_FPGA.Native_3\,
       I3 => \Using_FPGA.Native_4\,
-      I4 => \Using_FPGA.Native_3\(1),
-      I5 => \Using_FPGA.Native_5\,
-      O => S_4
+      I4 => \Using_FPGA.Native_1\,
+      I5 => \Using_FPGA.Native_2\(1),
+      O => S_8
+    );
+\Using_FPGA.Native_i_1__11\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFF7"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_FPGA.Native_3\,
+      I2 => \Using_FPGA.Native_2\(0),
+      I3 => \Using_FPGA.Native_4\,
+      I4 => \Using_FPGA.Native_5\,
+      I5 => \Using_FPGA.Native_2\(1),
+      O => S_9
+    );
+\Using_FPGA.Native_i_1__12\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFF7"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_FPGA.Native_2\(0),
+      I2 => \Using_FPGA.Native_3\,
+      I3 => \Using_FPGA.Native_4\,
+      I4 => \Using_FPGA.Native_5\,
+      I5 => \Using_FPGA.Native_2\(1),
+      O => S_10
+    );
+\Using_FPGA.Native_i_1__13\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFF7FFFFFFFF"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_FPGA.Native_1\,
+      I2 => \Using_FPGA.Native_2\(0),
+      I3 => \Using_FPGA.Native_2\(1),
+      I4 => \Using_FPGA.Native_4\,
+      I5 => \Using_FPGA.Native_3\,
+      O => S_11
+    );
+\Using_FPGA.Native_i_1__15\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFF7FFFFFFFF"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_FPGA.Native_1\,
+      I2 => \Using_FPGA.Native_2\(0),
+      I3 => \Using_FPGA.Native_2\(1),
+      I4 => \Using_FPGA.Native_5\,
+      I5 => \Using_FPGA.Native_3\,
+      O => S_13
+    );
+\Using_FPGA.Native_i_1__17\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFF7FFFFFFFF"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_FPGA.Native_2\(1),
+      I2 => \Using_FPGA.Native_2\(0),
+      I3 => \Using_FPGA.Native_5\,
+      I4 => \Using_FPGA.Native_1\,
+      I5 => \Using_FPGA.Native_3\,
+      O => S_15
+    );
+\Using_FPGA.Native_i_1__18\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFF7"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_FPGA.Native_2\(1),
+      I2 => \Using_FPGA.Native_2\(0),
+      I3 => \Using_FPGA.Native_5\,
+      I4 => \Using_FPGA.Native_1\,
+      I5 => \Using_FPGA.Native_3\,
+      O => S_16
+    );
+\Using_FPGA.Native_i_1__19\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFF7FFFFFFFF"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_FPGA.Native_2\(1),
+      I2 => \Using_FPGA.Native_2\(0),
+      I3 => \Using_FPGA.Native_4\,
+      I4 => \Using_FPGA.Native_5\,
+      I5 => \Using_FPGA.Native_3\,
+      O => S_17
+    );
+\Using_FPGA.Native_i_1__2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFF7"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_FPGA.Native_1\,
+      I2 => \Using_FPGA.Native_2\(0),
+      I3 => \Using_FPGA.Native_3\,
+      I4 => \Using_FPGA.Native_4\,
+      I5 => \Using_FPGA.Native_2\(1),
+      O => S_0
+    );
+\Using_FPGA.Native_i_1__20\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFF7"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_FPGA.Native_2\(1),
+      I2 => \Using_FPGA.Native_2\(0),
+      I3 => \Using_FPGA.Native_4\,
+      I4 => \Using_FPGA.Native_5\,
+      I5 => \Using_FPGA.Native_1\,
+      O => S_18
+    );
+\Using_FPGA.Native_i_1__21\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFF7"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_FPGA.Native_2\(1),
+      I2 => \Using_FPGA.Native_2\(0),
+      I3 => \Using_FPGA.Native_4\,
+      I4 => \Using_FPGA.Native_5\,
+      I5 => \Using_FPGA.Native_3\,
+      O => S_19
+    );
+\Using_FPGA.Native_i_1__22\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFF7"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_FPGA.Native_2\(1),
+      I2 => \Using_FPGA.Native_2\(0),
+      I3 => \Using_FPGA.Native_4\,
+      I4 => \Using_FPGA.Native_1\,
+      I5 => \Using_FPGA.Native_3\,
+      O => S_20
+    );
+\Using_FPGA.Native_i_1__23\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFF7FFFFFFFF"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_FPGA.Native_2\(1),
+      I2 => \Using_FPGA.Native_2\(0),
+      I3 => \Using_FPGA.Native_4\,
+      I4 => \Using_FPGA.Native_1\,
+      I5 => \Using_FPGA.Native_3\,
+      O => S_21
+    );
+\Using_FPGA.Native_i_1__26\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFF7FFFFFFFFFFFF"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_FPGA.Native_1\,
+      I2 => \Using_FPGA.Native_5\,
+      I3 => \Using_FPGA.Native_2\(0),
+      I4 => \Using_FPGA.Native_3\,
+      I5 => \Using_FPGA.Native_2\(1),
+      O => S_24
+    );
+\Using_FPGA.Native_i_1__27\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFF7FFFFFFFFFFFF"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_FPGA.Native_1\,
+      I2 => \Using_FPGA.Native_4\,
+      I3 => \Using_FPGA.Native_2\(0),
+      I4 => \Using_FPGA.Native_3\,
+      I5 => \Using_FPGA.Native_2\(1),
+      O => S_25
+    );
+\Using_FPGA.Native_i_1__3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFF7"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_FPGA.Native_1\,
+      I2 => \Using_FPGA.Native_2\(0),
+      I3 => \Using_FPGA.Native_3\,
+      I4 => \Using_FPGA.Native_5\,
+      I5 => \Using_FPGA.Native_2\(1),
+      O => S_1
+    );
+\Using_FPGA.Native_i_1__7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFF7"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_FPGA.Native_2\(0),
+      I2 => \Using_FPGA.Native_3\,
+      I3 => \Using_FPGA.Native_5\,
+      I4 => \Using_FPGA.Native_1\,
+      I5 => \Using_FPGA.Native_2\(1),
+      O => S_5
+    );
+\Using_FPGA.Native_i_1__8\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFF7"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_FPGA.Native_3\,
+      I2 => \Using_FPGA.Native_2\(0),
+      I3 => \Using_FPGA.Native_4\,
+      I4 => \Using_FPGA.Native_1\,
+      I5 => \Using_FPGA.Native_2\(1),
+      O => S_6
+    );
+\Using_FPGA.Native_i_1__9\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFF7"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_FPGA.Native_3\,
+      I2 => \Using_FPGA.Native_2\(0),
+      I3 => \Using_FPGA.Native_5\,
+      I4 => \Using_FPGA.Native_1\,
+      I5 => \Using_FPGA.Native_2\(1),
+      O => S_7
     );
 end STRUCTURE;
 library IEEE;
@@ -225,50 +430,50 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_149 is
   port (
     \Using_FPGA.xor6_1\ : out STD_LOGIC;
-    InA : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q_reg[23]\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     Q : in STD_LOGIC_VECTOR ( 1 downto 0 );
     LMB_WriteDBus : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     LMB_BE : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \Using_FPGA.Native_2\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC
+    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC;
+    \Using_FPGA.Native_2\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_149 : entity is "MB_LUT6";
 end microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_149;
 
 architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_149 is
-  signal \^ina\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \^ecc.do_writes.do_byte_halfword_writes.writedbus_q_reg[23]\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute box_type : string;
   attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
 begin
-  InA(1 downto 0) <= \^ina\(1 downto 0);
+  \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q_reg[23]\(1 downto 0) <= \^ecc.do_writes.do_byte_halfword_writes.writedbus_q_reg[23]\(1 downto 0);
 \BRAM_Dout_A[23]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AAFFCFCFAA00C0C0"
     )
         port map (
       I0 => Q(1),
       I1 => LMB_WriteDBus(1),
-      I2 => \Using_FPGA.Native_1\(1),
-      I3 => LMB_BE(1),
-      I4 => \Using_FPGA.Native_2\(1),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      O => \^ina\(1)
+      I2 => LMB_BE(1),
+      I3 => \Using_FPGA.Native_1\(1),
+      I4 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I5 => \Using_FPGA.Native_2\(1),
+      O => \^ecc.do_writes.do_byte_halfword_writes.writedbus_q_reg[23]\(1)
     );
 \BRAM_Dout_A[24]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AAFFCFCFAA00C0C0"
     )
         port map (
       I0 => Q(0),
       I1 => LMB_WriteDBus(0),
-      I2 => \Using_FPGA.Native_1\(0),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_2\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      O => \^ina\(0)
+      I2 => LMB_BE(0),
+      I3 => \Using_FPGA.Native_1\(0),
+      I4 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I5 => \Using_FPGA.Native_2\(0),
+      O => \^ecc.do_writes.do_byte_halfword_writes.writedbus_q_reg[23]\(0)
     );
 \Using_FPGA.Native\: unisim.vcomponents.LUT6
     generic map(
@@ -279,8 +484,8 @@ begin
       I1 => '0',
       I2 => '0',
       I3 => \Using_FPGA.Native_0\(0),
-      I4 => \^ina\(0),
-      I5 => \^ina\(1),
+      I4 => \^ecc.do_writes.do_byte_halfword_writes.writedbus_q_reg[23]\(0),
+      I5 => \^ecc.do_writes.do_byte_halfword_writes.writedbus_q_reg[23]\(1),
       O => \Using_FPGA.xor6_1\
     );
 end STRUCTURE;
@@ -291,63 +496,67 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_150 is
   port (
     \Using_FPGA.xor6_2\ : out STD_LOGIC;
-    InA : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q_reg[18]\ : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    BRAM_Dout_A : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     Q : in STD_LOGIC_VECTOR ( 2 downto 0 );
     LMB_WriteDBus : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     LMB_BE : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Using_FPGA.Native_2\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC;
+    \Using_FPGA.Native_3\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_150 : entity is "MB_LUT6";
 end microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_150;
 
 architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_150 is
-  signal \^ina\ : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal \^bram_dout_a\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \^ecc.do_writes.do_byte_halfword_writes.writedbus_q_reg[18]\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute box_type : string;
   attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
 begin
-  InA(2 downto 0) <= \^ina\(2 downto 0);
+  BRAM_Dout_A(0) <= \^bram_dout_a\(0);
+  \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q_reg[18]\(1 downto 0) <= \^ecc.do_writes.do_byte_halfword_writes.writedbus_q_reg[18]\(1 downto 0);
 \BRAM_Dout_A[17]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AAFFCFCFAA00C0C0"
     )
         port map (
       I0 => Q(2),
       I1 => LMB_WriteDBus(2),
-      I2 => \Using_FPGA.Native_1\(2),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_2\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      O => \^ina\(2)
+      I2 => LMB_BE(0),
+      I3 => \Using_FPGA.Native_2\(0),
+      I4 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I5 => \Using_FPGA.Native_3\(2),
+      O => \^bram_dout_a\(0)
     );
 \BRAM_Dout_A[18]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AAFFCFCFAA00C0C0"
     )
         port map (
       I0 => Q(1),
       I1 => LMB_WriteDBus(1),
-      I2 => \Using_FPGA.Native_1\(1),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_2\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      O => \^ina\(1)
+      I2 => LMB_BE(0),
+      I3 => \Using_FPGA.Native_2\(0),
+      I4 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I5 => \Using_FPGA.Native_3\(1),
+      O => \^ecc.do_writes.do_byte_halfword_writes.writedbus_q_reg[18]\(1)
     );
 \BRAM_Dout_A[21]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AAFFCFCFAA00C0C0"
     )
         port map (
       I0 => Q(0),
       I1 => LMB_WriteDBus(0),
-      I2 => \Using_FPGA.Native_1\(0),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_2\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      O => \^ina\(0)
+      I2 => LMB_BE(0),
+      I3 => \Using_FPGA.Native_2\(0),
+      I4 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I5 => \Using_FPGA.Native_3\(0),
+      O => \^ecc.do_writes.do_byte_halfword_writes.writedbus_q_reg[18]\(0)
     );
 \Using_FPGA.Native\: unisim.vcomponents.LUT6
     generic map(
@@ -355,11 +564,11 @@ begin
     )
         port map (
       I0 => \Using_FPGA.Native_0\(0),
-      I1 => \^ina\(0),
+      I1 => \^ecc.do_writes.do_byte_halfword_writes.writedbus_q_reg[18]\(0),
       I2 => \Using_FPGA.Native_0\(1),
-      I3 => \Using_FPGA.Native_0\(2),
-      I4 => \^ina\(1),
-      I5 => \^ina\(2),
+      I3 => \Using_FPGA.Native_1\(0),
+      I4 => \^ecc.do_writes.do_byte_halfword_writes.writedbus_q_reg[18]\(1),
+      I5 => \^bram_dout_a\(0),
       O => \Using_FPGA.xor6_2\
     );
 end STRUCTURE;
@@ -370,75 +579,79 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_151 is
   port (
     \Using_FPGA.xor6_3\ : out STD_LOGIC;
-    InA : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    BRAM_Dout_A : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    BRAM_Dout_A : out STD_LOGIC_VECTOR ( 0 to 0 );
+    InA : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 2 downto 0 );
     LMB_WriteDBus : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     LMB_BE : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC;
+    \Using_FPGA.Native_2\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \Using_FPGA.Native_3\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_151 : entity is "MB_LUT6";
 end microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_151;
 
 architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_151 is
-  signal \^ina\ : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal \^bram_dout_a\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \^ina\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute box_type : string;
   attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
 begin
-  InA(2 downto 0) <= \^ina\(2 downto 0);
+  BRAM_Dout_A(0) <= \^bram_dout_a\(0);
+  InA(1 downto 0) <= \^ina\(1 downto 0);
 \BRAM_Dout_A[11]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AACFFFCFAAC000C0"
     )
         port map (
       I0 => Q(2),
       I1 => LMB_WriteDBus(2),
-      I2 => \Using_FPGA.Native_0\(2),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_1\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      O => \^ina\(2)
+      I2 => LMB_BE(0),
+      I3 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I4 => \Using_FPGA.Native_2\(0),
+      I5 => \Using_FPGA.Native_3\(2),
+      O => \^ina\(1)
     );
 \BRAM_Dout_A[12]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AACFFFCFAAC000C0"
     )
         port map (
       I0 => Q(1),
       I1 => LMB_WriteDBus(1),
-      I2 => \Using_FPGA.Native_0\(1),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_1\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      O => \^ina\(1)
+      I2 => LMB_BE(0),
+      I3 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I4 => \Using_FPGA.Native_2\(0),
+      I5 => \Using_FPGA.Native_3\(1),
+      O => \^ina\(0)
     );
 \BRAM_Dout_A[14]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AACFFFCFAAC000C0"
     )
         port map (
       I0 => Q(0),
       I1 => LMB_WriteDBus(0),
-      I2 => \Using_FPGA.Native_0\(0),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_1\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      O => \^ina\(0)
+      I2 => LMB_BE(0),
+      I3 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I4 => \Using_FPGA.Native_2\(0),
+      I5 => \Using_FPGA.Native_3\(0),
+      O => \^bram_dout_a\(0)
     );
 \Using_FPGA.Native\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"6996966996696996"
     )
         port map (
-      I0 => BRAM_Dout_A(0),
-      I1 => BRAM_Dout_A(1),
-      I2 => \^ina\(0),
-      I3 => BRAM_Dout_A(2),
-      I4 => \^ina\(1),
-      I5 => \^ina\(2),
+      I0 => \Using_FPGA.Native_0\(0),
+      I1 => \Using_FPGA.Native_1\(0),
+      I2 => \^bram_dout_a\(0),
+      I3 => \Using_FPGA.Native_1\(1),
+      I4 => \^ina\(0),
+      I5 => \^ina\(1),
       O => \Using_FPGA.xor6_3\
     );
 end STRUCTURE;
@@ -449,37 +662,37 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_155 is
   port (
     \Using_FPGA.xor6_1\ : out STD_LOGIC;
-    InA : out STD_LOGIC_VECTOR ( 0 to 0 );
+    BRAM_Dout_A : out STD_LOGIC_VECTOR ( 0 to 0 );
     \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     LMB_WriteDBus : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     LMB_BE : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \Using_FPGA.Native_2\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC
+    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC;
+    \Using_FPGA.Native_2\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_155 : entity is "MB_LUT6";
 end microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_155;
 
 architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_155 is
-  signal \^ina\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \^bram_dout_a\ : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute box_type : string;
   attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
 begin
-  InA(0) <= \^ina\(0);
+  BRAM_Dout_A(0) <= \^bram_dout_a\(0);
 \BRAM_Dout_A[25]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AAFFCFCFAA00C0C0"
     )
         port map (
       I0 => Q(0),
       I1 => LMB_WriteDBus(0),
-      I2 => \Using_FPGA.Native_1\(0),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_2\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      O => \^ina\(0)
+      I2 => LMB_BE(0),
+      I3 => \Using_FPGA.Native_1\(0),
+      I4 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I5 => \Using_FPGA.Native_2\(0),
+      O => \^bram_dout_a\(0)
     );
 \Using_FPGA.Native\: unisim.vcomponents.LUT6
     generic map(
@@ -489,7 +702,7 @@ begin
       I0 => '0',
       I1 => '0',
       I2 => '0',
-      I3 => \^ina\(0),
+      I3 => \^bram_dout_a\(0),
       I4 => \Using_FPGA.Native_0\(0),
       I5 => \Using_FPGA.Native_0\(1),
       O => \Using_FPGA.xor6_1\
@@ -502,88 +715,91 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_156 is
   port (
     \Using_FPGA.xor6_2\ : out STD_LOGIC;
-    InA : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    BRAM_Dout_A : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    InA : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     LMB_WriteDBus : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     LMB_BE : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \Using_FPGA.Native_2\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC
+    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC;
+    \Using_FPGA.Native_2\ : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_156 : entity is "MB_LUT6";
 end microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_156;
 
 architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_156 is
-  signal \^ina\ : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \^bram_dout_a\ : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \^ina\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute box_type : string;
   attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
 begin
-  InA(3 downto 0) <= \^ina\(3 downto 0);
+  BRAM_Dout_A(1 downto 0) <= \^bram_dout_a\(1 downto 0);
+  InA(1 downto 0) <= \^ina\(1 downto 0);
 \BRAM_Dout_A[10]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AACFFFCFAAC000C0"
     )
         port map (
       I0 => Q(3),
       I1 => LMB_WriteDBus(3),
-      I2 => \Using_FPGA.Native_1\(3),
-      I3 => LMB_BE(1),
-      I4 => \Using_FPGA.Native_2\(1),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      O => \^ina\(3)
+      I2 => LMB_BE(1),
+      I3 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I4 => \Using_FPGA.Native_1\(1),
+      I5 => \Using_FPGA.Native_2\(3),
+      O => \^bram_dout_a\(1)
     );
 \BRAM_Dout_A[19]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AAFFCFCFAA00C0C0"
     )
         port map (
       I0 => Q(2),
       I1 => LMB_WriteDBus(2),
-      I2 => \Using_FPGA.Native_1\(2),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_2\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      O => \^ina\(2)
+      I2 => LMB_BE(0),
+      I3 => \Using_FPGA.Native_1\(0),
+      I4 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I5 => \Using_FPGA.Native_2\(2),
+      O => \^ina\(1)
     );
 \BRAM_Dout_A[20]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AAFFCFCFAA00C0C0"
     )
         port map (
       I0 => Q(1),
       I1 => LMB_WriteDBus(1),
-      I2 => \Using_FPGA.Native_1\(1),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_2\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      O => \^ina\(1)
+      I2 => LMB_BE(0),
+      I3 => \Using_FPGA.Native_1\(0),
+      I4 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I5 => \Using_FPGA.Native_2\(1),
+      O => \^ina\(0)
     );
 \BRAM_Dout_A[22]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AAFFCFCFAA00C0C0"
     )
         port map (
       I0 => Q(0),
       I1 => LMB_WriteDBus(0),
-      I2 => \Using_FPGA.Native_1\(0),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_2\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      O => \^ina\(0)
+      I2 => LMB_BE(0),
+      I3 => \Using_FPGA.Native_1\(0),
+      I4 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I5 => \Using_FPGA.Native_2\(0),
+      O => \^bram_dout_a\(0)
     );
 \Using_FPGA.Native\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"6996966996696996"
     )
         port map (
-      I0 => \^ina\(0),
+      I0 => \^bram_dout_a\(0),
       I1 => \Using_FPGA.Native_0\(0),
-      I2 => \^ina\(1),
-      I3 => \^ina\(2),
+      I2 => \^ina\(0),
+      I3 => \^ina\(1),
       I4 => \Using_FPGA.Native_0\(1),
-      I5 => \^ina\(3),
+      I5 => \^bram_dout_a\(1),
       O => \Using_FPGA.xor6_2\
     );
 end STRUCTURE;
@@ -594,75 +810,78 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_157 is
   port (
     \Using_FPGA.xor6_3\ : out STD_LOGIC;
-    InA : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    BRAM_Dout_A : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    BRAM_Dout_A : out STD_LOGIC_VECTOR ( 0 to 0 );
+    InA : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 2 downto 0 );
     LMB_WriteDBus : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     LMB_BE : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC;
     \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC
+    \Using_FPGA.Native_2\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_157 : entity is "MB_LUT6";
 end microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_157;
 
 architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_157 is
-  signal \^ina\ : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal \^bram_dout_a\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \^ina\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   attribute box_type : string;
   attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
 begin
-  InA(2 downto 0) <= \^ina\(2 downto 0);
+  BRAM_Dout_A(0) <= \^bram_dout_a\(0);
+  InA(1 downto 0) <= \^ina\(1 downto 0);
 \BRAM_Dout_A[4]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AACFFFCFAAC000C0"
     )
         port map (
       I0 => Q(2),
       I1 => LMB_WriteDBus(2),
-      I2 => \Using_FPGA.Native_0\(2),
-      I3 => LMB_BE(0),
+      I2 => LMB_BE(0),
+      I3 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
       I4 => \Using_FPGA.Native_1\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      O => \^ina\(2)
+      I5 => \Using_FPGA.Native_2\(2),
+      O => \^ina\(1)
     );
 \BRAM_Dout_A[5]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AACFFFCFAAC000C0"
     )
         port map (
       I0 => Q(1),
       I1 => LMB_WriteDBus(1),
-      I2 => \Using_FPGA.Native_0\(1),
-      I3 => LMB_BE(0),
+      I2 => LMB_BE(0),
+      I3 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
       I4 => \Using_FPGA.Native_1\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      O => \^ina\(1)
+      I5 => \Using_FPGA.Native_2\(1),
+      O => \^ina\(0)
     );
 \BRAM_Dout_A[7]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AACFFFCFAAC000C0"
     )
         port map (
       I0 => Q(0),
       I1 => LMB_WriteDBus(0),
-      I2 => \Using_FPGA.Native_0\(0),
-      I3 => LMB_BE(0),
+      I2 => LMB_BE(0),
+      I3 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
       I4 => \Using_FPGA.Native_1\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      O => \^ina\(0)
+      I5 => \Using_FPGA.Native_2\(0),
+      O => \^bram_dout_a\(0)
     );
 \Using_FPGA.Native\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"6996966996696996"
     )
         port map (
-      I0 => BRAM_Dout_A(0),
-      I1 => BRAM_Dout_A(1),
-      I2 => \^ina\(0),
-      I3 => BRAM_Dout_A(2),
-      I4 => \^ina\(1),
-      I5 => \^ina\(2),
+      I0 => \Using_FPGA.Native_0\(0),
+      I1 => \Using_FPGA.Native_0\(1),
+      I2 => \^bram_dout_a\(0),
+      I3 => \Using_FPGA.Native_0\(2),
+      I4 => \^ina\(0),
+      I5 => \^ina\(1),
       O => \Using_FPGA.xor6_3\
     );
 end STRUCTURE;
@@ -677,10 +896,10 @@ entity microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_161 is
     BRAM_Dout_A : in STD_LOGIC_VECTOR ( 3 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 1 downto 0 );
     LMB_WriteDBus : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     LMB_BE : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC
+    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC;
+    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_161 : entity is "MB_LUT6";
@@ -694,28 +913,28 @@ begin
   InA(1 downto 0) <= \^ina\(1 downto 0);
 \BRAM_Dout_A[30]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AAFFCFCFAA00C0C0"
     )
         port map (
       I0 => Q(1),
       I1 => LMB_WriteDBus(1),
-      I2 => \Using_FPGA.Native_0\(1),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_1\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I2 => LMB_BE(0),
+      I3 => \Using_FPGA.Native_0\(0),
+      I4 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I5 => \Using_FPGA.Native_1\(1),
       O => \^ina\(1)
     );
 \BRAM_Dout_A[31]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AAFFCFCFAA00C0C0"
     )
         port map (
       I0 => Q(0),
       I1 => LMB_WriteDBus(0),
-      I2 => \Using_FPGA.Native_0\(0),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_1\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I2 => LMB_BE(0),
+      I3 => \Using_FPGA.Native_0\(0),
+      I4 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I5 => \Using_FPGA.Native_1\(0),
       O => \^ina\(0)
     );
 \Using_FPGA.Native\: unisim.vcomponents.LUT6
@@ -743,10 +962,10 @@ entity microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_162 is
     BRAM_Dout_A : in STD_LOGIC_VECTOR ( 3 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 1 downto 0 );
     LMB_WriteDBus : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     LMB_BE : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC
+    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC;
+    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_162 : entity is "MB_LUT6";
@@ -760,28 +979,28 @@ begin
   InA(1 downto 0) <= \^ina\(1 downto 0);
 \BRAM_Dout_A[15]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AACFFFCFAAC000C0"
     )
         port map (
       I0 => Q(1),
       I1 => LMB_WriteDBus(1),
-      I2 => \Using_FPGA.Native_0\(1),
-      I3 => LMB_BE(1),
-      I4 => \Using_FPGA.Native_1\(1),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I2 => LMB_BE(1),
+      I3 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I4 => \Using_FPGA.Native_0\(1),
+      I5 => \Using_FPGA.Native_1\(1),
       O => \^ina\(1)
     );
 \BRAM_Dout_A[16]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AAFFCFCFAA00C0C0"
     )
         port map (
       I0 => Q(0),
       I1 => LMB_WriteDBus(0),
-      I2 => \Using_FPGA.Native_0\(0),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_1\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I2 => LMB_BE(0),
+      I3 => \Using_FPGA.Native_0\(0),
+      I4 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I5 => \Using_FPGA.Native_1\(0),
       O => \^ina\(0)
     );
 \Using_FPGA.Native\: unisim.vcomponents.LUT6
@@ -809,10 +1028,10 @@ entity microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_163 is
     BRAM_Dout_A : in STD_LOGIC_VECTOR ( 1 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     LMB_WriteDBus : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     LMB_BE : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC;
+    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_163 : entity is "MB_LUT6";
@@ -826,54 +1045,54 @@ begin
   InA(3 downto 0) <= \^ina\(3 downto 0);
 \BRAM_Dout_A[1]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AACFFFCFAAC000C0"
     )
         port map (
       I0 => Q(3),
       I1 => LMB_WriteDBus(3),
-      I2 => \Using_FPGA.Native_0\(3),
-      I3 => LMB_BE(1),
-      I4 => \Using_FPGA.Native_1\(1),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I2 => LMB_BE(1),
+      I3 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I4 => \Using_FPGA.Native_0\(1),
+      I5 => \Using_FPGA.Native_1\(3),
       O => \^ina\(3)
     );
 \BRAM_Dout_A[2]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AACFFFCFAAC000C0"
     )
         port map (
       I0 => Q(2),
       I1 => LMB_WriteDBus(2),
-      I2 => \Using_FPGA.Native_0\(2),
-      I3 => LMB_BE(1),
-      I4 => \Using_FPGA.Native_1\(1),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I2 => LMB_BE(1),
+      I3 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I4 => \Using_FPGA.Native_0\(1),
+      I5 => \Using_FPGA.Native_1\(2),
       O => \^ina\(2)
     );
 \BRAM_Dout_A[8]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AACFFFCFAAC000C0"
     )
         port map (
       I0 => Q(1),
       I1 => LMB_WriteDBus(1),
-      I2 => \Using_FPGA.Native_0\(1),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_1\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I2 => LMB_BE(0),
+      I3 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I4 => \Using_FPGA.Native_0\(0),
+      I5 => \Using_FPGA.Native_1\(1),
       O => \^ina\(1)
     );
 \BRAM_Dout_A[9]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AACFFFCFAAC000C0"
     )
         port map (
       I0 => Q(0),
       I1 => LMB_WriteDBus(0),
-      I2 => \Using_FPGA.Native_0\(0),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_1\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I2 => LMB_BE(0),
+      I3 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I4 => \Using_FPGA.Native_0\(0),
+      I5 => \Using_FPGA.Native_1\(0),
       O => \^ina\(0)
     );
 \Using_FPGA.Native\: unisim.vcomponents.LUT6
@@ -901,10 +1120,10 @@ entity microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_167 is
     \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     LMB_WriteDBus : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     LMB_BE : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \Using_FPGA.Native_2\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC
+    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC;
+    \Using_FPGA.Native_2\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_167 : entity is "MB_LUT6";
@@ -918,15 +1137,15 @@ begin
   InA(0) <= \^ina\(0);
 \BRAM_Dout_A[28]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AAFFCFCFAA00C0C0"
     )
         port map (
       I0 => Q(0),
       I1 => LMB_WriteDBus(0),
-      I2 => \Using_FPGA.Native_1\(0),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_2\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I2 => LMB_BE(0),
+      I3 => \Using_FPGA.Native_1\(0),
+      I4 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I5 => \Using_FPGA.Native_2\(0),
       O => \^ina\(0)
     );
 \Using_FPGA.Native\: unisim.vcomponents.LUT6
@@ -954,10 +1173,10 @@ entity microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_168 is
     \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 0 to 0 );
     LMB_WriteDBus : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     LMB_BE : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \Using_FPGA.Native_2\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC;
+    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \Using_FPGA.Native_2\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_168 : entity is "MB_LUT6";
@@ -971,15 +1190,15 @@ begin
   InA(0) <= \^ina\(0);
 \BRAM_Dout_A[13]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AACFFFCFAAC000C0"
     )
         port map (
       I0 => Q(0),
       I1 => LMB_WriteDBus(0),
-      I2 => \Using_FPGA.Native_1\(0),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_2\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I2 => LMB_BE(0),
+      I3 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I4 => \Using_FPGA.Native_1\(0),
+      I5 => \Using_FPGA.Native_2\(0),
       O => \^ina\(0)
     );
 \Using_FPGA.Native\: unisim.vcomponents.LUT6
@@ -1007,10 +1226,10 @@ entity microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_169 is
     \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 2 downto 0 );
     LMB_WriteDBus : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     LMB_BE : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \Using_FPGA.Native_2\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC;
+    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \Using_FPGA.Native_2\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_169 : entity is "MB_LUT6";
@@ -1024,41 +1243,41 @@ begin
   InA(2 downto 0) <= \^ina\(2 downto 0);
 \BRAM_Dout_A[0]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AACFFFCFAAC000C0"
     )
         port map (
       I0 => Q(2),
       I1 => LMB_WriteDBus(2),
-      I2 => \Using_FPGA.Native_1\(2),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_2\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I2 => LMB_BE(0),
+      I3 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I4 => \Using_FPGA.Native_1\(0),
+      I5 => \Using_FPGA.Native_2\(2),
       O => \^ina\(2)
     );
 \BRAM_Dout_A[3]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AACFFFCFAAC000C0"
     )
         port map (
       I0 => Q(1),
       I1 => LMB_WriteDBus(1),
-      I2 => \Using_FPGA.Native_1\(1),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_2\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I2 => LMB_BE(0),
+      I3 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I4 => \Using_FPGA.Native_1\(0),
+      I5 => \Using_FPGA.Native_2\(1),
       O => \^ina\(1)
     );
 \BRAM_Dout_A[6]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AACFFFCFAAC000C0"
     )
         port map (
       I0 => Q(0),
       I1 => LMB_WriteDBus(0),
-      I2 => \Using_FPGA.Native_1\(0),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_2\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I2 => LMB_BE(0),
+      I3 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I4 => \Using_FPGA.Native_1\(0),
+      I5 => \Using_FPGA.Native_2\(0),
       O => \^ina\(0)
     );
 \Using_FPGA.Native\: unisim.vcomponents.LUT6
@@ -1179,10 +1398,10 @@ entity microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_178 is
     \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     Q : in STD_LOGIC_VECTOR ( 2 downto 0 );
     LMB_WriteDBus : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     LMB_BE : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \Using_FPGA.Native_2\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC
+    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC;
+    \Using_FPGA.Native_2\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_178 : entity is "MB_LUT6";
@@ -1196,41 +1415,41 @@ begin
   BRAM_Dout_A(3 downto 0) <= \^bram_dout_a\(3 downto 0);
 \BRAM_Dout_A[26]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AAFFCFCFAA00C0C0"
     )
         port map (
       I0 => Q(2),
       I1 => LMB_WriteDBus(2),
-      I2 => \Using_FPGA.Native_1\(2),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_2\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I2 => LMB_BE(0),
+      I3 => \Using_FPGA.Native_1\(0),
+      I4 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I5 => \Using_FPGA.Native_2\(2),
       O => \^bram_dout_a\(3)
     );
 \BRAM_Dout_A[27]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AAFFCFCFAA00C0C0"
     )
         port map (
       I0 => Q(1),
       I1 => LMB_WriteDBus(1),
-      I2 => \Using_FPGA.Native_1\(1),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_2\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I2 => LMB_BE(0),
+      I3 => \Using_FPGA.Native_1\(0),
+      I4 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I5 => \Using_FPGA.Native_2\(1),
       O => \^bram_dout_a\(2)
     );
 \BRAM_Dout_A[29]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"F0F0AAAACCAACCAA"
+      INIT => X"AAFFCFCFAA00C0C0"
     )
         port map (
       I0 => Q(0),
       I1 => LMB_WriteDBus(0),
-      I2 => \Using_FPGA.Native_1\(0),
-      I3 => LMB_BE(0),
-      I4 => \Using_FPGA.Native_2\(0),
-      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I2 => LMB_BE(0),
+      I3 => \Using_FPGA.Native_1\(0),
+      I4 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I5 => \Using_FPGA.Native_2\(0),
       O => \^bram_dout_a\(1)
     );
 \Using_FPGA.Native\: unisim.vcomponents.LUT6
@@ -1470,28 +1689,27 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_34 is
   port (
-    \Using_FPGA.Native_0\ : out STD_LOGIC;
-    S_2 : out STD_LOGIC;
+    \ECC.Syndrome\ : out STD_LOGIC_VECTOR ( 0 to 0 );
+    S : out STD_LOGIC;
     S_3 : out STD_LOGIC;
-    S_15 : out STD_LOGIC;
     Res : in STD_LOGIC;
+    \Using_FPGA.Native_0\ : in STD_LOGIC;
     \Using_FPGA.Native_1\ : in STD_LOGIC;
     \Using_FPGA.Native_2\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \Using_FPGA.Native_3\ : in STD_LOGIC;
     \Using_FPGA.Native_4\ : in STD_LOGIC;
-    \Using_FPGA.Native_5\ : in STD_LOGIC;
-    \Using_FPGA.Native_6\ : in STD_LOGIC
+    \Using_FPGA.Native_5\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_34 : entity is "MB_LUT6";
 end microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_34;
 
 architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_34 is
-  signal \^using_fpga.native_0\ : STD_LOGIC;
+  signal \^ecc.syndrome\ : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute box_type : string;
   attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
 begin
-  \Using_FPGA.Native_0\ <= \^using_fpga.native_0\;
+  \ECC.Syndrome\(0) <= \^ecc.syndrome\(0);
 \Using_FPGA.Native\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"6996966996696996"
@@ -1502,46 +1720,33 @@ begin
       I2 => '0',
       I3 => '0',
       I4 => Res,
-      I5 => \Using_FPGA.Native_1\,
-      O => \^using_fpga.native_0\
+      I5 => \Using_FPGA.Native_0\,
+      O => \^ecc.syndrome\(0)
     );
-\Using_FPGA.Native_i_1__17\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFF7FFFFFFFFFFFF"
+      INIT => X"FFFFFFF7FFFFFFFF"
     )
         port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \Using_FPGA.Native_3\,
+      I0 => \^ecc.syndrome\(0),
+      I1 => \Using_FPGA.Native_1\,
       I2 => \Using_FPGA.Native_2\(1),
-      I3 => \Using_FPGA.Native_4\,
-      I4 => \Using_FPGA.Native_5\,
+      I3 => \Using_FPGA.Native_3\,
+      I4 => \Using_FPGA.Native_4\,
       I5 => \Using_FPGA.Native_2\(0),
-      O => S_15
-    );
-\Using_FPGA.Native_i_1__4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFDFFFFFFFFFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \Using_FPGA.Native_2\(1),
-      I2 => \Using_FPGA.Native_3\,
-      I3 => \Using_FPGA.Native_4\,
-      I4 => \Using_FPGA.Native_5\,
-      I5 => \Using_FPGA.Native_2\(0),
-      O => S_2
+      O => S
     );
 \Using_FPGA.Native_i_1__5\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFEFFFFFFFFFFFF"
+      INIT => X"FFFFFFF7FFFFFFFF"
     )
         port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \Using_FPGA.Native_2\(1),
-      I2 => \Using_FPGA.Native_3\,
-      I3 => \Using_FPGA.Native_6\,
-      I4 => \Using_FPGA.Native_2\(0),
-      I5 => \Using_FPGA.Native_5\,
+      I0 => \^ecc.syndrome\(0),
+      I1 => \Using_FPGA.Native_1\,
+      I2 => \Using_FPGA.Native_2\(1),
+      I3 => \Using_FPGA.Native_3\,
+      I4 => \Using_FPGA.Native_5\,
+      I5 => \Using_FPGA.Native_2\(0),
       O => S_3
     );
 end STRUCTURE;
@@ -2079,34 +2284,18 @@ use UNISIM.VCOMPONENTS.ALL;
 entity \microblaze_ilmb_bram_if_cntlr_2_MB_LUT6__parameterized1\ is
   port (
     \Using_FPGA.Native_0\ : out STD_LOGIC;
-    S_0 : out STD_LOGIC;
-    S_5 : out STD_LOGIC;
-    S_6 : out STD_LOGIC;
-    S_11 : out STD_LOGIC;
-    S_17 : out STD_LOGIC;
-    S_18 : out STD_LOGIC;
-    S_19 : out STD_LOGIC;
-    S_22 : out STD_LOGIC;
-    S_23 : out STD_LOGIC;
-    S_30 : out STD_LOGIC;
     Res : in STD_LOGIC;
     \Using_FPGA.Native_1\ : in STD_LOGIC;
-    Enable_ECC : in STD_LOGIC;
-    \ECC.Syndrome\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \Using_FPGA.Native_2\ : in STD_LOGIC;
-    \Using_FPGA.Native_3\ : in STD_LOGIC;
-    \Using_FPGA.Native_4\ : in STD_LOGIC
+    Enable_ECC : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \microblaze_ilmb_bram_if_cntlr_2_MB_LUT6__parameterized1\ : entity is "MB_LUT6";
 end \microblaze_ilmb_bram_if_cntlr_2_MB_LUT6__parameterized1\;
 
 architecture STRUCTURE of \microblaze_ilmb_bram_if_cntlr_2_MB_LUT6__parameterized1\ is
-  signal \^using_fpga.native_0\ : STD_LOGIC;
   attribute box_type : string;
   attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
 begin
-  \Using_FPGA.Native_0\ <= \^using_fpga.native_0\;
 \Using_FPGA.Native\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"9669699600000000"
@@ -2118,137 +2307,7 @@ begin
       I3 => Res,
       I4 => \Using_FPGA.Native_1\,
       I5 => Enable_ECC,
-      O => \^using_fpga.native_0\
-    );
-\Using_FPGA.Native_i_1__13\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FEFFFFFFFFFFFFFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \ECC.Syndrome\(1),
-      I2 => \ECC.Syndrome\(2),
-      I3 => \Using_FPGA.Native_4\,
-      I4 => \ECC.Syndrome\(0),
-      I5 => \Using_FPGA.Native_2\,
-      O => S_11
-    );
-\Using_FPGA.Native_i_1__19\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFDFFFFFFFFFFFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \ECC.Syndrome\(1),
-      I2 => \ECC.Syndrome\(2),
-      I3 => \Using_FPGA.Native_3\,
-      I4 => \ECC.Syndrome\(0),
-      I5 => \Using_FPGA.Native_2\,
-      O => S_17
-    );
-\Using_FPGA.Native_i_1__2\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFEFFFFFFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \ECC.Syndrome\(1),
-      I2 => \ECC.Syndrome\(2),
-      I3 => \ECC.Syndrome\(0),
-      I4 => \Using_FPGA.Native_2\,
-      I5 => \Using_FPGA.Native_3\,
-      O => S_0
-    );
-\Using_FPGA.Native_i_1__20\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFF7FFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \ECC.Syndrome\(0),
-      I2 => \Using_FPGA.Native_2\,
-      I3 => \Using_FPGA.Native_4\,
-      I4 => \ECC.Syndrome\(2),
-      I5 => \ECC.Syndrome\(1),
-      O => S_18
-    );
-\Using_FPGA.Native_i_1__21\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFDFFFFFFFFFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \ECC.Syndrome\(1),
-      I2 => \ECC.Syndrome\(2),
-      I3 => \Using_FPGA.Native_4\,
-      I4 => \Using_FPGA.Native_2\,
-      I5 => \ECC.Syndrome\(0),
-      O => S_19
-    );
-\Using_FPGA.Native_i_1__24\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFDFFFFFFFFFFFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \Using_FPGA.Native_4\,
-      I2 => \ECC.Syndrome\(1),
-      I3 => \Using_FPGA.Native_3\,
-      I4 => \ECC.Syndrome\(2),
-      I5 => \ECC.Syndrome\(0),
-      O => S_22
-    );
-\Using_FPGA.Native_i_1__25\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFEFFFFFFFFFFFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \Using_FPGA.Native_4\,
-      I2 => \ECC.Syndrome\(1),
-      I3 => \Using_FPGA.Native_3\,
-      I4 => \ECC.Syndrome\(2),
-      I5 => \ECC.Syndrome\(0),
-      O => S_23
-    );
-\Using_FPGA.Native_i_1__32\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFBFFFFFFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \ECC.Syndrome\(0),
-      I2 => \Using_FPGA.Native_2\,
-      I3 => \Using_FPGA.Native_4\,
-      I4 => \ECC.Syndrome\(2),
-      I5 => \ECC.Syndrome\(1),
-      O => S_30
-    );
-\Using_FPGA.Native_i_1__7\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFFBFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \ECC.Syndrome\(0),
-      I2 => \Using_FPGA.Native_3\,
-      I3 => \ECC.Syndrome\(1),
-      I4 => \ECC.Syndrome\(2),
-      I5 => \Using_FPGA.Native_2\,
-      O => S_5
-    );
-\Using_FPGA.Native_i_1__8\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFBFFFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \ECC.Syndrome\(0),
-      I2 => \Using_FPGA.Native_2\,
-      I3 => \ECC.Syndrome\(2),
-      I4 => \ECC.Syndrome\(1),
-      I5 => \Using_FPGA.Native_4\,
-      O => S_6
+      O => \Using_FPGA.Native_0\
     );
 end STRUCTURE;
 library IEEE;
@@ -2258,29 +2317,18 @@ use UNISIM.VCOMPONENTS.ALL;
 entity \microblaze_ilmb_bram_if_cntlr_2_MB_LUT6__parameterized1_62\ is
   port (
     \Using_FPGA.Native_0\ : out STD_LOGIC;
-    S_20 : out STD_LOGIC;
-    S_21 : out STD_LOGIC;
-    S_24 : out STD_LOGIC;
-    S_25 : out STD_LOGIC;
-    S_26 : out STD_LOGIC;
     BRAM_Din_A : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Handle_32.Decode_Bits.chk2_1\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    Enable_ECC : in STD_LOGIC;
-    \ECC.Syndrome\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \Using_FPGA.Native_1\ : in STD_LOGIC;
-    \Using_FPGA.Native_2\ : in STD_LOGIC;
-    \Using_FPGA.Native_3\ : in STD_LOGIC
+    Enable_ECC : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \microblaze_ilmb_bram_if_cntlr_2_MB_LUT6__parameterized1_62\ : entity is "MB_LUT6";
 end \microblaze_ilmb_bram_if_cntlr_2_MB_LUT6__parameterized1_62\;
 
 architecture STRUCTURE of \microblaze_ilmb_bram_if_cntlr_2_MB_LUT6__parameterized1_62\ is
-  signal \^using_fpga.native_0\ : STD_LOGIC;
   attribute box_type : string;
   attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
 begin
-  \Using_FPGA.Native_0\ <= \^using_fpga.native_0\;
 \Using_FPGA.Native\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"9669699600000000"
@@ -2292,72 +2340,7 @@ begin
       I3 => \Handle_32.Decode_Bits.chk2_1\(1),
       I4 => \Handle_32.Decode_Bits.chk2_1\(2),
       I5 => Enable_ECC,
-      O => \^using_fpga.native_0\
-    );
-\Using_FPGA.Native_i_1__22\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFBFFFFFFFFFFFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \ECC.Syndrome\(0),
-      I2 => \ECC.Syndrome\(1),
-      I3 => \Using_FPGA.Native_1\,
-      I4 => \Using_FPGA.Native_2\,
-      I5 => \ECC.Syndrome\(2),
-      O => S_20
-    );
-\Using_FPGA.Native_i_1__23\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFBFFFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \ECC.Syndrome\(0),
-      I2 => \ECC.Syndrome\(1),
-      I3 => \Using_FPGA.Native_1\,
-      I4 => \ECC.Syndrome\(2),
-      I5 => \Using_FPGA.Native_2\,
-      O => S_21
-    );
-\Using_FPGA.Native_i_1__26\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFBFFFFFFFFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \ECC.Syndrome\(0),
-      I2 => \ECC.Syndrome\(2),
-      I3 => \Using_FPGA.Native_3\,
-      I4 => \ECC.Syndrome\(1),
-      I5 => \Using_FPGA.Native_2\,
-      O => S_24
-    );
-\Using_FPGA.Native_i_1__27\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFFFBF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \ECC.Syndrome\(0),
-      I2 => \ECC.Syndrome\(2),
-      I3 => \Using_FPGA.Native_3\,
-      I4 => \ECC.Syndrome\(1),
-      I5 => \Using_FPGA.Native_1\,
-      O => S_25
-    );
-\Using_FPGA.Native_i_1__28\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFFFBF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \ECC.Syndrome\(0),
-      I2 => \ECC.Syndrome\(2),
-      I3 => \Using_FPGA.Native_3\,
-      I4 => \ECC.Syndrome\(1),
-      I5 => \Using_FPGA.Native_2\,
-      O => S_26
+      O => \Using_FPGA.Native_0\
     );
 end STRUCTURE;
 library IEEE;
@@ -2367,9 +2350,15 @@ use UNISIM.VCOMPONENTS.ALL;
 entity \microblaze_ilmb_bram_if_cntlr_2_MB_LUT6__parameterized1_66\ is
   port (
     \Using_FPGA.Native_0\ : out STD_LOGIC;
-    S_1 : out STD_LOGIC;
-    S_13 : out STD_LOGIC;
+    S_2 : out STD_LOGIC;
+    S_4 : out STD_LOGIC;
+    S_12 : out STD_LOGIC;
+    S_14 : out STD_LOGIC;
+    S_23 : out STD_LOGIC;
+    S_26 : out STD_LOGIC;
     S_28 : out STD_LOGIC;
+    S_29 : out STD_LOGIC;
+    S_30 : out STD_LOGIC;
     BRAM_Din_A : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Handle_32.Decode_Bits.chk1_1\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     Enable_ECC : in STD_LOGIC;
@@ -2400,44 +2389,122 @@ begin
       I5 => Enable_ECC,
       O => \^using_fpga.native_0\
     );
-\Using_FPGA.Native_i_1__15\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__14\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFFFFFBFFF"
+      INIT => X"FFFFFFF7FFFFFFFF"
     )
         port map (
       I0 => \^using_fpga.native_0\,
       I1 => \ECC.Syndrome\(0),
-      I2 => \Using_FPGA.Native_1\,
-      I3 => \Using_FPGA.Native_2\,
-      I4 => \ECC.Syndrome\(1),
-      I5 => \ECC.Syndrome\(2),
-      O => S_13
-    );
-\Using_FPGA.Native_i_1__3\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFBFFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \ECC.Syndrome\(0),
-      I2 => \Using_FPGA.Native_1\,
+      I2 => \ECC.Syndrome\(1),
       I3 => \ECC.Syndrome\(2),
-      I4 => \ECC.Syndrome\(1),
-      I5 => \Using_FPGA.Native_2\,
-      O => S_1
+      I4 => \Using_FPGA.Native_2\,
+      I5 => \Using_FPGA.Native_1\,
+      O => S_12
+    );
+\Using_FPGA.Native_i_1__16\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFF7FFFFFFFF"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_FPGA.Native_2\,
+      I2 => \ECC.Syndrome\(1),
+      I3 => \ECC.Syndrome\(2),
+      I4 => \Using_FPGA.Native_1\,
+      I5 => \ECC.Syndrome\(0),
+      O => S_14
+    );
+\Using_FPGA.Native_i_1__25\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F7FFFFFFFFFFFFFF"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_FPGA.Native_2\,
+      I2 => \ECC.Syndrome\(1),
+      I3 => \ECC.Syndrome\(0),
+      I4 => \Using_FPGA.Native_1\,
+      I5 => \ECC.Syndrome\(2),
+      O => S_23
+    );
+\Using_FPGA.Native_i_1__28\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFF7FFFFFFFFFFFF"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \ECC.Syndrome\(0),
+      I2 => \Using_FPGA.Native_2\,
+      I3 => \ECC.Syndrome\(1),
+      I4 => \Using_FPGA.Native_1\,
+      I5 => \ECC.Syndrome\(2),
+      O => S_26
     );
 \Using_FPGA.Native_i_1__30\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFDFFFFFFFFFFFFF"
+      INIT => X"FFFFFFF7FFFFFFFF"
     )
         port map (
       I0 => \^using_fpga.native_0\,
-      I1 => \Using_FPGA.Native_1\,
-      I2 => \ECC.Syndrome\(0),
+      I1 => \ECC.Syndrome\(1),
+      I2 => \ECC.Syndrome\(2),
+      I3 => \Using_FPGA.Native_1\,
+      I4 => \Using_FPGA.Native_2\,
+      I5 => \ECC.Syndrome\(0),
+      O => S_28
+    );
+\Using_FPGA.Native_i_1__31\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFF7FFFFFFFFFFFF"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_FPGA.Native_2\,
+      I2 => \ECC.Syndrome\(2),
       I3 => \ECC.Syndrome\(1),
+      I4 => \Using_FPGA.Native_1\,
+      I5 => \ECC.Syndrome\(0),
+      O => S_29
+    );
+\Using_FPGA.Native_i_1__32\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFF7FFFFFFFFFFFF"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \Using_FPGA.Native_2\,
+      I2 => \Using_FPGA.Native_1\,
+      I3 => \ECC.Syndrome\(1),
+      I4 => \ECC.Syndrome\(0),
+      I5 => \ECC.Syndrome\(2),
+      O => S_30
+    );
+\Using_FPGA.Native_i_1__4\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFF7FFFFFFFF"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \ECC.Syndrome\(2),
+      I2 => \ECC.Syndrome\(1),
+      I3 => \Using_FPGA.Native_1\,
+      I4 => \Using_FPGA.Native_2\,
+      I5 => \ECC.Syndrome\(0),
+      O => S_2
+    );
+\Using_FPGA.Native_i_1__6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFFFFFFFFFFFFFF7"
+    )
+        port map (
+      I0 => \^using_fpga.native_0\,
+      I1 => \ECC.Syndrome\(0),
+      I2 => \ECC.Syndrome\(1),
+      I3 => \Using_FPGA.Native_1\,
       I4 => \Using_FPGA.Native_2\,
       I5 => \ECC.Syndrome\(2),
-      O => S_28
+      O => S_4
     );
 end STRUCTURE;
 library IEEE;
@@ -2447,36 +2514,20 @@ use UNISIM.VCOMPONENTS.ALL;
 entity \microblaze_ilmb_bram_if_cntlr_2_MB_LUT6__parameterized1_70\ is
   port (
     \Using_FPGA.Native_0\ : out STD_LOGIC;
-    \Handle_32.Decode_Bits.ue_i_03_out\ : out STD_LOGIC;
-    S_9 : out STD_LOGIC;
-    S_14 : out STD_LOGIC;
-    S_16 : out STD_LOGIC;
     BRAM_Din_A : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Using_FPGA.Native_1\ : in STD_LOGIC;
     \Using_FPGA.Native_2\ : in STD_LOGIC;
     Res : in STD_LOGIC;
-    Enable_ECC : in STD_LOGIC;
-    \Using_FPGA.Native_3\ : in STD_LOGIC;
-    UE_Q : in STD_LOGIC;
-    \ECC.Syndrome\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \Using_FPGA.Native_4\ : in STD_LOGIC;
-    \Using_FPGA.Native_5\ : in STD_LOGIC;
-    \Using_FPGA.Native_6\ : in STD_LOGIC;
-    \Using_FPGA.Native_7\ : in STD_LOGIC;
-    \Using_FPGA.Native_8\ : in STD_LOGIC;
-    \Using_FPGA.Native_9\ : in STD_LOGIC
+    Enable_ECC : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \microblaze_ilmb_bram_if_cntlr_2_MB_LUT6__parameterized1_70\ : entity is "MB_LUT6";
 end \microblaze_ilmb_bram_if_cntlr_2_MB_LUT6__parameterized1_70\;
 
 architecture STRUCTURE of \microblaze_ilmb_bram_if_cntlr_2_MB_LUT6__parameterized1_70\ is
-  signal \^using_fpga.native_0\ : STD_LOGIC;
-  signal \Using_FPGA.Native_i_3_n_0\ : STD_LOGIC;
   attribute box_type : string;
   attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
 begin
-  \Using_FPGA.Native_0\ <= \^using_fpga.native_0\;
 \Using_FPGA.Native\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"9669699600000000"
@@ -2488,71 +2539,7 @@ begin
       I3 => \Using_FPGA.Native_2\,
       I4 => Res,
       I5 => Enable_ECC,
-      O => \^using_fpga.native_0\
-    );
-\Using_FPGA.Native_i_1\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AAAAAAAAAAAAAAA8"
-    )
-        port map (
-      I0 => Enable_ECC,
-      I1 => \Using_FPGA.Native_i_3_n_0\,
-      I2 => \Using_FPGA.Native_3\,
-      I3 => UE_Q,
-      I4 => \ECC.Syndrome\(1),
-      I5 => \Using_FPGA.Native_4\,
-      O => \Handle_32.Decode_Bits.ue_i_03_out\
-    );
-\Using_FPGA.Native_i_1__11\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFFBFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \ECC.Syndrome\(1),
-      I2 => \Using_FPGA.Native_9\,
-      I3 => \ECC.Syndrome\(0),
-      I4 => \ECC.Syndrome\(2),
-      I5 => \Using_FPGA.Native_3\,
-      O => S_9
-    );
-\Using_FPGA.Native_i_1__16\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFFFFFFFFFFBFFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \ECC.Syndrome\(1),
-      I2 => \ECC.Syndrome\(0),
-      I3 => \Using_FPGA.Native_4\,
-      I4 => \Using_FPGA.Native_9\,
-      I5 => \ECC.Syndrome\(2),
-      O => S_14
-    );
-\Using_FPGA.Native_i_1__18\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFBFFFFFFFFFFFFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \ECC.Syndrome\(0),
-      I2 => \Using_FPGA.Native_4\,
-      I3 => \ECC.Syndrome\(1),
-      I4 => \Using_FPGA.Native_9\,
-      I5 => \ECC.Syndrome\(2),
-      O => S_16
-    );
-\Using_FPGA.Native_i_3\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"BEFFFFBE"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \Using_FPGA.Native_5\,
-      I2 => \Using_FPGA.Native_6\,
-      I3 => \Using_FPGA.Native_7\,
-      I4 => \Using_FPGA.Native_8\,
-      O => \Using_FPGA.Native_i_3_n_0\
+      O => \Using_FPGA.Native_0\
     );
 end STRUCTURE;
 library IEEE;
@@ -2939,8 +2926,6 @@ entity microblaze_ilmb_bram_if_cntlr_2_MB_MUXCY is
     lopt : out STD_LOGIC;
     lopt_1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_MUXCY : entity is "MB_MUXCY";
 end microblaze_ilmb_bram_if_cntlr_2_MB_MUXCY;
 
 architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_MB_MUXCY is
@@ -5014,22 +4999,20 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_ilmb_bram_if_cntlr_2_MB_MUXF7 is
   port (
     Sl_UE : out STD_LOGIC;
-    Enable_ECC : out STD_LOGIC;
     UE : out STD_LOGIC;
+    Enable_ECC : out STD_LOGIC;
     \Using_FPGA.Native_0\ : out STD_LOGIC;
     \ECC.Syndrome\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Handle_32.Decode_Bits.ue_i_03_out\ : in STD_LOGIC;
     \Handle_32.Decode_Bits.ue_i_1\ : in STD_LOGIC;
+    UE_0 : in STD_LOGIC;
     \Using_FPGA.Native_1\ : in STD_LOGIC;
     \ECC.full_word_write_access\ : in STD_LOGIC;
-    UE_0 : in STD_LOGIC;
     lmb_as : in STD_LOGIC;
     \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i\ : in STD_LOGIC;
     \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC;
     UE_Q : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_MUXF7 : entity is "MB_MUXF7";
 end microblaze_ilmb_bram_if_cntlr_2_MB_MUXF7;
 
 architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_MB_MUXF7 is
@@ -5163,116 +5146,60 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_ilmb_bram_if_cntlr_2_MB_MUXF7_31 is
   port (
-    \Using_FPGA.Native_0\ : out STD_LOGIC;
-    S : out STD_LOGIC;
-    S_7 : out STD_LOGIC;
-    S_8 : out STD_LOGIC;
-    S_10 : out STD_LOGIC;
-    S_12 : out STD_LOGIC;
+    Res : out STD_LOGIC;
+    S_22 : out STD_LOGIC;
     S_27 : out STD_LOGIC;
     BRAM_Din_A : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Using_FPGA.Use_MUXF7.result6\ : in STD_LOGIC;
     \Using_FPGA.Use_MUXF7.result6n\ : in STD_LOGIC;
+    \Using_FPGA.Native_0\ : in STD_LOGIC;
+    \ECC.Syndrome\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \Using_FPGA.Native_1\ : in STD_LOGIC;
     \Using_FPGA.Native_2\ : in STD_LOGIC;
-    \ECC.Syndrome\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \Using_FPGA.Native_3\ : in STD_LOGIC;
-    \Using_FPGA.Native_4\ : in STD_LOGIC
+    \Using_FPGA.Native_3\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_MUXF7_31 : entity is "MB_MUXF7";
 end microblaze_ilmb_bram_if_cntlr_2_MB_MUXF7_31;
 
 architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_MB_MUXF7_31 is
-  signal \^using_fpga.native_0\ : STD_LOGIC;
+  signal \^res\ : STD_LOGIC;
   attribute box_type : string;
   attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
 begin
-  \Using_FPGA.Native_0\ <= \^using_fpga.native_0\;
+  Res <= \^res\;
 \Using_FPGA.Native\: unisim.vcomponents.MUXF7
      port map (
       I0 => \Using_FPGA.Use_MUXF7.result6\,
       I1 => \Using_FPGA.Use_MUXF7.result6n\,
-      O => \^using_fpga.native_0\,
+      O => \^res\,
       S => BRAM_Din_A(0)
     );
-\Using_FPGA.Native_i_1__1\: unisim.vcomponents.LUT6
+\Using_FPGA.Native_i_1__24\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFEFFFFFFFFFFFF"
+      INIT => X"FFFFFFF7FFFFFFFF"
     )
         port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \Using_FPGA.Native_1\,
-      I2 => \Using_FPGA.Native_2\,
-      I3 => \ECC.Syndrome\(1),
-      I4 => \ECC.Syndrome\(0),
-      I5 => \Using_FPGA.Native_3\,
-      O => S
-    );
-\Using_FPGA.Native_i_1__10\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFEFFFFFFFFFFFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \Using_FPGA.Native_3\,
-      I2 => \Using_FPGA.Native_2\,
-      I3 => \ECC.Syndrome\(1),
-      I4 => \Using_FPGA.Native_1\,
+      I0 => \^res\,
+      I1 => \Using_FPGA.Native_0\,
+      I2 => \ECC.Syndrome\(1),
+      I3 => \Using_FPGA.Native_1\,
+      I4 => \Using_FPGA.Native_2\,
       I5 => \ECC.Syndrome\(0),
-      O => S_8
-    );
-\Using_FPGA.Native_i_1__12\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFEFFFFFFFFFFFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \Using_FPGA.Native_4\,
-      I2 => \Using_FPGA.Native_3\,
-      I3 => \ECC.Syndrome\(1),
-      I4 => \ECC.Syndrome\(0),
-      I5 => \Using_FPGA.Native_1\,
-      O => S_10
-    );
-\Using_FPGA.Native_i_1__14\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFDFFFFFFFFFFFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \ECC.Syndrome\(1),
-      I2 => \Using_FPGA.Native_1\,
-      I3 => \Using_FPGA.Native_3\,
-      I4 => \ECC.Syndrome\(0),
-      I5 => \Using_FPGA.Native_2\,
-      O => S_12
+      O => S_22
     );
 \Using_FPGA.Native_i_1__29\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFDFFFFFFFFFF"
+      INIT => X"FFFFFFF7FFFFFFFF"
     )
         port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \ECC.Syndrome\(1),
-      I2 => \Using_FPGA.Native_1\,
-      I3 => \Using_FPGA.Native_3\,
-      I4 => \Using_FPGA.Native_2\,
+      I0 => \^res\,
+      I1 => \Using_FPGA.Native_0\,
+      I2 => \ECC.Syndrome\(1),
+      I3 => \Using_FPGA.Native_1\,
+      I4 => \Using_FPGA.Native_3\,
       I5 => \ECC.Syndrome\(0),
       O => S_27
-    );
-\Using_FPGA.Native_i_1__9\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"FFFEFFFFFFFFFFFF"
-    )
-        port map (
-      I0 => \^using_fpga.native_0\,
-      I1 => \Using_FPGA.Native_4\,
-      I2 => \Using_FPGA.Native_2\,
-      I3 => \ECC.Syndrome\(1),
-      I4 => \ECC.Syndrome\(0),
-      I5 => \Using_FPGA.Native_1\,
-      O => S_7
     );
 end STRUCTURE;
 library IEEE;
@@ -5498,24 +5425,35 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8 is
   port (
     Res : out STD_LOGIC;
+    \Handle_32.Decode_Bits.syndrome_3_to_5\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     BRAM_Din_A : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Using_FPGA.Use_MUXF8.result7_1\ : in STD_LOGIC;
-    \Using_FPGA.Use_MUXF8.result7_1n\ : in STD_LOGIC
+    \Using_FPGA.Use_MUXF8.result7_1n\ : in STD_LOGIC;
+    \Using_FPGA.Native_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8 : entity is "MB_MUXF8";
 end microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8;
 
 architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8 is
+  signal \^res\ : STD_LOGIC;
   attribute box_type : string;
   attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
 begin
+  Res <= \^res\;
 \Using_FPGA.Native\: unisim.vcomponents.MUXF8
      port map (
       I0 => \Using_FPGA.Use_MUXF8.result7_1\,
       I1 => \Using_FPGA.Use_MUXF8.result7_1n\,
-      O => Res,
+      O => \^res\,
       S => BRAM_Din_A(0)
+    );
+\Using_FPGA.Native_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => \^res\,
+      I1 => \Using_FPGA.Native_0\,
+      O => \Handle_32.Decode_Bits.syndrome_3_to_5\(0)
     );
 end STRUCTURE;
 library IEEE;
@@ -5525,24 +5463,62 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8_43 is
   port (
     Res : out STD_LOGIC;
+    \Handle_32.Decode_Bits.ue_i_03_out\ : out STD_LOGIC;
     BRAM_Din_A : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Using_FPGA.Use_MUXF8.result7_1\ : in STD_LOGIC;
-    \Using_FPGA.Use_MUXF8.result7_1n\ : in STD_LOGIC
+    \Using_FPGA.Use_MUXF8.result7_1n\ : in STD_LOGIC;
+    Enable_ECC : in STD_LOGIC;
+    UE_Q : in STD_LOGIC;
+    \Using_FPGA.Native_0\ : in STD_LOGIC;
+    \Using_FPGA.Native_1\ : in STD_LOGIC;
+    \Using_FPGA.Native_2\ : in STD_LOGIC;
+    \Using_FPGA.Native_3\ : in STD_LOGIC;
+    \Using_FPGA.Native_4\ : in STD_LOGIC;
+    \Using_FPGA.Native_5\ : in STD_LOGIC;
+    \Using_FPGA.Native_6\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8_43 : entity is "MB_MUXF8";
 end microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8_43;
 
 architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8_43 is
+  signal \Handle_32.Decode_Bits.ue_i_022_in\ : STD_LOGIC;
+  signal \^res\ : STD_LOGIC;
   attribute box_type : string;
   attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
 begin
+  Res <= \^res\;
 \Using_FPGA.Native\: unisim.vcomponents.MUXF8
      port map (
       I0 => \Using_FPGA.Use_MUXF8.result7_1\,
       I1 => \Using_FPGA.Use_MUXF8.result7_1n\,
-      O => Res,
+      O => \^res\,
       S => BRAM_Din_A(0)
+    );
+\Using_FPGA.Native_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAAAAAAAAAAAAAA8"
+    )
+        port map (
+      I0 => Enable_ECC,
+      I1 => UE_Q,
+      I2 => \Handle_32.Decode_Bits.ue_i_022_in\,
+      I3 => \Using_FPGA.Native_0\,
+      I4 => \Using_FPGA.Native_1\,
+      I5 => \Using_FPGA.Native_2\,
+      O => \Handle_32.Decode_Bits.ue_i_03_out\
+    );
+\Using_FPGA.Native_i_3\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"F6FFFFF6"
+    )
+        port map (
+      I0 => \^res\,
+      I1 => \Using_FPGA.Native_3\,
+      I2 => \Using_FPGA.Native_4\,
+      I3 => \Using_FPGA.Native_5\,
+      I4 => \Using_FPGA.Native_6\,
+      O => \Handle_32.Decode_Bits.ue_i_022_in\
     );
 end STRUCTURE;
 library IEEE;
@@ -5552,92 +5528,15 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8_50 is
   port (
     Res : out STD_LOGIC;
-    \Handle_32.Decode_Bits.ue_i_1\ : out STD_LOGIC;
-    p_1_in : out STD_LOGIC;
-    Sl_CE : out STD_LOGIC;
     BRAM_Din_A : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Using_FPGA.Use_MUXF8.result7_1\ : in STD_LOGIC;
-    \Using_FPGA.Use_MUXF8.result7_1n\ : in STD_LOGIC;
-    UE_Q : in STD_LOGIC;
-    \Using_FPGA.Native_0\ : in STD_LOGIC;
-    \ECC.full_word_write_access\ : in STD_LOGIC;
-    \ECC.Syndrome\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    CE_Q : in STD_LOGIC;
-    Sl_CE_0 : in STD_LOGIC;
-    Sl_CE_1 : in STD_LOGIC;
-    Sl_CE_2 : in STD_LOGIC
+    \Using_FPGA.Use_MUXF8.result7_1n\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8_50 : entity is "MB_MUXF8";
 end microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8_50;
 
 architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8_50 is
-  signal \^res\ : STD_LOGIC;
-  signal \^p_1_in\ : STD_LOGIC;
-  attribute box_type : string;
-  attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
-begin
-  Res <= \^res\;
-  p_1_in <= \^p_1_in\;
-Sl_CE_INST_0: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"0000F400"
-    )
-        port map (
-      I0 => \^p_1_in\,
-      I1 => \ECC.Syndrome\(0),
-      I2 => CE_Q,
-      I3 => \Using_FPGA.Native_0\,
-      I4 => \ECC.full_word_write_access\,
-      O => Sl_CE
-    );
-Sl_CE_INST_0_i_1: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"6FF60000"
-    )
-        port map (
-      I0 => \^res\,
-      I1 => Sl_CE_0,
-      I2 => Sl_CE_1,
-      I3 => Sl_CE_2,
-      I4 => \ECC.Syndrome\(1),
-      O => \^p_1_in\
-    );
-\Using_FPGA.Native\: unisim.vcomponents.MUXF8
-     port map (
-      I0 => \Using_FPGA.Use_MUXF8.result7_1\,
-      I1 => \Using_FPGA.Use_MUXF8.result7_1n\,
-      O => \^res\,
-      S => BRAM_Din_A(0)
-    );
-\Using_FPGA.Native_i_2\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"00E0"
-    )
-        port map (
-      I0 => \^p_1_in\,
-      I1 => UE_Q,
-      I2 => \Using_FPGA.Native_0\,
-      I3 => \ECC.full_word_write_access\,
-      O => \Handle_32.Decode_Bits.ue_i_1\
-    );
-end STRUCTURE;
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-library UNISIM;
-use UNISIM.VCOMPONENTS.ALL;
-entity microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8_57 is
-  port (
-    Res : out STD_LOGIC;
-    BRAM_Din_A : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \Using_FPGA.Use_MUXF8.result7_1\ : in STD_LOGIC;
-    \Using_FPGA.Use_MUXF8.result7_1n\ : in STD_LOGIC
-  );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8_57 : entity is "MB_MUXF8";
-end microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8_57;
-
-architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8_57 is
   attribute box_type : string;
   attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
 begin
@@ -5647,6 +5546,118 @@ begin
       I1 => \Using_FPGA.Use_MUXF8.result7_1n\,
       O => Res,
       S => BRAM_Din_A(0)
+    );
+end STRUCTURE;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8_57 is
+  port (
+    Res : out STD_LOGIC;
+    \Handle_32.Decode_Bits.ue_i_1\ : out STD_LOGIC;
+    CE : out STD_LOGIC;
+    p_1_in : out STD_LOGIC;
+    \ECC.RdModifyWr_Modify\ : out STD_LOGIC;
+    \Using_FPGA.Native_0\ : out STD_LOGIC;
+    BRAM_Din_A : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \Using_FPGA.Use_MUXF8.result7_1\ : in STD_LOGIC;
+    \Using_FPGA.Use_MUXF8.result7_1n\ : in STD_LOGIC;
+    Enable_ECC : in STD_LOGIC;
+    UE_Q : in STD_LOGIC;
+    \Using_FPGA.Native_1\ : in STD_LOGIC;
+    \ECC.Syndrome\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \Handle_32.Decode_Bits.syndrome_3_to_5\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    CE_0 : in STD_LOGIC;
+    CE_Q : in STD_LOGIC;
+    CE_1 : in STD_LOGIC;
+    \ECC.full_word_write_access\ : in STD_LOGIC;
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.CE_Q_reg\ : in STD_LOGIC;
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.CE_Q_reg_0\ : in STD_LOGIC;
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i\ : in STD_LOGIC;
+    lmb_as : in STD_LOGIC;
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC
+  );
+  attribute ORIG_REF_NAME : string;
+  attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8_57 : entity is "MB_MUXF8";
+end microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8_57;
+
+architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8_57 is
+  signal \^ecc.rdmodifywr_modify\ : STD_LOGIC;
+  signal \^res\ : STD_LOGIC;
+  signal \^p_1_in\ : STD_LOGIC;
+  attribute box_type : string;
+  attribute box_type of \Using_FPGA.Native\ : label is "PRIMITIVE";
+begin
+  \ECC.RdModifyWr_Modify\ <= \^ecc.rdmodifywr_modify\;
+  Res <= \^res\;
+  p_1_in <= \^p_1_in\;
+CE_INST_0: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"00000000AA200000"
+    )
+        port map (
+      I0 => CE_0,
+      I1 => \^p_1_in\,
+      I2 => \ECC.Syndrome\(0),
+      I3 => CE_Q,
+      I4 => CE_1,
+      I5 => \ECC.full_word_write_access\,
+      O => CE
+    );
+\ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.CE_Q_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F0FFF00040004000"
+    )
+        port map (
+      I0 => \^p_1_in\,
+      I1 => \ECC.Syndrome\(0),
+      I2 => Enable_ECC,
+      I3 => \^ecc.rdmodifywr_modify\,
+      I4 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      I5 => CE_Q,
+      O => \Using_FPGA.Native_0\
+    );
+\ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"8"
+    )
+        port map (
+      I0 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i\,
+      I1 => lmb_as,
+      O => \^ecc.rdmodifywr_modify\
+    );
+Sl_CE_INST_0_i_1: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"60F0F060"
+    )
+        port map (
+      I0 => \^res\,
+      I1 => \Using_FPGA.Native_1\,
+      I2 => \ECC.Syndrome\(1),
+      I3 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.CE_Q_reg\,
+      I4 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.CE_Q_reg_0\,
+      O => \^p_1_in\
+    );
+\Using_FPGA.Native\: unisim.vcomponents.MUXF8
+     port map (
+      I0 => \Using_FPGA.Use_MUXF8.result7_1\,
+      I1 => \Using_FPGA.Use_MUXF8.result7_1n\,
+      O => \^res\,
+      S => BRAM_Din_A(0)
+    );
+\Using_FPGA.Native_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AAAA88888AA88888"
+    )
+        port map (
+      I0 => Enable_ECC,
+      I1 => UE_Q,
+      I2 => \^res\,
+      I3 => \Using_FPGA.Native_1\,
+      I4 => \ECC.Syndrome\(1),
+      I5 => \Handle_32.Decode_Bits.syndrome_3_to_5\(0),
+      O => \Handle_32.Decode_Bits.ue_i_1\
     );
 end STRUCTURE;
 library IEEE;
@@ -5660,8 +5671,6 @@ entity microblaze_ilmb_bram_if_cntlr_2_MB_XORCY is
     corr_c : in STD_LOGIC;
     lopt : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_MB_XORCY : entity is "MB_XORCY";
 end microblaze_ilmb_bram_if_cntlr_2_MB_XORCY;
 
 architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_MB_XORCY is
@@ -6458,8 +6467,6 @@ entity microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit is
     \ECC.Syndrome\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     BRAM_Din_A : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit : entity is "Correct_One_Bit";
 end microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit;
 
 architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit is
@@ -7576,8 +7583,6 @@ entity microblaze_ilmb_bram_if_cntlr_2_Parity is
     Res : out STD_LOGIC;
     BRAM_Din_A : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_Parity : entity is "Parity";
 end microblaze_ilmb_bram_if_cntlr_2_Parity;
 
 architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_Parity is
@@ -7595,27 +7600,12 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_ilmb_bram_if_cntlr_2_ParityEnable is
   port (
     \Using_FPGA.Native\ : out STD_LOGIC;
-    \Handle_32.Decode_Bits.ue_i_03_out\ : out STD_LOGIC;
-    S_9 : out STD_LOGIC;
-    S_14 : out STD_LOGIC;
-    S_16 : out STD_LOGIC;
     BRAM_Din_A : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Using_FPGA.Native_0\ : in STD_LOGIC;
     \Using_FPGA.Native_1\ : in STD_LOGIC;
     Res : in STD_LOGIC;
-    Enable_ECC : in STD_LOGIC;
-    \Using_FPGA.Native_2\ : in STD_LOGIC;
-    UE_Q : in STD_LOGIC;
-    \ECC.Syndrome\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \Using_FPGA.Native_3\ : in STD_LOGIC;
-    \Using_FPGA.Native_4\ : in STD_LOGIC;
-    \Using_FPGA.Native_5\ : in STD_LOGIC;
-    \Using_FPGA.Native_6\ : in STD_LOGIC;
-    \Using_FPGA.Native_7\ : in STD_LOGIC;
-    \Using_FPGA.Native_8\ : in STD_LOGIC
+    Enable_ECC : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_ParityEnable : entity is "ParityEnable";
 end microblaze_ilmb_bram_if_cntlr_2_ParityEnable;
 
 architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_ParityEnable is
@@ -7623,24 +7613,11 @@ begin
 \Using_FPGA.Single_LUT6.XOR6_LUT\: entity work.\microblaze_ilmb_bram_if_cntlr_2_MB_LUT6__parameterized1_70\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(0),
-      \ECC.Syndrome\(2 downto 0) => \ECC.Syndrome\(2 downto 0),
       Enable_ECC => Enable_ECC,
-      \Handle_32.Decode_Bits.ue_i_03_out\ => \Handle_32.Decode_Bits.ue_i_03_out\,
       Res => Res,
-      S_14 => S_14,
-      S_16 => S_16,
-      S_9 => S_9,
-      UE_Q => UE_Q,
       \Using_FPGA.Native_0\ => \Using_FPGA.Native\,
       \Using_FPGA.Native_1\ => \Using_FPGA.Native_0\,
-      \Using_FPGA.Native_2\ => \Using_FPGA.Native_1\,
-      \Using_FPGA.Native_3\ => \Using_FPGA.Native_2\,
-      \Using_FPGA.Native_4\ => \Using_FPGA.Native_3\,
-      \Using_FPGA.Native_5\ => \Using_FPGA.Native_4\,
-      \Using_FPGA.Native_6\ => \Using_FPGA.Native_5\,
-      \Using_FPGA.Native_7\ => \Using_FPGA.Native_6\,
-      \Using_FPGA.Native_8\ => \Using_FPGA.Native_7\,
-      \Using_FPGA.Native_9\ => \Using_FPGA.Native_8\
+      \Using_FPGA.Native_2\ => \Using_FPGA.Native_1\
     );
 end STRUCTURE;
 library IEEE;
@@ -7650,9 +7627,15 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_ilmb_bram_if_cntlr_2_ParityEnable_5 is
   port (
     \Using_FPGA.Native\ : out STD_LOGIC;
-    S_1 : out STD_LOGIC;
-    S_13 : out STD_LOGIC;
+    S_2 : out STD_LOGIC;
+    S_4 : out STD_LOGIC;
+    S_12 : out STD_LOGIC;
+    S_14 : out STD_LOGIC;
+    S_23 : out STD_LOGIC;
+    S_26 : out STD_LOGIC;
     S_28 : out STD_LOGIC;
+    S_29 : out STD_LOGIC;
+    S_30 : out STD_LOGIC;
     BRAM_Din_A : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Handle_32.Decode_Bits.chk1_1\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     Enable_ECC : in STD_LOGIC;
@@ -7672,9 +7655,15 @@ begin
       \ECC.Syndrome\(2 downto 0) => \ECC.Syndrome\(2 downto 0),
       Enable_ECC => Enable_ECC,
       \Handle_32.Decode_Bits.chk1_1\(2 downto 0) => \Handle_32.Decode_Bits.chk1_1\(2 downto 0),
-      S_1 => S_1,
-      S_13 => S_13,
+      S_12 => S_12,
+      S_14 => S_14,
+      S_2 => S_2,
+      S_23 => S_23,
+      S_26 => S_26,
       S_28 => S_28,
+      S_29 => S_29,
+      S_30 => S_30,
+      S_4 => S_4,
       \Using_FPGA.Native_0\ => \Using_FPGA.Native\,
       \Using_FPGA.Native_1\ => \Using_FPGA.Native_0\,
       \Using_FPGA.Native_2\ => \Using_FPGA.Native_1\
@@ -7687,18 +7676,9 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_ilmb_bram_if_cntlr_2_ParityEnable_9 is
   port (
     \Using_FPGA.Native\ : out STD_LOGIC;
-    S_20 : out STD_LOGIC;
-    S_21 : out STD_LOGIC;
-    S_24 : out STD_LOGIC;
-    S_25 : out STD_LOGIC;
-    S_26 : out STD_LOGIC;
     BRAM_Din_A : in STD_LOGIC_VECTOR ( 0 to 0 );
     \Handle_32.Decode_Bits.chk2_1\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    Enable_ECC : in STD_LOGIC;
-    \ECC.Syndrome\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \Using_FPGA.Native_0\ : in STD_LOGIC;
-    \Using_FPGA.Native_1\ : in STD_LOGIC;
-    \Using_FPGA.Native_2\ : in STD_LOGIC
+    Enable_ECC : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_ParityEnable_9 : entity is "ParityEnable";
@@ -7709,18 +7689,9 @@ begin
 \Using_FPGA.Single_LUT6.XOR6_LUT\: entity work.\microblaze_ilmb_bram_if_cntlr_2_MB_LUT6__parameterized1_62\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(0),
-      \ECC.Syndrome\(2 downto 0) => \ECC.Syndrome\(2 downto 0),
       Enable_ECC => Enable_ECC,
       \Handle_32.Decode_Bits.chk2_1\(2 downto 0) => \Handle_32.Decode_Bits.chk2_1\(2 downto 0),
-      S_20 => S_20,
-      S_21 => S_21,
-      S_24 => S_24,
-      S_25 => S_25,
-      S_26 => S_26,
-      \Using_FPGA.Native_0\ => \Using_FPGA.Native\,
-      \Using_FPGA.Native_1\ => \Using_FPGA.Native_0\,
-      \Using_FPGA.Native_2\ => \Using_FPGA.Native_1\,
-      \Using_FPGA.Native_3\ => \Using_FPGA.Native_2\
+      \Using_FPGA.Native_0\ => \Using_FPGA.Native\
     );
 end STRUCTURE;
 library IEEE;
@@ -7730,23 +7701,9 @@ use UNISIM.VCOMPONENTS.ALL;
 entity \microblaze_ilmb_bram_if_cntlr_2_ParityEnable__parameterized2\ is
   port (
     \Using_FPGA.Native\ : out STD_LOGIC;
-    S_0 : out STD_LOGIC;
-    S_5 : out STD_LOGIC;
-    S_6 : out STD_LOGIC;
-    S_11 : out STD_LOGIC;
-    S_17 : out STD_LOGIC;
-    S_18 : out STD_LOGIC;
-    S_19 : out STD_LOGIC;
-    S_22 : out STD_LOGIC;
-    S_23 : out STD_LOGIC;
-    S_30 : out STD_LOGIC;
     Res : in STD_LOGIC;
     \Using_FPGA.Native_0\ : in STD_LOGIC;
-    Enable_ECC : in STD_LOGIC;
-    \ECC.Syndrome\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \Using_FPGA.Native_1\ : in STD_LOGIC;
-    \Using_FPGA.Native_2\ : in STD_LOGIC;
-    \Using_FPGA.Native_3\ : in STD_LOGIC
+    Enable_ECC : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \microblaze_ilmb_bram_if_cntlr_2_ParityEnable__parameterized2\ : entity is "ParityEnable";
@@ -7756,24 +7713,10 @@ architecture STRUCTURE of \microblaze_ilmb_bram_if_cntlr_2_ParityEnable__paramet
 begin
 \Using_FPGA.Single_LUT6.XOR6_LUT\: entity work.\microblaze_ilmb_bram_if_cntlr_2_MB_LUT6__parameterized1\
      port map (
-      \ECC.Syndrome\(2 downto 0) => \ECC.Syndrome\(2 downto 0),
       Enable_ECC => Enable_ECC,
       Res => Res,
-      S_0 => S_0,
-      S_11 => S_11,
-      S_17 => S_17,
-      S_18 => S_18,
-      S_19 => S_19,
-      S_22 => S_22,
-      S_23 => S_23,
-      S_30 => S_30,
-      S_5 => S_5,
-      S_6 => S_6,
       \Using_FPGA.Native_0\ => \Using_FPGA.Native\,
-      \Using_FPGA.Native_1\ => \Using_FPGA.Native_0\,
-      \Using_FPGA.Native_2\ => \Using_FPGA.Native_1\,
-      \Using_FPGA.Native_3\ => \Using_FPGA.Native_2\,
-      \Using_FPGA.Native_4\ => \Using_FPGA.Native_3\
+      \Using_FPGA.Native_1\ => \Using_FPGA.Native_0\
     );
 end STRUCTURE;
 library IEEE;
@@ -7850,10 +7793,10 @@ entity microblaze_ilmb_bram_if_cntlr_2_Parity_136 is
     \Using_FPGA.Native\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     Q : in STD_LOGIC_VECTOR ( 2 downto 0 );
     LMB_WriteDBus : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     LMB_BE : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 0 to 0 );
-    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC
+    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC;
+    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_Parity_136 : entity is "Parity";
@@ -7870,8 +7813,8 @@ begin
       LMB_WriteDBus(2 downto 0) => LMB_WriteDBus(2 downto 0),
       Q(2 downto 0) => Q(2 downto 0),
       \Using_FPGA.Native_0\(0) => \Using_FPGA.Native\(0),
-      \Using_FPGA.Native_1\(2 downto 0) => \Using_FPGA.Native_0\(2 downto 0),
-      \Using_FPGA.Native_2\(0) => \Using_FPGA.Native_1\(0)
+      \Using_FPGA.Native_1\(0) => \Using_FPGA.Native_0\(0),
+      \Using_FPGA.Native_2\(2 downto 0) => \Using_FPGA.Native_1\(2 downto 0)
     );
 end STRUCTURE;
 library IEEE;
@@ -7923,25 +7866,36 @@ use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_ilmb_bram_if_cntlr_2_Parity_19 is
   port (
     \ECC.Syndrome\ : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CE : out STD_LOGIC;
-    \ECC.RdModifyWr_Modify\ : out STD_LOGIC;
-    S_4 : out STD_LOGIC;
-    S_29 : out STD_LOGIC;
-    \Using_FPGA.Native\ : out STD_LOGIC;
+    Sl_CE : out STD_LOGIC;
+    S_0 : out STD_LOGIC;
+    S_1 : out STD_LOGIC;
+    S_5 : out STD_LOGIC;
+    S_6 : out STD_LOGIC;
+    S_7 : out STD_LOGIC;
+    S_8 : out STD_LOGIC;
+    S_9 : out STD_LOGIC;
+    S_10 : out STD_LOGIC;
+    S_11 : out STD_LOGIC;
+    S_13 : out STD_LOGIC;
+    S_15 : out STD_LOGIC;
+    S_16 : out STD_LOGIC;
+    S_17 : out STD_LOGIC;
+    S_18 : out STD_LOGIC;
+    S_19 : out STD_LOGIC;
+    S_20 : out STD_LOGIC;
+    S_21 : out STD_LOGIC;
+    S_24 : out STD_LOGIC;
+    S_25 : out STD_LOGIC;
     \Handle_32.Decode_Bits.chk6_1\ : in STD_LOGIC_VECTOR ( 0 to 5 );
-    CE_0 : in STD_LOGIC;
     \ECC.full_word_write_access\ : in STD_LOGIC;
-    CE_1 : in STD_LOGIC;
+    Sl_CE_0 : in STD_LOGIC;
     CE_Q : in STD_LOGIC;
     p_1_in : in STD_LOGIC;
-    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i\ : in STD_LOGIC;
-    lmb_as : in STD_LOGIC;
-    \Using_FPGA.Native_0\ : in STD_LOGIC;
-    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \Using_FPGA.Native\ : in STD_LOGIC;
+    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \Using_FPGA.Native_1\ : in STD_LOGIC;
     \Using_FPGA.Native_2\ : in STD_LOGIC;
-    \Using_FPGA.Native_3\ : in STD_LOGIC;
-    Enable_ECC : in STD_LOGIC;
-    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC
+    \Using_FPGA.Native_3\ : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_Parity_19 : entity is "Parity";
@@ -7951,25 +7905,36 @@ architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_Parity_19 is
 begin
 \Using_FPGA.Single_LUT6.XOR6_LUT\: entity work.microblaze_ilmb_bram_if_cntlr_2_MB_LUT6
      port map (
-      CE => CE,
-      CE_0 => CE_0,
-      CE_1 => CE_1,
       CE_Q => CE_Q,
-      \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i\ => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i\,
-      \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      \ECC.RdModifyWr_Modify\ => \ECC.RdModifyWr_Modify\,
       \ECC.full_word_write_access\ => \ECC.full_word_write_access\,
-      Enable_ECC => Enable_ECC,
       \Handle_32.Decode_Bits.chk6_1\(0 to 5) => \Handle_32.Decode_Bits.chk6_1\(0 to 5),
-      S_29 => S_29,
-      S_4 => S_4,
+      S_0 => S_0,
+      S_1 => S_1,
+      S_10 => S_10,
+      S_11 => S_11,
+      S_13 => S_13,
+      S_15 => S_15,
+      S_16 => S_16,
+      S_17 => S_17,
+      S_18 => S_18,
+      S_19 => S_19,
+      S_20 => S_20,
+      S_21 => S_21,
+      S_24 => S_24,
+      S_25 => S_25,
+      S_5 => S_5,
+      S_6 => S_6,
+      S_7 => S_7,
+      S_8 => S_8,
+      S_9 => S_9,
+      Sl_CE => Sl_CE,
+      Sl_CE_0 => Sl_CE_0,
       \Using_FPGA.Native_0\ => \ECC.Syndrome\(0),
       \Using_FPGA.Native_1\ => \Using_FPGA.Native\,
-      \Using_FPGA.Native_2\ => \Using_FPGA.Native_0\,
-      \Using_FPGA.Native_3\(1 downto 0) => \Using_FPGA.Native_1\(1 downto 0),
+      \Using_FPGA.Native_2\(1 downto 0) => \Using_FPGA.Native_0\(1 downto 0),
+      \Using_FPGA.Native_3\ => \Using_FPGA.Native_1\,
       \Using_FPGA.Native_4\ => \Using_FPGA.Native_2\,
       \Using_FPGA.Native_5\ => \Using_FPGA.Native_3\,
-      lmb_as => lmb_as,
       p_1_in => p_1_in
     );
 end STRUCTURE;
@@ -8105,7 +8070,26 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \microblaze_ilmb_bram_if_cntlr_2_Parity__parameterized2\ is
   port (
+    \Handle_32.Decode_Bits.ue_i_1\ : out STD_LOGIC;
     Res : out STD_LOGIC;
+    CE : out STD_LOGIC;
+    p_1_in : out STD_LOGIC;
+    \ECC.RdModifyWr_Modify\ : out STD_LOGIC;
+    \Using_FPGA.Native\ : out STD_LOGIC;
+    Enable_ECC : in STD_LOGIC;
+    UE_Q : in STD_LOGIC;
+    \Using_FPGA.Native_0\ : in STD_LOGIC;
+    \ECC.Syndrome\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \Handle_32.Decode_Bits.syndrome_3_to_5\ : in STD_LOGIC_VECTOR ( 0 to 0 );
+    CE_0 : in STD_LOGIC;
+    CE_Q : in STD_LOGIC;
+    CE_1 : in STD_LOGIC;
+    \ECC.full_word_write_access\ : in STD_LOGIC;
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.CE_Q_reg\ : in STD_LOGIC;
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.CE_Q_reg_0\ : in STD_LOGIC;
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i\ : in STD_LOGIC;
+    lmb_as : in STD_LOGIC;
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC;
     BRAM_Din_A : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -8137,9 +8121,28 @@ begin
 \Using_FPGA.Use_MUXF8.MUXF8_LUT\: entity work.microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8_57
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(0),
+      CE => CE,
+      CE_0 => CE_0,
+      CE_1 => CE_1,
+      CE_Q => CE_Q,
+      \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.CE_Q_reg\ => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.CE_Q_reg\,
+      \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.CE_Q_reg_0\ => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.CE_Q_reg_0\,
+      \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i\ => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i\,
+      \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      \ECC.RdModifyWr_Modify\ => \ECC.RdModifyWr_Modify\,
+      \ECC.Syndrome\(1 downto 0) => \ECC.Syndrome\(1 downto 0),
+      \ECC.full_word_write_access\ => \ECC.full_word_write_access\,
+      Enable_ECC => Enable_ECC,
+      \Handle_32.Decode_Bits.syndrome_3_to_5\(0) => \Handle_32.Decode_Bits.syndrome_3_to_5\(0),
+      \Handle_32.Decode_Bits.ue_i_1\ => \Handle_32.Decode_Bits.ue_i_1\,
       Res => Res,
+      UE_Q => UE_Q,
+      \Using_FPGA.Native_0\ => \Using_FPGA.Native\,
+      \Using_FPGA.Native_1\ => \Using_FPGA.Native_0\,
       \Using_FPGA.Use_MUXF8.result7_1\ => \Using_FPGA.Use_MUXF8.result7_1\,
-      \Using_FPGA.Use_MUXF8.result7_1n\ => \Using_FPGA.Use_MUXF8.result7_1n\
+      \Using_FPGA.Use_MUXF8.result7_1n\ => \Using_FPGA.Use_MUXF8.result7_1n\,
+      lmb_as => lmb_as,
+      p_1_in => p_1_in
     );
 \Using_FPGA.Use_MUXF8.XOR6_LUT1\: entity work.microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_58
      port map (
@@ -8168,18 +8171,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \microblaze_ilmb_bram_if_cntlr_2_Parity__parameterized2_10\ is
   port (
-    \Handle_32.Decode_Bits.ue_i_1\ : out STD_LOGIC;
-    p_1_in : out STD_LOGIC;
-    Sl_CE : out STD_LOGIC;
     Res : out STD_LOGIC;
-    UE_Q : in STD_LOGIC;
-    \Using_FPGA.Native\ : in STD_LOGIC;
-    \ECC.full_word_write_access\ : in STD_LOGIC;
-    \ECC.Syndrome\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    CE_Q : in STD_LOGIC;
-    Sl_CE_0 : in STD_LOGIC;
-    Sl_CE_1 : in STD_LOGIC;
-    Sl_CE_2 : in STD_LOGIC;
     BRAM_Din_A : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -8211,20 +8203,9 @@ begin
 \Using_FPGA.Use_MUXF8.MUXF8_LUT\: entity work.microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8_50
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(0),
-      CE_Q => CE_Q,
-      \ECC.Syndrome\(1 downto 0) => \ECC.Syndrome\(1 downto 0),
-      \ECC.full_word_write_access\ => \ECC.full_word_write_access\,
-      \Handle_32.Decode_Bits.ue_i_1\ => \Handle_32.Decode_Bits.ue_i_1\,
       Res => Res,
-      Sl_CE => Sl_CE,
-      Sl_CE_0 => Sl_CE_0,
-      Sl_CE_1 => Sl_CE_1,
-      Sl_CE_2 => Sl_CE_2,
-      UE_Q => UE_Q,
-      \Using_FPGA.Native_0\ => \Using_FPGA.Native\,
       \Using_FPGA.Use_MUXF8.result7_1\ => \Using_FPGA.Use_MUXF8.result7_1\,
-      \Using_FPGA.Use_MUXF8.result7_1n\ => \Using_FPGA.Use_MUXF8.result7_1n\,
-      p_1_in => p_1_in
+      \Using_FPGA.Use_MUXF8.result7_1n\ => \Using_FPGA.Use_MUXF8.result7_1n\
     );
 \Using_FPGA.Use_MUXF8.XOR6_LUT1\: entity work.microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_51
      port map (
@@ -8253,7 +8234,17 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \microblaze_ilmb_bram_if_cntlr_2_Parity__parameterized2_11\ is
   port (
+    \Handle_32.Decode_Bits.ue_i_03_out\ : out STD_LOGIC;
     Res : out STD_LOGIC;
+    Enable_ECC : in STD_LOGIC;
+    UE_Q : in STD_LOGIC;
+    \Using_FPGA.Native\ : in STD_LOGIC;
+    \Using_FPGA.Native_0\ : in STD_LOGIC;
+    \Using_FPGA.Native_1\ : in STD_LOGIC;
+    \Using_FPGA.Native_2\ : in STD_LOGIC;
+    \Using_FPGA.Native_3\ : in STD_LOGIC;
+    \Using_FPGA.Native_4\ : in STD_LOGIC;
+    \Using_FPGA.Native_5\ : in STD_LOGIC;
     BRAM_Din_A : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -8285,7 +8276,17 @@ begin
 \Using_FPGA.Use_MUXF8.MUXF8_LUT\: entity work.microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8_43
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(0),
+      Enable_ECC => Enable_ECC,
+      \Handle_32.Decode_Bits.ue_i_03_out\ => \Handle_32.Decode_Bits.ue_i_03_out\,
       Res => Res,
+      UE_Q => UE_Q,
+      \Using_FPGA.Native_0\ => \Using_FPGA.Native\,
+      \Using_FPGA.Native_1\ => \Using_FPGA.Native_0\,
+      \Using_FPGA.Native_2\ => \Using_FPGA.Native_1\,
+      \Using_FPGA.Native_3\ => \Using_FPGA.Native_2\,
+      \Using_FPGA.Native_4\ => \Using_FPGA.Native_3\,
+      \Using_FPGA.Native_5\ => \Using_FPGA.Native_4\,
+      \Using_FPGA.Native_6\ => \Using_FPGA.Native_5\,
       \Using_FPGA.Use_MUXF8.result7_1\ => \Using_FPGA.Use_MUXF8.result7_1\,
       \Using_FPGA.Use_MUXF8.result7_1n\ => \Using_FPGA.Use_MUXF8.result7_1n\
     );
@@ -8316,7 +8317,9 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \microblaze_ilmb_bram_if_cntlr_2_Parity__parameterized2_12\ is
   port (
+    \Handle_32.Decode_Bits.syndrome_3_to_5\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     Res : out STD_LOGIC;
+    \Using_FPGA.Native\ : in STD_LOGIC;
     BRAM_Din_A : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -8348,7 +8351,9 @@ begin
 \Using_FPGA.Use_MUXF8.MUXF8_LUT\: entity work.microblaze_ilmb_bram_if_cntlr_2_MB_MUXF8
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(0),
+      \Handle_32.Decode_Bits.syndrome_3_to_5\(0) => \Handle_32.Decode_Bits.syndrome_3_to_5\(0),
       Res => Res,
+      \Using_FPGA.Native_0\ => \Using_FPGA.Native\,
       \Using_FPGA.Use_MUXF8.result7_1\ => \Using_FPGA.Use_MUXF8.result7_1\,
       \Using_FPGA.Use_MUXF8.result7_1n\ => \Using_FPGA.Use_MUXF8.result7_1n\
     );
@@ -8380,13 +8385,12 @@ use UNISIM.VCOMPONENTS.ALL;
 entity \microblaze_ilmb_bram_if_cntlr_2_Parity__parameterized4\ is
   port (
     \ECC.Syndrome\ : out STD_LOGIC_VECTOR ( 0 to 0 );
-    S_2 : out STD_LOGIC;
+    S : out STD_LOGIC;
     S_3 : out STD_LOGIC;
-    S_15 : out STD_LOGIC;
     Res : in STD_LOGIC;
     \Using_FPGA.Native\ : in STD_LOGIC;
-    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    \Using_FPGA.Native_1\ : in STD_LOGIC;
+    \Using_FPGA.Native_0\ : in STD_LOGIC;
+    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
     \Using_FPGA.Native_2\ : in STD_LOGIC;
     \Using_FPGA.Native_3\ : in STD_LOGIC;
     \Using_FPGA.Native_4\ : in STD_LOGIC
@@ -8399,17 +8403,16 @@ architecture STRUCTURE of \microblaze_ilmb_bram_if_cntlr_2_Parity__parameterized
 begin
 \Using_FPGA.Single_LUT6.XOR6_LUT\: entity work.microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_34
      port map (
+      \ECC.Syndrome\(0) => \ECC.Syndrome\(0),
       Res => Res,
-      S_15 => S_15,
-      S_2 => S_2,
+      S => S,
       S_3 => S_3,
-      \Using_FPGA.Native_0\ => \ECC.Syndrome\(0),
-      \Using_FPGA.Native_1\ => \Using_FPGA.Native\,
-      \Using_FPGA.Native_2\(1 downto 0) => \Using_FPGA.Native_0\(1 downto 0),
-      \Using_FPGA.Native_3\ => \Using_FPGA.Native_1\,
-      \Using_FPGA.Native_4\ => \Using_FPGA.Native_2\,
-      \Using_FPGA.Native_5\ => \Using_FPGA.Native_3\,
-      \Using_FPGA.Native_6\ => \Using_FPGA.Native_4\
+      \Using_FPGA.Native_0\ => \Using_FPGA.Native\,
+      \Using_FPGA.Native_1\ => \Using_FPGA.Native_0\,
+      \Using_FPGA.Native_2\(1 downto 0) => \Using_FPGA.Native_1\(1 downto 0),
+      \Using_FPGA.Native_3\ => \Using_FPGA.Native_2\,
+      \Using_FPGA.Native_4\ => \Using_FPGA.Native_3\,
+      \Using_FPGA.Native_5\ => \Using_FPGA.Native_4\
     );
 end STRUCTURE;
 library IEEE;
@@ -8418,16 +8421,12 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity \microblaze_ilmb_bram_if_cntlr_2_Parity__parameterized6\ is
   port (
-    S : out STD_LOGIC;
+    S_22 : out STD_LOGIC;
     Res : out STD_LOGIC;
-    S_7 : out STD_LOGIC;
-    S_8 : out STD_LOGIC;
-    S_10 : out STD_LOGIC;
-    S_12 : out STD_LOGIC;
     S_27 : out STD_LOGIC;
     \Using_FPGA.Native\ : in STD_LOGIC;
-    \Using_FPGA.Native_0\ : in STD_LOGIC;
     \ECC.Syndrome\ : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    \Using_FPGA.Native_0\ : in STD_LOGIC;
     \Using_FPGA.Native_1\ : in STD_LOGIC;
     \Using_FPGA.Native_2\ : in STD_LOGIC;
     BRAM_Din_A : in STD_LOGIC_VECTOR ( 6 downto 0 )
@@ -8444,17 +8443,13 @@ begin
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(0),
       \ECC.Syndrome\(1 downto 0) => \ECC.Syndrome\(1 downto 0),
-      S => S,
-      S_10 => S_10,
-      S_12 => S_12,
+      Res => Res,
+      S_22 => S_22,
       S_27 => S_27,
-      S_7 => S_7,
-      S_8 => S_8,
-      \Using_FPGA.Native_0\ => Res,
-      \Using_FPGA.Native_1\ => \Using_FPGA.Native\,
-      \Using_FPGA.Native_2\ => \Using_FPGA.Native_0\,
-      \Using_FPGA.Native_3\ => \Using_FPGA.Native_1\,
-      \Using_FPGA.Native_4\ => \Using_FPGA.Native_2\,
+      \Using_FPGA.Native_0\ => \Using_FPGA.Native\,
+      \Using_FPGA.Native_1\ => \Using_FPGA.Native_0\,
+      \Using_FPGA.Native_2\ => \Using_FPGA.Native_1\,
+      \Using_FPGA.Native_3\ => \Using_FPGA.Native_2\,
       \Using_FPGA.Use_MUXF7.result6\ => \Using_FPGA.Use_MUXF7.result6\,
       \Using_FPGA.Use_MUXF7.result6n\ => \Using_FPGA.Use_MUXF7.result6n\
     );
@@ -8583,8 +8578,6 @@ entity microblaze_ilmb_bram_if_cntlr_2_XOR18 is
     BRAM_Dout_A : out STD_LOGIC_VECTOR ( 0 to 0 );
     InA : in STD_LOGIC_VECTOR ( 0 to 17 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_XOR18 : entity is "XOR18";
 end microblaze_ilmb_bram_if_cntlr_2_XOR18;
 
 architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_XOR18 is
@@ -8661,10 +8654,10 @@ entity microblaze_ilmb_bram_if_cntlr_2_XOR18_137 is
     BRAM_Dout_A : out STD_LOGIC_VECTOR ( 0 to 0 );
     Q : in STD_LOGIC_VECTOR ( 4 downto 0 );
     LMB_WriteDBus : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    \Using_FPGA.Native\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
     LMB_BE : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    \Using_FPGA.Native\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC;
+    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 4 downto 0 );
     \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 12 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -8719,8 +8712,8 @@ begin
       LMB_WriteDBus(2 downto 0) => LMB_WriteDBus(4 downto 2),
       Q(2 downto 0) => Q(4 downto 2),
       \Using_FPGA.Native_0\(2 downto 0) => \Using_FPGA.Native_1\(12 downto 10),
-      \Using_FPGA.Native_1\(2 downto 0) => \Using_FPGA.Native\(4 downto 2),
-      \Using_FPGA.Native_2\(0) => \Using_FPGA.Native_0\(2),
+      \Using_FPGA.Native_1\(0) => \Using_FPGA.Native\(2),
+      \Using_FPGA.Native_2\(2 downto 0) => \Using_FPGA.Native_0\(4 downto 2),
       \Using_FPGA.xor6_3\ => \Using_FPGA.xor6_3\
     );
 \Using_FPGA.XOR_1st_MUXCY\: entity work.microblaze_ilmb_bram_if_cntlr_2_MB_MUXCY_170
@@ -8751,10 +8744,10 @@ entity microblaze_ilmb_bram_if_cntlr_2_XOR18_138 is
     \Using_FPGA.Native\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     Q : in STD_LOGIC_VECTOR ( 7 downto 0 );
     LMB_WriteDBus : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     LMB_BE : in STD_LOGIC_VECTOR ( 0 to 3 );
-    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC;
+    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     BRAM_Dout_A : in STD_LOGIC_VECTOR ( 9 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
@@ -8785,8 +8778,8 @@ begin
       LMB_BE(0) => LMB_BE(3),
       LMB_WriteDBus(1 downto 0) => LMB_WriteDBus(1 downto 0),
       Q(1 downto 0) => Q(1 downto 0),
-      \Using_FPGA.Native_0\(1 downto 0) => \Using_FPGA.Native_0\(1 downto 0),
-      \Using_FPGA.Native_1\(0) => \Using_FPGA.Native_1\(0),
+      \Using_FPGA.Native_0\(0) => \Using_FPGA.Native_0\(0),
+      \Using_FPGA.Native_1\(1 downto 0) => \Using_FPGA.Native_1\(1 downto 0),
       \Using_FPGA.xor6_1\ => \Using_FPGA.xor6_1\
     );
 \Using_FPGA.XOR6_2_LUT\: entity work.microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_162
@@ -8798,8 +8791,8 @@ begin
       LMB_BE(0) => LMB_BE(2),
       LMB_WriteDBus(1 downto 0) => LMB_WriteDBus(3 downto 2),
       Q(1 downto 0) => Q(3 downto 2),
-      \Using_FPGA.Native_0\(1 downto 0) => \Using_FPGA.Native_0\(3 downto 2),
-      \Using_FPGA.Native_1\(1 downto 0) => \Using_FPGA.Native_1\(2 downto 1),
+      \Using_FPGA.Native_0\(1 downto 0) => \Using_FPGA.Native_0\(2 downto 1),
+      \Using_FPGA.Native_1\(1 downto 0) => \Using_FPGA.Native_1\(3 downto 2),
       \Using_FPGA.xor6_2\ => \Using_FPGA.xor6_2\
     );
 \Using_FPGA.XOR6_3_LUT\: entity work.microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_163
@@ -8811,8 +8804,8 @@ begin
       LMB_BE(0) => LMB_BE(1),
       LMB_WriteDBus(3 downto 0) => LMB_WriteDBus(7 downto 4),
       Q(3 downto 0) => Q(7 downto 4),
-      \Using_FPGA.Native_0\(3 downto 0) => \Using_FPGA.Native_0\(7 downto 4),
-      \Using_FPGA.Native_1\(1 downto 0) => \Using_FPGA.Native_1\(3 downto 2),
+      \Using_FPGA.Native_0\(1 downto 0) => \Using_FPGA.Native_0\(3 downto 2),
+      \Using_FPGA.Native_1\(3 downto 0) => \Using_FPGA.Native_1\(7 downto 4),
       \Using_FPGA.xor6_3\ => \Using_FPGA.xor6_3\
     );
 \Using_FPGA.XOR_1st_MUXCY\: entity work.microblaze_ilmb_bram_if_cntlr_2_MB_MUXCY_164
@@ -8839,16 +8832,17 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_ilmb_bram_if_cntlr_2_XOR18_139 is
   port (
-    InA : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    BRAM_Dout_A : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    InA : out STD_LOGIC_VECTOR ( 3 downto 0 );
     \Using_FPGA.Native\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     Q : in STD_LOGIC_VECTOR ( 7 downto 0 );
     LMB_WriteDBus : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     LMB_BE : in STD_LOGIC_VECTOR ( 0 to 3 );
-    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC;
+    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \Using_FPGA.Native_2\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    BRAM_Dout_A : in STD_LOGIC_VECTOR ( 2 downto 0 )
+    \Using_FPGA.Native_3\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_XOR18_139 : entity is "XOR18";
@@ -8872,8 +8866,8 @@ begin
     );
 \Using_FPGA.XOR6_1_LUT\: entity work.microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_155
      port map (
+      BRAM_Dout_A(0) => BRAM_Dout_A(0),
       \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      InA(0) => InA(0),
       LMB_BE(0) => LMB_BE(3),
       LMB_WriteDBus(0) => LMB_WriteDBus(0),
       Q(0) => Q(0),
@@ -8884,27 +8878,29 @@ begin
     );
 \Using_FPGA.XOR6_2_LUT\: entity work.microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_156
      port map (
+      BRAM_Dout_A(1 downto 0) => BRAM_Dout_A(2 downto 1),
       \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      InA(3 downto 0) => InA(4 downto 1),
+      InA(1 downto 0) => InA(1 downto 0),
       LMB_BE(1) => LMB_BE(1),
       LMB_BE(0) => LMB_BE(2),
       LMB_WriteDBus(3 downto 0) => LMB_WriteDBus(4 downto 1),
       Q(3 downto 0) => Q(4 downto 1),
       \Using_FPGA.Native_0\(1 downto 0) => \Using_FPGA.Native_2\(3 downto 2),
-      \Using_FPGA.Native_1\(3 downto 0) => \Using_FPGA.Native_0\(4 downto 1),
-      \Using_FPGA.Native_2\(1 downto 0) => \Using_FPGA.Native_1\(2 downto 1),
+      \Using_FPGA.Native_1\(1 downto 0) => \Using_FPGA.Native_0\(2 downto 1),
+      \Using_FPGA.Native_2\(3 downto 0) => \Using_FPGA.Native_1\(4 downto 1),
       \Using_FPGA.xor6_2\ => \Using_FPGA.xor6_2\
     );
 \Using_FPGA.XOR6_3_LUT\: entity work.microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_157
      port map (
-      BRAM_Dout_A(2 downto 0) => BRAM_Dout_A(2 downto 0),
+      BRAM_Dout_A(0) => BRAM_Dout_A(3),
       \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      InA(2 downto 0) => InA(7 downto 5),
+      InA(1 downto 0) => InA(3 downto 2),
       LMB_BE(0) => LMB_BE(0),
       LMB_WriteDBus(2 downto 0) => LMB_WriteDBus(7 downto 5),
       Q(2 downto 0) => Q(7 downto 5),
-      \Using_FPGA.Native_0\(2 downto 0) => \Using_FPGA.Native_0\(7 downto 5),
-      \Using_FPGA.Native_1\(0) => \Using_FPGA.Native_1\(3),
+      \Using_FPGA.Native_0\(2 downto 0) => \Using_FPGA.Native_3\(2 downto 0),
+      \Using_FPGA.Native_1\(0) => \Using_FPGA.Native_0\(3),
+      \Using_FPGA.Native_2\(2 downto 0) => \Using_FPGA.Native_1\(7 downto 5),
       \Using_FPGA.xor6_3\ => \Using_FPGA.xor6_3\
     );
 \Using_FPGA.XOR_1st_MUXCY\: entity work.microblaze_ilmb_bram_if_cntlr_2_MB_MUXCY_158
@@ -8931,16 +8927,18 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity microblaze_ilmb_bram_if_cntlr_2_XOR18_140 is
   port (
-    InA : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q_reg[18]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    BRAM_Dout_A : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    InA : out STD_LOGIC_VECTOR ( 1 downto 0 );
     \Using_FPGA.Native\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     Q : in STD_LOGIC_VECTOR ( 7 downto 0 );
     LMB_WriteDBus : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     LMB_BE : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC;
+    \Using_FPGA.Native_1\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \Using_FPGA.Native_2\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    BRAM_Dout_A : in STD_LOGIC_VECTOR ( 2 downto 0 )
+    \Using_FPGA.Native_3\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_XOR18_140 : entity is "XOR18";
@@ -8965,7 +8963,7 @@ begin
 \Using_FPGA.XOR6_1_LUT\: entity work.microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_149
      port map (
       \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      InA(1 downto 0) => InA(1 downto 0),
+      \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q_reg[23]\(1 downto 0) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q_reg[18]\(1 downto 0),
       LMB_BE(1 downto 0) => LMB_BE(1 downto 0),
       LMB_WriteDBus(1 downto 0) => LMB_WriteDBus(1 downto 0),
       Q(1 downto 0) => Q(1 downto 0),
@@ -8976,26 +8974,30 @@ begin
     );
 \Using_FPGA.XOR6_2_LUT\: entity work.microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_150
      port map (
+      BRAM_Dout_A(0) => BRAM_Dout_A(0),
       \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      InA(2 downto 0) => InA(4 downto 2),
+      \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q_reg[18]\(1 downto 0) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q_reg[18]\(3 downto 2),
       LMB_BE(0) => LMB_BE(1),
       LMB_WriteDBus(2 downto 0) => LMB_WriteDBus(4 downto 2),
       Q(2 downto 0) => Q(4 downto 2),
-      \Using_FPGA.Native_0\(2 downto 0) => \Using_FPGA.Native_2\(3 downto 1),
-      \Using_FPGA.Native_1\(2 downto 0) => \Using_FPGA.Native_0\(4 downto 2),
-      \Using_FPGA.Native_2\(0) => \Using_FPGA.Native_1\(1),
+      \Using_FPGA.Native_0\(1 downto 0) => \Using_FPGA.Native_3\(1 downto 0),
+      \Using_FPGA.Native_1\(0) => \Using_FPGA.Native_2\(1),
+      \Using_FPGA.Native_2\(0) => \Using_FPGA.Native_0\(1),
+      \Using_FPGA.Native_3\(2 downto 0) => \Using_FPGA.Native_1\(4 downto 2),
       \Using_FPGA.xor6_2\ => \Using_FPGA.xor6_2\
     );
 \Using_FPGA.XOR6_3_LUT\: entity work.microblaze_ilmb_bram_if_cntlr_2_MB_LUT6_151
      port map (
-      BRAM_Dout_A(2 downto 0) => BRAM_Dout_A(2 downto 0),
+      BRAM_Dout_A(0) => BRAM_Dout_A(1),
       \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      InA(2 downto 0) => InA(7 downto 5),
+      InA(1 downto 0) => InA(1 downto 0),
       LMB_BE(0) => LMB_BE(2),
       LMB_WriteDBus(2 downto 0) => LMB_WriteDBus(7 downto 5),
       Q(2 downto 0) => Q(7 downto 5),
-      \Using_FPGA.Native_0\(2 downto 0) => \Using_FPGA.Native_0\(7 downto 5),
-      \Using_FPGA.Native_1\(0) => \Using_FPGA.Native_1\(2),
+      \Using_FPGA.Native_0\(0) => \Using_FPGA.Native_3\(2),
+      \Using_FPGA.Native_1\(1 downto 0) => \Using_FPGA.Native_2\(3 downto 2),
+      \Using_FPGA.Native_2\(0) => \Using_FPGA.Native_0\(2),
+      \Using_FPGA.Native_3\(2 downto 0) => \Using_FPGA.Native_1\(7 downto 5),
       \Using_FPGA.xor6_3\ => \Using_FPGA.xor6_3\
     );
 \Using_FPGA.XOR_1st_MUXCY\: entity work.microblaze_ilmb_bram_if_cntlr_2_MB_MUXCY_152
@@ -9126,16 +9128,14 @@ entity microblaze_ilmb_bram_if_cntlr_2_checkbit_handler is
     \Using_FPGA.Native_1\ : out STD_LOGIC;
     BRAM_Din_A : in STD_LOGIC_VECTOR ( 38 downto 0 );
     UE_Q : in STD_LOGIC;
-    \Using_FPGA.Native_2\ : in STD_LOGIC;
-    \ECC.full_word_write_access\ : in STD_LOGIC;
     UE_0 : in STD_LOGIC;
     CE_Q : in STD_LOGIC;
+    \Using_FPGA.Native_2\ : in STD_LOGIC;
+    \ECC.full_word_write_access\ : in STD_LOGIC;
     \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i\ : in STD_LOGIC;
     lmb_as : in STD_LOGIC;
     \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_checkbit_handler : entity is "checkbit_handler";
 end microblaze_ilmb_bram_if_cntlr_2_checkbit_handler;
 
 architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_checkbit_handler is
@@ -9150,6 +9150,7 @@ architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_checkbit_handler is
   signal \Handle_32.Decode_Bits.chk4_1_0\ : STD_LOGIC;
   signal \Handle_32.Decode_Bits.chk4_1_1\ : STD_LOGIC;
   signal \Handle_32.Decode_Bits.chk6_1\ : STD_LOGIC_VECTOR ( 0 to 5 );
+  signal \Handle_32.Decode_Bits.syndrome_3_to_5\ : STD_LOGIC_VECTOR ( 4 to 4 );
   signal \Handle_32.Decode_Bits.ue_i_03_out\ : STD_LOGIC;
   signal \Handle_32.Decode_Bits.ue_i_1\ : STD_LOGIC;
   signal Res : STD_LOGIC;
@@ -9186,26 +9187,11 @@ begin
 \Handle_32.Decode_Bits.Parity_chk0_4\: entity work.microblaze_ilmb_bram_if_cntlr_2_ParityEnable
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(6),
-      \ECC.Syndrome\(2) => \ECC.Syndrome\(4),
-      \ECC.Syndrome\(1) => \ECC.Syndrome\(5),
-      \ECC.Syndrome\(0) => \ECC.Syndrome\(6),
       Enable_ECC => Enable_ECC,
-      \Handle_32.Decode_Bits.ue_i_03_out\ => \Handle_32.Decode_Bits.ue_i_03_out\,
       Res => Res,
-      S_14 => S_14,
-      S_16 => S_16,
-      S_9 => S_9,
-      UE_Q => UE_Q,
       \Using_FPGA.Native\ => \^using_fpga.native\(3),
       \Using_FPGA.Native_0\ => \Handle_32.Decode_Bits.Parity_chk0_3_n_0\,
-      \Using_FPGA.Native_1\ => \Handle_32.Decode_Bits.Parity_chk0_2_n_0\,
-      \Using_FPGA.Native_2\ => \^using_fpga.native\(2),
-      \Using_FPGA.Native_3\ => \^using_fpga.native\(1),
-      \Using_FPGA.Native_4\ => \Handle_32.Decode_Bits.chk3_1_0\,
-      \Using_FPGA.Native_5\ => \Handle_32.Decode_Bits.chk3_1_1\,
-      \Using_FPGA.Native_6\ => \Handle_32.Decode_Bits.chk4_1_0\,
-      \Using_FPGA.Native_7\ => \Handle_32.Decode_Bits.chk4_1_1\,
-      \Using_FPGA.Native_8\ => \^using_fpga.native\(0)
+      \Using_FPGA.Native_1\ => \Handle_32.Decode_Bits.Parity_chk0_2_n_0\
     );
 \Handle_32.Decode_Bits.Parity_chk1_1\: entity work.microblaze_ilmb_bram_if_cntlr_2_Parity_2
      port map (
@@ -9241,12 +9227,18 @@ begin
       \Handle_32.Decode_Bits.chk1_1\(2) => \Handle_32.Decode_Bits.chk1_1\(0),
       \Handle_32.Decode_Bits.chk1_1\(1) => \Handle_32.Decode_Bits.chk1_1\(1),
       \Handle_32.Decode_Bits.chk1_1\(0) => \Handle_32.Decode_Bits.chk1_1\(2),
-      S_1 => S_1,
-      S_13 => S_13,
+      S_12 => S_12,
+      S_14 => S_14,
+      S_2 => S_2,
+      S_23 => S_23,
+      S_26 => S_26,
       S_28 => S_28,
+      S_29 => S_29,
+      S_30 => S_30,
+      S_4 => S_4,
       \Using_FPGA.Native\ => \^using_fpga.native\(2),
-      \Using_FPGA.Native_0\ => \^using_fpga.native\(1),
-      \Using_FPGA.Native_1\ => \^using_fpga.native\(0)
+      \Using_FPGA.Native_0\ => \^using_fpga.native\(0),
+      \Using_FPGA.Native_1\ => \^using_fpga.native\(1)
     );
 \Handle_32.Decode_Bits.Parity_chk2_1\: entity work.microblaze_ilmb_bram_if_cntlr_2_Parity_6
      port map (
@@ -9270,95 +9262,87 @@ begin
 \Handle_32.Decode_Bits.Parity_chk2_4\: entity work.microblaze_ilmb_bram_if_cntlr_2_ParityEnable_9
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(4),
-      \ECC.Syndrome\(2) => \ECC.Syndrome\(4),
-      \ECC.Syndrome\(1) => \ECC.Syndrome\(5),
-      \ECC.Syndrome\(0) => \ECC.Syndrome\(6),
       Enable_ECC => Enable_ECC,
       \Handle_32.Decode_Bits.chk2_1\(2) => \Handle_32.Decode_Bits.chk2_1\(0),
       \Handle_32.Decode_Bits.chk2_1\(1) => \Handle_32.Decode_Bits.chk2_1\(1),
       \Handle_32.Decode_Bits.chk2_1\(0) => \Handle_32.Decode_Bits.chk2_1\(2),
-      S_20 => S_20,
-      S_21 => S_21,
-      S_24 => S_24,
-      S_25 => S_25,
-      S_26 => S_26,
-      \Using_FPGA.Native\ => \^using_fpga.native\(1),
-      \Using_FPGA.Native_0\ => \^using_fpga.native\(2),
-      \Using_FPGA.Native_1\ => \^using_fpga.native\(0),
-      \Using_FPGA.Native_2\ => \^using_fpga.native\(3)
+      \Using_FPGA.Native\ => \^using_fpga.native\(1)
     );
 \Handle_32.Decode_Bits.Parity_chk3_1\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Parity__parameterized2\
      port map (
       BRAM_Din_A(7 downto 1) => BRAM_Din_A(34 downto 28),
       BRAM_Din_A(0) => BRAM_Din_A(20),
-      Res => \Handle_32.Decode_Bits.chk3_1_1\
+      CE => CE,
+      CE_0 => UE_0,
+      CE_1 => \Using_FPGA.Native_2\,
+      CE_Q => CE_Q,
+      \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.CE_Q_reg\ => \Handle_32.Decode_Bits.chk4_1_0\,
+      \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.CE_Q_reg_0\ => \Handle_32.Decode_Bits.chk4_1_1\,
+      \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i\ => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i\,
+      \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
+      \ECC.RdModifyWr_Modify\ => \ECC.RdModifyWr_Modify\,
+      \ECC.Syndrome\(1) => \ECC.Syndrome\(5),
+      \ECC.Syndrome\(0) => \ECC.Syndrome\(6),
+      \ECC.full_word_write_access\ => \ECC.full_word_write_access\,
+      Enable_ECC => Enable_ECC,
+      \Handle_32.Decode_Bits.syndrome_3_to_5\(0) => \Handle_32.Decode_Bits.syndrome_3_to_5\(4),
+      \Handle_32.Decode_Bits.ue_i_1\ => \Handle_32.Decode_Bits.ue_i_1\,
+      Res => \Handle_32.Decode_Bits.chk3_1_1\,
+      UE_Q => UE_Q,
+      \Using_FPGA.Native\ => \Using_FPGA.Native_0\,
+      \Using_FPGA.Native_0\ => \Handle_32.Decode_Bits.chk3_1_0\,
+      lmb_as => lmb_as,
+      p_1_in => p_1_in
     );
 \Handle_32.Decode_Bits.Parity_chk3_2\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Parity__parameterized2_10\
      port map (
       BRAM_Din_A(7 downto 1) => BRAM_Din_A(19 downto 13),
       BRAM_Din_A(0) => BRAM_Din_A(3),
-      CE_Q => CE_Q,
-      \ECC.Syndrome\(1) => \ECC.Syndrome\(5),
-      \ECC.Syndrome\(0) => \ECC.Syndrome\(6),
-      \ECC.full_word_write_access\ => \ECC.full_word_write_access\,
-      \Handle_32.Decode_Bits.ue_i_1\ => \Handle_32.Decode_Bits.ue_i_1\,
-      Res => \Handle_32.Decode_Bits.chk3_1_0\,
-      Sl_CE => Sl_CE,
-      Sl_CE_0 => \Handle_32.Decode_Bits.chk3_1_1\,
-      Sl_CE_1 => \Handle_32.Decode_Bits.chk4_1_0\,
-      Sl_CE_2 => \Handle_32.Decode_Bits.chk4_1_1\,
-      UE_Q => UE_Q,
-      \Using_FPGA.Native\ => \Using_FPGA.Native_2\,
-      p_1_in => p_1_in
+      Res => \Handle_32.Decode_Bits.chk3_1_0\
     );
 \Handle_32.Decode_Bits.Parity_chk3_3\: entity work.\microblaze_ilmb_bram_if_cntlr_2_ParityEnable__parameterized2\
      port map (
-      \ECC.Syndrome\(2) => \ECC.Syndrome\(4),
-      \ECC.Syndrome\(1) => \ECC.Syndrome\(5),
-      \ECC.Syndrome\(0) => \ECC.Syndrome\(6),
       Enable_ECC => Enable_ECC,
       Res => \Handle_32.Decode_Bits.chk3_1_0\,
-      S_0 => S_0,
-      S_11 => S_11,
-      S_17 => S_17,
-      S_18 => S_18,
-      S_19 => S_19,
-      S_22 => S_22,
-      S_23 => S_23,
-      S_30 => S_30,
-      S_5 => S_5,
-      S_6 => S_6,
       \Using_FPGA.Native\ => \^using_fpga.native\(0),
-      \Using_FPGA.Native_0\ => \Handle_32.Decode_Bits.chk3_1_1\,
-      \Using_FPGA.Native_1\ => \^using_fpga.native\(1),
-      \Using_FPGA.Native_2\ => \^using_fpga.native\(3),
-      \Using_FPGA.Native_3\ => \^using_fpga.native\(2)
+      \Using_FPGA.Native_0\ => \Handle_32.Decode_Bits.chk3_1_1\
     );
 \Handle_32.Decode_Bits.Parity_chk4_1\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Parity__parameterized2_11\
      port map (
       BRAM_Din_A(7 downto 0) => BRAM_Din_A(27 downto 20),
-      Res => \Handle_32.Decode_Bits.chk4_1_1\
+      Enable_ECC => Enable_ECC,
+      \Handle_32.Decode_Bits.ue_i_03_out\ => \Handle_32.Decode_Bits.ue_i_03_out\,
+      Res => \Handle_32.Decode_Bits.chk4_1_1\,
+      UE_Q => UE_Q,
+      \Using_FPGA.Native\ => \^using_fpga.native\(3),
+      \Using_FPGA.Native_0\ => \^using_fpga.native\(1),
+      \Using_FPGA.Native_1\ => \^using_fpga.native\(2),
+      \Using_FPGA.Native_2\ => \Handle_32.Decode_Bits.chk4_1_0\,
+      \Using_FPGA.Native_3\ => \ECC.Syndrome\(5),
+      \Using_FPGA.Native_4\ => \Handle_32.Decode_Bits.chk3_1_0\,
+      \Using_FPGA.Native_5\ => \Handle_32.Decode_Bits.chk3_1_1\
     );
 \Handle_32.Decode_Bits.Parity_chk4_2\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Parity__parameterized2_12\
      port map (
       BRAM_Din_A(7 downto 1) => BRAM_Din_A(19 downto 13),
       BRAM_Din_A(0) => BRAM_Din_A(2),
-      Res => \Handle_32.Decode_Bits.chk4_1_0\
+      \Handle_32.Decode_Bits.syndrome_3_to_5\(0) => \Handle_32.Decode_Bits.syndrome_3_to_5\(4),
+      Res => \Handle_32.Decode_Bits.chk4_1_0\,
+      \Using_FPGA.Native\ => \Handle_32.Decode_Bits.chk4_1_1\
     );
 \Handle_32.Decode_Bits.Parity_chk4_3\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Parity__parameterized4\
      port map (
       \ECC.Syndrome\(0) => \ECC.Syndrome\(4),
       Res => \Handle_32.Decode_Bits.chk4_1_0\,
-      S_15 => S_15,
-      S_2 => S_2,
+      S => S,
       S_3 => S_3,
       \Using_FPGA.Native\ => \Handle_32.Decode_Bits.chk4_1_1\,
-      \Using_FPGA.Native_0\(1) => \ECC.Syndrome\(5),
-      \Using_FPGA.Native_0\(0) => \ECC.Syndrome\(6),
-      \Using_FPGA.Native_1\ => \^using_fpga.native\(0),
-      \Using_FPGA.Native_2\ => \^using_fpga.native\(2),
-      \Using_FPGA.Native_3\ => \^using_fpga.native\(1),
-      \Using_FPGA.Native_4\ => \^using_fpga.native\(3)
+      \Using_FPGA.Native_0\ => \^using_fpga.native\(1),
+      \Using_FPGA.Native_1\(1) => \ECC.Syndrome\(5),
+      \Using_FPGA.Native_1\(0) => \ECC.Syndrome\(6),
+      \Using_FPGA.Native_2\ => \^using_fpga.native\(0),
+      \Using_FPGA.Native_3\ => \^using_fpga.native\(3),
+      \Using_FPGA.Native_4\ => \^using_fpga.native\(2)
     );
 \Handle_32.Decode_Bits.Parity_chk5_1\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Parity__parameterized6\
      port map (
@@ -9367,16 +9351,12 @@ begin
       \ECC.Syndrome\(1) => \ECC.Syndrome\(4),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(6),
       Res => \ECC.Syndrome\(5),
-      S => S,
-      S_10 => S_10,
-      S_12 => S_12,
+      S_22 => S_22,
       S_27 => S_27,
-      S_7 => S_7,
-      S_8 => S_8,
-      \Using_FPGA.Native\ => \^using_fpga.native\(0),
-      \Using_FPGA.Native_0\ => \^using_fpga.native\(1),
-      \Using_FPGA.Native_1\ => \^using_fpga.native\(2),
-      \Using_FPGA.Native_2\ => \^using_fpga.native\(3)
+      \Using_FPGA.Native\ => \^using_fpga.native\(1),
+      \Using_FPGA.Native_0\ => \^using_fpga.native\(0),
+      \Using_FPGA.Native_1\ => \^using_fpga.native\(3),
+      \Using_FPGA.Native_2\ => \^using_fpga.native\(2)
     );
 \Handle_32.Decode_Bits.Parity_chk6_1\: entity work.microblaze_ilmb_bram_if_cntlr_2_Parity_13
      port map (
@@ -9410,26 +9390,37 @@ begin
     );
 \Handle_32.Decode_Bits.Parity_chk6_7\: entity work.microblaze_ilmb_bram_if_cntlr_2_Parity_19
      port map (
-      CE => CE,
-      CE_0 => UE_0,
-      CE_1 => \Using_FPGA.Native_2\,
       CE_Q => CE_Q,
-      \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i\ => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i\,
-      \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      \ECC.RdModifyWr_Modify\ => \ECC.RdModifyWr_Modify\,
       \ECC.Syndrome\(0) => \ECC.Syndrome\(6),
       \ECC.full_word_write_access\ => \ECC.full_word_write_access\,
-      Enable_ECC => Enable_ECC,
       \Handle_32.Decode_Bits.chk6_1\(0 to 5) => \Handle_32.Decode_Bits.chk6_1\(0 to 5),
-      S_29 => S_29,
-      S_4 => S_4,
-      \Using_FPGA.Native\ => \Using_FPGA.Native_0\,
-      \Using_FPGA.Native_0\ => \^using_fpga.native\(1),
-      \Using_FPGA.Native_1\(1) => \ECC.Syndrome\(4),
-      \Using_FPGA.Native_1\(0) => \ECC.Syndrome\(5),
-      \Using_FPGA.Native_2\ => \^using_fpga.native\(0),
+      S_0 => S_0,
+      S_1 => S_1,
+      S_10 => S_10,
+      S_11 => S_11,
+      S_13 => S_13,
+      S_15 => S_15,
+      S_16 => S_16,
+      S_17 => S_17,
+      S_18 => S_18,
+      S_19 => S_19,
+      S_20 => S_20,
+      S_21 => S_21,
+      S_24 => S_24,
+      S_25 => S_25,
+      S_5 => S_5,
+      S_6 => S_6,
+      S_7 => S_7,
+      S_8 => S_8,
+      S_9 => S_9,
+      Sl_CE => Sl_CE,
+      Sl_CE_0 => \Using_FPGA.Native_2\,
+      \Using_FPGA.Native\ => \^using_fpga.native\(1),
+      \Using_FPGA.Native_0\(1) => \ECC.Syndrome\(4),
+      \Using_FPGA.Native_0\(0) => \ECC.Syndrome\(5),
+      \Using_FPGA.Native_1\ => \^using_fpga.native\(0),
+      \Using_FPGA.Native_2\ => \^using_fpga.native\(3),
       \Using_FPGA.Native_3\ => \^using_fpga.native\(2),
-      lmb_as => lmb_as,
       p_1_in => p_1_in
     );
 \Handle_32.Decode_Bits.Use_FPGA.UE_MUXF7\: entity work.microblaze_ilmb_bram_if_cntlr_2_MB_MUXF7
@@ -9459,10 +9450,10 @@ entity \microblaze_ilmb_bram_if_cntlr_2_checkbit_handler__parameterized1\ is
     BRAM_Dout_A : out STD_LOGIC_VECTOR ( 38 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 31 downto 0 );
     LMB_WriteDBus : in STD_LOGIC_VECTOR ( 0 to 31 );
-    \Using_FPGA.Native\ : in STD_LOGIC_VECTOR ( 31 downto 0 );
     LMB_BE : in STD_LOGIC_VECTOR ( 0 to 3 );
-    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC
+    \Using_FPGA.Native\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ : in STD_LOGIC;
+    \Using_FPGA.Native_0\ : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of \microblaze_ilmb_bram_if_cntlr_2_checkbit_handler__parameterized1\ : entity is "checkbit_handler";
@@ -9487,9 +9478,9 @@ begin
       Q(2 downto 1) => Q(5 downto 4),
       Q(0) => Q(2),
       \Using_FPGA.Native\(0) => \^bram_dout_a\(8),
-      \Using_FPGA.Native_0\(2 downto 1) => \Using_FPGA.Native\(5 downto 4),
-      \Using_FPGA.Native_0\(0) => \Using_FPGA.Native\(2),
-      \Using_FPGA.Native_1\(0) => \Using_FPGA.Native_0\(0)
+      \Using_FPGA.Native_0\(0) => \Using_FPGA.Native\(0),
+      \Using_FPGA.Native_1\(2 downto 1) => \Using_FPGA.Native_0\(5 downto 4),
+      \Using_FPGA.Native_1\(0) => \Using_FPGA.Native_0\(2)
     );
 \Handle_32.Encode_Bits.XOR18_I0\: entity work.microblaze_ilmb_bram_if_cntlr_2_XOR18
      port map (
@@ -9535,13 +9526,13 @@ begin
       Q(2) => Q(25),
       Q(1) => Q(18),
       Q(0) => Q(3),
-      \Using_FPGA.Native\(4) => \Using_FPGA.Native\(31),
-      \Using_FPGA.Native\(3) => \Using_FPGA.Native\(28),
-      \Using_FPGA.Native\(2) => \Using_FPGA.Native\(25),
-      \Using_FPGA.Native\(1) => \Using_FPGA.Native\(18),
-      \Using_FPGA.Native\(0) => \Using_FPGA.Native\(3),
-      \Using_FPGA.Native_0\(2 downto 1) => \Using_FPGA.Native_0\(3 downto 2),
-      \Using_FPGA.Native_0\(0) => \Using_FPGA.Native_0\(0),
+      \Using_FPGA.Native\(2 downto 1) => \Using_FPGA.Native\(3 downto 2),
+      \Using_FPGA.Native\(0) => \Using_FPGA.Native\(0),
+      \Using_FPGA.Native_0\(4) => \Using_FPGA.Native_0\(31),
+      \Using_FPGA.Native_0\(3) => \Using_FPGA.Native_0\(28),
+      \Using_FPGA.Native_0\(2) => \Using_FPGA.Native_0\(25),
+      \Using_FPGA.Native_0\(1) => \Using_FPGA.Native_0\(18),
+      \Using_FPGA.Native_0\(0) => \Using_FPGA.Native_0\(3),
       \Using_FPGA.Native_1\(12) => \^bram_dout_a\(36),
       \Using_FPGA.Native_1\(11) => \^bram_dout_a\(33),
       \Using_FPGA.Native_1\(10 downto 9) => \^bram_dout_a\(29 downto 28),
@@ -9580,23 +9571,21 @@ begin
       Q(3 downto 2) => Q(16 downto 15),
       Q(1 downto 0) => Q(1 downto 0),
       \Using_FPGA.Native\(0) => \^bram_dout_a\(4),
-      \Using_FPGA.Native_0\(7 downto 6) => \Using_FPGA.Native\(30 downto 29),
-      \Using_FPGA.Native_0\(5 downto 4) => \Using_FPGA.Native\(23 downto 22),
-      \Using_FPGA.Native_0\(3 downto 2) => \Using_FPGA.Native\(16 downto 15),
-      \Using_FPGA.Native_0\(1 downto 0) => \Using_FPGA.Native\(1 downto 0),
-      \Using_FPGA.Native_1\(3 downto 0) => \Using_FPGA.Native_0\(3 downto 0)
+      \Using_FPGA.Native_0\(3 downto 0) => \Using_FPGA.Native\(3 downto 0),
+      \Using_FPGA.Native_1\(7 downto 6) => \Using_FPGA.Native_0\(30 downto 29),
+      \Using_FPGA.Native_1\(5 downto 4) => \Using_FPGA.Native_0\(23 downto 22),
+      \Using_FPGA.Native_1\(3 downto 2) => \Using_FPGA.Native_0\(16 downto 15),
+      \Using_FPGA.Native_1\(1 downto 0) => \Using_FPGA.Native_0\(1 downto 0)
     );
 \Handle_32.Encode_Bits.XOR18_I3\: entity work.microblaze_ilmb_bram_if_cntlr_2_XOR18_139
      port map (
-      BRAM_Dout_A(2) => \^bram_dout_a\(32),
-      BRAM_Dout_A(1 downto 0) => \^bram_dout_a\(30 downto 29),
+      BRAM_Dout_A(3) => \^bram_dout_a\(31),
+      BRAM_Dout_A(2) => \^bram_dout_a\(28),
+      BRAM_Dout_A(1) => \^bram_dout_a\(16),
+      BRAM_Dout_A(0) => \^bram_dout_a\(13),
       \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      InA(7 downto 6) => \^bram_dout_a\(34 downto 33),
-      InA(5) => \^bram_dout_a\(31),
-      InA(4) => \^bram_dout_a\(28),
-      InA(3 downto 2) => \^bram_dout_a\(19 downto 18),
-      InA(1) => \^bram_dout_a\(16),
-      InA(0) => \^bram_dout_a\(13),
+      InA(3 downto 2) => \^bram_dout_a\(34 downto 33),
+      InA(1 downto 0) => \^bram_dout_a\(19 downto 18),
       LMB_BE(0 to 3) => LMB_BE(0 to 3),
       LMB_WriteDBus(7) => LMB_WriteDBus(4),
       LMB_WriteDBus(6) => LMB_WriteDBus(5),
@@ -9613,27 +9602,28 @@ begin
       Q(1) => Q(9),
       Q(0) => Q(6),
       \Using_FPGA.Native\(0) => \^bram_dout_a\(3),
-      \Using_FPGA.Native_0\(7 downto 6) => \Using_FPGA.Native\(27 downto 26),
-      \Using_FPGA.Native_0\(5) => \Using_FPGA.Native\(24),
-      \Using_FPGA.Native_0\(4) => \Using_FPGA.Native\(21),
-      \Using_FPGA.Native_0\(3 downto 2) => \Using_FPGA.Native\(12 downto 11),
-      \Using_FPGA.Native_0\(1) => \Using_FPGA.Native\(9),
-      \Using_FPGA.Native_0\(0) => \Using_FPGA.Native\(6),
-      \Using_FPGA.Native_1\(3 downto 0) => \Using_FPGA.Native_0\(3 downto 0),
+      \Using_FPGA.Native_0\(3 downto 0) => \Using_FPGA.Native\(3 downto 0),
+      \Using_FPGA.Native_1\(7 downto 6) => \Using_FPGA.Native_0\(27 downto 26),
+      \Using_FPGA.Native_1\(5) => \Using_FPGA.Native_0\(24),
+      \Using_FPGA.Native_1\(4) => \Using_FPGA.Native_0\(21),
+      \Using_FPGA.Native_1\(3 downto 2) => \Using_FPGA.Native_0\(12 downto 11),
+      \Using_FPGA.Native_1\(1) => \Using_FPGA.Native_0\(9),
+      \Using_FPGA.Native_1\(0) => \Using_FPGA.Native_0\(6),
       \Using_FPGA.Native_2\(3) => \^bram_dout_a\(20),
       \Using_FPGA.Native_2\(2) => \^bram_dout_a\(17),
-      \Using_FPGA.Native_2\(1 downto 0) => \^bram_dout_a\(15 downto 14)
+      \Using_FPGA.Native_2\(1 downto 0) => \^bram_dout_a\(15 downto 14),
+      \Using_FPGA.Native_3\(2) => \^bram_dout_a\(32),
+      \Using_FPGA.Native_3\(1 downto 0) => \^bram_dout_a\(30 downto 29)
     );
 \Handle_32.Encode_Bits.XOR18_I4\: entity work.microblaze_ilmb_bram_if_cntlr_2_XOR18_140
      port map (
-      BRAM_Dout_A(2) => \^bram_dout_a\(25),
-      BRAM_Dout_A(1 downto 0) => \^bram_dout_a\(23 downto 22),
+      BRAM_Dout_A(1) => \^bram_dout_a\(24),
+      BRAM_Dout_A(0) => \^bram_dout_a\(21),
       \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\,
-      InA(7 downto 6) => \^bram_dout_a\(27 downto 26),
-      InA(5) => \^bram_dout_a\(24),
-      InA(4 downto 3) => \^bram_dout_a\(21 downto 20),
-      InA(2) => \^bram_dout_a\(17),
-      InA(1 downto 0) => \^bram_dout_a\(15 downto 14),
+      \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q_reg[18]\(3) => \^bram_dout_a\(20),
+      \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q_reg[18]\(2) => \^bram_dout_a\(17),
+      \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q_reg[18]\(1 downto 0) => \^bram_dout_a\(15 downto 14),
+      InA(1 downto 0) => \^bram_dout_a\(27 downto 26),
       LMB_BE(2) => LMB_BE(1),
       LMB_BE(1) => LMB_BE(2),
       LMB_BE(0) => LMB_BE(3),
@@ -9651,15 +9641,19 @@ begin
       Q(2) => Q(10),
       Q(1 downto 0) => Q(8 downto 7),
       \Using_FPGA.Native\(0) => \^bram_dout_a\(2),
-      \Using_FPGA.Native_0\(7 downto 6) => \Using_FPGA.Native\(20 downto 19),
-      \Using_FPGA.Native_0\(5) => \Using_FPGA.Native\(17),
-      \Using_FPGA.Native_0\(4 downto 3) => \Using_FPGA.Native\(14 downto 13),
-      \Using_FPGA.Native_0\(2) => \Using_FPGA.Native\(10),
-      \Using_FPGA.Native_0\(1 downto 0) => \Using_FPGA.Native\(8 downto 7),
-      \Using_FPGA.Native_1\(2 downto 0) => \Using_FPGA.Native_0\(2 downto 0),
-      \Using_FPGA.Native_2\(3 downto 2) => \^bram_dout_a\(19 downto 18),
-      \Using_FPGA.Native_2\(1) => \^bram_dout_a\(16),
-      \Using_FPGA.Native_2\(0) => \^bram_dout_a\(13)
+      \Using_FPGA.Native_0\(2 downto 0) => \Using_FPGA.Native\(2 downto 0),
+      \Using_FPGA.Native_1\(7 downto 6) => \Using_FPGA.Native_0\(20 downto 19),
+      \Using_FPGA.Native_1\(5) => \Using_FPGA.Native_0\(17),
+      \Using_FPGA.Native_1\(4 downto 3) => \Using_FPGA.Native_0\(14 downto 13),
+      \Using_FPGA.Native_1\(2) => \Using_FPGA.Native_0\(10),
+      \Using_FPGA.Native_1\(1 downto 0) => \Using_FPGA.Native_0\(8 downto 7),
+      \Using_FPGA.Native_2\(3) => \^bram_dout_a\(25),
+      \Using_FPGA.Native_2\(2) => \^bram_dout_a\(23),
+      \Using_FPGA.Native_2\(1) => \^bram_dout_a\(19),
+      \Using_FPGA.Native_2\(0) => \^bram_dout_a\(13),
+      \Using_FPGA.Native_3\(2) => \^bram_dout_a\(22),
+      \Using_FPGA.Native_3\(1) => \^bram_dout_a\(18),
+      \Using_FPGA.Native_3\(0) => \^bram_dout_a\(16)
     );
 \Handle_32.Encode_Bits.XOR18_I6\: entity work.microblaze_ilmb_bram_if_cntlr_2_XOR18_141
      port map (
@@ -9835,7 +9829,7 @@ entity microblaze_ilmb_bram_if_cntlr_2_lmb_bram_if_cntlr is
   attribute C_LMB_PROTOCOL : integer;
   attribute C_LMB_PROTOCOL of microblaze_ilmb_bram_if_cntlr_2_lmb_bram_if_cntlr : entity is 0;
   attribute C_MASK : string;
-  attribute C_MASK of microblaze_ilmb_bram_if_cntlr_2_lmb_bram_if_cntlr : entity is "64'b0000000000000000000000000000000000000000000000000000000000000000";
+  attribute C_MASK of microblaze_ilmb_bram_if_cntlr_2_lmb_bram_if_cntlr : entity is "64'b0000000000000000000000000000000001000000000000000000000000000000";
   attribute C_MASK1 : string;
   attribute C_MASK1 of microblaze_ilmb_bram_if_cntlr_2_lmb_bram_if_cntlr : entity is "64'b0000000000000000000000000000000000000000100000000000000000000000";
   attribute C_MASK2 : string;
@@ -9864,8 +9858,6 @@ entity microblaze_ilmb_bram_if_cntlr_2_lmb_bram_if_cntlr is
   attribute C_UE_FAILING_REGISTERS of microblaze_ilmb_bram_if_cntlr_2_lmb_bram_if_cntlr : entity is 0;
   attribute C_WRITE_ACCESS : integer;
   attribute C_WRITE_ACCESS of microblaze_ilmb_bram_if_cntlr_2_lmb_bram_if_cntlr : entity is 2;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_ilmb_bram_if_cntlr_2_lmb_bram_if_cntlr : entity is "lmb_bram_if_cntlr";
 end microblaze_ilmb_bram_if_cntlr_2_lmb_bram_if_cntlr;
 
 architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_lmb_bram_if_cntlr is
@@ -9906,7 +9898,6 @@ architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_lmb_bram_if_cntlr is
   signal \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[8]\ : STD_LOGIC;
   signal \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[9]\ : STD_LOGIC;
   signal \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i\ : STD_LOGIC;
-  signal \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i17_in\ : STD_LOGIC;
   signal \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\ : STD_LOGIC;
   signal \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.lmb_be_q_reg_n_0_[3]\ : STD_LOGIC;
   signal \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\ : STD_LOGIC_VECTOR ( 0 to 31 );
@@ -9919,6 +9910,7 @@ architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_lmb_bram_if_cntlr is
   signal \ECC.checkbit_handler_I1_n_42\ : STD_LOGIC;
   signal \ECC.full_word_write_access\ : STD_LOGIC;
   signal \ECC.full_word_write_access_i_1_n_0\ : STD_LOGIC;
+  signal IsWordWrite : STD_LOGIC;
   signal \^lmb_clk\ : STD_LOGIC;
   signal S : STD_LOGIC;
   signal S_0 : STD_LOGIC;
@@ -9962,42 +9954,42 @@ architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2_lmb_bram_if_cntlr is
   signal p_0_in15_in : STD_LOGIC;
   signal p_0_in9_in : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[0]_INST_0\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[10]_INST_0\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[11]_INST_0\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[12]_INST_0\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[13]_INST_0\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[14]_INST_0\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[15]_INST_0\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[16]_INST_0\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[17]_INST_0\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[18]_INST_0\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[19]_INST_0\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[1]_INST_0\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[20]_INST_0\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[21]_INST_0\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[22]_INST_0\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[23]_INST_0\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[24]_INST_0\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[25]_INST_0\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[26]_INST_0\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[27]_INST_0\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[28]_INST_0\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[29]_INST_0\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[2]_INST_0\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[30]_INST_0\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[31]_INST_0\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[3]_INST_0\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[4]_INST_0\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[5]_INST_0\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[6]_INST_0\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[7]_INST_0\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[8]_INST_0\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \BRAM_Addr_A[9]_INST_0\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of BRAM_EN_A_INST_0 : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \BRAM_WEN_A[4]_INST_0_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \ECC.Sl_Rdy_i_1\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \ECC.full_word_write_access_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[0]_INST_0\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[10]_INST_0\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[11]_INST_0\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[12]_INST_0\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[13]_INST_0\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[14]_INST_0\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[15]_INST_0\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[16]_INST_0\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[17]_INST_0\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[18]_INST_0\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[19]_INST_0\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[1]_INST_0\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[20]_INST_0\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[21]_INST_0\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[22]_INST_0\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[23]_INST_0\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[24]_INST_0\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[25]_INST_0\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[26]_INST_0\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[27]_INST_0\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[28]_INST_0\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[29]_INST_0\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[2]_INST_0\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[30]_INST_0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[31]_INST_0\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[3]_INST_0\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[4]_INST_0\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[5]_INST_0\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[6]_INST_0\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[7]_INST_0\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[8]_INST_0\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \BRAM_Addr_A[9]_INST_0\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of BRAM_EN_A_INST_0 : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \BRAM_WEN_A[4]_INST_0_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \ECC.Sl_Rdy_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \ECC.full_word_write_access_i_1\ : label is "soft_lutpair1";
 begin
   BRAM_Clk_A <= \^lmb_clk\;
   BRAM_Dout_A(0 to 31) <= \^bram_dout_a\(0 to 31);
@@ -10309,322 +10301,322 @@ begin
   \^lmb_clk\ <= LMB_Clk;
 \BRAM_Addr_A[0]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(0),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(0),
+      I1 => LMB_ABus(0),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(0)
     );
 \BRAM_Addr_A[10]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(10),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(10),
+      I1 => LMB_ABus(10),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(10)
     );
 \BRAM_Addr_A[11]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(11),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(11),
+      I1 => LMB_ABus(11),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(11)
     );
 \BRAM_Addr_A[12]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(12),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(12),
+      I1 => LMB_ABus(12),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(12)
     );
 \BRAM_Addr_A[13]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(13),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(13),
+      I1 => LMB_ABus(13),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(13)
     );
 \BRAM_Addr_A[14]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(14),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(14),
+      I1 => LMB_ABus(14),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(14)
     );
 \BRAM_Addr_A[15]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(15),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(15),
+      I1 => LMB_ABus(15),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(15)
     );
 \BRAM_Addr_A[16]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(16),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(16),
+      I1 => LMB_ABus(16),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(16)
     );
 \BRAM_Addr_A[17]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(17),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(17),
+      I1 => LMB_ABus(17),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(17)
     );
 \BRAM_Addr_A[18]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(18),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(18),
+      I1 => LMB_ABus(18),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(18)
     );
 \BRAM_Addr_A[19]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(19),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(19),
+      I1 => LMB_ABus(19),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(19)
     );
 \BRAM_Addr_A[1]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(1),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(1),
+      I1 => LMB_ABus(1),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(1)
     );
 \BRAM_Addr_A[20]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(20),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(20),
+      I1 => LMB_ABus(20),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(20)
     );
 \BRAM_Addr_A[21]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(21),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(21),
+      I1 => LMB_ABus(21),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(21)
     );
 \BRAM_Addr_A[22]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(22),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(22),
+      I1 => LMB_ABus(22),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(22)
     );
 \BRAM_Addr_A[23]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(23),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(23),
+      I1 => LMB_ABus(23),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(23)
     );
 \BRAM_Addr_A[24]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(24),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(24),
+      I1 => LMB_ABus(24),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(24)
     );
 \BRAM_Addr_A[25]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(25),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(25),
+      I1 => LMB_ABus(25),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(25)
     );
 \BRAM_Addr_A[26]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(26),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(26),
+      I1 => LMB_ABus(26),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(26)
     );
 \BRAM_Addr_A[27]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(27),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(27),
+      I1 => LMB_ABus(27),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(27)
     );
 \BRAM_Addr_A[28]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(28),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(28),
+      I1 => LMB_ABus(28),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(28)
     );
 \BRAM_Addr_A[29]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(29),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(29),
+      I1 => LMB_ABus(29),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(29)
     );
 \BRAM_Addr_A[2]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(2),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(2),
+      I1 => LMB_ABus(2),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(2)
     );
 \BRAM_Addr_A[30]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(30),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(30),
+      I1 => LMB_ABus(30),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(30)
     );
 \BRAM_Addr_A[31]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(31),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(31),
+      I1 => LMB_ABus(31),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(31)
     );
 \BRAM_Addr_A[3]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(3),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(3),
+      I1 => LMB_ABus(3),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(3)
     );
 \BRAM_Addr_A[4]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(4),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(4),
+      I1 => LMB_ABus(4),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(4)
     );
 \BRAM_Addr_A[5]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(5),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(5),
+      I1 => LMB_ABus(5),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(5)
     );
 \BRAM_Addr_A[6]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(6),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(6),
+      I1 => LMB_ABus(6),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(6)
     );
 \BRAM_Addr_A[7]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(7),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(7),
+      I1 => LMB_ABus(7),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(7)
     );
 \BRAM_Addr_A[8]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(8),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(8),
+      I1 => LMB_ABus(8),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(8)
     );
 \BRAM_Addr_A[9]_INST_0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"B8"
+      INIT => X"AC"
     )
         port map (
       I0 => \ECC.LMB_ABus_Q\(9),
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I2 => LMB_ABus(9),
+      I1 => LMB_ABus(9),
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_Addr_A(9)
     );
 BRAM_EN_A_INST_0: unisim.vcomponents.LUT2
@@ -10636,29 +10628,30 @@ BRAM_EN_A_INST_0: unisim.vcomponents.LUT2
       I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => BRAM_EN_A
     );
-\BRAM_WEN_A[4]_INST_0\: unisim.vcomponents.LUT5
+\BRAM_WEN_A[4]_INST_0\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"05550333"
+      INIT => X"000004F404F404F4"
     )
         port map (
-      I0 => UE_Q,
-      I1 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i17_in\,
-      I2 => lmb_as,
-      I3 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i\,
-      I4 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
+      I0 => LMB_ABus(1),
+      I1 => IsWordWrite,
+      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
+      I3 => UE_Q,
+      I4 => lmb_as,
+      I5 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i\,
       O => \^bram_wen_a\(0)
     );
 \BRAM_WEN_A[4]_INST_0_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"7FFFFFFF"
+      INIT => X"80000000"
     )
         port map (
       I0 => LMB_BE(2),
-      I1 => LMB_WriteStrobe,
-      I2 => LMB_BE(0),
-      I3 => LMB_BE(1),
-      I4 => LMB_BE(3),
-      O => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i17_in\
+      I1 => LMB_BE(3),
+      I2 => LMB_BE(1),
+      I3 => LMB_BE(0),
+      I4 => LMB_WriteStrobe,
+      O => IsWordWrite
     );
 \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.CE_Q_reg\: unisim.vcomponents.FDRE
      port map (
@@ -10712,74 +10705,74 @@ BRAM_EN_A_INST_0: unisim.vcomponents.LUT2
       \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg\ => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       LMB_BE(0 to 3) => LMB_BE(0 to 3),
       LMB_WriteDBus(0 to 31) => LMB_WriteDBus(0 to 31),
-      Q(31) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[0]\,
-      Q(30) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[1]\,
-      Q(29) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[2]\,
-      Q(28) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[3]\,
-      Q(27) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[4]\,
-      Q(26) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[5]\,
-      Q(25) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[6]\,
-      Q(24) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[7]\,
-      Q(23) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[8]\,
-      Q(22) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[9]\,
-      Q(21) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[10]\,
-      Q(20) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[11]\,
-      Q(19) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[12]\,
-      Q(18) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[13]\,
-      Q(17) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[14]\,
-      Q(16) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[15]\,
-      Q(15) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[16]\,
-      Q(14) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[17]\,
-      Q(13) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[18]\,
-      Q(12) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[19]\,
-      Q(11) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[20]\,
-      Q(10) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[21]\,
-      Q(9) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[22]\,
-      Q(8) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[23]\,
-      Q(7) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[24]\,
-      Q(6) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[25]\,
-      Q(5) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[26]\,
-      Q(4) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[27]\,
-      Q(3) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[28]\,
-      Q(2) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[29]\,
-      Q(1) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[30]\,
-      Q(0) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[31]\,
-      \Using_FPGA.Native\(31) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(0),
-      \Using_FPGA.Native\(30) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(1),
-      \Using_FPGA.Native\(29) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(2),
-      \Using_FPGA.Native\(28) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(3),
-      \Using_FPGA.Native\(27) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(4),
-      \Using_FPGA.Native\(26) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(5),
-      \Using_FPGA.Native\(25) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(6),
-      \Using_FPGA.Native\(24) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(7),
-      \Using_FPGA.Native\(23) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(8),
-      \Using_FPGA.Native\(22) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(9),
-      \Using_FPGA.Native\(21) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(10),
-      \Using_FPGA.Native\(20) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(11),
-      \Using_FPGA.Native\(19) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(12),
-      \Using_FPGA.Native\(18) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(13),
-      \Using_FPGA.Native\(17) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(14),
-      \Using_FPGA.Native\(16) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(15),
-      \Using_FPGA.Native\(15) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(16),
-      \Using_FPGA.Native\(14) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(17),
-      \Using_FPGA.Native\(13) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(18),
-      \Using_FPGA.Native\(12) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(19),
-      \Using_FPGA.Native\(11) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(20),
-      \Using_FPGA.Native\(10) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(21),
-      \Using_FPGA.Native\(9) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(22),
-      \Using_FPGA.Native\(8) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(23),
-      \Using_FPGA.Native\(7) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(24),
-      \Using_FPGA.Native\(6) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(25),
-      \Using_FPGA.Native\(5) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(26),
-      \Using_FPGA.Native\(4) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(27),
-      \Using_FPGA.Native\(3) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(28),
-      \Using_FPGA.Native\(2) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(29),
-      \Using_FPGA.Native\(1) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(30),
-      \Using_FPGA.Native\(0) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(31),
-      \Using_FPGA.Native_0\(3) => p_0_in15_in,
-      \Using_FPGA.Native_0\(2) => p_0_in12_in,
-      \Using_FPGA.Native_0\(1) => p_0_in9_in,
-      \Using_FPGA.Native_0\(0) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.lmb_be_q_reg_n_0_[3]\
+      Q(31) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(0),
+      Q(30) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(1),
+      Q(29) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(2),
+      Q(28) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(3),
+      Q(27) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(4),
+      Q(26) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(5),
+      Q(25) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(6),
+      Q(24) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(7),
+      Q(23) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(8),
+      Q(22) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(9),
+      Q(21) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(10),
+      Q(20) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(11),
+      Q(19) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(12),
+      Q(18) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(13),
+      Q(17) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(14),
+      Q(16) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(15),
+      Q(15) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(16),
+      Q(14) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(17),
+      Q(13) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(18),
+      Q(12) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(19),
+      Q(11) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(20),
+      Q(10) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(21),
+      Q(9) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(22),
+      Q(8) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(23),
+      Q(7) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(24),
+      Q(6) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(25),
+      Q(5) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(26),
+      Q(4) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(27),
+      Q(3) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(28),
+      Q(2) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(29),
+      Q(1) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(30),
+      Q(0) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.writeDBus_Q\(31),
+      \Using_FPGA.Native\(3) => p_0_in15_in,
+      \Using_FPGA.Native\(2) => p_0_in12_in,
+      \Using_FPGA.Native\(1) => p_0_in9_in,
+      \Using_FPGA.Native\(0) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.lmb_be_q_reg_n_0_[3]\,
+      \Using_FPGA.Native_0\(31) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[0]\,
+      \Using_FPGA.Native_0\(30) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[1]\,
+      \Using_FPGA.Native_0\(29) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[2]\,
+      \Using_FPGA.Native_0\(28) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[3]\,
+      \Using_FPGA.Native_0\(27) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[4]\,
+      \Using_FPGA.Native_0\(26) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[5]\,
+      \Using_FPGA.Native_0\(25) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[6]\,
+      \Using_FPGA.Native_0\(24) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[7]\,
+      \Using_FPGA.Native_0\(23) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[8]\,
+      \Using_FPGA.Native_0\(22) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[9]\,
+      \Using_FPGA.Native_0\(21) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[10]\,
+      \Using_FPGA.Native_0\(20) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[11]\,
+      \Using_FPGA.Native_0\(19) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[12]\,
+      \Using_FPGA.Native_0\(18) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[13]\,
+      \Using_FPGA.Native_0\(17) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[14]\,
+      \Using_FPGA.Native_0\(16) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[15]\,
+      \Using_FPGA.Native_0\(15) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[16]\,
+      \Using_FPGA.Native_0\(14) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[17]\,
+      \Using_FPGA.Native_0\(13) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[18]\,
+      \Using_FPGA.Native_0\(12) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[19]\,
+      \Using_FPGA.Native_0\(11) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[20]\,
+      \Using_FPGA.Native_0\(10) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[21]\,
+      \Using_FPGA.Native_0\(9) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[22]\,
+      \Using_FPGA.Native_0\(8) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[23]\,
+      \Using_FPGA.Native_0\(7) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[24]\,
+      \Using_FPGA.Native_0\(6) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[25]\,
+      \Using_FPGA.Native_0\(5) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[26]\,
+      \Using_FPGA.Native_0\(4) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[27]\,
+      \Using_FPGA.Native_0\(3) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[28]\,
+      \Using_FPGA.Native_0\(2) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[29]\,
+      \Using_FPGA.Native_0\(1) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[30]\,
+      \Using_FPGA.Native_0\(0) => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[31]\
     );
 \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg[0]\: unisim.vcomponents.FDRE
      port map (
@@ -11037,16 +11030,17 @@ BRAM_EN_A_INST_0: unisim.vcomponents.LUT2
       Q => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.CorrectedRdData_Q_reg_n_0_[9]\,
       R => LMB_Rst
     );
-\ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i_i_1\: unisim.vcomponents.LUT5
+\ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"70F0F0E0"
+      INIT => X"040C0C0C0C0C0C08"
     )
         port map (
-      I0 => LMB_BE(1),
-      I1 => LMB_BE(0),
-      I2 => LMB_WriteStrobe,
+      I0 => LMB_BE(2),
+      I1 => LMB_WriteStrobe,
+      I2 => LMB_ABus(1),
       I3 => LMB_BE(3),
-      I4 => LMB_BE(2),
+      I4 => LMB_BE(1),
+      I5 => LMB_BE(0),
       O => \ECC.RdModifyWr_Read\
     );
 \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i_reg\: unisim.vcomponents.FDRE
@@ -11621,28 +11615,28 @@ BRAM_EN_A_INST_0: unisim.vcomponents.LUT2
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(0),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(0),
-      S => S_30,
+      S => S_25,
       Sl_DBus(0) => \^sl_dbus\(0)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[10].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized19\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(10),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(0),
-      S => S_11,
+      S => S_0,
       Sl_DBus(0) => \^sl_dbus\(10)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[11].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized21\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(11),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(0),
-      S => S_8,
+      S => S_13,
       Sl_DBus(0) => \^sl_dbus\(11)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[12].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized23\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(12),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(1),
-      S => S_3,
+      S => S_9,
       Sl_DBus(0) => \^sl_dbus\(12)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[13].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized25\
@@ -11656,21 +11650,21 @@ BRAM_EN_A_INST_0: unisim.vcomponents.LUT2
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(14),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(2),
-      S => S_6,
+      S => S_10,
       Sl_DBus(0) => \^sl_dbus\(14)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[15].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized29\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(15),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(0),
-      S => S_28,
+      S => S_26,
       Sl_DBus(0) => \^sl_dbus\(15)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[16].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized31\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(16),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(1),
-      S => S_29,
+      S => S_30,
       Sl_DBus(0) => \^sl_dbus\(16)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[17].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized33\
@@ -11684,147 +11678,147 @@ BRAM_EN_A_INST_0: unisim.vcomponents.LUT2
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(18),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(3),
-      S => S_4,
+      S => S_11,
       Sl_DBus(0) => \^sl_dbus\(18)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[19].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized37\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(19),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(0),
-      S => S_9,
+      S => S_14,
       Sl_DBus(0) => \^sl_dbus\(19)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[1].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized1\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(1),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(0),
-      S => S_25,
+      S => S_28,
       Sl_DBus(0) => \^sl_dbus\(1)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[20].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized39\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(20),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(1),
-      S => S_5,
+      S => S_8,
       Sl_DBus(0) => \^sl_dbus\(20)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[21].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized41\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(21),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(0),
-      S => S_1,
+      S => S_3,
       Sl_DBus(0) => \^sl_dbus\(21)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[22].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized43\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(22),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(2),
-      S => S_7,
+      S => S_12,
       Sl_DBus(0) => \^sl_dbus\(22)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[23].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized45\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(23),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(0),
-      S => S_14,
+      S => S_5,
       Sl_DBus(0) => \^sl_dbus\(23)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[24].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized47\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(24),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(1),
-      S => S_13,
+      S => S_4,
       Sl_DBus(0) => \^sl_dbus\(24)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[25].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized49\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(25),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(0),
-      S => S_0,
+      S => S_6,
       Sl_DBus(0) => \^sl_dbus\(25)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[26].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized51\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(26),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(0),
-      S => S_23,
+      S => S_24,
       Sl_DBus(0) => \^sl_dbus\(26)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[27].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized53\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(27),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(1),
-      S => S_24,
+      S => S_21,
       Sl_DBus(0) => \^sl_dbus\(27)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[28].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized55\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(28),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(0),
-      S => S_2,
+      S => S_1,
       Sl_DBus(0) => \^sl_dbus\(28)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[29].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized57\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(29),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(2),
-      S => S_20,
+      S => S_19,
       Sl_DBus(0) => \^sl_dbus\(29)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[2].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized3\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(2),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(1),
-      S => S_26,
+      S => S_29,
       Sl_DBus(0) => \^sl_dbus\(2)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[30].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized59\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(30),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(0),
-      S => S_17,
+      S => S_2,
       Sl_DBus(0) => \^sl_dbus\(30)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[31].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized61\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(31),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(1),
-      S => S_15,
+      S => S_7,
       Sl_DBus(0) => \^sl_dbus\(31)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[3].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized5\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(3),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(0),
-      S => S_18,
+      S => S_15,
       Sl_DBus(0) => \^sl_dbus\(3)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[4].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized7\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(4),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(0),
-      S => S_21,
+      S => S_22,
       Sl_DBus(0) => \^sl_dbus\(4)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[5].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized9\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(5),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(1),
-      S => S_22,
+      S => S_23,
       Sl_DBus(0) => \^sl_dbus\(5)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[6].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized11\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(6),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(0),
-      S => S_10,
+      S => S_17,
       Sl_DBus(0) => \^sl_dbus\(6)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[7].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized13\
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(7),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(2),
-      S => S_19,
+      S => S_20,
       Sl_DBus(0) => \^sl_dbus\(7)
     );
 \ECC.No_Long_Data.Gen_Correct_Data[8].Correct_One_Bit_I\: entity work.\microblaze_ilmb_bram_if_cntlr_2_Correct_One_Bit__parameterized15\
@@ -11838,18 +11832,19 @@ BRAM_EN_A_INST_0: unisim.vcomponents.LUT2
      port map (
       BRAM_Din_A(0) => BRAM_Din_A(9),
       \ECC.Syndrome\(0) => \ECC.Syndrome\(1),
-      S => S_12,
+      S => S_18,
       Sl_DBus(0) => \^sl_dbus\(9)
     );
-\ECC.Sl_Rdy_i_1\: unisim.vcomponents.LUT4
+\ECC.Sl_Rdy_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"EFAA"
+      INIT => X"FFFF00E0"
     )
         port map (
-      I0 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
-      I1 => LMB_ReadStrobe,
-      I2 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Modify_i17_in\,
-      I3 => LMB_AddrStrobe,
+      I0 => LMB_ReadStrobe,
+      I1 => IsWordWrite,
+      I2 => LMB_AddrStrobe,
+      I3 => LMB_ABus(1),
+      I4 => \ECC.Do_Writes.DO_BYTE_HALFWORD_WRITES.RdModifyWr_LMB_Protocol_0.RdModifyWr_Write_reg__0\,
       O => Sl_Rdy0
     );
 \ECC.Sl_Rdy_reg\: unisim.vcomponents.FDRE
@@ -11860,14 +11855,15 @@ BRAM_EN_A_INST_0: unisim.vcomponents.LUT2
       Q => \^sl_ready\,
       R => LMB_Rst
     );
-\ECC.Sl_Wait_i_i_1\: unisim.vcomponents.LUT3
+\ECC.Sl_Wait_i_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"BA"
+      INIT => X"4744"
     )
         port map (
-      I0 => LMB_AddrStrobe,
-      I1 => \^sl_ready\,
-      I2 => \^sl_wait\,
+      I0 => LMB_ABus(1),
+      I1 => LMB_AddrStrobe,
+      I2 => \^sl_ready\,
+      I3 => \^sl_wait\,
       O => \ECC.Sl_Wait_i_i_1_n_0\
     );
 \ECC.Sl_Wait_i_reg\: unisim.vcomponents.FDRE
@@ -11976,11 +11972,11 @@ BRAM_EN_A_INST_0: unisim.vcomponents.LUT2
       INIT => X"80000000"
     )
         port map (
-      I0 => LMB_BE(3),
-      I1 => LMB_BE(1),
-      I2 => LMB_BE(0),
+      I0 => LMB_BE(0),
+      I1 => LMB_BE(2),
+      I2 => LMB_BE(3),
       I3 => LMB_WriteStrobe,
-      I4 => LMB_BE(2),
+      I4 => LMB_BE(1),
       O => \ECC.full_word_write_access_i_1_n_0\
     );
 \ECC.full_word_write_access_reg\: unisim.vcomponents.FDRE
@@ -12036,7 +12032,7 @@ entity microblaze_ilmb_bram_if_cntlr_2 is
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of microblaze_ilmb_bram_if_cntlr_2 : entity is true;
   attribute CHECK_LICENSE_TYPE : string;
-  attribute CHECK_LICENSE_TYPE of microblaze_ilmb_bram_if_cntlr_2 : entity is "microblaze_ilmb_bram_if_cntlr_2,lmb_bram_if_cntlr,{}";
+  attribute CHECK_LICENSE_TYPE of microblaze_ilmb_bram_if_cntlr_2 : entity is "microblaze_dlmb_bram_if_cntlr_2,lmb_bram_if_cntlr,{}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of microblaze_ilmb_bram_if_cntlr_2 : entity is "yes";
   attribute x_core_info : string;
@@ -12125,7 +12121,7 @@ architecture STRUCTURE of microblaze_ilmb_bram_if_cntlr_2 is
   attribute C_LMB_PROTOCOL : integer;
   attribute C_LMB_PROTOCOL of U0 : label is 0;
   attribute C_MASK : string;
-  attribute C_MASK of U0 : label is "64'b0000000000000000000000000000000000000000000000000000000000000000";
+  attribute C_MASK of U0 : label is "64'b0000000000000000000000000000000001000000000000000000000000000000";
   attribute C_MASK1 : string;
   attribute C_MASK1 of U0 : label is "64'b0000000000000000000000000000000000000000100000000000000000000000";
   attribute C_MASK2 : string;

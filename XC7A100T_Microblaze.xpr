@@ -99,9 +99,6 @@
         <CompFileExtendedInfo CompFileName="microblaze.bd" FileRelPathName="ip/microblaze_axi_gpio_0_1/microblaze_axi_gpio_0_1.xci">
           <Proxy FileSetName="microblaze_axi_gpio_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microblaze.bd" FileRelPathName="ip/microblaze_axi_quad_spi_0_1/microblaze_axi_quad_spi_0_1.xci">
-          <Proxy FileSetName="microblaze_axi_quad_spi_0_1"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="microblaze.bd" FileRelPathName="ip/microblaze_axi_uartlite_0_1/microblaze_axi_uartlite_0_1.xci">
           <Proxy FileSetName="microblaze_axi_uartlite_0_1"/>
         </CompFileExtendedInfo>
@@ -113,9 +110,6 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="microblaze.bd" FileRelPathName="ip/microblaze_dlmb_v10_2/microblaze_dlmb_v10_2.xci">
           <Proxy FileSetName="microblaze_dlmb_v10_2"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="microblaze.bd" FileRelPathName="ip/microblaze_ilmb_bram_if_cntlr_2/microblaze_ilmb_bram_if_cntlr_2.xci">
-          <Proxy FileSetName="microblaze_ilmb_bram_if_cntlr_2"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="microblaze.bd" FileRelPathName="ip/microblaze_ilmb_v10_2/microblaze_ilmb_v10_2.xci">
           <Proxy FileSetName="microblaze_ilmb_v10_2"/>
@@ -228,12 +222,6 @@
         <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
-    <FileSet Name="microblaze_axi_quad_spi_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/microblaze_axi_quad_spi_0_1" RelGenDir="$PGENDIR/microblaze_axi_quad_spi_0_1">
-      <Config>
-        <Option Name="TopModule" Val="microblaze_axi_quad_spi_0_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="microblaze_axi_gpio_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/microblaze_axi_gpio_0_1" RelGenDir="$PGENDIR/microblaze_axi_gpio_0_1">
       <Config>
         <Option Name="TopModule" Val="microblaze_axi_gpio_0_1"/>
@@ -279,12 +267,6 @@
     <FileSet Name="microblaze_dlmb_v10_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/microblaze_dlmb_v10_2" RelGenDir="$PGENDIR/microblaze_dlmb_v10_2">
       <Config>
         <Option Name="TopModule" Val="microblaze_dlmb_v10_2"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="microblaze_ilmb_bram_if_cntlr_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/microblaze_ilmb_bram_if_cntlr_2" RelGenDir="$PGENDIR/microblaze_ilmb_bram_if_cntlr_2">
-      <Config>
-        <Option Name="TopModule" Val="microblaze_ilmb_bram_if_cntlr_2"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -336,16 +318,6 @@
   </Simulators>
   <Runs Version="1" Minor="22">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" IncrementalCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top_module.dcp" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1" ParallelReportGen="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="microblaze_axi_quad_spi_0_1_synth_1" Type="Ft3:Synth" SrcSet="microblaze_axi_quad_spi_0_1" Part="xc7a100tcsg324-1" ConstrsSet="microblaze_axi_quad_spi_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/microblaze_axi_quad_spi_0_1_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/microblaze_axi_quad_spi_0_1_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/microblaze_axi_quad_spi_0_1_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
         <Step Id="synth_design"/>
@@ -435,16 +407,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="microblaze_ilmb_bram_if_cntlr_2_synth_1" Type="Ft3:Synth" SrcSet="microblaze_ilmb_bram_if_cntlr_2" Part="xc7a100tcsg324-1" ConstrsSet="microblaze_ilmb_bram_if_cntlr_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/microblaze_ilmb_bram_if_cntlr_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/microblaze_ilmb_bram_if_cntlr_2_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/microblaze_ilmb_bram_if_cntlr_2_synth_1" ParallelReportGen="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2025"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
     <Run Id="microblaze_clk_wiz_1_2_synth_1" Type="Ft3:Synth" SrcSet="microblaze_clk_wiz_1_2" Part="xc7a100tcsg324-1" ConstrsSet="microblaze_clk_wiz_1_2" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/microblaze_clk_wiz_1_2_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/microblaze_clk_wiz_1_2_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/microblaze_clk_wiz_1_2_synth_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
@@ -499,23 +461,6 @@
         <Step Id="write_bitstream"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="microblaze_axi_quad_spi_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="microblaze_axi_quad_spi_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="microblaze_axi_quad_spi_0_1_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/microblaze_axi_quad_spi_0_1_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/microblaze_axi_quad_spi_0_1_impl_1" ParallelReportGen="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
@@ -640,23 +585,6 @@
       <RQSFiles/>
     </Run>
     <Run Id="microblaze_dlmb_v10_2_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="microblaze_dlmb_v10_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="microblaze_dlmb_v10_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/microblaze_dlmb_v10_2_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/microblaze_dlmb_v10_2_impl_1" ParallelReportGen="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2025"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="microblaze_ilmb_bram_if_cntlr_2_impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="microblaze_ilmb_bram_if_cntlr_2" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="microblaze_ilmb_bram_if_cntlr_2_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/microblaze_ilmb_bram_if_cntlr_2_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/microblaze_ilmb_bram_if_cntlr_2_impl_1" ParallelReportGen="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2025"/>
         <Step Id="init_design"/>

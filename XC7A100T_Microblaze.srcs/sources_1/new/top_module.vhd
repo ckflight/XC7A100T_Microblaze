@@ -7,17 +7,25 @@ entity top_module is
     Port ( 
         SYSCLK              : in STD_LOGIC;
         RESET               : in STD_LOGIC;
+        
         LED                 : out std_logic_vector(15 downto 0);
+        
         SPI_CLK             : out std_logic;
         SPI_MISO            : in std_logic;
         SPI_MOSI            : out std_logic;
         SPI_CS              : out  STD_LOGIC_VECTOR ( 0 to 0 );
+        
         SEG                 : out std_logic_vector(7 downto 0);
         AN                  : out std_logic_vector(7 downto 0);
+        
         JA_SPI_MOSI_DEBUG   : out std_logic;
         JA_SPI_MISO_DEBUG   : out std_logic;
         JA_SPI_CLK_DEBUG    : out std_logic;
-        JA_SPI_CS_DEBUG     : out std_logic_vector(0 to 0)
+        JA_SPI_CS_DEBUG     : out std_logic_vector(0 to 0);
+        
+        JD_UART_TX_DEBUG    : out std_logic;
+        
+        USB_UART_TX         : out std_logic -- connected to ft2232h's uart rxd pin on board
     );
 end top_module;
 
@@ -100,15 +108,18 @@ begin
     
     reset_n <= not RESET;
     
-    JA_SPI_MOSI_DEBUG <= s_spi_mosi;
-    JA_SPI_MISO_DEBUG <= s_spi_miso;
-    JA_SPI_CLK_DEBUG <= s_spi_clk;
-    JA_SPI_CS_DEBUG <= s_spi_cs;
+    JD_UART_TX_DEBUG    <= s_uart_tx;  -- send tx data sent from microblaze to debug pin on jd header
+    USB_UART_TX         <= s_uart_tx;       -- send tx data sent from microblaze to nexy4 onboard f
     
-    SPI_MOSI <= s_spi_mosi;
-    s_spi_miso <= SPI_MISO;
-    SPI_CLK <= s_spi_clk;
-    SPI_CS <= s_spi_cs;
+    JA_SPI_MOSI_DEBUG   <= s_spi_mosi;
+    JA_SPI_MISO_DEBUG   <= s_spi_miso;
+    JA_SPI_CLK_DEBUG    <= s_spi_clk;
+    JA_SPI_CS_DEBUG     <= s_spi_cs;
+    
+    SPI_MOSI            <= s_spi_mosi;
+    s_spi_miso          <= SPI_MISO;
+    SPI_CLK             <= s_spi_clk;
+    SPI_CS              <= s_spi_cs;
     
     microblaze: microblaze_wrapper
     port map (      
@@ -154,7 +165,7 @@ begin
         NUMBER5 => X"0",
         NUMBER6 => X"0",
         NUMBER7 => X"0",
-        NUMBER8 => X"0",
+        NUMBER8 => X"C",
         AN      => AN,
         SEG     => SEG        
     );

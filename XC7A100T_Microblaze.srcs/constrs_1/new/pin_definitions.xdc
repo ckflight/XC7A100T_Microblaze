@@ -29,10 +29,16 @@ set_property -dict { PACKAGE_PIN D15   IOSTANDARD LVCMOS33 } [get_ports { SPI_CS
 set_property -dict { PACKAGE_PIN F15   IOSTANDARD LVCMOS33 } [get_ports { SPI_CLK }];
 
 #SPI DEBUG
-set_property -dict { PACKAGE_PIN C17   IOSTANDARD LVCMOS33 } [get_ports { JA_SPI_MOSI_DEBUG }]; #IO_L20N_T3_A19_15 Sch=ja[1]
-set_property -dict { PACKAGE_PIN D18   IOSTANDARD LVCMOS33 } [get_ports { JA_SPI_MISO_DEBUG }]; #IO_L21N_T3_DQS_A18_15 Sch=ja[2]
-set_property -dict { PACKAGE_PIN E18   IOSTANDARD LVCMOS33 } [get_ports { JA_SPI_CLK_DEBUG }]; #IO_L21P_T3_DQS_15 Sch=ja[3]
-set_property -dict { PACKAGE_PIN G17   IOSTANDARD LVCMOS33 } [get_ports { JA_SPI_CS_DEBUG }]; #IO_L18N_T2_A23_15 Sch=ja[4]
+set_property -dict { PACKAGE_PIN K1   IOSTANDARD LVCMOS33 } [get_ports { JA_SPI_MOSI_DEBUG }];
+set_property -dict { PACKAGE_PIN F6   IOSTANDARD LVCMOS33 } [get_ports { JA_SPI_MISO_DEBUG }];
+set_property -dict { PACKAGE_PIN J2   IOSTANDARD LVCMOS33 } [get_ports { JA_SPI_CLK_DEBUG }];
+set_property -dict { PACKAGE_PIN G6   IOSTANDARD LVCMOS33 } [get_ports { JA_SPI_CS_DEBUG[0] }];
+
+#UART DEBUG
+set_property -dict { PACKAGE_PIN H1    IOSTANDARD LVCMOS33 } [get_ports { JD_UART_TX_DEBUG }];
+
+#USB UART
+set_property -dict { PACKAGE_PIN D4    IOSTANDARD LVCMOS33 } [get_ports { USB_UART_TX }];
 
 #AN
 set_property -dict { PACKAGE_PIN J17   IOSTANDARD LVCMOS33 } [get_ports { AN[0] }];

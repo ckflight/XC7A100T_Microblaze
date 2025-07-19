@@ -3,8 +3,8 @@
 # SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Thu Jul 17 23:25:50 2025
-# Process ID         : 11345
+# Start of session at: Sat Jul 19 20:25:01 2025
+# Process ID         : 578771
 # Current directory  : /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_3_synth_1
 # Command line       : vivado -log microblaze_microblaze_0_3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source microblaze_microblaze_0_3.tcl
 # Log file           : /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_3_synth_1/microblaze_microblaze_0_3.vds
@@ -13,13 +13,13 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 25.04
 # Processor Detail   : AMD Ryzen 9 9950X 16-Core Processor
-# CPU Frequency      : 5506.651 MHz
+# CPU Frequency      : 5618.438 MHz
 # CPU Physical cores : 16
 # CPU Logical cores  : 32
 # Host memory        : 63756 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 72346 MB
-# Available Virtual  : 64153 MB
+# Available Virtual  : 63543 MB
 #-----------------------------------------------------------
 source microblaze_microblaze_0_3.tcl -notrace
 Command: synth_design -top microblaze_microblaze_0_3 -part xc7a100tcsg324-1 -incremental_mode off -mode out_of_context
@@ -29,11 +29,11 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 12300
+INFO: [Synth 8-7075] Helper process launched with PID 578886
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2383.410 ; gain = 185.773 ; free physical = 30958 ; free virtual = 43220
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2391.461 ; gain = 192.742 ; free physical = 44026 ; free virtual = 58155
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'microblaze_microblaze_0_3' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_3/synth/microblaze_microblaze_0_3.vhd:116]
+INFO: [Synth 8-638] synthesizing module 'microblaze_microblaze_0_3' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_3/synth/microblaze_microblaze_0_3.vhd:139]
 	Parameter C_SCO bound to: 0 - type: integer 
 	Parameter C_FREQ bound to: 100000000 - type: integer 
 	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
@@ -76,14 +76,14 @@ INFO: [Synth 8-638] synthesizing module 'microblaze_microblaze_0_3' [/home/ck/De
 	Parameter C_D_AXI bound to: 1 - type: integer 
 	Parameter C_I_LMB bound to: 1 - type: integer 
 	Parameter C_I_LMB_PROTOCOL bound to: 0 - type: integer 
-	Parameter C_I_AXI bound to: 0 - type: integer 
+	Parameter C_I_AXI bound to: 1 - type: integer 
 	Parameter G_TEMPLATE_LIST bound to: 8 - type: integer 
 	Parameter C_USE_MSR_INSTR bound to: 1 - type: integer 
 	Parameter C_USE_PCMP_INSTR bound to: 1 - type: integer 
 	Parameter C_USE_BARREL bound to: 1 - type: integer 
 	Parameter C_USE_DIV bound to: 0 - type: integer 
 	Parameter C_USE_HW_MUL bound to: 1 - type: integer 
-	Parameter C_USE_FPU bound to: 0 - type: integer 
+	Parameter C_USE_FPU bound to: 2 - type: integer 
 	Parameter C_USE_REORDER_INSTR bound to: 0 - type: integer 
 	Parameter C_UNALIGNED_EXCEPTIONS bound to: 0 - type: integer 
 	Parameter C_ILL_OPCODE_EXCEPTION bound to: 0 - type: integer 
@@ -113,11 +113,11 @@ INFO: [Synth 8-638] synthesizing module 'microblaze_microblaze_0_3' [/home/ck/De
 	Parameter C_DYNAMIC_BUS_SIZING bound to: 0 - type: integer 
 	Parameter C_RESET_MSR bound to: 32'b00000000000000000000000000000000 
 	Parameter C_OPCODE_0x0_ILLEGAL bound to: 0 - type: integer 
-	Parameter C_DEBUG_ENABLED bound to: 1 - type: integer 
+	Parameter C_DEBUG_ENABLED bound to: 2 - type: integer 
 	Parameter C_DEBUG_INTERFACE bound to: 0 - type: integer 
-	Parameter C_NUMBER_OF_PC_BRK bound to: 1 - type: integer 
-	Parameter C_NUMBER_OF_RD_ADDR_BRK bound to: 0 - type: integer 
-	Parameter C_NUMBER_OF_WR_ADDR_BRK bound to: 0 - type: integer 
+	Parameter C_NUMBER_OF_PC_BRK bound to: 8 - type: integer 
+	Parameter C_NUMBER_OF_RD_ADDR_BRK bound to: 4 - type: integer 
+	Parameter C_NUMBER_OF_WR_ADDR_BRK bound to: 4 - type: integer 
 	Parameter C_DEBUG_EVENT_COUNTERS bound to: 5 - type: integer 
 	Parameter C_DEBUG_LATENCY_COUNTERS bound to: 1 - type: integer 
 	Parameter C_DEBUG_COUNTER_WIDTH bound to: 32 - type: integer 
@@ -204,42 +204,9 @@ INFO: [Synth 8-638] synthesizing module 'microblaze_microblaze_0_3' [/home/ck/De
 	Parameter C_M_AXI_DC_WUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_M_AXI_DC_RUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_M_AXI_DC_BUSER_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'MicroBlaze' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/75f6/hdl/microblaze_v11_0_vh_rfs.vhd:165076' bound to instance 'U0' of component 'MicroBlaze' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_3/synth/microblaze_microblaze_0_3.vhd:828]
-INFO: [Synth 8-256] done synthesizing module 'microblaze_microblaze_0_3' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_3/synth/microblaze_microblaze_0_3.vhd:116]
-WARNING: [Synth 8-7129] Port ILMB_data_strobe in module instr_mux is either unconnected or has no load
+INFO: [Synth 8-3491] module 'MicroBlaze' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/75f6/hdl/microblaze_v11_0_vh_rfs.vhd:165076' bound to instance 'U0' of component 'MicroBlaze' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_3/synth/microblaze_microblaze_0_3.vhd:877]
+INFO: [Synth 8-256] done synthesizing module 'microblaze_microblaze_0_3' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_3/synth/microblaze_microblaze_0_3.vhd:139]
 WARNING: [Synth 8-7129] Port ILMB_data_sel in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[0] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[1] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[2] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[3] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[4] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[5] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[6] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[7] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[8] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[9] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[10] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[11] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[12] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[13] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[14] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[15] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[16] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[17] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[18] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[19] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[20] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[21] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[22] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[23] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[24] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[25] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[26] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[27] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[28] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[29] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[30] in module instr_mux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port IEXT_data[31] in module instr_mux is either unconnected or has no load
 WARNING: [Synth 8-7129] Port IEXT_data_strobe in module instr_mux is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ICache_data[0] in module instr_mux is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ICache_data[1] in module instr_mux is either unconnected or has no load
@@ -306,21 +273,54 @@ WARNING: [Synth 8-7129] Port PC_EX[25] in module exception_registers is either u
 WARNING: [Synth 8-7129] Port PC_EX[26] in module exception_registers is either unconnected or has no load
 WARNING: [Synth 8-7129] Port PC_EX[27] in module exception_registers is either unconnected or has no load
 WARNING: [Synth 8-7129] Port PC_EX[28] in module exception_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC_EX[29] in module exception_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC_EX[30] in module exception_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port PC_EX[31] in module exception_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FSL_No[3] in module exception_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FSL_No[2] in module exception_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FSL_No[1] in module exception_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port FSL_No[0] in module exception_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR_ENA in module MB_RAMB36 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ADDR_ENB in module MB_RAMB36 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CASCADEINREGA in module MB_RAMB36 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CASCADEINREGB in module MB_RAMB36 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_To[255] in module RAM_Module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_To[254] in module RAM_Module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_To[253] in module RAM_Module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_To[252] in module RAM_Module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_To[251] in module RAM_Module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_To[250] in module RAM_Module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_To[249] in module RAM_Module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_To[248] in module RAM_Module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_To[247] in module RAM_Module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_To[246] in module RAM_Module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_To[245] in module RAM_Module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_To[244] in module RAM_Module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_To[243] in module RAM_Module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_To[242] in module RAM_Module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_To[241] in module RAM_Module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_To[240] in module RAM_Module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_To[239] in module RAM_Module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_To[238] in module RAM_Module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_To[237] in module RAM_Module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_To[236] in module RAM_Module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_To[235] in module RAM_Module is either unconnected or has no load
+WARNING: [Synth 8-7129] Port RAM_To[234] in module RAM_Module is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2689.918 ; gain = 492.281 ; free physical = 29399 ; free virtual = 41690
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2746.938 ; gain = 548.219 ; free physical = 43561 ; free virtual = 57696
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2689.918 ; gain = 492.281 ; free physical = 29399 ; free virtual = 41690
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2746.938 ; gain = 548.219 ; free physical = 43561 ; free virtual = 57696
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2689.918 ; gain = 492.281 ; free physical = 29399 ; free virtual = 41690
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2746.938 ; gain = 548.219 ; free physical = 43561 ; free virtual = 57696
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2689.918 ; gain = 0.000 ; free physical = 29405 ; free virtual = 41696
-INFO: [Netlist 29-17] Analyzing 514 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2746.938 ; gain = 0.000 ; free physical = 43561 ; free virtual = 57696
+INFO: [Netlist 29-17] Analyzing 956 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -338,39 +338,39 @@ Parsing XDC File [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A
 Finished Parsing XDC File [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_3_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2729.938 ; gain = 0.000 ; free physical = 29427 ; free virtual = 41728
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2786.957 ; gain = 0.000 ; free physical = 43569 ; free virtual = 57706
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 411 instances were transformed.
+  A total of 739 instances were transformed.
   FD => FDRE: 32 instances
   FDE => FDRE: 32 instances
-  FDR => FDRE: 1 instance 
+  FDR => FDRE: 5 instances
   FDRSE => FDRSE (FDRE, LUT4, VCC): 10 instances
   FDS => FDSE: 3 instances
-  LUT6_2 => LUT6_2 (LUT5, LUT6): 145 instances
-  MULT_AND => LUT2: 3 instances
-  MUXCY_L => MUXCY: 121 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 129 instances
+  MULT_AND => LUT2: 13 instances
+  MUXCY_L => MUXCY: 451 instances
   RAM32X1D => RAM32X1D (RAMD32(x2)): 64 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2729.973 ; gain = 0.000 ; free physical = 29427 ; free virtual = 41728
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2786.992 ; gain = 0.000 ; free physical = 43577 ; free virtual = 57714
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2729.973 ; gain = 532.336 ; free physical = 28928 ; free virtual = 41280
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2786.992 ; gain = 588.273 ; free physical = 43592 ; free virtual = 57730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2737.941 ; gain = 540.305 ; free physical = 28928 ; free virtual = 41280
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2794.961 ; gain = 596.242 ; free physical = 43592 ; free virtual = 57730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2737.941 ; gain = 540.305 ; free physical = 28928 ; free virtual = 41284
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2794.961 ; gain = 596.242 ; free physical = 43592 ; free virtual = 57730
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2737.941 ; gain = 540.305 ; free physical = 28160 ; free virtual = 40835
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2794.961 ; gain = 596.242 ; free physical = 43472 ; free virtual = 57611
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -396,25 +396,25 @@ INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Decode_I/Us
 INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Decode_I/Using_FPGA.ALU_long_ALU_Op_FDRE/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
 INFO: [Synth 8-3332] Sequential element (MicroBlaze_Core_I/Area.Core/Decode_I/Using_FPGA.Reg_Test_Long_FDRE/Using_FPGA.Native) is unused and will be removed from module MicroBlaze.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2737.941 ; gain = 540.305 ; free physical = 27570 ; free virtual = 40418
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2794.961 ; gain = 596.242 ; free physical = 43626 ; free virtual = 57774
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2737.941 ; gain = 540.305 ; free physical = 27624 ; free virtual = 40468
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2801.961 ; gain = 603.242 ; free physical = 43679 ; free virtual = 57831
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2802.543 ; gain = 604.906 ; free physical = 27624 ; free virtual = 40469
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 2884.453 ; gain = 685.734 ; free physical = 43268 ; free virtual = 57422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2802.543 ; gain = 604.906 ; free physical = 27635 ; free virtual = 40480
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2908.477 ; gain = 709.758 ; free physical = 43247 ; free virtual = 57398
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -432,50 +432,55 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2927.355 ; gain = 729.719 ; free physical = 27566 ; free virtual = 40408
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 3015.289 ; gain = 816.570 ; free physical = 43152 ; free virtual = 57301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2927.355 ; gain = 729.719 ; free physical = 27566 ; free virtual = 40408
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 3015.289 ; gain = 816.570 ; free physical = 43151 ; free virtual = 57299
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2927.355 ; gain = 729.719 ; free physical = 27566 ; free virtual = 40408
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 3015.289 ; gain = 816.570 ; free physical = 43099 ; free virtual = 57253
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2927.355 ; gain = 729.719 ; free physical = 27566 ; free virtual = 40408
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 3015.289 ; gain = 816.570 ; free physical = 43099 ; free virtual = 57253
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2927.355 ; gain = 729.719 ; free physical = 27566 ; free virtual = 40408
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 3015.289 ; gain = 816.570 ; free physical = 43098 ; free virtual = 57252
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2927.355 ; gain = 729.719 ; free physical = 27568 ; free virtual = 40410
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 3015.289 ; gain = 816.570 ; free physical = 43098 ; free virtual = 57252
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 DSP Final Report (the ' indicates corresponding REG is set)
-+---------------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name                | DSP Mapping        | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+---------------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|MB_DSP48E1__parameterized1 | (PCIN>>17+(A*B)')' | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 1    | 1    | 
-|MB_DSP48E1__parameterized3 | PCIN+(A'*B')'      | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
-|MB_DSP48E1                 | (A*B)'             | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-+---------------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++-------------------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                    | DSP Mapping        | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|MB_DSP48E1                     | (A*B)'             | 24     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 1    | 0    | 
+|MB_DSP48E1__parameterized1     | (PCIN>>17+(A*B)')' | 24     | 7      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|MB_DSP48E1__parameterized5_570 | (PCIN>>17+(A*B)')' | 30     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|MB_DSP48E1__parameterized7_569 | PCIN+(A'*B')'      | 17     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|MB_DSP48E1__parameterized3_568 | (A*B)'             | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|MB_DSP48E1__parameterized5     | (PCIN>>17+(A*B)')' | 0      | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 1    | 1    | 
+|MB_DSP48E1__parameterized7     | PCIN+(A'*B')'      | 16     | 0      | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|MB_DSP48E1__parameterized3     | (A*B)'             | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++-------------------------------+--------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 
 Report BlackBoxes: 
@@ -488,64 +493,69 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |DSP48E1  |     3|
-|4     |LUT1     |     8|
-|5     |LUT2     |    65|
-|6     |LUT3     |    84|
-|7     |LUT4     |   291|
-|8     |LUT5     |   143|
-|9     |LUT6     |   524|
-|11    |MULT_AND |     2|
-|12    |MUXCY_L  |   119|
-|13    |MUXF7    |    34|
-|14    |RAM32X1D |    64|
-|15    |SRL16E   |    80|
-|16    |SRLC16E  |     8|
-|17    |XORCY    |    67|
-|18    |FD       |    32|
-|19    |FDCE     |     7|
-|20    |FDE      |    32|
-|21    |FDR      |     1|
-|22    |FDRE     |   758|
-|23    |FDS      |     3|
-|24    |FDSE     |    66|
+|1     |AND2B1L  |    16|
+|2     |CARRY4   |   137|
+|3     |DSP48E1  |     8|
+|8     |LUT1     |    84|
+|9     |LUT2     |   302|
+|10    |LUT3     |   414|
+|11    |LUT4     |   780|
+|12    |LUT5     |   845|
+|13    |LUT6     |  1672|
+|15    |MULT_AND |    11|
+|16    |MUXCY_L  |   444|
+|17    |MUXF7    |   208|
+|18    |MUXF8    |     2|
+|19    |RAM32X1D |    64|
+|20    |RAMB36E1 |     2|
+|21    |SRL16E   |    88|
+|22    |SRLC16E  |   192|
+|23    |SRLC32E  |     1|
+|24    |XORCY    |   173|
+|25    |FD       |    32|
+|26    |FDCE     |    93|
+|27    |FDE      |    32|
+|28    |FDR      |     5|
+|29    |FDRE     |  3270|
+|30    |FDS      |     3|
+|31    |FDSE     |   111|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2927.355 ; gain = 729.719 ; free physical = 27568 ; free virtual = 40410
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 3015.289 ; gain = 816.570 ; free physical = 43098 ; free virtual = 57252
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 10528 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2927.355 ; gain = 689.664 ; free physical = 27560 ; free virtual = 40401
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2927.363 ; gain = 729.719 ; free physical = 27560 ; free virtual = 40401
+Synthesis finished with 0 errors, 0 critical warnings and 10791 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 3015.289 ; gain = 776.516 ; free physical = 43100 ; free virtual = 57254
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:31 . Memory (MB): peak = 3015.297 ; gain = 816.570 ; free physical = 43100 ; free virtual = 57254
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2927.363 ; gain = 0.000 ; free physical = 27763 ; free virtual = 40604
-INFO: [Netlist 29-17] Analyzing 502 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3015.297 ; gain = 0.000 ; free physical = 43260 ; free virtual = 57414
+INFO: [Netlist 29-17] Analyzing 1250 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2983.383 ; gain = 0.000 ; free physical = 27802 ; free virtual = 40644
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3071.316 ; gain = 0.000 ; free physical = 43246 ; free virtual = 57398
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 315 instances were transformed.
-  (MUXCY,XORCY) => CARRY4: 36 instances
+  A total of 408 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 132 instances
   FD => FDRE: 32 instances
   FDE => FDRE: 32 instances
-  FDR => FDRE: 1 instance 
+  FDR => FDRE: 5 instances
   FDS => FDSE: 3 instances
-  LUT6_2 => LUT6_2 (LUT5, LUT6): 145 instances
-  MULT_AND => LUT2: 2 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 129 instances
+  MULT_AND => LUT2: 11 instances
   RAM32X1D => RAM32X1D (RAMD32(x2)): 64 instances
 
-Synth Design complete | Checksum: 6ef4e555
+Synth Design complete | Checksum: df99c958
 INFO: [Common 17-83] Releasing license: Synthesis
 26 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:22 . Memory (MB): peak = 2983.418 ; gain = 1205.867 ; free physical = 27802 ; free virtual = 40644
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1850.414; main = 1850.414; forked = 175.451
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3702.699; main = 2983.387; forked = 964.754
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3007.395 ; gain = 0.000 ; free physical = 27807 ; free virtual = 40649
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:33 . Memory (MB): peak = 3071.352 ; gain = 1217.031 ; free physical = 43246 ; free virtual = 57398
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2293.015; main = 2107.934; forked = 248.337
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3932.238; main = 3071.320; forked = 964.758
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3095.328 ; gain = 0.000 ; free physical = 43246 ; free virtual = 57398
 INFO: [Common 17-1381] The checkpoint '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_3_synth_1/microblaze_microblaze_0_3.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP microblaze_microblaze_0_3, cache-ID = 5e1f5a92939c035f
-INFO: [Coretcl 2-1174] Renamed 1151 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3007.395 ; gain = 0.000 ; free physical = 27810 ; free virtual = 40662
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP microblaze_microblaze_0_3, cache-ID = 3db3eaf91a0d4e80
+INFO: [Coretcl 2-1174] Renamed 1804 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00 . Memory (MB): peak = 3095.328 ; gain = 0.000 ; free physical = 44896 ; free virtual = 59066
 INFO: [Common 17-1381] The checkpoint '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_3_synth_1/microblaze_microblaze_0_3.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file microblaze_microblaze_0_3_utilization_synth.rpt -pb microblaze_microblaze_0_3_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jul 17 23:26:17 2025...
+INFO: [Common 17-206] Exiting Vivado at Sat Jul 19 20:25:38 2025...

@@ -3,8 +3,8 @@
 # SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Thu Jul 17 23:25:50 2025
-# Process ID         : 11347
+# Start of session at: Sat Jul 19 20:25:01 2025
+# Process ID         : 578770
 # Current directory  : /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_xbar_2_synth_1
 # Command line       : vivado -log microblaze_microblaze_0_axi_periph_imp_xbar_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source microblaze_microblaze_0_axi_periph_imp_xbar_2.tcl
 # Log file           : /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_xbar_2_synth_1/microblaze_microblaze_0_axi_periph_imp_xbar_2.vds
@@ -13,13 +13,13 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 25.04
 # Processor Detail   : AMD Ryzen 9 9950X 16-Core Processor
-# CPU Frequency      : 5429.276 MHz
+# CPU Frequency      : 5618.438 MHz
 # CPU Physical cores : 16
 # CPU Logical cores  : 32
 # Host memory        : 63756 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 72346 MB
-# Available Virtual  : 63471 MB
+# Available Virtual  : 63543 MB
 #-----------------------------------------------------------
 source microblaze_microblaze_0_axi_periph_imp_xbar_2.tcl -notrace
 Command: synth_design -top microblaze_microblaze_0_axi_periph_imp_xbar_2 -part xc7a100tcsg324-1 -incremental_mode off -mode out_of_context
@@ -29,16 +29,18 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 12375
+INFO: [Synth 8-7075] Helper process launched with PID 578974
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2387.934 ; gain = 182.688 ; free physical = 30297 ; free virtual = 42563
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2388.957 ; gain = 183.688 ; free physical = 43954 ; free virtual = 58085
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_xbar_2/synth/microblaze_microblaze_0_axi_periph_imp_xbar_2.v:155]
-WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_xbar_2/synth/microblaze_microblaze_0_axi_periph_imp_xbar_2.v:157]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_xbar_2/synth/microblaze_microblaze_0_axi_periph_imp_xbar_2.v:114]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_xbar_2/synth/microblaze_microblaze_0_axi_periph_imp_xbar_2.v:116]
 WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_xbar_2/synth/microblaze_microblaze_0_axi_periph_imp_xbar_2.v:158]
 WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_xbar_2/synth/microblaze_microblaze_0_axi_periph_imp_xbar_2.v:160]
 WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_xbar_2/synth/microblaze_microblaze_0_axi_periph_imp_xbar_2.v:161]
 WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_xbar_2/synth/microblaze_microblaze_0_axi_periph_imp_xbar_2.v:163]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_MODE' is already specified; last one will take precedence [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_xbar_2/synth/microblaze_microblaze_0_axi_periph_imp_xbar_2.v:164]
+WARNING: [Synth 8-10507] attribute 'X_INTERFACE_PARAMETER' is already specified; last one will take precedence [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_xbar_2/synth/microblaze_microblaze_0_axi_periph_imp_xbar_2.v:166]
 INFO: [Synth 8-6157] synthesizing module 'microblaze_microblaze_0_axi_periph_imp_xbar_2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_xbar_2/synth/microblaze_microblaze_0_axi_periph_imp_xbar_2.v:53]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_37_axi_crossbar' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:4871]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_37_crossbar_sasd' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:1234]
@@ -54,24 +56,28 @@ INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_compara
 INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
 INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_comparator_static__parameterized2' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2119]
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_37_addr_decoder' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:790]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_mux_enc' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_mux_enc' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized0' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized0' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_37_decerr_slave' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:3493]
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_37_decerr_slave' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:3493]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_37_addr_arbiter_sasd' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:63]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized1' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized1' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_37_addr_arbiter_sasd' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:63]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_37_splitter' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:4451]
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_37_splitter' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:4451]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_37_splitter__parameterized0' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:4451]
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_37_splitter__parameterized0' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:4451]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_mux_enc' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_mux_enc' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized0' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized0' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
-INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized1' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
-INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized1' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
-INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_35_axic_register_slice' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
-INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_35_axic_register_slice' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
 INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
 INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized2' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized3' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized3' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_35_axic_register_slice' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_35_axic_register_slice' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized4' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_mux_enc__parameterized4' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:2436]
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_37_crossbar_sasd' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:1234]
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_37_axi_crossbar' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:4871]
 INFO: [Synth 8-6155] done synthesizing module 'microblaze_microblaze_0_axi_periph_imp_xbar_2' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_xbar_2/synth/microblaze_microblaze_0_axi_periph_imp_xbar_2.v:53]
@@ -79,7 +85,6 @@ WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_aw_t
 WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_ar_trans_seq_i_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:2062]
 WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_w_beat_cnt_i_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:2073]
 WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_r_beat_cnt_i_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/a1a7/hdl/axi_crossbar_v2_1_vl_rfs.v:2086]
-WARNING: [Synth 8-7129] Port S[0] in module generic_baseblocks_v2_1_2_mux_enc__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWID[0] in module axi_crossbar_v2_1_37_decerr_slave is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_WLAST in module axi_crossbar_v2_1_37_decerr_slave is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_ARID[0] in module axi_crossbar_v2_1_37_decerr_slave is either unconnected or has no load
@@ -93,7 +98,11 @@ WARNING: [Synth 8-7129] Port S_AXI_ARLEN[1] in module axi_crossbar_v2_1_37_decer
 WARNING: [Synth 8-7129] Port S_AXI_ARLEN[0] in module axi_crossbar_v2_1_37_decerr_slave is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ADDR[1] in module axi_crossbar_v2_1_37_addr_decoder is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ADDR[0] in module axi_crossbar_v2_1_37_addr_decoder is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AWID[1] in module axi_crossbar_v2_1_37_crossbar_sasd is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWID[0] in module axi_crossbar_v2_1_37_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WID[1] in module axi_crossbar_v2_1_37_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_WID[0] in module axi_crossbar_v2_1_37_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_ARID[1] in module axi_crossbar_v2_1_37_crossbar_sasd is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_ARID[0] in module axi_crossbar_v2_1_37_crossbar_sasd is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_AXI_BID[3] in module axi_crossbar_v2_1_37_crossbar_sasd is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_AXI_BID[2] in module axi_crossbar_v2_1_37_crossbar_sasd is either unconnected or has no load
@@ -103,7 +112,48 @@ WARNING: [Synth 8-7129] Port M_AXI_RID[3] in module axi_crossbar_v2_1_37_crossba
 WARNING: [Synth 8-7129] Port M_AXI_RID[2] in module axi_crossbar_v2_1_37_crossbar_sasd is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_AXI_RID[1] in module axi_crossbar_v2_1_37_crossbar_sasd is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_AXI_RID[0] in module axi_crossbar_v2_1_37_crossbar_sasd is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awid[1] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_awid[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[63] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[62] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[61] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[60] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[59] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[58] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[57] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[56] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[55] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[54] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[53] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[52] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[51] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[50] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[49] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[48] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[47] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[46] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[45] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[44] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[43] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[42] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[41] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[40] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[39] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[38] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[37] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[36] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[35] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[34] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[33] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awaddr[32] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[15] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[14] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[13] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[12] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[11] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[10] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[9] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlen[8] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_awlen[7] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_awlen[6] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_awlen[5] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
@@ -112,81 +162,43 @@ WARNING: [Synth 8-7129] Port s_axi_awlen[3] in module axi_crossbar_v2_1_37_axi_c
 WARNING: [Synth 8-7129] Port s_axi_awlen[2] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_awlen[1] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_awlen[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[5] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[4] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awsize[3] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_awsize[2] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_awsize[1] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_awsize[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awburst[3] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awburst[2] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_awburst[1] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_awburst[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlock[1] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_awlock[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awcache[7] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awcache[6] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awcache[5] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awcache[4] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_awcache[3] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_awcache[2] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_awcache[1] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_awcache[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_awqos[3] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_awqos[2] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_awqos[1] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_awqos[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_awuser[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_wid[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_wlast[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_wuser[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arid[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arlen[7] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arlen[6] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arlen[5] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arlen[4] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arlen[3] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arlen[2] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arlen[1] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arlen[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arsize[2] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arsize[1] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arsize[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arburst[1] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arburst[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arlock[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arcache[3] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arcache[2] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arcache[1] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arcache[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arqos[3] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arqos[2] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arqos[1] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_arqos[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_aruser[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_bid[3] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_bid[2] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_bid[1] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_bid[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_buser[3] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_buser[2] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_buser[1] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_buser[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_rid[3] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_rid[2] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_rid[1] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_rid[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_rlast[3] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_rlast[2] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_rlast[1] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_rlast[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_ruser[3] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_ruser[2] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_ruser[1] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port m_axi_ruser[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[5] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[4] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awprot[3] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2585.840 ; gain = 380.594 ; free physical = 29424 ; free virtual = 41713
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2577.895 ; gain = 372.625 ; free physical = 43727 ; free virtual = 57859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2585.840 ; gain = 380.594 ; free physical = 29423 ; free virtual = 41713
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2580.863 ; gain = 375.594 ; free physical = 43727 ; free virtual = 57859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2585.840 ; gain = 380.594 ; free physical = 29423 ; free virtual = 41713
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2580.863 ; gain = 375.594 ; free physical = 43727 ; free virtual = 57859
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2585.840 ; gain = 0.000 ; free physical = 29423 ; free virtual = 41713
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2580.863 ; gain = 0.000 ; free physical = 43719 ; free virtual = 57851
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -197,30 +209,30 @@ Parsing XDC File [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A
 Finished Parsing XDC File [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_xbar_2_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2657.305 ; gain = 0.000 ; free physical = 29405 ; free virtual = 41696
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2654.328 ; gain = 0.000 ; free physical = 43561 ; free virtual = 57715
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2657.340 ; gain = 0.000 ; free physical = 29405 ; free virtual = 41696
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2654.363 ; gain = 0.000 ; free physical = 43561 ; free virtual = 57715
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2657.340 ; gain = 452.094 ; free physical = 29298 ; free virtual = 41609
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2654.363 ; gain = 449.094 ; free physical = 43577 ; free virtual = 57714
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2665.309 ; gain = 460.062 ; free physical = 29298 ; free virtual = 41609
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2662.332 ; gain = 457.062 ; free physical = 43577 ; free virtual = 57714
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2665.309 ; gain = 460.062 ; free physical = 29298 ; free virtual = 41609
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2662.332 ; gain = 457.062 ; free physical = 43577 ; free virtual = 57714
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2665.309 ; gain = 460.062 ; free physical = 29269 ; free virtual = 41582
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2662.332 ; gain = 457.062 ; free physical = 43575 ; free virtual = 57713
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -231,16 +243,16 @@ Detailed RTL Component Info :
 	               36 Bit    Registers := 2     
 	                5 Bit    Registers := 1     
 	                3 Bit    Registers := 2     
-	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 14    
+	                2 Bit    Registers := 7     
+	                1 Bit    Registers := 11    
 +---Muxes : 
-	   2 Input   64 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 2     
 	   2 Input   36 Bit        Muxes := 2     
 	   2 Input    5 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 43    
+	   2 Input    1 Bit        Muxes := 45    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -258,32 +270,26 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 INFO: [Synth 8-3936] Found unconnected internal register 'gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:1726]
-WARNING: [Synth 8-7129] Port s_axi_awid[0] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_awlen[7] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_awlen[6] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_awlen[5] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-WARNING: [Synth 8-7129] Port s_axi_awlen[4] in module axi_crossbar_v2_1_37_axi_crossbar is either unconnected or has no load
-INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2665.309 ; gain = 460.062 ; free physical = 29066 ; free virtual = 41389
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2662.332 ; gain = 457.062 ; free physical = 43583 ; free virtual = 57721
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2665.309 ; gain = 460.062 ; free physical = 27606 ; free virtual = 40339
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2670.332 ; gain = 465.062 ; free physical = 43571 ; free virtual = 57713
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2680.324 ; gain = 475.078 ; free physical = 27639 ; free virtual = 40400
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2686.348 ; gain = 481.078 ; free physical = 43548 ; free virtual = 57689
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2690.348 ; gain = 485.102 ; free physical = 27613 ; free virtual = 40372
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2697.371 ; gain = 492.102 ; free physical = 43540 ; free virtual = 57681
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -301,37 +307,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2843.160 ; gain = 637.914 ; free physical = 27452 ; free virtual = 40301
+Finished IO Insertion : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2846.184 ; gain = 640.914 ; free physical = 43425 ; free virtual = 57566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2843.160 ; gain = 637.914 ; free physical = 27452 ; free virtual = 40301
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2846.184 ; gain = 640.914 ; free physical = 43425 ; free virtual = 57566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2843.160 ; gain = 637.914 ; free physical = 27452 ; free virtual = 40301
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2846.184 ; gain = 640.914 ; free physical = 43425 ; free virtual = 57566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2843.160 ; gain = 637.914 ; free physical = 27452 ; free virtual = 40301
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2846.184 ; gain = 640.914 ; free physical = 43425 ; free virtual = 57566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2843.160 ; gain = 637.914 ; free physical = 27449 ; free virtual = 40298
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2846.184 ; gain = 640.914 ; free physical = 43425 ; free virtual = 57566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2843.160 ; gain = 637.914 ; free physical = 27452 ; free virtual = 40301
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2846.184 ; gain = 640.914 ; free physical = 43425 ; free virtual = 57566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -348,39 +354,40 @@ Report Cell Usage:
 |      |Cell |Count |
 +------+-----+------+
 |1     |LUT1 |     1|
-|2     |LUT2 |    11|
-|3     |LUT3 |    13|
-|4     |LUT4 |    53|
-|5     |LUT5 |    44|
-|6     |LUT6 |    79|
-|7     |FDRE |   133|
+|2     |LUT2 |    50|
+|3     |LUT3 |    45|
+|4     |LUT4 |    16|
+|5     |LUT5 |    61|
+|6     |LUT6 |   107|
+|7     |FDRE |   138|
+|8     |FDSE |     1|
 +------+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2843.160 ; gain = 637.914 ; free physical = 27452 ; free virtual = 40301
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2846.184 ; gain = 640.914 ; free physical = 43425 ; free virtual = 57566
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 72 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2843.160 ; gain = 566.414 ; free physical = 27455 ; free virtual = 40304
-Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2843.168 ; gain = 637.914 ; free physical = 27455 ; free virtual = 40304
+Synthesis finished with 0 errors, 0 critical warnings and 197 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2846.184 ; gain = 567.414 ; free physical = 43425 ; free virtual = 57567
+Synthesis Optimization Complete : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2846.191 ; gain = 640.914 ; free physical = 43425 ; free virtual = 57567
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:00 . Memory (MB): peak = 2843.168 ; gain = 0.000 ; free physical = 27560 ; free virtual = 40410
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2846.191 ; gain = 0.000 ; free physical = 43585 ; free virtual = 57726
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2899.188 ; gain = 0.000 ; free physical = 27561 ; free virtual = 40409
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2902.211 ; gain = 0.000 ; free physical = 43588 ; free virtual = 57728
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 63852f55
+Synth Design complete | Checksum: 62aabf93
 INFO: [Common 17-83] Releasing license: Synthesis
-51 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
+55 Infos, 113 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:15 . Memory (MB): peak = 2899.223 ; gain = 1075.250 ; free physical = 27553 ; free virtual = 40401
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1777.975; main = 1777.975; forked = 175.358
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3630.066; main = 2899.191; forked = 964.754
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2923.199 ; gain = 0.000 ; free physical = 27548 ; free virtual = 40397
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2902.246 ; gain = 1106.156 ; free physical = 43590 ; free virtual = 57729
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1937.220; main = 1908.276; forked = 230.856
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3627.094; main = 2902.215; forked = 964.758
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2926.223 ; gain = 0.000 ; free physical = 43590 ; free virtual = 57729
 INFO: [Common 17-1381] The checkpoint '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_xbar_2_synth_1/microblaze_microblaze_0_axi_periph_imp_xbar_2.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP microblaze_microblaze_0_axi_periph_imp_xbar_2, cache-ID = da34717c0f80d192
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP microblaze_microblaze_0_axi_periph_imp_xbar_2, cache-ID = 7b15c34d42795313
 INFO: [Coretcl 2-1174] Renamed 7 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2923.199 ; gain = 0.000 ; free physical = 27523 ; free virtual = 40372
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2926.223 ; gain = 0.000 ; free physical = 43600 ; free virtual = 57740
 INFO: [Common 17-1381] The checkpoint '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_xbar_2_synth_1/microblaze_microblaze_0_axi_periph_imp_xbar_2.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file microblaze_microblaze_0_axi_periph_imp_xbar_2_utilization_synth.rpt -pb microblaze_microblaze_0_axi_periph_imp_xbar_2_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Jul 17 23:26:10 2025...
+INFO: [Common 17-206] Exiting Vivado at Sat Jul 19 20:25:17 2025...
