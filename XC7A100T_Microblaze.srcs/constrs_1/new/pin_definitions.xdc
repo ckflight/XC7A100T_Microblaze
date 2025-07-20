@@ -1,7 +1,6 @@
 set_property -dict { PACKAGE_PIN E3   IOSTANDARD LVCMOS33 } [get_ports { SYSCLK }];
 create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports {SYSCLK}];
 
-
 set_property -dict { PACKAGE_PIN M17   IOSTANDARD LVCMOS33 } [get_ports { RESET }]; # rightmost button
 
 #LEDs
@@ -34,11 +33,19 @@ set_property -dict { PACKAGE_PIN F6   IOSTANDARD LVCMOS33 } [get_ports { JA_SPI_
 set_property -dict { PACKAGE_PIN J2   IOSTANDARD LVCMOS33 } [get_ports { JA_SPI_CLK_DEBUG }];
 set_property -dict { PACKAGE_PIN G6   IOSTANDARD LVCMOS33 } [get_ports { JA_SPI_CS_DEBUG[0] }];
 
-#UART DEBUG
-set_property -dict { PACKAGE_PIN H1    IOSTANDARD LVCMOS33 } [get_ports { JD_UART_TX_DEBUG }];
+#I2C
+set_property -dict { PACKAGE_PIN C14    IOSTANDARD LVCMOS33 } [get_ports { I2C_SCL }];
+set_property -dict { PACKAGE_PIN C15    IOSTANDARD LVCMOS33 } [get_ports { I2C_SDA }];
+
+#I2C DEBUG
+#set_property -dict { PACKAGE_PIN H1    IOSTANDARD LVCMOS33 } [get_ports { JD_I2C_SCL_DEBUG }];
+#set_property -dict { PACKAGE_PIN G1    IOSTANDARD LVCMOS33 } [get_ports { JD_I2C_SDA_DEBUG }];
 
 #USB UART
 set_property -dict { PACKAGE_PIN D4    IOSTANDARD LVCMOS33 } [get_ports { USB_UART_TX }];
+
+#UART DEBUG
+set_property -dict { PACKAGE_PIN H4    IOSTANDARD LVCMOS33 } [get_ports { JD_UART_TX_DEBUG }];
 
 #AN
 set_property -dict { PACKAGE_PIN J17   IOSTANDARD LVCMOS33 } [get_ports { AN[0] }];

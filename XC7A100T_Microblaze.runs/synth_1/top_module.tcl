@@ -110,6 +110,8 @@ set_property used_in_implementation false [get_files -all /home/ck/Desktop/Works
 set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_quad_spi_0_1/microblaze_axi_quad_spi_0_1.xdc]
 set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_quad_spi_0_1/microblaze_axi_quad_spi_0_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_quad_spi_0_1/microblaze_axi_quad_spi_0_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_iic_0_0/microblaze_axi_iic_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_iic_0_0/microblaze_axi_iic_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/microblaze_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_3/data/mb_bootloop_le.elf]
 

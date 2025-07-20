@@ -298,6 +298,42 @@
             },
             "V9": {
                 "VT": "AC",
+                "BA": "0x40800000",
+                "HA": "0x4080FFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Data",
+                "MX": "/microblaze_0",
+                "MI": "M_AXI_DP",
+                "MS": "SEG_axi_iic_0_Reg",
+                "MV": "xilinx.com:ip:microblaze:11.0",
+                "SX": "/axi_iic_0",
+                "SI": "S_AXI",
+                "SS": "Reg",
+                "SV": "xilinx.com:ip:axi_iic:2.1",
+                "TM": "data",
+                "TU": "register"
+            },
+            "V10": {
+                "VT": "AC",
+                "BA": "0x40800000",
+                "HA": "0x4080FFFF",
+                "BP": "C_BASEADDR",
+                "HP": "C_HIGHADDR",
+                "MA": "Instruction",
+                "MX": "/microblaze_0",
+                "MI": "M_AXI_IP",
+                "MS": "SEG_axi_iic_0_Reg",
+                "MV": "xilinx.com:ip:microblaze:11.0",
+                "SX": "/axi_iic_0",
+                "SI": "S_AXI",
+                "SS": "Reg",
+                "SV": "xilinx.com:ip:axi_iic:2.1",
+                "TM": "instruction",
+                "TU": "register"
+            },
+            "V11": {
+                "VT": "AC",
                 "BA": "0x41200000",
                 "HA": "0x4120FFFF",
                 "BP": "C_BASEADDR",
@@ -315,7 +351,7 @@
                 "TM": "data",
                 "TU": "register"
             },
-            "V10": {
+            "V12": {
                 "VT": "AC",
                 "BA": "0x41200000",
                 "HA": "0x4120FFFF",
@@ -334,7 +370,7 @@
                 "TM": "instruction",
                 "TU": "register"
             },
-            "V11": {
+            "V13": {
                 "VT": "AC",
                 "BA": "0x44A00000",
                 "HA": "0x44A0FFFF",
@@ -352,7 +388,7 @@
                 "TM": "data",
                 "TU": "register"
             },
-            "V12": {
+            "V14": {
                 "VT": "AC",
                 "BA": "0x44A00000",
                 "HA": "0x44A0FFFF",
@@ -427,6 +463,16 @@
             },
             {
                 "src": "V12",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V13",
+                "trg": "V2",
+                "EH": "2"
+            },
+            {
+                "src": "V14",
                 "trg": "V2",
                 "EH": "2"
             }

@@ -25,7 +25,13 @@ entity top_module is
         
         JD_UART_TX_DEBUG    : out std_logic;
         
-        USB_UART_TX         : out std_logic -- connected to ft2232h's uart rxd pin on board
+        USB_UART_TX         : out std_logic; -- connected to ft2232h's uart rxd pin on board
+        
+        I2C_SCL             : inout std_logic;
+        I2C_SDA             : inout std_Logic
+        
+        --JD_I2C_SCL_DEBUG    : out std_logic; -- these pins are not driving anyting so they will output the signal only
+        --JD_I2C_SDA_DEBUG    : out std_logic
     );
 end top_module;
 
@@ -35,13 +41,15 @@ architecture Behavioral of top_module is
     port (
         clk_100MHz          : in STD_LOGIC;
         gpio_rtl_0_tri_o    : out STD_LOGIC_VECTOR ( 15 downto 0 );
+        iic_rtl_0_scl_io    : inout STD_LOGIC;
+        iic_rtl_0_sda_io    : inout STD_LOGIC;
         reset_rtl_0         : in STD_LOGIC;
         spi_clk             : out STD_LOGIC;
         spi_cs              : out STD_LOGIC_VECTOR ( 0 to 0 );
         spi_miso            : in STD_LOGIC;
         spi_mosi            : out STD_LOGIC;
         uart_rtl_0_rxd      : in STD_LOGIC;
-        uart_rtl_0_txd      : out STD_LOGIC
+        uart_rtl_0_txd      : out STD_LOGIC 
     );
     end component;
     
@@ -103,10 +111,11 @@ architecture Behavioral of top_module is
     signal s_spi_miso       : std_logic;
     signal s_spi_clk        : std_logic;
     signal s_spi_cs         : std_logic_vector(0 to 0);
+        
     
 begin 
     
-    reset_n <= not RESET;
+    reset_n             <= not RESET;
     
     JD_UART_TX_DEBUG    <= s_uart_tx;  -- send tx data sent from microblaze to debug pin on jd header
     USB_UART_TX         <= s_uart_tx;       -- send tx data sent from microblaze to nexy4 onboard f
@@ -120,11 +129,13 @@ begin
     s_spi_miso          <= SPI_MISO;
     SPI_CLK             <= s_spi_clk;
     SPI_CS              <= s_spi_cs;
-    
+        
     microblaze: microblaze_wrapper
     port map (      
         clk_100MHz          => SYSCLK,
         gpio_rtl_0_tri_o    => LED,
+        iic_rtl_0_scl_io    => I2C_SCL,
+        iic_rtl_0_sda_io    => I2C_SDA,
         reset_rtl_0         => reset_n,
         spi_clk             => s_spi_clk,
         spi_cs              => s_spi_cs,

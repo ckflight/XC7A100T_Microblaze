@@ -54,4 +54,7 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_
 # IP: bd/microblaze/ip/microblaze_axi_quad_spi_0_1/microblaze_axi_quad_spi_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_axi_quad_spi_0_1 || ORIG_REF_NAME==microblaze_axi_quad_spi_0_1} -quiet] -quiet
 
+# IP: bd/microblaze/ip/microblaze_axi_iic_0_0/microblaze_axi_iic_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_axi_iic_0_0 || ORIG_REF_NAME==microblaze_axi_iic_0_0} -quiet] -quiet
+
 # XDC: /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/microblaze_ooc.xdc

@@ -2,7 +2,7 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
---Date        : Sat Jul 19 20:52:41 2025
+--Date        : Sun Jul 20 11:57:52 2025
 --Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
 --Command     : generate_target microblaze_wrapper.bd
 --Design      : microblaze_wrapper
@@ -16,6 +16,8 @@ entity microblaze_wrapper is
   port (
     clk_100MHz : in STD_LOGIC;
     gpio_rtl_0_tri_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    iic_rtl_0_scl_io : inout STD_LOGIC;
+    iic_rtl_0_sda_io : inout STD_LOGIC;
     reset_rtl_0 : in STD_LOGIC;
     spi_clk : out STD_LOGIC;
     spi_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -37,14 +39,54 @@ architecture STRUCTURE of microblaze_wrapper is
     spi_miso : in STD_LOGIC;
     spi_mosi : out STD_LOGIC;
     spi_clk : out STD_LOGIC;
-    spi_cs : out STD_LOGIC_VECTOR ( 0 to 0 )
+    spi_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
+    iic_rtl_0_scl_i : in STD_LOGIC;
+    iic_rtl_0_scl_o : out STD_LOGIC;
+    iic_rtl_0_scl_t : out STD_LOGIC;
+    iic_rtl_0_sda_i : in STD_LOGIC;
+    iic_rtl_0_sda_o : out STD_LOGIC;
+    iic_rtl_0_sda_t : out STD_LOGIC
   );
   end component microblaze;
+  component IOBUF is
+  port (
+    I : in STD_LOGIC;
+    O : out STD_LOGIC;
+    T : in STD_LOGIC;
+    IO : inout STD_LOGIC
+  );
+  end component IOBUF;
+  signal iic_rtl_0_scl_i : STD_LOGIC;
+  signal iic_rtl_0_scl_o : STD_LOGIC;
+  signal iic_rtl_0_scl_t : STD_LOGIC;
+  signal iic_rtl_0_sda_i : STD_LOGIC;
+  signal iic_rtl_0_sda_o : STD_LOGIC;
+  signal iic_rtl_0_sda_t : STD_LOGIC;
 begin
+iic_rtl_0_scl_iobuf: component IOBUF
+     port map (
+      I => iic_rtl_0_scl_o,
+      IO => iic_rtl_0_scl_io,
+      O => iic_rtl_0_scl_i,
+      T => iic_rtl_0_scl_t
+    );
+iic_rtl_0_sda_iobuf: component IOBUF
+     port map (
+      I => iic_rtl_0_sda_o,
+      IO => iic_rtl_0_sda_io,
+      O => iic_rtl_0_sda_i,
+      T => iic_rtl_0_sda_t
+    );
 microblaze_i: component microblaze
      port map (
       clk_100MHz => clk_100MHz,
       gpio_rtl_0_tri_o(15 downto 0) => gpio_rtl_0_tri_o(15 downto 0),
+      iic_rtl_0_scl_i => iic_rtl_0_scl_i,
+      iic_rtl_0_scl_o => iic_rtl_0_scl_o,
+      iic_rtl_0_scl_t => iic_rtl_0_scl_t,
+      iic_rtl_0_sda_i => iic_rtl_0_sda_i,
+      iic_rtl_0_sda_o => iic_rtl_0_sda_o,
+      iic_rtl_0_sda_t => iic_rtl_0_sda_t,
       reset_rtl_0 => reset_rtl_0,
       spi_clk => spi_clk,
       spi_cs(0) => spi_cs(0),
