@@ -189,8 +189,8 @@ microblaze_microblaze_0_xlconcat_0_sc::microblaze_microblaze_0_xlconcat_0_sc(con
     model_param_props.addLong("IN125_WIDTH", "1");
     model_param_props.addLong("IN126_WIDTH", "1");
     model_param_props.addLong("IN127_WIDTH", "1");
-    model_param_props.addLong("dout_width", "2");
-    model_param_props.addLong("NUM_PORTS", "2");
+    model_param_props.addLong("dout_width", "4");
+    model_param_props.addLong("NUM_PORTS", "4");
     model_param_props.addString("COMPONENT_NAME", "microblaze_microblaze_0_xlconcat_0");
 
   mp_impl = new microblaze_microblaze_0_xlconcat_0_core("inst", model_param_props);

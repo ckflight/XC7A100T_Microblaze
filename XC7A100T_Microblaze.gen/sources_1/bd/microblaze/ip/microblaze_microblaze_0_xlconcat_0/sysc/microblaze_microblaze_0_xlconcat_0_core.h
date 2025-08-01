@@ -151,12 +151,16 @@ class microblaze_microblaze_0_xlconcat_0_core : public sc_module
             : sc_module(nm)
               , In0    ( "In0" )
               , In1    ( "In1" )
+              , In2    ( "In2" )
+              , In3    ( "In3" )
               , dout   ( "dout" )
     {
         SC_HAS_PROCESS(microblaze_microblaze_0_xlconcat_0_core);
         SC_METHOD(concate_input_port_values);
             sensitive << In0 
-                      << In1 ;
+                      << In1 
+                      << In2 
+                      << In3 ;
         dont_initialize();
     }
 
@@ -164,15 +168,19 @@ class microblaze_microblaze_0_xlconcat_0_core : public sc_module
    
     void concate_input_port_values()
     {
-        sc_bv <2> portConcateVal;
+        sc_bv <4> portConcateVal;
             portConcateVal.range(0,0) =  In0.read();
             portConcateVal.range(1,1) =  In1.read();
+            portConcateVal.range(2,2) =  In2.read();
+            portConcateVal.range(3,3) =  In3.read();
         dout.write(portConcateVal);
     }
     public: 
         sc_in< sc_bv<IN0_WIDTH> >   In0;
         sc_in< sc_bv<IN1_WIDTH> >   In1;
-        sc_out< sc_bv <2> >  dout;
+        sc_in< sc_bv<IN2_WIDTH> >   In2;
+        sc_in< sc_bv<IN3_WIDTH> >   In3;
+        sc_out< sc_bv <4> >  dout;
 
 };
 

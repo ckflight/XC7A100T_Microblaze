@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version              : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date                      : Thu Jul 31 21:17:39 2025
-| Host                      : ck-MS-7E62 running 64-bit Ubuntu 25.04
+| Tool Version              : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date                      : Fri Aug  1 15:04:06 2025
+| Host                      : TPC-0073 running 64-bit major release  (build 9200)
 | Command                   : report_io -file top_module_io_placed.rpt
 | Design                    : top_module
 | Device                    : xc7a100t
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            49 |
+|            51 |
 +---------------+
 
 
@@ -146,7 +146,7 @@ Table of Contents
 | G1         | JD_GPIO2_IN[0]  | High Range | IO_L17N_T2_35                | INPUT       | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      | PULLDOWN  |          |      | NONE             |              |                   |              |
 | G2         |                 | High Range | IO_L15N_T2_DQS_35            | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | G3         | JD_GPIO2_IN[1]  | High Range | IO_L20N_T3_35                | INPUT       | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      | PULLDOWN  |          |      | NONE             |              |                   |              |
-| G4         |                 | High Range | IO_L20P_T3_35                | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| G4         | JD8_I2C_SDA     | High Range | IO_L20P_T3_35                | BIDIR       | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | G5         |                 | High Range | VCCO_35                      | VCCO        |             |      35 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | G6         | JC4_SPI1_CS[0]  | High Range | IO_L19P_T3_35                | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | G7         |                 |            | VCCINT                       | VCCINT      |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
@@ -162,7 +162,7 @@ Table of Contents
 | G17        |                 | High Range | IO_L18N_T2_A23_15            | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | G18        |                 | High Range | IO_L22P_T3_A17_15            | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | H1         | JD_GPIO1_OUT[1] | High Range | IO_L17P_T2_35                | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
-| H2         |                 | High Range | IO_L15P_T2_DQS_35            | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| H2         | JD7_I2C_SCL     | High Range | IO_L15P_T2_DQS_35            | BIDIR       | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | H3         |                 |            | GND                          | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | H4         | JD_GPIO1_OUT[0] | High Range | IO_L21N_T3_DQS_35            | OUTPUT      | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | H5         |                 | High Range | IO_L24N_T3_35                | User IO     |             |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

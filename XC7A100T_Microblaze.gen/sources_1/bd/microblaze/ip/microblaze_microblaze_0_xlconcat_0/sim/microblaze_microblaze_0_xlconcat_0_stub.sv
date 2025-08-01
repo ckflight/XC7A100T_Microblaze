@@ -68,18 +68,22 @@ typedef bit bit_as_bool;
 module microblaze_microblaze_0_xlconcat_0 (
   input bit [0 : 0] In0,
   input bit [0 : 0] In1,
-  output bit [1 : 0] dout
+  input bit [0 : 0] In2,
+  input bit [0 : 0] In3,
+  output bit [3 : 0] dout
 );
 endmodule
 `endif
 
 `ifdef XCELIUM
 (* XMSC_MODULE_EXPORT *)
-module microblaze_microblaze_0_xlconcat_0 (In0,In1,dout)
+module microblaze_microblaze_0_xlconcat_0 (In0,In1,In2,In3,dout)
 (* integer foreign = "SystemC";
 *);
   input bit [0 : 0] In0;
   input bit [0 : 0] In1;
-  output wire [1 : 0] dout;
+  input bit [0 : 0] In2;
+  input bit [0 : 0] In3;
+  output wire [3 : 0] dout;
 endmodule
 `endif

@@ -29,7 +29,10 @@ entity top_module is
         I2C_SDA              : inout std_Logic;
         
         JD_GPIO1_OUT         : out std_logic_vector(1 downto 0);
-        JD_GPIO2_IN          : in std_logic_vector(1 downto 0)
+        JD_GPIO2_IN          : in std_logic_vector(1 downto 0);
+        
+        JD7_I2C_SCL          : inout std_logic;
+        JD8_I2C_SDA          : inout std_logic
 
     );
 end top_module;
@@ -45,6 +48,8 @@ architecture Behavioral of top_module is
         gpio_rtl_2_tri_i : in STD_LOGIC_VECTOR ( 1 downto 0 );
         iic_rtl_0_scl_io : inout STD_LOGIC;
         iic_rtl_0_sda_io : inout STD_LOGIC;
+        iic_rtl_1_scl_io : inout STD_LOGIC;
+        iic_rtl_1_sda_io : inout STD_LOGIC;
         io0_o_0 : out STD_LOGIC;
         io0_o_1 : out STD_LOGIC;
         io1_i_0 : in STD_LOGIC;
@@ -121,8 +126,8 @@ architecture Behavioral of top_module is
     signal s_spi1_mosi          : std_logic;
     signal s_spi1_miso          : std_logic;
     signal s_spi1_clk           : std_logic;
-    signal s_spi1_cs            : std_logic_vector(0 to 0);    
-        
+    signal s_spi1_cs            : std_logic_vector(0 to 0);
+
 begin 
     
     reset_n              <= not RESET;
@@ -138,7 +143,7 @@ begin
     s_spi0_miso          <= SPI0_MISO;
     SPI0_CLK             <= s_spi0_clk;
     SPI0_CS              <= s_spi0_cs;
-                
+    
     microblaze: microblaze_wrapper
     port map (      
         clk_100MHz              => SYSCLK,
@@ -147,6 +152,8 @@ begin
         gpio_rtl_2_tri_i        => JD_GPIO2_IN,
         iic_rtl_0_scl_io        => I2C_SCL,
         iic_rtl_0_sda_io        => I2C_SDA,
+        iic_rtl_1_scl_io        => JD7_I2C_SCL,
+        iic_rtl_1_sda_io        => JD8_I2C_SDA,
         io0_o_0                 => s_spi0_mosi,
         io0_o_1                 => s_spi1_mosi,
         io1_i_0                 => s_spi0_miso,
@@ -189,8 +196,8 @@ begin
         NUMBER3 => X"0",
         NUMBER4 => X"0",
         NUMBER5 => X"0",
-        NUMBER6 => X"1",
-        NUMBER7 => X"C",
+        NUMBER6 => X"0",
+        NUMBER7 => X"8",
         NUMBER8 => X"C",
         AN      => AN,
         SEG     => SEG        

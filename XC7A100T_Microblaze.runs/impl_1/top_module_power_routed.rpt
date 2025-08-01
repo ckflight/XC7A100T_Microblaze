@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date             : Thu Jul 31 21:17:56 2025
-| Host             : ck-MS-7E62 running 64-bit Ubuntu 25.04
+| Tool Version     : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date             : Fri Aug  1 15:05:11 2025
+| Host             : TPC-0073 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_module_power_routed.rpt -pb top_module_power_summary_routed.pb -rpx top_module_power_routed.rpx
 | Design           : top_module
 | Device           : xc7a100tcsg324-1
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.272        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.173        |
+| Dynamic (W)              | 0.172        |
 | Device Static (W)        | 0.099        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 83.8         |
@@ -52,20 +52,20 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.024 |        8 |       --- |             --- |
-| Slice Logic              |     0.013 |    11038 |       --- |             --- |
-|   LUT as Logic           |     0.011 |     3988 |     63400 |            6.29 |
+| Clocks                   |     0.026 |        8 |       --- |             --- |
+| Slice Logic              |     0.013 |    11967 |       --- |             --- |
+|   LUT as Logic           |     0.011 |     4424 |     63400 |            6.98 |
 |   LUT as Distributed RAM |     0.001 |      184 |     19000 |            0.97 |
-|   Register               |    <0.001 |     4286 |    126800 |            3.38 |
-|   CARRY4                 |    <0.001 |      180 |     15850 |            1.14 |
-|   F7/F8 Muxes            |    <0.001 |       45 |     63400 |            0.07 |
-|   LUT as Shift Register  |    <0.001 |      154 |     19000 |            0.81 |
-|   Others                 |     0.000 |     1149 |       --- |             --- |
-| Signals                  |     0.017 |     7486 |       --- |             --- |
+|   Register               |    <0.001 |     4657 |    126800 |            3.67 |
+|   CARRY4                 |    <0.001 |      193 |     15850 |            1.22 |
+|   F7/F8 Muxes            |    <0.001 |       53 |     63400 |            0.08 |
+|   LUT as Shift Register  |    <0.001 |      163 |     19000 |            0.86 |
+|   Others                 |     0.000 |     1175 |       --- |             --- |
+| Signals                  |     0.018 |     8131 |       --- |             --- |
 | Block RAM                |     0.001 |     32.5 |       135 |           24.07 |
 | MMCM                     |     0.106 |        1 |         6 |           16.67 |
 | DSPs                     |     0.003 |        5 |       240 |            2.08 |
-| I/O                      |     0.008 |       49 |       210 |           23.33 |
+| I/O                      |     0.006 |       51 |       210 |           24.29 |
 | Static Power             |     0.099 |          |           |                 |
 | Total                    |     0.272 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
@@ -77,9 +77,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.076 |       0.059 |      0.016 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.078 |       0.062 |      0.016 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.077 |       0.059 |      0.018 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -151,19 +151,19 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| top_module                    |     0.173 |
-|   microblaze                  |     0.160 |
-|     microblaze_i              |     0.160 |
+| top_module                    |     0.172 |
+|   microblaze                  |     0.163 |
+|     microblaze_i              |     0.163 |
 |       axi_iic_0               |     0.002 |
+|       axi_iic_1               |     0.002 |
 |       axi_quad_spi_0          |     0.006 |
 |       axi_quad_spi_1          |     0.006 |
 |       axi_timer_0             |     0.004 |
 |       clk_wiz_1               |     0.107 |
 |       mdm_1                   |     0.001 |
-|       microblaze_0            |     0.029 |
-|       microblaze_0_axi_intc   |     0.001 |
+|       microblaze_0            |     0.030 |
+|       microblaze_0_axi_intc   |     0.002 |
 |       microblaze_0_axi_periph |     0.002 |
-|   ssd                         |     0.001 |
 |   uart_rx                     |     0.002 |
 |     fifo                      |     0.002 |
 +-------------------------------+-----------+

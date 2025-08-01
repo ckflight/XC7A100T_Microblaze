@@ -33,7 +33,7 @@ set_property -dict { PACKAGE_PIN F6   IOSTANDARD LVCMOS33 } [get_ports { JC2_SPI
 set_property -dict { PACKAGE_PIN J2   IOSTANDARD LVCMOS33 } [get_ports { JC3_SPI1_CLK }];
 set_property -dict { PACKAGE_PIN G6   IOSTANDARD LVCMOS33 } [get_ports { JC4_SPI1_CS[0] }];
 
-#I2C
+#I2C0 Onboard temperature sensor
 set_property -dict { PACKAGE_PIN C14    IOSTANDARD LVCMOS33 } [get_ports { I2C_SCL }];
 set_property -dict { PACKAGE_PIN C15    IOSTANDARD LVCMOS33 } [get_ports { I2C_SDA }];
 
@@ -47,6 +47,11 @@ set_property PULLDOWN TRUE [get_ports {JD_GPIO2_IN[0]}]
 
 set_property -dict { PACKAGE_PIN G3    IOSTANDARD LVCMOS33 } [get_ports {JD_GPIO2_IN[1]}]
 set_property PULLDOWN TRUE [get_ports {JD_GPIO2_IN[1]}]
+
+# I2C1
+set_property -dict { PACKAGE_PIN H2    IOSTANDARD LVCMOS33 } [get_ports {JD7_I2C_SCL}]
+set_property -dict { PACKAGE_PIN G4    IOSTANDARD LVCMOS33 } [get_ports {JD8_I2C_SDA}]
+
 
 #USB UART
 set_property -dict { PACKAGE_PIN D4    IOSTANDARD LVCMOS33 } [get_ports { USB_UART_TX }];

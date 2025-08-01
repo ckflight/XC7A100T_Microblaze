@@ -1,15 +1,40 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="ck" Host="ck-MS-7E62" Pid="198716" HostCore="32" HostMemory="62262260">
+    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="10624" HostCore="20" HostMemory="016997011456">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="ck" Host="ck-MS-7E62" Pid="200175" HostCore="32" HostMemory="62262260">
+    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="4184" HostCore="20" HostMemory="016997011456">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado" Owner="ck" Host="ck-MS-7E62" Pid="244772" HostCore="32" HostMemory="62262260">
+    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="7516" HostCore="20" HostMemory="016997011456">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="5112" HostCore="20" HostMemory="016997011456">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="14328" HostCore="20" HostMemory="016997011456">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="10308" HostCore="20" HostMemory="016997011456">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="13416" HostCore="20" HostMemory="016997011456">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="8048" HostCore="20" HostMemory="016997011456">
     </Process>
 </ProcessHandle>

@@ -61,12 +61,14 @@
 
 
 #ifdef XILINX_SIMULATOR
-microblaze_microblaze_0_xlconcat_0::microblaze_microblaze_0_xlconcat_0(const sc_core::sc_module_name& nm) : microblaze_microblaze_0_xlconcat_0_sc(nm), In0("In0"), In1("In1"), dout("dout")
+microblaze_microblaze_0_xlconcat_0::microblaze_microblaze_0_xlconcat_0(const sc_core::sc_module_name& nm) : microblaze_microblaze_0_xlconcat_0_sc(nm), In0("In0"), In1("In1"), In2("In2"), In3("In3"), dout("dout")
 {
 
   // initialize pins
   mp_impl->In0(In0);
   mp_impl->In1(In1);
+  mp_impl->In2(In2);
+  mp_impl->In3(In3);
   mp_impl->dout(dout);
 
 }
@@ -81,12 +83,14 @@ void microblaze_microblaze_0_xlconcat_0::before_end_of_elaboration()
 
 
 #ifdef XM_SYSTEMC
-microblaze_microblaze_0_xlconcat_0::microblaze_microblaze_0_xlconcat_0(const sc_core::sc_module_name& nm) : microblaze_microblaze_0_xlconcat_0_sc(nm), In0("In0"), In1("In1"), dout("dout")
+microblaze_microblaze_0_xlconcat_0::microblaze_microblaze_0_xlconcat_0(const sc_core::sc_module_name& nm) : microblaze_microblaze_0_xlconcat_0_sc(nm), In0("In0"), In1("In1"), In2("In2"), In3("In3"), dout("dout")
 {
 
   // initialize pins
   mp_impl->In0(In0);
   mp_impl->In1(In1);
+  mp_impl->In2(In2);
+  mp_impl->In3(In3);
   mp_impl->dout(dout);
 
 }
@@ -101,12 +105,14 @@ void microblaze_microblaze_0_xlconcat_0::before_end_of_elaboration()
 
 
 #ifdef RIVIERA
-microblaze_microblaze_0_xlconcat_0::microblaze_microblaze_0_xlconcat_0(const sc_core::sc_module_name& nm) : microblaze_microblaze_0_xlconcat_0_sc(nm), In0("In0"), In1("In1"), dout("dout")
+microblaze_microblaze_0_xlconcat_0::microblaze_microblaze_0_xlconcat_0(const sc_core::sc_module_name& nm) : microblaze_microblaze_0_xlconcat_0_sc(nm), In0("In0"), In1("In1"), In2("In2"), In3("In3"), dout("dout")
 {
 
   // initialize pins
   mp_impl->In0(In0);
   mp_impl->In1(In1);
+  mp_impl->In2(In2);
+  mp_impl->In3(In3);
   mp_impl->dout(dout);
 
 }
@@ -121,11 +127,13 @@ void microblaze_microblaze_0_xlconcat_0::before_end_of_elaboration()
 
 
 #ifdef VCSSYSTEMC
-microblaze_microblaze_0_xlconcat_0::microblaze_microblaze_0_xlconcat_0(const sc_core::sc_module_name& nm) : microblaze_microblaze_0_xlconcat_0_sc(nm),  In0("In0"), In1("In1"), dout("dout")
+microblaze_microblaze_0_xlconcat_0::microblaze_microblaze_0_xlconcat_0(const sc_core::sc_module_name& nm) : microblaze_microblaze_0_xlconcat_0_sc(nm),  In0("In0"), In1("In1"), In2("In2"), In3("In3"), dout("dout")
 {
   // initialize pins
   mp_impl->In0(In0);
   mp_impl->In1(In1);
+  mp_impl->In2(In2);
+  mp_impl->In3(In3);
   mp_impl->dout(dout);
 
   // Instantiate Socket Stubs
@@ -143,11 +151,13 @@ void microblaze_microblaze_0_xlconcat_0::before_end_of_elaboration()
 
 
 #ifdef MTI_SYSTEMC
-microblaze_microblaze_0_xlconcat_0::microblaze_microblaze_0_xlconcat_0(const sc_core::sc_module_name& nm) : microblaze_microblaze_0_xlconcat_0_sc(nm),  In0("In0"), In1("In1"), dout("dout")
+microblaze_microblaze_0_xlconcat_0::microblaze_microblaze_0_xlconcat_0(const sc_core::sc_module_name& nm) : microblaze_microblaze_0_xlconcat_0_sc(nm),  In0("In0"), In1("In1"), In2("In2"), In3("In3"), dout("dout")
 {
   // initialize pins
   mp_impl->In0(In0);
   mp_impl->In1(In1);
+  mp_impl->In2(In2);
+  mp_impl->In3(In3);
   mp_impl->dout(dout);
 
   // Instantiate Socket Stubs

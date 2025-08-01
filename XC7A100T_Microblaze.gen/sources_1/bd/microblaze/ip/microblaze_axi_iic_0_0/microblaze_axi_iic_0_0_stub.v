@@ -1,11 +1,11 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-// Date        : Thu Jul 31 21:13:27 2025
-// Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
+// Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+// Date        : Fri Aug  1 10:44:38 2025
+// Host        : TPC-0073 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_iic_0_0/microblaze_axi_iic_0_0_stub.v
+//               c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_iic_0_0/microblaze_axi_iic_0_0_stub.v
 // Design      : microblaze_axi_iic_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1
@@ -14,7 +14,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* CHECK_LICENSE_TYPE = "microblaze_axi_iic_0_0,axi_iic,{}" *) (* core_generation_info = "microblaze_axi_iic_0_0,axi_iic,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_iic,x_ipVersion=2.1,x_ipCoreRevision=11,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_S_AXI_ADDR_WIDTH=9,C_S_AXI_DATA_WIDTH=32,C_IIC_FREQ=100000,C_TEN_BIT_ADR=0,C_GPO_WIDTH=1,C_S_AXI_ACLK_FREQ_HZ=100000000,C_SCL_INERTIAL_DELAY=0,C_SDA_INERTIAL_DELAY=0,C_SDA_LEVEL=1,C_SMBUS_PMBUS_HOST=0,C_DISABLE_SETUP_VIOLATION_CHECK=0,C_STATIC_TIMING_REG_WIDTH=0,C_TIMING_REG_WIDTH=32,C_DEFAULT_VALUE=0x00}" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* CHECK_LICENSE_TYPE = "microblaze_axi_iic_0_0,axi_iic,{}" *) (* core_generation_info = "microblaze_axi_iic_0_0,axi_iic,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_iic,x_ipVersion=2.1,x_ipCoreRevision=11,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_S_AXI_ADDR_WIDTH=9,C_S_AXI_DATA_WIDTH=32,C_IIC_FREQ=400000,C_TEN_BIT_ADR=0,C_GPO_WIDTH=1,C_S_AXI_ACLK_FREQ_HZ=100000000,C_SCL_INERTIAL_DELAY=0,C_SDA_INERTIAL_DELAY=0,C_SDA_LEVEL=1,C_SMBUS_PMBUS_HOST=0,C_DISABLE_SETUP_VIOLATION_CHECK=0,C_STATIC_TIMING_REG_WIDTH=0,C_TIMING_REG_WIDTH=32,C_DEFAULT_VALUE=0x00}" *) (* downgradeipidentifiedwarnings = "yes" *) 
 (* x_core_info = "axi_iic,Vivado 2025.1" *) 
 module microblaze_axi_iic_0_0(s_axi_aclk, s_axi_aresetn, iic2intc_irpt, 
   s_axi_awaddr, s_axi_awvalid, s_axi_awready, s_axi_wdata, s_axi_wstrb, s_axi_wvalid, 
