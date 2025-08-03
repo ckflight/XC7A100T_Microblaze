@@ -63,6 +63,51 @@ architecture Behavioral of top_module is
     );
     end component;
     
+    component mig_7series_0_mig
+    port (
+        ddr2_dq                     : inout std_logic_vector(15 downto 0);
+        ddr2_dqs_p                  : inout std_logic_vector(1 downto 0);
+        ddr2_dqs_n                  : inout std_logic_vector(1 downto 0);
+        ddr2_addr                   : out   std_logic_vector(12 downto 0);
+        ddr2_ba                     : out   std_logic_vector(2 downto 0);
+        ddr2_ras_n                  : out   std_logic;
+        ddr2_cas_n                  : out   std_logic;
+        ddr2_we_n                   : out   std_logic;
+        ddr2_ck_p                   : out   std_logic_vector(0 downto 0);
+        ddr2_ck_n                   : out   std_logic_vector(0 downto 0);
+        ddr2_cke                    : out   std_logic_vector(0 downto 0);
+        ddr2_cs_n                   : out   std_logic_vector(0 downto 0);
+        ddr2_dm                     : out   std_logic_vector(1 downto 0);
+        ddr2_odt                    : out   std_logic_vector(0 downto 0);
+        app_addr                    : in    std_logic_vector(26 downto 0);
+        app_cmd                     : in    std_logic_vector(2 downto 0);
+        app_en                      : in    std_logic;
+        app_wdf_data                : in    std_logic_vector(127 downto 0);
+        app_wdf_end                 : in    std_logic;
+        app_wdf_mask                : in    std_logic_vector(15 downto 0);
+        app_wdf_wren                : in    std_logic;
+        app_rd_data                 : out   std_logic_vector(127 downto 0);
+        app_rd_data_end             : out   std_logic;
+        app_rd_data_valid           : out   std_logic;
+        app_rdy                     : out   std_logic;
+        app_wdf_rdy                 : out   std_logic;
+        app_sr_req                  : in    std_logic;
+        app_ref_req                 : in    std_logic;
+        app_zq_req                  : in    std_logic;
+        app_sr_active               : out   std_logic;
+        app_ref_ack                 : out   std_logic;
+        app_zq_ack                  : out   std_logic;
+        ui_clk                      : out   std_logic;
+        ui_clk_sync_rst             : out   std_logic;
+        init_calib_complete         : out   std_logic;
+        -- System Clock Ports
+        sys_clk_i                   : in    std_logic;
+        -- Reference Clock Ports
+        clk_ref_i                   : in    std_logic;
+        sys_rst                     : in    std_logic
+    );
+    end component;
+    
     component uart_tx_module
     PORT(
         SYSCLK      : in STD_LOGIC;
@@ -165,6 +210,52 @@ begin
         spi1_sck                => s_spi1_clk,
         uart_rtl_0_rxd          => s_uart_rx,
         uart_rtl_0_txd          => s_uart_tx 
+    );
+    
+    u_mig_7series_0_mig : mig_7series_0_mig
+    port map (
+      -- Memory interface ports
+      ddr2_addr                      => ddr2_addr,
+      ddr2_ba                        => ddr2_ba,
+      ddr2_cas_n                     => ddr2_cas_n,
+      ddr2_ck_n                      => ddr2_ck_n,
+      ddr2_ck_p                      => ddr2_ck_p,
+      ddr2_cke                       => ddr2_cke,
+      ddr2_ras_n                     => ddr2_ras_n,
+      ddr2_we_n                      => ddr2_we_n,
+      ddr2_dq                        => ddr2_dq,
+      ddr2_dqs_n                     => ddr2_dqs_n,
+      ddr2_dqs_p                     => ddr2_dqs_p,
+      init_calib_complete            => init_calib_complete,
+      ddr2_cs_n                      => ddr2_cs_n,
+      ddr2_dm                        => ddr2_dm,
+      ddr2_odt                       => ddr2_odt,
+      -- Application interface ports
+      app_addr                       => app_addr,
+      app_cmd                        => app_cmd,
+      app_en                         => app_en,
+      app_wdf_data                   => app_wdf_data,
+      app_wdf_end                    => app_wdf_end,
+      app_wdf_wren                   => app_wdf_wren,
+      app_rd_data                    => app_rd_data,
+      app_rd_data_end                => app_rd_data_end,
+      app_rd_data_valid              => app_rd_data_valid,
+      app_rdy                        => app_rdy,
+      app_wdf_rdy                    => app_wdf_rdy,
+      app_sr_req                     => app_sr_req,
+      app_ref_req                    => app_ref_req,
+      app_zq_req                     => app_zq_req,
+      app_sr_active                  => app_sr_active,
+      app_ref_ack                    => app_ref_ack,
+      app_zq_ack                     => app_zq_ack,
+      ui_clk                         => ui_clk,
+      ui_clk_sync_rst                => ui_clk_sync_rst,
+      app_wdf_mask                   => app_wdf_mask,
+      -- System Clock Ports
+      sys_clk_i                       => sys_clk_i,
+      -- Reference Clock Ports
+      clk_ref_i                      => clk_ref_i,
+      sys_rst                        => sys_rst
     );
     
     uart_tx: uart_tx_module
