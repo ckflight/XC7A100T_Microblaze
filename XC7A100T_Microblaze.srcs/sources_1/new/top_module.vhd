@@ -63,7 +63,7 @@ architecture Behavioral of top_module is
     );
     end component;
     
-    component mig_7series_0_mig
+    component mig_7series_0
     port (
         ddr2_dq                     : inout std_logic_vector(15 downto 0);
         ddr2_dqs_p                  : inout std_logic_vector(1 downto 0);
@@ -212,7 +212,7 @@ begin
         uart_rtl_0_txd          => s_uart_tx 
     );
     
-    u_mig_7series_0_mig : mig_7series_0_mig
+    u_mig_7series_0_mig : mig_7series_0
     port map (
       -- Memory interface ports
       ddr2_addr                      => ddr2_addr,
