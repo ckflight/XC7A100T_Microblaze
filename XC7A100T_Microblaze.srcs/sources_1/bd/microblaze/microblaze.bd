@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x775C1A7BBEADB8ED",
+      "boundary_crc": "0xB6E621C30D60BF67",
       "device": "xc7a100tcsg324-1",
       "gen_directory": "../../../../XC7A100T_Microblaze.gen/sources_1/bd/microblaze",
       "name": "microblaze",
@@ -181,30 +181,30 @@
           }
         }
       },
-      "io0_o_0": {
+      "spi1_mosi": {
         "direction": "O"
       },
-      "io1_i_0": {
+      "spi1_miso": {
         "direction": "I"
       },
-      "sck_o_0": {
+      "spi1_sck": {
         "direction": "O"
       },
-      "ss_o_0": {
+      "spi1_cs": {
         "direction": "O",
         "left": "0",
         "right": "0"
       },
-      "io0_o_1": {
+      "spi0_mosi": {
         "direction": "O"
       },
-      "io1_i_1": {
+      "spi0_miso": {
         "direction": "I"
       },
-      "sck_o_1": {
+      "spi0_sck": {
         "direction": "O"
       },
-      "ss_o_1": {
+      "spi0_cs": {
         "direction": "O",
         "left": "0",
         "right": "0"
@@ -240,7 +240,7 @@
         "vlnv": "xilinx.com:ip:microblaze:11.0",
         "ip_revision": "15",
         "xci_name": "microblaze_microblaze_0_0",
-        "xci_path": "ip\\microblaze_microblaze_0_0\\microblaze_microblaze_0_0.xci",
+        "xci_path": "ip/microblaze_microblaze_0_0/microblaze_microblaze_0_0.xci",
         "inst_hier_path": "microblaze_0",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -385,7 +385,7 @@
             "vlnv": "xilinx.com:ip:lmb_v10:3.0",
             "ip_revision": "15",
             "xci_name": "microblaze_dlmb_v10_0",
-            "xci_path": "ip\\microblaze_dlmb_v10_0\\microblaze_dlmb_v10_0.xci",
+            "xci_path": "ip/microblaze_dlmb_v10_0/microblaze_dlmb_v10_0.xci",
             "inst_hier_path": "microblaze_0_local_memory/dlmb_v10",
             "has_run_ip_tcl": "true",
             "interface_ports": {
@@ -420,7 +420,7 @@
             "vlnv": "xilinx.com:ip:lmb_v10:3.0",
             "ip_revision": "15",
             "xci_name": "microblaze_ilmb_v10_0",
-            "xci_path": "ip\\microblaze_ilmb_v10_0\\microblaze_ilmb_v10_0.xci",
+            "xci_path": "ip/microblaze_ilmb_v10_0/microblaze_ilmb_v10_0.xci",
             "inst_hier_path": "microblaze_0_local_memory/ilmb_v10",
             "has_run_ip_tcl": "true",
             "interface_ports": {
@@ -455,7 +455,7 @@
             "vlnv": "xilinx.com:ip:lmb_bram_if_cntlr:4.0",
             "ip_revision": "26",
             "xci_name": "microblaze_dlmb_bram_if_cntlr_0",
-            "xci_path": "ip\\microblaze_dlmb_bram_if_cntlr_0\\microblaze_dlmb_bram_if_cntlr_0.xci",
+            "xci_path": "ip/microblaze_dlmb_bram_if_cntlr_0/microblaze_dlmb_bram_if_cntlr_0.xci",
             "inst_hier_path": "microblaze_0_local_memory/dlmb_bram_if_cntlr",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -488,7 +488,7 @@
             "vlnv": "xilinx.com:ip:lmb_bram_if_cntlr:4.0",
             "ip_revision": "26",
             "xci_name": "microblaze_ilmb_bram_if_cntlr_0",
-            "xci_path": "ip\\microblaze_ilmb_bram_if_cntlr_0\\microblaze_ilmb_bram_if_cntlr_0.xci",
+            "xci_path": "ip/microblaze_ilmb_bram_if_cntlr_0/microblaze_ilmb_bram_if_cntlr_0.xci",
             "inst_hier_path": "microblaze_0_local_memory/ilmb_bram_if_cntlr",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -511,7 +511,7 @@
             "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
             "ip_revision": "11",
             "xci_name": "microblaze_lmb_bram_0",
-            "xci_path": "ip\\microblaze_lmb_bram_0\\microblaze_lmb_bram_0.xci",
+            "xci_path": "ip/microblaze_lmb_bram_0/microblaze_lmb_bram_0.xci",
             "inst_hier_path": "microblaze_0_local_memory/lmb_bram",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -585,7 +585,7 @@
       },
       "microblaze_0_axi_periph": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
-        "xci_path": "ip\\microblaze_microblaze_0_axi_periph_0\\microblaze_microblaze_0_axi_periph_0.xci",
+        "xci_path": "ip/microblaze_microblaze_0_axi_periph_0/microblaze_microblaze_0_axi_periph_0.xci",
         "inst_hier_path": "microblaze_0_axi_periph",
         "xci_name": "microblaze_microblaze_0_axi_periph_0",
         "parameters": {
@@ -867,7 +867,7 @@
             "vlnv": "xilinx.com:ip:axi_crossbar:2.1",
             "ip_revision": "37",
             "xci_name": "microblaze_microblaze_0_axi_periph_imp_xbar_0",
-            "xci_path": "ip\\microblaze_microblaze_0_axi_periph_imp_xbar_0\\microblaze_microblaze_0_axi_periph_imp_xbar_0.xci",
+            "xci_path": "ip/microblaze_microblaze_0_axi_periph_imp_xbar_0/microblaze_microblaze_0_axi_periph_imp_xbar_0.xci",
             "inst_hier_path": "microblaze_0_axi_periph/xbar",
             "has_run_ip_tcl": "true",
             "parameters": {
@@ -1885,7 +1885,7 @@
         "vlnv": "xilinx.com:ip:axi_intc:4.1",
         "ip_revision": "21",
         "xci_name": "microblaze_microblaze_0_axi_intc_0",
-        "xci_path": "ip\\microblaze_microblaze_0_axi_intc_0\\microblaze_microblaze_0_axi_intc_0.xci",
+        "xci_path": "ip/microblaze_microblaze_0_axi_intc_0/microblaze_microblaze_0_axi_intc_0.xci",
         "inst_hier_path": "microblaze_0_axi_intc",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -1908,7 +1908,7 @@
         "vlnv": "xilinx.com:ip:xlconcat:2.1",
         "ip_revision": "7",
         "xci_name": "microblaze_microblaze_0_xlconcat_0",
-        "xci_path": "ip\\microblaze_microblaze_0_xlconcat_0\\microblaze_microblaze_0_xlconcat_0.xci",
+        "xci_path": "ip/microblaze_microblaze_0_xlconcat_0/microblaze_microblaze_0_xlconcat_0.xci",
         "inst_hier_path": "microblaze_0_xlconcat",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -1921,7 +1921,7 @@
         "vlnv": "xilinx.com:ip:mdm:3.2",
         "ip_revision": "28",
         "xci_name": "microblaze_mdm_1_0",
-        "xci_path": "ip\\microblaze_mdm_1_0\\microblaze_mdm_1_0.xci",
+        "xci_path": "ip/microblaze_mdm_1_0/microblaze_mdm_1_0.xci",
         "inst_hier_path": "mdm_1",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -1940,7 +1940,7 @@
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
         "ip_revision": "16",
         "xci_name": "microblaze_clk_wiz_1_0",
-        "xci_path": "ip\\microblaze_clk_wiz_1_0\\microblaze_clk_wiz_1_0.xci",
+        "xci_path": "ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0.xci",
         "inst_hier_path": "clk_wiz_1",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -1953,7 +1953,7 @@
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "ip_revision": "17",
         "xci_name": "microblaze_rst_clk_wiz_1_100M_0",
-        "xci_path": "ip\\microblaze_rst_clk_wiz_1_100M_0\\microblaze_rst_clk_wiz_1_100M_0.xci",
+        "xci_path": "ip/microblaze_rst_clk_wiz_1_100M_0/microblaze_rst_clk_wiz_1_100M_0.xci",
         "inst_hier_path": "rst_clk_wiz_1_100M",
         "has_run_ip_tcl": "true"
       },
@@ -1961,7 +1961,7 @@
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "ip_revision": "37",
         "xci_name": "microblaze_axi_gpio_0_0",
-        "xci_path": "ip\\microblaze_axi_gpio_0_0\\microblaze_axi_gpio_0_0.xci",
+        "xci_path": "ip/microblaze_axi_gpio_0_0/microblaze_axi_gpio_0_0.xci",
         "inst_hier_path": "axi_gpio_0",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -1977,7 +1977,7 @@
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "ip_revision": "37",
         "xci_name": "microblaze_axi_gpio_1_0",
-        "xci_path": "ip\\microblaze_axi_gpio_1_0\\microblaze_axi_gpio_1_0.xci",
+        "xci_path": "ip/microblaze_axi_gpio_1_0/microblaze_axi_gpio_1_0.xci",
         "inst_hier_path": "axi_gpio_1",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -1993,7 +1993,7 @@
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "ip_revision": "37",
         "xci_name": "microblaze_axi_gpio_2_0",
-        "xci_path": "ip\\microblaze_axi_gpio_2_0\\microblaze_axi_gpio_2_0.xci",
+        "xci_path": "ip/microblaze_axi_gpio_2_0/microblaze_axi_gpio_2_0.xci",
         "inst_hier_path": "axi_gpio_2",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -2009,7 +2009,7 @@
         "vlnv": "xilinx.com:ip:axi_quad_spi:3.2",
         "ip_revision": "34",
         "xci_name": "microblaze_axi_quad_spi_0_0",
-        "xci_path": "ip\\microblaze_axi_quad_spi_0_0\\microblaze_axi_quad_spi_0_0.xci",
+        "xci_path": "ip/microblaze_axi_quad_spi_0_0/microblaze_axi_quad_spi_0_0.xci",
         "inst_hier_path": "axi_quad_spi_0",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -2025,7 +2025,7 @@
         "vlnv": "xilinx.com:ip:axi_quad_spi:3.2",
         "ip_revision": "34",
         "xci_name": "microblaze_axi_quad_spi_1_0",
-        "xci_path": "ip\\microblaze_axi_quad_spi_1_0\\microblaze_axi_quad_spi_1_0.xci",
+        "xci_path": "ip/microblaze_axi_quad_spi_1_0/microblaze_axi_quad_spi_1_0.xci",
         "inst_hier_path": "axi_quad_spi_1",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -2041,7 +2041,7 @@
         "vlnv": "xilinx.com:ip:axi_uartlite:2.0",
         "ip_revision": "39",
         "xci_name": "microblaze_axi_uartlite_0_0",
-        "xci_path": "ip\\microblaze_axi_uartlite_0_0\\microblaze_axi_uartlite_0_0.xci",
+        "xci_path": "ip/microblaze_axi_uartlite_0_0/microblaze_axi_uartlite_0_0.xci",
         "inst_hier_path": "axi_uartlite_0",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -2054,7 +2054,7 @@
         "vlnv": "xilinx.com:ip:axi_timer:2.0",
         "ip_revision": "37",
         "xci_name": "microblaze_axi_timer_0_0",
-        "xci_path": "ip\\microblaze_axi_timer_0_0\\microblaze_axi_timer_0_0.xci",
+        "xci_path": "ip/microblaze_axi_timer_0_0/microblaze_axi_timer_0_0.xci",
         "inst_hier_path": "axi_timer_0",
         "has_run_ip_tcl": "true"
       },
@@ -2062,7 +2062,7 @@
         "vlnv": "xilinx.com:ip:axi_iic:2.1",
         "ip_revision": "11",
         "xci_name": "microblaze_axi_iic_0_0",
-        "xci_path": "ip\\microblaze_axi_iic_0_0\\microblaze_axi_iic_0_0.xci",
+        "xci_path": "ip/microblaze_axi_iic_0_0/microblaze_axi_iic_0_0.xci",
         "inst_hier_path": "axi_iic_0",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -2075,7 +2075,7 @@
         "vlnv": "xilinx.com:ip:axi_iic:2.1",
         "ip_revision": "11",
         "xci_name": "microblaze_axi_iic_1_0",
-        "xci_path": "ip\\microblaze_axi_iic_1_0\\microblaze_axi_iic_1_0.xci",
+        "xci_path": "ip/microblaze_axi_iic_1_0/microblaze_axi_iic_1_0.xci",
         "inst_hier_path": "axi_iic_1",
         "has_run_ip_tcl": "true",
         "parameters": {
@@ -2229,37 +2229,37 @@
       "axi_quad_spi_0_io0_o": {
         "ports": [
           "axi_quad_spi_0/io0_o",
-          "io0_o_1"
+          "spi0_mosi"
         ]
       },
       "axi_quad_spi_0_sck_o": {
         "ports": [
           "axi_quad_spi_0/sck_o",
-          "sck_o_1"
+          "spi0_sck"
         ]
       },
       "axi_quad_spi_0_ss_o": {
         "ports": [
           "axi_quad_spi_0/ss_o",
-          "ss_o_1"
+          "spi0_cs"
         ]
       },
       "axi_quad_spi_1_io0_o": {
         "ports": [
           "axi_quad_spi_1/io0_o",
-          "io0_o_0"
+          "spi1_mosi"
         ]
       },
       "axi_quad_spi_1_sck_o": {
         "ports": [
           "axi_quad_spi_1/sck_o",
-          "sck_o_0"
+          "spi1_sck"
         ]
       },
       "axi_quad_spi_1_ss_o": {
         "ports": [
           "axi_quad_spi_1/ss_o",
-          "ss_o_0"
+          "spi1_cs"
         ]
       },
       "clk_100MHz_1": {
@@ -2276,13 +2276,13 @@
       },
       "io1_i_0_1": {
         "ports": [
-          "io1_i_0",
+          "spi1_miso",
           "axi_quad_spi_1/io1_i"
         ]
       },
       "io1_i_1_1": {
         "ports": [
-          "io1_i_1",
+          "spi0_miso",
           "axi_quad_spi_0/io1_i"
         ]
       },

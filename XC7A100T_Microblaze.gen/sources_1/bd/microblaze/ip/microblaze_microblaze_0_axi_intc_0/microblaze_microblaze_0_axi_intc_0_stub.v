@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
 // Date        : Fri Aug  1 15:02:15 2025
 // Host        : TPC-0073 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_intc_0/microblaze_microblaze_0_axi_intc_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top microblaze_microblaze_0_axi_intc_0 -prefix
+//               microblaze_microblaze_0_axi_intc_0_ microblaze_microblaze_0_axi_intc_0_stub.v
 // Design      : microblaze_microblaze_0_axi_intc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a100tcsg324-1

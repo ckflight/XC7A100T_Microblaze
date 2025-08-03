@@ -1,9 +1,9 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
---Date        : Fri Aug  1 15:01:31 2025
---Host        : TPC-0073 running 64-bit major release  (build 9200)
+--Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+--Date        : Sun Aug  3 08:47:39 2025
+--Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
 --Command     : generate_target microblaze_wrapper.bd
 --Design      : microblaze_wrapper
 --Purpose     : IP block netlist
@@ -22,15 +22,15 @@ entity microblaze_wrapper is
     iic_rtl_0_sda_io : inout STD_LOGIC;
     iic_rtl_1_scl_io : inout STD_LOGIC;
     iic_rtl_1_sda_io : inout STD_LOGIC;
-    io0_o_0 : out STD_LOGIC;
-    io0_o_1 : out STD_LOGIC;
-    io1_i_0 : in STD_LOGIC;
-    io1_i_1 : in STD_LOGIC;
     reset_rtl_0 : in STD_LOGIC;
-    sck_o_0 : out STD_LOGIC;
-    sck_o_1 : out STD_LOGIC;
-    ss_o_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    ss_o_1 : out STD_LOGIC_VECTOR ( 0 to 0 );
+    spi0_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
+    spi0_miso : in STD_LOGIC;
+    spi0_mosi : out STD_LOGIC;
+    spi0_sck : out STD_LOGIC;
+    spi1_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
+    spi1_miso : in STD_LOGIC;
+    spi1_mosi : out STD_LOGIC;
+    spi1_sck : out STD_LOGIC;
     uart_rtl_0_rxd : in STD_LOGIC;
     uart_rtl_0_txd : out STD_LOGIC
   );
@@ -50,22 +50,22 @@ architecture STRUCTURE of microblaze_wrapper is
     iic_rtl_0_sda_i : in STD_LOGIC;
     iic_rtl_0_sda_o : out STD_LOGIC;
     iic_rtl_0_sda_t : out STD_LOGIC;
-    reset_rtl_0 : in STD_LOGIC;
-    io0_o_0 : out STD_LOGIC;
-    io1_i_0 : in STD_LOGIC;
-    sck_o_0 : out STD_LOGIC;
-    ss_o_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    io0_o_1 : out STD_LOGIC;
-    io1_i_1 : in STD_LOGIC;
-    sck_o_1 : out STD_LOGIC;
-    ss_o_1 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    clk_100MHz : in STD_LOGIC;
     iic_rtl_1_scl_i : in STD_LOGIC;
     iic_rtl_1_scl_o : out STD_LOGIC;
     iic_rtl_1_scl_t : out STD_LOGIC;
     iic_rtl_1_sda_i : in STD_LOGIC;
     iic_rtl_1_sda_o : out STD_LOGIC;
-    iic_rtl_1_sda_t : out STD_LOGIC
+    iic_rtl_1_sda_t : out STD_LOGIC;
+    reset_rtl_0 : in STD_LOGIC;
+    spi1_mosi : out STD_LOGIC;
+    spi1_miso : in STD_LOGIC;
+    spi1_sck : out STD_LOGIC;
+    spi1_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
+    spi0_mosi : out STD_LOGIC;
+    spi0_miso : in STD_LOGIC;
+    spi0_sck : out STD_LOGIC;
+    spi0_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
+    clk_100MHz : in STD_LOGIC
   );
   end component microblaze;
   component IOBUF is
@@ -135,15 +135,15 @@ microblaze_i: component microblaze
       iic_rtl_1_sda_i => iic_rtl_1_sda_i,
       iic_rtl_1_sda_o => iic_rtl_1_sda_o,
       iic_rtl_1_sda_t => iic_rtl_1_sda_t,
-      io0_o_0 => io0_o_0,
-      io0_o_1 => io0_o_1,
-      io1_i_0 => io1_i_0,
-      io1_i_1 => io1_i_1,
       reset_rtl_0 => reset_rtl_0,
-      sck_o_0 => sck_o_0,
-      sck_o_1 => sck_o_1,
-      ss_o_0(0) => ss_o_0(0),
-      ss_o_1(0) => ss_o_1(0),
+      spi0_cs(0) => spi0_cs(0),
+      spi0_miso => spi0_miso,
+      spi0_mosi => spi0_mosi,
+      spi0_sck => spi0_sck,
+      spi1_cs(0) => spi1_cs(0),
+      spi1_miso => spi1_miso,
+      spi1_mosi => spi1_mosi,
+      spi1_sck => spi1_sck,
       uart_rtl_0_rxd => uart_rtl_0_rxd,
       uart_rtl_0_txd => uart_rtl_0_txd
     );

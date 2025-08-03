@@ -1,9 +1,9 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
---Date        : Fri Aug  1 15:01:31 2025
---Host        : TPC-0073 running 64-bit major release  (build 9200)
+--Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+--Date        : Sun Aug  3 08:47:39 2025
+--Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
 --Command     : generate_target microblaze.bd
 --Design      : microblaze
 --Purpose     : IP block netlist
@@ -2973,15 +2973,15 @@ entity microblaze is
     iic_rtl_1_sda_i : in STD_LOGIC;
     iic_rtl_1_sda_o : out STD_LOGIC;
     iic_rtl_1_sda_t : out STD_LOGIC;
-    io0_o_0 : out STD_LOGIC;
-    io0_o_1 : out STD_LOGIC;
-    io1_i_0 : in STD_LOGIC;
-    io1_i_1 : in STD_LOGIC;
     reset_rtl_0 : in STD_LOGIC;
-    sck_o_0 : out STD_LOGIC;
-    sck_o_1 : out STD_LOGIC;
-    ss_o_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
-    ss_o_1 : out STD_LOGIC_VECTOR ( 0 to 0 );
+    spi0_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
+    spi0_miso : in STD_LOGIC;
+    spi0_mosi : out STD_LOGIC;
+    spi0_sck : out STD_LOGIC;
+    spi1_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
+    spi1_miso : in STD_LOGIC;
+    spi1_mosi : out STD_LOGIC;
+    spi1_sck : out STD_LOGIC;
     uart_rtl_0_rxd : in STD_LOGIC;
     uart_rtl_0_txd : out STD_LOGIC
   );
@@ -3842,9 +3842,9 @@ axi_quad_spi_0: component microblaze_axi_quad_spi_0_0
      port map (
       ext_spi_clk => microblaze_0_Clk,
       io0_i => '0',
-      io0_o => io0_o_1,
+      io0_o => spi0_mosi,
       io0_t => NLW_axi_quad_spi_0_io0_t_UNCONNECTED,
-      io1_i => io1_i_1,
+      io1_i => spi0_miso,
       io1_o => NLW_axi_quad_spi_0_io1_o_UNCONNECTED,
       io1_t => NLW_axi_quad_spi_0_io1_t_UNCONNECTED,
       ip2intc_irpt => NLW_axi_quad_spi_0_ip2intc_irpt_UNCONNECTED,
@@ -3868,19 +3868,19 @@ axi_quad_spi_0: component microblaze_axi_quad_spi_0_0
       s_axi_wstrb(3 downto 0) => microblaze_0_axi_periph_M05_AXI_WSTRB(3 downto 0),
       s_axi_wvalid => microblaze_0_axi_periph_M05_AXI_WVALID,
       sck_i => '0',
-      sck_o => sck_o_1,
+      sck_o => spi0_sck,
       sck_t => NLW_axi_quad_spi_0_sck_t_UNCONNECTED,
       ss_i(0) => '0',
-      ss_o(0) => ss_o_1(0),
+      ss_o(0) => spi0_cs(0),
       ss_t => NLW_axi_quad_spi_0_ss_t_UNCONNECTED
     );
 axi_quad_spi_1: component microblaze_axi_quad_spi_1_0
      port map (
       ext_spi_clk => microblaze_0_Clk,
       io0_i => '0',
-      io0_o => io0_o_0,
+      io0_o => spi1_mosi,
       io0_t => NLW_axi_quad_spi_1_io0_t_UNCONNECTED,
-      io1_i => io1_i_0,
+      io1_i => spi1_miso,
       io1_o => NLW_axi_quad_spi_1_io1_o_UNCONNECTED,
       io1_t => NLW_axi_quad_spi_1_io1_t_UNCONNECTED,
       ip2intc_irpt => NLW_axi_quad_spi_1_ip2intc_irpt_UNCONNECTED,
@@ -3904,10 +3904,10 @@ axi_quad_spi_1: component microblaze_axi_quad_spi_1_0
       s_axi_wstrb(3 downto 0) => microblaze_0_axi_periph_M06_AXI_WSTRB(3 downto 0),
       s_axi_wvalid => microblaze_0_axi_periph_M06_AXI_WVALID,
       sck_i => '0',
-      sck_o => sck_o_0,
+      sck_o => spi1_sck,
       sck_t => NLW_axi_quad_spi_1_sck_t_UNCONNECTED,
       ss_i(0) => '0',
-      ss_o(0) => ss_o_0(0),
+      ss_o(0) => spi1_cs(0),
       ss_t => NLW_axi_quad_spi_1_ss_t_UNCONNECTED
     );
 axi_timer_0: component microblaze_axi_timer_0_0

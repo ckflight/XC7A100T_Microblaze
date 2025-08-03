@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Aug  1 15:01:32 2025" VIVADOVERSION="2025.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Aug  3 08:47:39 2025" VIVADOVERSION="2025.1">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a100t" NAME="microblaze" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -84,49 +84,49 @@
         <CONNECTION INSTANCE="axi_iic_1" PORT="sda_t"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="io0_o_0" SIGIS="undef" SIGNAME="axi_quad_spi_1_io0_o">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_quad_spi_1" PORT="io0_o"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="io0_o_1" SIGIS="undef" SIGNAME="axi_quad_spi_0_io0_o">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_quad_spi_0" PORT="io0_o"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="io1_i_0" SIGIS="undef" SIGNAME="External_Ports_io1_i_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_quad_spi_1" PORT="io1_i"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="io1_i_1" SIGIS="undef" SIGNAME="External_Ports_io1_i_1">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_quad_spi_0" PORT="io1_i"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="I" NAME="reset_rtl_0" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_reset_rtl_0">
       <CONNECTIONS>
         <CONNECTION INSTANCE="rst_clk_wiz_1_100M" PORT="ext_reset_in"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="sck_o_0" SIGIS="undef" SIGNAME="axi_quad_spi_1_sck_o">
+    <PORT DIR="O" LEFT="0" NAME="spi0_cs" RIGHT="0" SIGIS="undef" SIGNAME="axi_quad_spi_0_ss_o">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_quad_spi_1" PORT="sck_o"/>
+        <CONNECTION INSTANCE="axi_quad_spi_0" PORT="ss_o"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="sck_o_1" SIGIS="undef" SIGNAME="axi_quad_spi_0_sck_o">
+    <PORT DIR="I" NAME="spi0_miso" SIGIS="undef" SIGNAME="External_Ports_spi0_miso">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_quad_spi_0" PORT="io1_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="spi0_mosi" SIGIS="undef" SIGNAME="axi_quad_spi_0_io0_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_quad_spi_0" PORT="io0_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="spi0_sck" SIGIS="undef" SIGNAME="axi_quad_spi_0_sck_o">
       <CONNECTIONS>
         <CONNECTION INSTANCE="axi_quad_spi_0" PORT="sck_o"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="0" NAME="ss_o_0" RIGHT="0" SIGIS="undef" SIGNAME="axi_quad_spi_1_ss_o">
+    <PORT DIR="O" LEFT="0" NAME="spi1_cs" RIGHT="0" SIGIS="undef" SIGNAME="axi_quad_spi_1_ss_o">
       <CONNECTIONS>
         <CONNECTION INSTANCE="axi_quad_spi_1" PORT="ss_o"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="0" NAME="ss_o_1" RIGHT="0" SIGIS="undef" SIGNAME="axi_quad_spi_0_ss_o">
+    <PORT DIR="I" NAME="spi1_miso" SIGIS="undef" SIGNAME="External_Ports_spi1_miso">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="axi_quad_spi_0" PORT="ss_o"/>
+        <CONNECTION INSTANCE="axi_quad_spi_1" PORT="io1_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="spi1_mosi" SIGIS="undef" SIGNAME="axi_quad_spi_1_io0_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_quad_spi_1" PORT="io0_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="spi1_sck" SIGIS="undef" SIGNAME="axi_quad_spi_1_sck_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="axi_quad_spi_1" PORT="sck_o"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="uart_rtl_0_rxd" SIGIS="undef" SIGNAME="axi_uartlite_0_rx">
@@ -3999,13 +3999,13 @@
         <PORT DIR="I" NAME="io0_i" SIGIS="undef"/>
         <PORT DIR="O" NAME="io0_o" SIGIS="undef" SIGNAME="axi_quad_spi_0_io0_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="io0_o_1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="spi0_mosi"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="io0_t" SIGIS="undef"/>
-        <PORT DIR="I" NAME="io1_i" SIGIS="undef" SIGNAME="External_Ports_io1_i_1">
+        <PORT DIR="I" NAME="io1_i" SIGIS="undef" SIGNAME="External_Ports_spi0_miso">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="io1_i_1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="spi0_miso"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="io1_o" SIGIS="undef"/>
@@ -4109,14 +4109,14 @@
         <PORT DIR="I" NAME="sck_i" SIGIS="undef"/>
         <PORT DIR="O" NAME="sck_o" SIGIS="undef" SIGNAME="axi_quad_spi_0_sck_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="sck_o_1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="spi0_sck"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="sck_t" SIGIS="undef"/>
         <PORT DIR="I" LEFT="0" NAME="ss_i" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="0" NAME="ss_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_quad_spi_0_ss_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="ss_o_1"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="spi0_cs"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="ss_t" SIGIS="undef"/>
@@ -5013,13 +5013,13 @@
         <PORT DIR="I" NAME="io0_i" SIGIS="undef"/>
         <PORT DIR="O" NAME="io0_o" SIGIS="undef" SIGNAME="axi_quad_spi_1_io0_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="io0_o_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="spi1_mosi"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="io0_t" SIGIS="undef"/>
-        <PORT DIR="I" NAME="io1_i" SIGIS="undef" SIGNAME="External_Ports_io1_i_0">
+        <PORT DIR="I" NAME="io1_i" SIGIS="undef" SIGNAME="External_Ports_spi1_miso">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="io1_i_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="spi1_miso"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="io1_o" SIGIS="undef"/>
@@ -5123,14 +5123,14 @@
         <PORT DIR="I" NAME="sck_i" SIGIS="undef"/>
         <PORT DIR="O" NAME="sck_o" SIGIS="undef" SIGNAME="axi_quad_spi_1_sck_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="sck_o_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="spi1_sck"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="sck_t" SIGIS="undef"/>
         <PORT DIR="I" LEFT="0" NAME="ss_i" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="0" NAME="ss_o" RIGHT="0" SIGIS="undef" SIGNAME="axi_quad_spi_1_ss_o">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="ss_o_0"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="spi1_cs"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="ss_t" SIGIS="undef"/>
@@ -9946,7 +9946,7 @@
             <CONNECTION INSTANCE="microblaze_0" PORT="Interrupt_Address"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="3" NAME="intr" RIGHT="0" SENSITIVITY="NULL:NULL:LEVEL_HIGH:LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="microblaze_0_xlconcat_dout">
+        <PORT DIR="I" LEFT="3" NAME="intr" RIGHT="0" SENSITIVITY="NULL:NULL:LEVEL_HIGH:NULL" SIGIS="INTERRUPT" SIGNAME="microblaze_0_xlconcat_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="microblaze_0_xlconcat" PORT="dout"/>
           </CONNECTIONS>

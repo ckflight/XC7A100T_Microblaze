@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
 -- Date        : Fri Aug  1 15:02:15 2025
 -- Host        : TPC-0073 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_intc_0/microblaze_microblaze_0_axi_intc_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_microblaze_0_axi_intc_0 -prefix
+--               microblaze_microblaze_0_axi_intc_0_ microblaze_microblaze_0_axi_intc_0_sim_netlist.vhdl
 -- Design      : microblaze_microblaze_0_axi_intc_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -79,8 +79,6 @@ entity microblaze_microblaze_0_axi_intc_0_address_decoder is
     \CIE_GEN.CIE_BIT_GEN[0].cie_reg[0]\ : in STD_LOGIC;
     Bus_RNW_reg_reg_12 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_microblaze_0_axi_intc_0_address_decoder : entity is "address_decoder";
 end microblaze_microblaze_0_axi_intc_0_address_decoder;
 
 architecture STRUCTURE of microblaze_microblaze_0_axi_intc_0_address_decoder is
@@ -1436,8 +1434,6 @@ entity microblaze_microblaze_0_axi_intc_0_shared_ram_ivar is
     Q : in STD_LOGIC_VECTOR ( 3 downto 0 );
     ivar_index_axi_clk : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_microblaze_0_axi_intc_0_shared_ram_ivar : entity is "shared_ram_ivar";
 end microblaze_microblaze_0_axi_intc_0_shared_ram_ivar;
 
 architecture STRUCTURE of microblaze_microblaze_0_axi_intc_0_shared_ram_ivar is
@@ -3049,8 +3045,6 @@ entity microblaze_microblaze_0_axi_intc_0_intc_core is
     isr_en : in STD_LOGIC;
     intr : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_microblaze_0_axi_intc_0_intc_core : entity is "intc_core";
 end microblaze_microblaze_0_axi_intc_0_intc_core;
 
 architecture STRUCTURE of microblaze_microblaze_0_axi_intc_0_intc_core is
@@ -4392,8 +4386,6 @@ entity microblaze_microblaze_0_axi_intc_0_slave_attachment is
     p_0_in3_in : in STD_LOGIC;
     \CIE_GEN.CIE_BIT_GEN[0].cie_reg[0]\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_microblaze_0_axi_intc_0_slave_attachment : entity is "slave_attachment";
 end microblaze_microblaze_0_axi_intc_0_slave_attachment;
 
 architecture STRUCTURE of microblaze_microblaze_0_axi_intc_0_slave_attachment is
@@ -5678,8 +5670,6 @@ entity microblaze_microblaze_0_axi_intc_0_axi_lite_ipif is
     p_0_in3_in : in STD_LOGIC;
     \CIE_GEN.CIE_BIT_GEN[0].cie_reg[0]\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_microblaze_0_axi_intc_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end microblaze_microblaze_0_axi_intc_0_axi_lite_ipif;
 
 architecture STRUCTURE of microblaze_microblaze_0_axi_intc_0_axi_lite_ipif is
@@ -5846,8 +5836,6 @@ entity microblaze_microblaze_0_axi_intc_0_axi_intc is
   attribute C_S_AXI_ADDR_WIDTH of microblaze_microblaze_0_axi_intc_0_axi_intc : entity is 9;
   attribute C_S_AXI_DATA_WIDTH : integer;
   attribute C_S_AXI_DATA_WIDTH of microblaze_microblaze_0_axi_intc_0_axi_intc : entity is 32;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of microblaze_microblaze_0_axi_intc_0_axi_intc : entity is "axi_intc";
   attribute hdl : string;
   attribute hdl of microblaze_microblaze_0_axi_intc_0_axi_intc : entity is "VHDL";
   attribute imp_netlist : string;

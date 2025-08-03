@@ -50,15 +50,15 @@ architecture Behavioral of top_module is
         iic_rtl_0_sda_io : inout STD_LOGIC;
         iic_rtl_1_scl_io : inout STD_LOGIC;
         iic_rtl_1_sda_io : inout STD_LOGIC;
-        io0_o_0 : out STD_LOGIC;
-        io0_o_1 : out STD_LOGIC;
-        io1_i_0 : in STD_LOGIC;
-        io1_i_1 : in STD_LOGIC;
         reset_rtl_0 : in STD_LOGIC;
-        sck_o_0 : out STD_LOGIC;
-        sck_o_1 : out STD_LOGIC;
-        ss_o_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
-        ss_o_1 : out STD_LOGIC_VECTOR ( 0 to 0 );
+        spi0_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
+        spi0_miso : in STD_LOGIC;
+        spi0_mosi : out STD_LOGIC;
+        spi0_sck : out STD_LOGIC;
+        spi1_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
+        spi1_miso : in STD_LOGIC;
+        spi1_mosi : out STD_LOGIC;
+        spi1_sck : out STD_LOGIC;
         uart_rtl_0_rxd : in STD_LOGIC;
         uart_rtl_0_txd : out STD_LOGIC
     );
@@ -143,7 +143,8 @@ begin
     s_spi0_miso          <= SPI0_MISO;
     SPI0_CLK             <= s_spi0_clk;
     SPI0_CS              <= s_spi0_cs;
-    
+
+
     microblaze: microblaze_wrapper
     port map (      
         clk_100MHz              => SYSCLK,
@@ -154,15 +155,15 @@ begin
         iic_rtl_0_sda_io        => I2C_SDA,
         iic_rtl_1_scl_io        => JD7_I2C_SCL,
         iic_rtl_1_sda_io        => JD8_I2C_SDA,
-        io0_o_0                 => s_spi0_mosi,
-        io0_o_1                 => s_spi1_mosi,
-        io1_i_0                 => s_spi0_miso,
-        io1_i_1                 => s_spi1_miso,
         reset_rtl_0             => reset_n,
-        sck_o_0                 => s_spi0_clk,
-        sck_o_1                 => s_spi1_clk,
-        ss_o_0                  => s_spi0_cs,
-        ss_o_1                  => s_spi1_cs,
+        spi0_cs                 => s_spi0_cs,
+        spi0_miso               => s_spi0_miso,
+        spi0_mosi               => s_spi0_mosi,
+        spi0_sck                => s_spi0_clk,
+        spi1_cs                 => s_spi1_cs,
+        spi1_miso               => s_spi1_miso,
+        spi1_mosi               => s_spi1_mosi,
+        spi1_sck                => s_spi1_clk,
         uart_rtl_0_rxd          => s_uart_rx,
         uart_rtl_0_txd          => s_uart_tx 
     );
