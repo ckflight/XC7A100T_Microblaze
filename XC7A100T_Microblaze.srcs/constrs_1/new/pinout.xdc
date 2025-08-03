@@ -42,15 +42,15 @@ set_property -dict { PACKAGE_PIN H4    IOSTANDARD LVCMOS33 } [get_ports { JD_GPI
 set_property -dict { PACKAGE_PIN H1    IOSTANDARD LVCMOS33 } [get_ports { JD_GPIO1_OUT[1] }]; # JD2
 
 #GPIO2 IN 2 pin
-set_property -dict { PACKAGE_PIN G1    IOSTANDARD LVCMOS33 } [get_ports {JD_GPIO2_IN[0]}]
-set_property PULLDOWN TRUE [get_ports {JD_GPIO2_IN[0]}]
+set_property -dict { PACKAGE_PIN G1    IOSTANDARD LVCMOS33 } [get_ports {JD_GPIO2_IN[0]}]; # JD3
+set_property PULLDOWN TRUE [get_ports {JD_GPIO2_IN[0]}];
 
-set_property -dict { PACKAGE_PIN G3    IOSTANDARD LVCMOS33 } [get_ports {JD_GPIO2_IN[1]}]
-set_property PULLDOWN TRUE [get_ports {JD_GPIO2_IN[1]}]
+set_property -dict { PACKAGE_PIN G3    IOSTANDARD LVCMOS33 } [get_ports {JD_GPIO2_IN[1]}]; # JD4
+set_property PULLDOWN TRUE [get_ports {JD_GPIO2_IN[1]}];
 
 # I2C1
-set_property -dict { PACKAGE_PIN H2    IOSTANDARD LVCMOS33 } [get_ports {JD7_I2C_SCL}]
-set_property -dict { PACKAGE_PIN G4    IOSTANDARD LVCMOS33 } [get_ports {JD8_I2C_SDA}]
+set_property -dict { PACKAGE_PIN H2    IOSTANDARD LVCMOS33 } [get_ports {JD7_I2C_SCL}];
+set_property -dict { PACKAGE_PIN G4    IOSTANDARD LVCMOS33 } [get_ports {JD8_I2C_SDA}];
 
 
 #USB UART

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date             : Sun Aug  3 08:50:03 2025
+| Date             : Sun Aug  3 19:43:39 2025
 | Host             : ck-MS-7E62 running 64-bit Ubuntu 25.04
 | Command          : report_power -file top_module_power_routed.rpt -pb top_module_power_summary_routed.pb -rpx top_module_power_routed.rpx
 | Design           : top_module
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.271        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.172        |
+| Dynamic (W)              | 0.171        |
 | Device Static (W)        | 0.099        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 83.8         |
@@ -52,16 +52,16 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.026 |        8 |       --- |             --- |
-| Slice Logic              |     0.013 |    11967 |       --- |             --- |
-|   LUT as Logic           |     0.011 |     4423 |     63400 |            6.98 |
+| Clocks                   |     0.025 |        8 |       --- |             --- |
+| Slice Logic              |     0.013 |    12040 |       --- |             --- |
+|   LUT as Logic           |     0.011 |     4445 |     63400 |            7.01 |
 |   LUT as Distributed RAM |     0.001 |      184 |     19000 |            0.97 |
-|   Register               |    <0.001 |     4657 |    126800 |            3.67 |
+|   Register               |    <0.001 |     4694 |    126800 |            3.70 |
 |   CARRY4                 |    <0.001 |      193 |     15850 |            1.22 |
 |   F7/F8 Muxes            |    <0.001 |       53 |     63400 |            0.08 |
-|   LUT as Shift Register  |    <0.001 |      164 |     19000 |            0.86 |
-|   Others                 |     0.000 |     1175 |       --- |             --- |
-| Signals                  |     0.018 |     8128 |       --- |             --- |
+|   LUT as Shift Register  |    <0.001 |      163 |     19000 |            0.86 |
+|   Others                 |     0.000 |     1176 |       --- |             --- |
+| Signals                  |     0.017 |     8177 |       --- |             --- |
 | Block RAM                |     0.001 |     32.5 |       135 |           24.07 |
 | MMCM                     |     0.106 |        1 |         6 |           16.67 |
 | DSPs                     |     0.003 |        5 |       240 |            2.08 |
@@ -151,7 +151,7 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| top_module                    |     0.172 |
+| top_module                    |     0.171 |
 |   microblaze                  |     0.162 |
 |     microblaze_i              |     0.162 |
 |       axi_iic_0               |     0.002 |
@@ -160,7 +160,6 @@ Table of Contents
 |       axi_quad_spi_1          |     0.006 |
 |       axi_timer_0             |     0.004 |
 |       clk_wiz_1               |     0.107 |
-|       mdm_1                   |     0.001 |
 |       microblaze_0            |     0.029 |
 |       microblaze_0_axi_intc   |     0.001 |
 |       microblaze_0_axi_periph |     0.002 |

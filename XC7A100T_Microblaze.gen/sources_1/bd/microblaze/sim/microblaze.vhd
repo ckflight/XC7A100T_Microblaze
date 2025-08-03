@@ -2,7 +2,7 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
---Date        : Sun Aug  3 08:47:39 2025
+--Date        : Sun Aug  3 19:29:47 2025
 --Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
 --Command     : generate_target microblaze.bd
 --Design      : microblaze
@@ -3211,6 +3211,7 @@ architecture STRUCTURE of microblaze is
     s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axi_rvalid : out STD_LOGIC;
     s_axi_rready : in STD_LOGIC;
+    ip2intc_irpt : out STD_LOGIC;
     gpio_io_i : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   end component microblaze_axi_gpio_2_0;
@@ -3406,6 +3407,7 @@ architecture STRUCTURE of microblaze is
     gpo : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component microblaze_axi_iic_1_0;
+  signal axi_gpio_2_ip2intc_irpt : STD_LOGIC;
   signal axi_iic_0_iic2intc_irpt : STD_LOGIC;
   signal clk_wiz_1_locked : STD_LOGIC;
   signal mdm_1_debug_sys_rst : STD_LOGIC;
@@ -3758,6 +3760,7 @@ axi_gpio_1: component microblaze_axi_gpio_1_0
 axi_gpio_2: component microblaze_axi_gpio_2_0
      port map (
       gpio_io_i(1 downto 0) => gpio_rtl_2_tri_i(1 downto 0),
+      ip2intc_irpt => axi_gpio_2_ip2intc_irpt,
       s_axi_aclk => microblaze_0_Clk,
       s_axi_araddr(8 downto 0) => microblaze_0_axi_periph_M04_AXI_ARADDR(8 downto 0),
       s_axi_aresetn => rst_clk_wiz_1_100M_peripheral_aresetn(0),
@@ -4380,7 +4383,7 @@ microblaze_0_local_memory: entity work.microblaze_0_local_memory_imp_HPR3PZ
     );
 microblaze_0_xlconcat: component microblaze_microblaze_0_xlconcat_0
      port map (
-      In0(0) => '0',
+      In0(0) => axi_gpio_2_ip2intc_irpt,
       In1(0) => axi_iic_0_iic2intc_irpt,
       In2(0) => '0',
       In3(0) => '0',

@@ -39,7 +39,6 @@ end top_module;
 
 architecture Behavioral of top_module is
 
-
     component microblaze_wrapper
     port (
         clk_100MHz : in STD_LOGIC;

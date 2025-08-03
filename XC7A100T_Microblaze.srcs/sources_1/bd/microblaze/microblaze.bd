@@ -2002,6 +2002,9 @@
           },
           "C_GPIO_WIDTH": {
             "value": "2"
+          },
+          "C_INTERRUPT_PRESENT": {
+            "value": "1"
           }
         }
       },
@@ -2220,6 +2223,12 @@
       }
     },
     "nets": {
+      "axi_gpio_2_ip2intc_irpt": {
+        "ports": [
+          "axi_gpio_2/ip2intc_irpt",
+          "microblaze_0_xlconcat/In0"
+        ]
+      },
       "axi_iic_0_iic2intc_irpt": {
         "ports": [
           "axi_iic_0/iic2intc_irpt",
