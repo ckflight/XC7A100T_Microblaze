@@ -65,44 +65,44 @@ architecture Behavioral of top_module is
         
     component mig_7series_0
       port(
-        ddr2_dq       : inout std_logic_vector(15 downto 0);
-        ddr2_dqs_p    : inout std_logic_vector(1 downto 0);
-        ddr2_dqs_n    : inout std_logic_vector(1 downto 0);
-        ddr2_addr     : out   std_logic_vector(12 downto 0);
-        ddr2_ba       : out   std_logic_vector(2 downto 0);
-        ddr2_ras_n    : out   std_logic;
-        ddr2_cas_n    : out   std_logic;
-        ddr2_we_n     : out   std_logic;
-        ddr2_ck_p     : out   std_logic_vector(0 downto 0);
-        ddr2_ck_n     : out   std_logic_vector(0 downto 0);
-        ddr2_cke      : out   std_logic_vector(0 downto 0);
-        ddr2_cs_n     : out   std_logic_vector(0 downto 0);
-        ddr2_dm                    : out   std_logic_vector(1 downto 0);
-        ddr2_odt                  : out   std_logic_vector(0 downto 0);
-        app_addr                  : in    std_logic_vector(26 downto 0);
-        app_cmd                   : in    std_logic_vector(2 downto 0);
-        app_en                    : in    std_logic;
-        app_wdf_data              : in    std_logic_vector(63 downto 0);
-        app_wdf_end               : in    std_logic;
-        app_wdf_mask         : in    std_logic_vector(7 downto 0);
-        app_wdf_wren              : in    std_logic;
-        app_rd_data               : out   std_logic_vector(63 downto 0);
-        app_rd_data_end           : out   std_logic;
-        app_rd_data_valid         : out   std_logic;
-        app_rdy                   : out   std_logic;
-        app_wdf_rdy               : out   std_logic;
-        app_sr_req                : in    std_logic;
-        app_ref_req               : in    std_logic;
-        app_zq_req                : in    std_logic;
-        app_sr_active             : out   std_logic;
-        app_ref_ack               : out   std_logic;
-        app_zq_ack                : out   std_logic;
-        ui_clk                    : out   std_logic;
-        ui_clk_sync_rst           : out   std_logic;
-        init_calib_complete       : out   std_logic;
+        ddr2_dq                 : inout std_logic_vector(15 downto 0);
+        ddr2_dqs_p              : inout std_logic_vector(1 downto 0);
+        ddr2_dqs_n              : inout std_logic_vector(1 downto 0);
+        ddr2_addr               : out   std_logic_vector(12 downto 0);
+        ddr2_ba                 : out   std_logic_vector(2 downto 0);
+        ddr2_ras_n              : out   std_logic;
+        ddr2_cas_n              : out   std_logic;
+        ddr2_we_n               : out   std_logic;
+        ddr2_ck_p               : out   std_logic_vector(0 downto 0);
+        ddr2_ck_n               : out   std_logic_vector(0 downto 0);
+        ddr2_cke                : out   std_logic_vector(0 downto 0);
+        ddr2_cs_n               : out   std_logic_vector(0 downto 0);
+        ddr2_dm                 : out   std_logic_vector(1 downto 0);
+        ddr2_odt                : out   std_logic_vector(0 downto 0);
+        app_addr                : in    std_logic_vector(26 downto 0);
+        app_cmd                 : in    std_logic_vector(2 downto 0);
+        app_en                  : in    std_logic;
+        app_wdf_data            : in    std_logic_vector(63 downto 0);
+        app_wdf_end             : in    std_logic;
+        app_wdf_mask            : in    std_logic_vector(7 downto 0);
+        app_wdf_wren            : in    std_logic;
+        app_rd_data             : out   std_logic_vector(63 downto 0);
+        app_rd_data_end         : out   std_logic;
+        app_rd_data_valid       : out   std_logic;
+        app_rdy                 : out   std_logic;
+        app_wdf_rdy             : out   std_logic;
+        app_sr_req              : in    std_logic;
+        app_ref_req             : in    std_logic;
+        app_zq_req              : in    std_logic;
+        app_sr_active           : out   std_logic;
+        app_ref_ack             : out   std_logic;
+        app_zq_ack              : out   std_logic;
+        ui_clk                  : out   std_logic;
+        ui_clk_sync_rst         : out   std_logic;
+        init_calib_complete     : out   std_logic;
         -- System Clock Ports
-        sys_clk_i                 : in    std_logic;
-        sys_rst                   : in std_logic
+        sys_clk_i               : in    std_logic;
+        sys_rst                 : in    std_logic 
         );
     end component;
     
@@ -172,54 +172,49 @@ architecture Behavioral of top_module is
    
    
     -- DDR2 interface signals
-    signal ddr2_addr           : std_logic_vector(12 downto 0);
-    signal ddr2_ba             : std_logic_vector(2 downto 0);
-    signal ddr2_cas_n          : std_logic;
-    signal ddr2_ck_n           : std_logic_vector(0 downto 0);
-    signal ddr2_ck_p           : std_logic_vector(0 downto 0);
-    signal ddr2_cke            : std_logic_vector(0 downto 0);
-    signal ddr2_ras_n          : std_logic;
-    signal ddr2_we_n           : std_logic;
-    signal ddr2_dq             : std_logic_vector(15 downto 0);
-    signal ddr2_dqs_n          : std_logic_vector(1 downto 0);
-    signal ddr2_dqs_p          : std_logic_vector(1 downto 0);
-    signal ddr2_cs_n           : std_logic_vector(0 downto 0);
-    signal ddr2_dm             : std_logic_vector(1 downto 0);
-    signal ddr2_odt            : std_logic_vector(0 downto 0);    
+    signal s_ddr2_dq                     : std_logic_vector(15 downto 0);
+    signal s_ddr2_dqs_p                  : std_logic_vector(1 downto 0);
+    signal s_ddr2_dqs_n                  : std_logic_vector(1 downto 0);
+    signal s_ddr2_addr                   : std_logic_vector(12 downto 0);
+    signal s_ddr2_ba                     : std_logic_vector(2 downto 0);
+    signal s_ddr2_ras_n                  : std_logic;
+    signal s_ddr2_cas_n                  : std_logic;
+    signal s_ddr2_we_n                   : std_logic;
+    signal s_ddr2_ck_p                   : std_logic_vector(0 downto 0);
+    signal s_ddr2_ck_n                   : std_logic_vector(0 downto 0);
+    signal s_ddr2_cke                    : std_logic_vector(0 downto 0);
+    signal s_ddr2_cs_n                   : std_logic_vector(0 downto 0);
+    signal s_ddr2_dm                     : std_logic_vector(1 downto 0);
+    signal s_ddr2_odt                    : std_logic_vector(0 downto 0);
+    signal s_app_addr                    : std_logic_vector(26 downto 0);
+    signal s_app_cmd                     : std_logic_vector(2 downto 0);
+    signal s_app_en                      : std_logic;
+    signal s_app_wdf_data                : std_logic_vector(63 downto 0);
+    signal s_app_wdf_end                 : std_logic;
+    signal s_app_wdf_mask                : std_logic_vector(7 downto 0);
+    signal s_app_wdf_wren                : std_logic;
+    signal s_app_rd_data                 : std_logic_vector(63 downto 0);
+    signal s_app_rd_data_end             : std_logic;
+    signal s_app_rd_data_valid           : std_logic;
+    signal s_app_rdy                     : std_logic;
+    signal s_app_wdf_rdy                 : std_logic;
+    signal s_app_sr_req                  : std_logic;
+    signal s_app_ref_req                 : std_logic;
+    signal s_app_zq_req                  : std_logic;
+    signal s_app_sr_active               : std_logic;
+    signal s_app_ref_ack                 : std_logic;
+    signal s_app_zq_ack                  : std_logic;
+    signal s_ui_clk                      : std_logic;
+    signal s_ui_clk_sync_rst             : std_logic;
+    signal s_init_calib_complete         : std_logic;
+       
+    signal s_sys_clk_i                     : std_logic;
+    signal s_sys_rst                       : std_logic;
     
-    -- Write interface
-    signal app_addr         : std_logic_vector(28 downto 0);
-    signal app_cmd          : std_logic_vector(2 downto 0);
-    signal app_en           : std_logic;
-    signal app_wdf_data     : std_logic_vector(127 downto 0);
-    signal app_wdf_end      : std_logic;
-    signal app_wdf_mask     : std_logic_vector(15 downto 0);
-    signal app_wdf_wren     : std_logic;
-    
-    -- Read interface
-    signal app_rd_data        : std_logic_vector(127 downto 0);
-    signal app_rd_data_end    : std_logic;
-    signal app_rd_data_valid  : std_logic;
-    
-    -- Status
-    signal app_rdy        : std_logic;
-    signal app_wdf_rdy    : std_logic;
-    signal init_calib_complete : std_logic;
-    
-    -- Control signals
-    signal ui_clk             : std_logic;
-    signal ui_clk_sync_rst    : std_logic;
-    
-    signal app_sr_req    : std_logic := '0';
-    signal app_ref_req   : std_logic := '0';
-    signal app_zq_req    : std_logic := '0';
-    
-    signal app_sr_active : std_logic;
-    signal app_ref_ack   : std_logic;
-    signal app_zq_ack    : std_logic;
-    
-    signal sys_clk_i     : std_logic;
-    signal sys_rst       : std_logic;  
+    -- Signals for control
+    signal fsm_state         : integer range 0 to 6 := 0;
+    signal data_written      : std_logic_vector(63 downto 0) := x"12345678ABCDEF00";
+    signal data_read         : std_logic_vector(63 downto 0);
     
 begin 
     
@@ -236,7 +231,13 @@ begin
     SPI0_CLK             <= s_spi0_clk;
     SPI0_CS              <= s_spi0_cs;
 
-
+    s_sys_clk_i <= SYSCLK;
+    s_sys_rst <= reset_n;
+    
+    s_app_sr_req  <= '0';
+    s_app_ref_req <= '0';
+    s_app_zq_req  <= '0';
+    
     microblaze: microblaze_wrapper
     port map (      
         clk_100MHz              => SYSCLK,
@@ -262,46 +263,45 @@ begin
     
     u_mig_7series_0_mig : mig_7series_0
     port map (
-      -- Memory interface ports
-      ddr2_addr                      => ddr2_addr,
-      ddr2_ba                        => ddr2_ba,
-      ddr2_cas_n                     => ddr2_cas_n,
-      ddr2_ck_n                      => ddr2_ck_n,
-      ddr2_ck_p                      => ddr2_ck_p,
-      ddr2_cke                       => ddr2_cke,
-      ddr2_ras_n                     => ddr2_ras_n,
-      ddr2_we_n                      => ddr2_we_n,
-      ddr2_dq                        => ddr2_dq,
-      ddr2_dqs_n                     => ddr2_dqs_n,
-      ddr2_dqs_p                     => ddr2_dqs_p,
-      init_calib_complete            => init_calib_complete,
-      ddr2_cs_n                      => ddr2_cs_n,
-      ddr2_dm                        => ddr2_dm,
-      ddr2_odt                       => ddr2_odt,
-      -- Application interface ports
-      app_addr                       => app_addr,
-      app_cmd                        => app_cmd,
-      app_en                         => app_en,
-      app_wdf_data                   => app_wdf_data,
-      app_wdf_end                    => app_wdf_end,
-      app_wdf_wren                   => app_wdf_wren,
-      app_rd_data                    => app_rd_data,
-      app_rd_data_end                => app_rd_data_end,
-      app_rd_data_valid              => app_rd_data_valid,
-      app_rdy                        => app_rdy,
-      app_wdf_rdy                    => app_wdf_rdy,
-      app_sr_req                     => app_sr_req,
-      app_ref_req                    => app_ref_req,
-      app_zq_req                     => app_zq_req,
-      app_sr_active                  => app_sr_active,
-      app_ref_ack                    => app_ref_ack,
-      app_zq_ack                     => app_zq_ack,
-      ui_clk                         => ui_clk,
-      ui_clk_sync_rst                => ui_clk_sync_rst,
-      app_wdf_mask                   => app_wdf_mask,
+        ddr2_addr                      => s_ddr2_addr,
+        ddr2_ba                        => s_ddr2_ba,
+        ddr2_cas_n                     => s_ddr2_cas_n,
+        ddr2_ck_n                      => s_ddr2_ck_n,
+        ddr2_ck_p                      => s_ddr2_ck_p,
+        ddr2_cke                       => s_ddr2_cke,
+        ddr2_ras_n                     => s_ddr2_ras_n,
+        ddr2_we_n                      => s_ddr2_we_n,
+        ddr2_dq                        => s_ddr2_dq,
+        ddr2_dqs_n                     => s_ddr2_dqs_n,
+        ddr2_dqs_p                     => s_ddr2_dqs_p,
+        init_calib_complete            => s_init_calib_complete,
+        ddr2_cs_n                      => s_ddr2_cs_n,
+        ddr2_dm                        => s_ddr2_dm,
+        ddr2_odt                       => s_ddr2_odt,
+        -- Application interface ports
+        app_addr                       => s_app_addr,
+        app_cmd                        => s_app_cmd,
+        app_en                         => s_app_en,
+        app_wdf_data                   => s_app_wdf_data,
+        app_wdf_end                    => s_app_wdf_end,
+        app_wdf_wren                   => s_app_wdf_wren,
+        app_rd_data                    => s_app_rd_data,
+        app_rd_data_end                => s_app_rd_data_end,
+        app_rd_data_valid              => s_app_rd_data_valid,
+        app_rdy                        => s_app_rdy,
+        app_wdf_rdy                    => s_app_wdf_rdy,
+        app_sr_req                     => s_app_sr_req,
+        app_ref_req                    => s_app_ref_req,
+        app_zq_req                     => s_app_zq_req,
+        app_sr_active                  => s_app_sr_active,
+        app_ref_ack                    => s_app_ref_ack,
+        app_zq_ack                     => s_app_zq_ack,
+        ui_clk                         => s_ui_clk,
+        ui_clk_sync_rst                => s_ui_clk_sync_rst,
+        app_wdf_mask                   => s_app_wdf_mask,
       -- System Clock Ports
-      sys_clk_i                      => sys_clk_i,
-      sys_rst                        => sys_rst
+        sys_clk_i                      => s_sys_clk_i,
+        sys_rst                        => s_sys_rst
     );
     
     uart_tx: uart_tx_module
@@ -332,8 +332,8 @@ begin
         NUMBER2 => unsigned(s_uart_tx_data(7 downto 4)),
         NUMBER3 => X"0",
         NUMBER4 => X"0",
-        NUMBER5 => X"0",
-        NUMBER6 => X"0",
+        NUMBER5 => unsigned(data_read(7 downto 4)),
+        NUMBER6 => unsigned(data_read(3 downto 0)),
         NUMBER7 => X"8",
         NUMBER8 => X"C",
         AN      => AN,
@@ -377,7 +377,71 @@ begin
     
     end process;
 
+        -- FSM to write and then read DDR2 memory
+    process(s_ui_clk)
+    begin
+        if rising_edge(s_ui_clk) then
+            if s_ui_clk_sync_rst = '1' or s_init_calib_complete = '0' then
+                fsm_state <= 0;
+                s_app_en <= '0';
+                s_app_wdf_wren <= '0';
+                s_app_wdf_end <= '0';
+                s_app_cmd <= "000";
+                s_app_addr <= (others => '0');
+                s_app_wdf_data <= (others => '0');
+                s_app_wdf_mask <= (others => '0');
+            else
+                case fsm_state is
 
+                    when 0 => -- Wait for MIG Ready
+                        if s_app_rdy = '1' and s_app_wdf_rdy = '1' then
+                            s_app_addr <= (others => '0'); -- Base address
+                            s_app_cmd <= "010"; -- WRITE
+                            s_app_en <= '1';
+                            s_app_wdf_data <= data_written;
+                            s_app_wdf_mask <= (others => '0');
+                            s_app_wdf_end <= '1';
+                            s_app_wdf_wren <= '1';
+                            fsm_state <= 1;
+                        end if;
+
+                    when 1 => -- Clear enable signals
+                        s_app_en <= '0';
+                        s_app_wdf_wren <= '0';
+                        s_app_wdf_end <= '0';
+                        fsm_state <= 2;
+
+                    when 2 => -- Wait a few cycles before read
+                        fsm_state <= 3;
+
+                    when 3 => -- Start read command
+                        if s_app_rdy = '1' then
+                            s_app_addr <= (others => '0');
+                            s_app_cmd <= "001"; -- READ
+                            s_app_en <= '1';
+                            fsm_state <= 4;
+                        end if;
+
+                    when 4 => -- Clear read enable
+                        s_app_en <= '0';
+                        fsm_state <= 5;
+
+                    when 5 => -- Wait for read valid
+                        if s_app_rd_data_valid = '1' then
+                            data_read <= s_app_rd_data;
+                            fsm_state <= 6;
+                        end if;
+
+                    when 6 => -- Done, remain here
+                        null;
+
+                    when others =>
+                        fsm_state <= 0;
+
+                end case;
+            end if;
+        end if;
+    end process;
 
 
 

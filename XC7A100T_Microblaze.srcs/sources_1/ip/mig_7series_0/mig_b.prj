@@ -23,9 +23,9 @@
 
   <Version>4.2</Version>
 
-  <SystemClock>No Buffer</SystemClock>
+  <SystemClock>Single-Ended</SystemClock>
 
-  <ReferenceClock>Use System Clock</ReferenceClock>
+  <ReferenceClock>No Buffer</ReferenceClock>
 
   <SysResetPolarity>ACTIVE LOW</SysResetPolarity>
 
@@ -43,10 +43,10 @@
 
   <Controller number="0">
     <MemoryDevice>DDR2_SDRAM/Components/MT47H64M16HR-25E</MemoryDevice>
-    <TimePeriod>3333</TimePeriod>
+    <TimePeriod>3000</TimePeriod>
     <VccAuxIO>1.8V</VccAuxIO>
-    <PHYRatio>2:1</PHYRatio>
-    <InputClkFreq>200.02</InputClkFreq>
+    <PHYRatio>4:1</PHYRatio>
+    <InputClkFreq>333.333</InputClkFreq>
     <UIExtraClocks>0</UIExtraClocks>
     <MMCM_VCO>1200</MMCM_VCO>
     <MMCMClkOut0> 1.000</MMCMClkOut0>
@@ -71,6 +71,7 @@
       <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="R2" SLEW="" VCCAUX_IO="" name="ddr2_addr[10]"/>
       <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="K5" SLEW="" VCCAUX_IO="" name="ddr2_addr[11]"/>
       <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="N6" SLEW="" VCCAUX_IO="" name="ddr2_addr[12]"/>
+      <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="K3" SLEW="" VCCAUX_IO="" name="ddr2_addr[13]"/>
       <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="P4" SLEW="" VCCAUX_IO="" name="ddr2_addr[1]"/>
       <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="M6" SLEW="" VCCAUX_IO="" name="ddr2_addr[2]"/>
       <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="T1" SLEW="" VCCAUX_IO="" name="ddr2_addr[3]"/>
@@ -114,6 +115,9 @@
       <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="N4" SLEW="" VCCAUX_IO="" name="ddr2_ras_n"/>
       <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="N2" SLEW="" VCCAUX_IO="" name="ddr2_we_n"/>
     </PinSelection>
+    <System_Clock>
+      <Pin Bank="35" PADName="E3(MRCC_P)" name="sys_clk_i"/>
+    </System_Clock>
     <System_Control>
       <Pin Bank="Select Bank" PADName="No connect" name="sys_rst"/>
       <Pin Bank="Select Bank" PADName="No connect" name="init_calib_complete"/>
