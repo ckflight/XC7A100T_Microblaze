@@ -23,9 +23,9 @@
 
   <Version>4.2</Version>
 
-  <SystemClock>Single-Ended</SystemClock>
+  <SystemClock>No Buffer</SystemClock>
 
-  <ReferenceClock>No Buffer</ReferenceClock>
+  <ReferenceClock>Use System Clock</ReferenceClock>
 
   <SysResetPolarity>ACTIVE LOW</SysResetPolarity>
 
@@ -43,10 +43,10 @@
 
   <Controller number="0">
     <MemoryDevice>DDR2_SDRAM/Components/MT47H64M16HR-25E</MemoryDevice>
-    <TimePeriod>3000</TimePeriod>
+    <TimePeriod>3333</TimePeriod>
     <VccAuxIO>1.8V</VccAuxIO>
-    <PHYRatio>4:1</PHYRatio>
-    <InputClkFreq>333.333</InputClkFreq>
+    <PHYRatio>2:1</PHYRatio>
+    <InputClkFreq>300.03</InputClkFreq>
     <UIExtraClocks>0</UIExtraClocks>
     <MMCM_VCO>1200</MMCM_VCO>
     <MMCMClkOut0> 1.000</MMCMClkOut0>
@@ -115,9 +115,6 @@
       <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="N4" SLEW="" VCCAUX_IO="" name="ddr2_ras_n"/>
       <Pin IN_TERM="" IOSTANDARD="SSTL18_II" PADName="N2" SLEW="" VCCAUX_IO="" name="ddr2_we_n"/>
     </PinSelection>
-    <System_Clock>
-      <Pin Bank="35" PADName="E3(MRCC_P)" name="sys_clk_i"/>
-    </System_Clock>
     <System_Control>
       <Pin Bank="Select Bank" PADName="No connect" name="sys_rst"/>
       <Pin Bank="Select Bank" PADName="No connect" name="init_calib_complete"/>

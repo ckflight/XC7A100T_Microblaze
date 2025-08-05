@@ -32,7 +32,23 @@ entity top_module is
         JD_GPIO2_IN          : in std_logic_vector(1 downto 0);
         
         JD7_I2C_SCL          : inout std_logic;
-        JD8_I2C_SDA          : inout std_logic
+        JD8_I2C_SDA          : inout std_logic;
+        
+            -- DDR2 interface pins (external FPGA pins)
+        ddr2_dq       : inout std_logic_vector(15 downto 0);
+        ddr2_dqs_p    : inout std_logic_vector(1 downto 0);
+        ddr2_dqs_n    : inout std_logic_vector(1 downto 0);
+        ddr2_addr     : out   std_logic_vector(12 downto 0);
+        ddr2_ba       : out   std_logic_vector(2 downto 0);
+        ddr2_ras_n    : out   std_logic;
+        ddr2_cas_n    : out   std_logic;
+        ddr2_we_n     : out   std_logic;
+        ddr2_ck_p     : out   std_logic_vector(0 downto 0);
+        ddr2_ck_n     : out   std_logic_vector(0 downto 0);
+        ddr2_cke      : out   std_logic_vector(0 downto 0);
+        ddr2_cs_n     : out   std_logic_vector(0 downto 0);
+        ddr2_dm       : out   std_logic_vector(1 downto 0);
+        ddr2_odt      : out   std_logic_vector(0 downto 0)
 
     );
 end top_module;
@@ -100,9 +116,10 @@ architecture Behavioral of top_module is
         ui_clk                  : out   std_logic;
         ui_clk_sync_rst         : out   std_logic;
         init_calib_complete     : out   std_logic;
-        -- System Clock Ports
         sys_clk_i               : in    std_logic;
-        sys_rst                 : in    std_logic 
+        -- Reference Clock Ports
+        clk_ref_i               : in    std_logic;
+        sys_rst                 : in    std_logic
         );
     end component;
     
@@ -172,20 +189,7 @@ architecture Behavioral of top_module is
    
    
     -- DDR2 interface signals
-    signal s_ddr2_dq                     : std_logic_vector(15 downto 0);
-    signal s_ddr2_dqs_p                  : std_logic_vector(1 downto 0);
-    signal s_ddr2_dqs_n                  : std_logic_vector(1 downto 0);
-    signal s_ddr2_addr                   : std_logic_vector(12 downto 0);
-    signal s_ddr2_ba                     : std_logic_vector(2 downto 0);
-    signal s_ddr2_ras_n                  : std_logic;
-    signal s_ddr2_cas_n                  : std_logic;
-    signal s_ddr2_we_n                   : std_logic;
-    signal s_ddr2_ck_p                   : std_logic_vector(0 downto 0);
-    signal s_ddr2_ck_n                   : std_logic_vector(0 downto 0);
-    signal s_ddr2_cke                    : std_logic_vector(0 downto 0);
-    signal s_ddr2_cs_n                   : std_logic_vector(0 downto 0);
-    signal s_ddr2_dm                     : std_logic_vector(1 downto 0);
-    signal s_ddr2_odt                    : std_logic_vector(0 downto 0);
+
     signal s_app_addr                    : std_logic_vector(26 downto 0);
     signal s_app_cmd                     : std_logic_vector(2 downto 0);
     signal s_app_en                      : std_logic;
@@ -207,9 +211,7 @@ architecture Behavioral of top_module is
     signal s_ui_clk                      : std_logic;
     signal s_ui_clk_sync_rst             : std_logic;
     signal s_init_calib_complete         : std_logic;
-       
-    signal s_sys_clk_i                     : std_logic;
-    signal s_sys_rst                       : std_logic;
+
     
     -- Signals for control
     signal fsm_state         : integer range 0 to 6 := 0;
@@ -230,9 +232,6 @@ begin
     s_spi0_miso          <= SPI0_MISO;
     SPI0_CLK             <= s_spi0_clk;
     SPI0_CS              <= s_spi0_cs;
-
-    s_sys_clk_i <= SYSCLK;
-    s_sys_rst <= reset_n;
     
     s_app_sr_req  <= '0';
     s_app_ref_req <= '0';
@@ -263,21 +262,21 @@ begin
     
     u_mig_7series_0_mig : mig_7series_0
     port map (
-        ddr2_addr                      => s_ddr2_addr,
-        ddr2_ba                        => s_ddr2_ba,
-        ddr2_cas_n                     => s_ddr2_cas_n,
-        ddr2_ck_n                      => s_ddr2_ck_n,
-        ddr2_ck_p                      => s_ddr2_ck_p,
-        ddr2_cke                       => s_ddr2_cke,
-        ddr2_ras_n                     => s_ddr2_ras_n,
-        ddr2_we_n                      => s_ddr2_we_n,
-        ddr2_dq                        => s_ddr2_dq,
-        ddr2_dqs_n                     => s_ddr2_dqs_n,
-        ddr2_dqs_p                     => s_ddr2_dqs_p,
+        ddr2_addr                      => ddr2_addr,
+        ddr2_ba                        => ddr2_ba,
+        ddr2_cas_n                     => ddr2_cas_n,
+        ddr2_ck_n                      => ddr2_ck_n,
+        ddr2_ck_p                      => ddr2_ck_p,
+        ddr2_cke                       => ddr2_cke,
+        ddr2_ras_n                     => ddr2_ras_n,
+        ddr2_we_n                      => ddr2_we_n,
+        ddr2_dq                        => ddr2_dq,
+        ddr2_dqs_n                     => ddr2_dqs_n,
+        ddr2_dqs_p                     => ddr2_dqs_p,
         init_calib_complete            => s_init_calib_complete,
-        ddr2_cs_n                      => s_ddr2_cs_n,
-        ddr2_dm                        => s_ddr2_dm,
-        ddr2_odt                       => s_ddr2_odt,
+        ddr2_cs_n                      => ddr2_cs_n,
+        ddr2_dm                        => ddr2_dm,
+        ddr2_odt                       => ddr2_odt,
         -- Application interface ports
         app_addr                       => s_app_addr,
         app_cmd                        => s_app_cmd,
@@ -299,9 +298,10 @@ begin
         ui_clk                         => s_ui_clk,
         ui_clk_sync_rst                => s_ui_clk_sync_rst,
         app_wdf_mask                   => s_app_wdf_mask,
+        clk_ref_i                      => SYSCLK,
       -- System Clock Ports
-        sys_clk_i                      => s_sys_clk_i,
-        sys_rst                        => s_sys_rst
+        sys_clk_i                      => SYSCLK,
+        sys_rst                        => reset_n
     );
     
     uart_tx: uart_tx_module

@@ -2,7 +2,7 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-// Date        : Tue Aug  5 23:10:04 2025
+// Date        : Wed Aug  6 00:17:21 2025
 // Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
 // Command     : write_verilog -force -mode funcsim
 //               /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0_sim_netlist.v
@@ -51,6 +51,7 @@ module mig_7series_0
     ui_clk_sync_rst,
     init_calib_complete,
     sys_clk_i,
+    clk_ref_i,
     sys_rst);
   inout [15:0]ddr2_dq;
   inout [1:0]ddr2_dqs_p;
@@ -88,6 +89,7 @@ module mig_7series_0
   output ui_clk_sync_rst;
   output init_calib_complete;
   input sys_clk_i;
+  input clk_ref_i;
   input sys_rst;
 
   wire [26:0]app_addr;
@@ -108,6 +110,7 @@ module mig_7series_0
   wire app_wdf_wren;
   wire app_zq_ack;
   wire app_zq_req;
+  (* IBUF_LOW_PWR = 0 *) wire clk_ref_i;
   (* DRIVE = "12" *) (* SLEW = "SLOW" *) wire [12:0]ddr2_addr;
   (* DRIVE = "12" *) (* SLEW = "SLOW" *) wire [2:0]ddr2_ba;
   (* DRIVE = "12" *) (* SLEW = "SLOW" *) wire ddr2_cas_n;
@@ -1440,6 +1443,7 @@ module mig_7series_0
         .app_wdf_wren(app_wdf_wren),
         .app_zq_ack(app_zq_ack),
         .app_zq_req(app_zq_req),
+        .clk_ref_i(clk_ref_i),
         .\cmd_pipe_plus.mc_address_reg[22] ({\u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/mux_address [22],\u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/mux_address [12],\u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/mux_address [9],\u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/mux_address [5],\u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/mux_address [3:2],\u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/mux_address [0]}),
         .\cmd_pipe_plus.mc_ras_n_reg[0] (\u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/mux_ras_n ),
         .ddr2_addr(ddr2_addr),
@@ -1579,7 +1583,6 @@ module mig_7series_0_mig
     CLKB0_4,
     app_zq_req,
     app_en,
-    sys_rst,
     app_wdf_wren,
     app_wdf_end,
     app_sr_req,
@@ -1617,6 +1620,8 @@ module mig_7series_0_mig
     out_fifo_19,
     out_fifo_20,
     out_fifo_21,
+    clk_ref_i,
+    sys_rst,
     mem_out_5);
   output u_bufg_clkdiv0;
   output rstdiv0_sync_r1_reg_rep;
@@ -1680,7 +1685,6 @@ module mig_7series_0_mig
   input CLKB0_4;
   input app_zq_req;
   input app_en;
-  input sys_rst;
   input app_wdf_wren;
   input app_wdf_end;
   input app_sr_req;
@@ -1718,6 +1722,8 @@ module mig_7series_0_mig
   input [1:0]out_fifo_19;
   input [1:0]out_fifo_20;
   input [1:0]out_fifo_21;
+  input clk_ref_i;
+  input sys_rst;
   input [47:0]mem_out_5;
 
   wire CLKB0;
@@ -1747,6 +1753,7 @@ module mig_7series_0_mig
   wire app_wdf_wren;
   wire app_zq_ack;
   wire app_zq_req;
+  wire clk_ref_i;
   wire [6:0]\cmd_pipe_plus.mc_address_reg[22] ;
   wire [0:0]\cmd_pipe_plus.mc_ras_n_reg[0] ;
   wire [12:0]ddr2_addr;
@@ -1786,6 +1793,7 @@ module mig_7series_0_mig
   wire [31:0]mem_out;
   wire [47:0]mem_out_5;
   wire mem_refclk;
+  wire mmcm_clk;
   wire [1:0]mux_bank;
   wire [53:0]mux_wrdata;
   wire [1:0]out;
@@ -1833,7 +1841,6 @@ module mig_7series_0_mig
   wire sys_rst;
   wire sys_rst_act_hi;
   wire u_bufg_clkdiv0;
-  wire u_ddr2_clk_ibuf_n_0;
   wire u_ddr2_infrastructure_n_0;
   wire u_ddr2_infrastructure_n_10;
   wire u_ddr2_infrastructure_n_11;
@@ -1859,6 +1866,7 @@ module mig_7series_0_mig
   wire u_ddr2_infrastructure_n_7;
   wire u_ddr2_infrastructure_n_8;
   wire u_ddr2_infrastructure_n_9;
+  wire u_iodelay_ctrl_n_1;
   wire u_memc_ui_top_std_n_54;
   wire wr_en;
   wire wr_en_2;
@@ -1871,11 +1879,11 @@ module mig_7series_0_mig
 
   mig_7series_0_mig_7series_v4_2_tempmon \temp_mon_enabled.u_tempmon 
        (.D(\mem_intfc0/ddr_phy_top0/u_ddr_calib_top/ddr_phy_tempmon_0/device_temp_100 ),
+        .clk_ref(u_iodelay_ctrl_n_1),
         .\device_temp_sync_r5_reg[11]_0 (u_bufg_clkdiv0),
-        .mmcm_clk(u_ddr2_clk_ibuf_n_0),
         .\xadc_supplied_temperature.rst_r1_reg_0 (rstdiv0_sync_r1_reg_rep));
   mig_7series_0_mig_7series_v4_2_clk_ibuf u_ddr2_clk_ibuf
-       (.mmcm_clk(u_ddr2_clk_ibuf_n_0),
+       (.mmcm_clk(mmcm_clk),
         .sys_clk_i(sys_clk_i));
   mig_7series_0_mig_7series_v4_2_infrastructure u_ddr2_infrastructure
        (.AS(sys_rst_act_hi),
@@ -1892,6 +1900,7 @@ module mig_7series_0_mig
         .freq_refclk(freq_refclk),
         .\gen_mmcm.mmcm_i_0 (u_ddr2_infrastructure_n_0),
         .mem_refclk(mem_refclk),
+        .mmcm_clk(mmcm_clk),
         .new_cnt_cpt_r_reg(\mem_intfc0/ddr_phy_top0/u_ddr_calib_top/ddr_phy_rdlvl_gen.u_ddr_phy_rdlvl/idelay_tap_limit_r0 ),
         .pass_open_bank_r(\mem_intfc0/mc0/bank_mach0/bank_cntrl[1].bank0/pass_open_bank_r ),
         .pass_open_bank_r_0(\mem_intfc0/mc0/bank_mach0/bank_cntrl[2].bank0/pass_open_bank_r ),
@@ -1901,7 +1910,6 @@ module mig_7series_0_mig
         .pass_open_bank_r_lcl_reg_1(u_ddr2_infrastructure_n_26),
         .pi_cnt_dec(\mem_intfc0/ddr_phy_top0/u_ddr_calib_top/ddr_phy_rdlvl_gen.u_ddr_phy_rdlvl/pi_cnt_dec ),
         .pll_locked(pll_locked),
-        .plle2_i_0(u_ddr2_clk_ibuf_n_0),
         .prbs_rdlvl_done_pulse(\mem_intfc0/ddr_phy_top0/u_ddr_calib_top/u_ddr_phy_init/prbs_rdlvl_done_pulse ),
         .prbs_rdlvl_done_pulse_reg(\mem_intfc0/ddr_phy_top0/u_ddr_calib_top/u_ddr_phy_init/complex_row0_rd_done1 ),
         .rst_tmp(rst_tmp),
@@ -1925,7 +1933,8 @@ module mig_7series_0_mig
         .\tap_cnt_cpt_r_reg[5] (u_memc_ui_top_std_n_54));
   mig_7series_0_mig_7series_v4_2_iodelay_ctrl u_iodelay_ctrl
        (.AS(sys_rst_act_hi),
-        .CLK(u_ddr2_clk_ibuf_n_0),
+        .clk_ref(u_iodelay_ctrl_n_1),
+        .clk_ref_i(clk_ref_i),
         .ref_dll_lock(ref_dll_lock),
         .rst_tmp(rst_tmp),
         .\rstdiv2_sync_r_reg[11] (u_ddr2_infrastructure_n_0),
@@ -15699,7 +15708,7 @@ module mig_7series_0_mig_7series_v4_2_col_mach
     \read_fifo.fifo_ram[0].RAM32M0_1 ,
     \read_fifo.fifo_ram[1].RAM32M0_1 ,
     maint_ref_zq_wip,
-    \read_fifo.head_r_reg[0]_0 ,
+    \read_fifo.head_r_reg[4]_0 ,
     E,
     \read_fifo.tail_r_reg[0]_1 );
   output [0:0]DIC;
@@ -15723,7 +15732,7 @@ module mig_7series_0_mig_7series_v4_2_col_mach
   input \read_fifo.fifo_ram[0].RAM32M0_1 ;
   input \read_fifo.fifo_ram[1].RAM32M0_1 ;
   input maint_ref_zq_wip;
-  input \read_fifo.head_r_reg[0]_0 ;
+  input \read_fifo.head_r_reg[4]_0 ;
   input [0:0]E;
   input \read_fifo.tail_r_reg[0]_1 ;
 
@@ -15755,7 +15764,7 @@ module mig_7series_0_mig_7series_v4_2_col_mach
   wire \read_fifo.fifo_ram[1].RAM32M0_0 ;
   wire \read_fifo.fifo_ram[1].RAM32M0_1 ;
   wire [4:0]\read_fifo.head_r_reg ;
-  wire \read_fifo.head_r_reg[0]_0 ;
+  wire \read_fifo.head_r_reg[4]_0 ;
   wire [3:0]\read_fifo.tail_ns ;
   wire \read_fifo.tail_r[1]_i_1_n_0 ;
   wire \read_fifo.tail_r[2]_i_1_n_0 ;
@@ -16014,31 +16023,31 @@ module mig_7series_0_mig_7series_v4_2_col_mach
         .CE(E),
         .D(p_0_in[0]),
         .Q(\read_fifo.head_r_reg [0]),
-        .R(\read_fifo.head_r_reg[0]_0 ));
+        .R(\read_fifo.head_r_reg[4]_0 ));
   FDRE \read_fifo.head_r_reg[1] 
        (.C(CLK),
         .CE(E),
         .D(p_0_in[1]),
         .Q(\read_fifo.head_r_reg [1]),
-        .R(\read_fifo.head_r_reg[0]_0 ));
+        .R(\read_fifo.head_r_reg[4]_0 ));
   FDRE \read_fifo.head_r_reg[2] 
        (.C(CLK),
         .CE(E),
         .D(p_0_in[2]),
         .Q(\read_fifo.head_r_reg [2]),
-        .R(\read_fifo.head_r_reg[0]_0 ));
+        .R(\read_fifo.head_r_reg[4]_0 ));
   FDRE \read_fifo.head_r_reg[3] 
        (.C(CLK),
         .CE(E),
         .D(p_0_in[3]),
         .Q(\read_fifo.head_r_reg [3]),
-        .R(\read_fifo.head_r_reg[0]_0 ));
+        .R(\read_fifo.head_r_reg[4]_0 ));
   FDRE \read_fifo.head_r_reg[4] 
        (.C(CLK),
         .CE(E),
         .D(p_0_in[4]),
         .Q(\read_fifo.head_r_reg [4]),
-        .R(\read_fifo.head_r_reg[0]_0 ));
+        .R(\read_fifo.head_r_reg[4]_0 ));
   LUT3 #(
     .INIT(8'h78)) 
     \read_fifo.tail_r[1]_i_1 
@@ -16080,31 +16089,31 @@ module mig_7series_0_mig_7series_v4_2_col_mach
         .CE(1'b1),
         .D(\read_fifo.tail_r_reg[0]_1 ),
         .Q(\read_fifo.tail_r_reg[0]_0 ),
-        .R(\read_fifo.head_r_reg[0]_0 ));
+        .R(\read_fifo.head_r_reg[4]_0 ));
   FDRE \read_fifo.tail_r_reg[1] 
        (.C(CLK),
         .CE(1'b1),
         .D(\read_fifo.tail_r[1]_i_1_n_0 ),
         .Q(\read_fifo.tail_r_reg [1]),
-        .R(\read_fifo.head_r_reg[0]_0 ));
+        .R(\read_fifo.head_r_reg[4]_0 ));
   FDRE \read_fifo.tail_r_reg[2] 
        (.C(CLK),
         .CE(1'b1),
         .D(\read_fifo.tail_r[2]_i_1_n_0 ),
         .Q(\read_fifo.tail_r_reg [2]),
-        .R(\read_fifo.head_r_reg[0]_0 ));
+        .R(\read_fifo.head_r_reg[4]_0 ));
   FDRE \read_fifo.tail_r_reg[3] 
        (.C(CLK),
         .CE(1'b1),
         .D(\read_fifo.tail_r[3]_i_1_n_0 ),
         .Q(\read_fifo.tail_r_reg [3]),
-        .R(\read_fifo.head_r_reg[0]_0 ));
+        .R(\read_fifo.head_r_reg[4]_0 ));
   FDRE \read_fifo.tail_r_reg[4] 
        (.C(CLK),
         .CE(1'b1),
         .D(\read_fifo.tail_r[4]_i_1_n_0 ),
         .Q(\read_fifo.tail_r_reg [4]),
-        .R(\read_fifo.head_r_reg[0]_0 ));
+        .R(\read_fifo.head_r_reg[4]_0 ));
   FDRE sent_col_r1_reg
        (.C(CLK),
         .CE(1'b1),
@@ -67136,7 +67145,7 @@ module mig_7series_0_mig_7series_v4_2_infrastructure
     samp_edge_cnt0_en_r_reg,
     SS,
     prbs_rdlvl_done_pulse_reg,
-    plle2_i_0,
+    mmcm_clk,
     AS,
     rst_tmp,
     pass_open_bank_r,
@@ -67181,7 +67190,7 @@ module mig_7series_0_mig_7series_v4_2_infrastructure
   output samp_edge_cnt0_en_r_reg;
   output [0:0]SS;
   output [0:0]prbs_rdlvl_done_pulse_reg;
-  input plle2_i_0;
+  input mmcm_clk;
   input [0:0]AS;
   input rst_tmp;
   input pass_open_bank_r;
@@ -67215,6 +67224,7 @@ module mig_7series_0_mig_7series_v4_2_infrastructure
   wire \gen_mmcm.u_bufg_clk_div2_n_0 ;
   wire \gen_mmcm.u_bufg_mmcm_ps_clk_n_0 ;
   wire mem_refclk;
+  wire mmcm_clk;
   wire mmcm_ps_clk_bufg_in;
   wire [0:0]new_cnt_cpt_r_reg;
   wire pass_open_bank_r;
@@ -67229,7 +67239,6 @@ module mig_7series_0_mig_7series_v4_2_infrastructure
   wire pll_clkfbout;
   wire pll_locked;
   wire pll_locked_i;
-  wire plle2_i_0;
   wire prbs_rdlvl_done_pulse;
   wire [0:0]prbs_rdlvl_done_pulse_reg;
   wire [11:0]rst_sync_r;
@@ -67432,9 +67441,9 @@ module mig_7series_0_mig_7series_v4_2_infrastructure
   (* BOX_TYPE = "PRIMITIVE" *) 
   PLLE2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT(6),
+    .CLKFBOUT_MULT(12),
     .CLKFBOUT_PHASE(0.000000),
-    .CLKIN1_PERIOD(4.999000),
+    .CLKIN1_PERIOD(9.999000),
     .CLKIN2_PERIOD(0.000000),
     .CLKOUT0_DIVIDE(2),
     .CLKOUT0_DUTY_CYCLE(0.500000),
@@ -67465,7 +67474,7 @@ module mig_7series_0_mig_7series_v4_2_infrastructure
     plle2_i
        (.CLKFBIN(pll_clkfbout),
         .CLKFBOUT(pll_clkfbout),
-        .CLKIN1(plle2_i_0),
+        .CLKIN1(mmcm_clk),
         .CLKIN2(1'b0),
         .CLKINSEL(1'b1),
         .CLKOUT0(freq_refclk),
@@ -67989,152 +67998,147 @@ endmodule
 (* ORIG_REF_NAME = "mig_7series_v4_2_iodelay_ctrl" *) 
 module mig_7series_0_mig_7series_v4_2_iodelay_ctrl
    (rst_tmp,
+    clk_ref,
     AS,
-    CLK,
-    sys_rst,
     \rstdiv2_sync_r_reg[11] ,
-    ref_dll_lock);
+    ref_dll_lock,
+    clk_ref_i,
+    sys_rst);
   output rst_tmp;
+  output [0:0]clk_ref;
   output [0:0]AS;
-  input CLK;
-  input sys_rst;
   input \rstdiv2_sync_r_reg[11] ;
   input ref_dll_lock;
+  input clk_ref_i;
+  input sys_rst;
 
   wire [0:0]AS;
-  wire CLK;
+  wire [0:0]clk_ref;
+  wire clk_ref_i;
+  wire clk_ref_ibufg;
   wire [0:0]iodelay_ctrl_rdy;
+  wire [14:1]p_0_in;
   wire ref_dll_lock;
   wire [0:0]rst_ref;
-  wire \rst_ref_sync_r_reg_n_0_[0][0] ;
-  wire \rst_ref_sync_r_reg_n_0_[0][10] ;
-  wire \rst_ref_sync_r_reg_n_0_[0][11] ;
-  wire \rst_ref_sync_r_reg_n_0_[0][12] ;
-  wire \rst_ref_sync_r_reg_n_0_[0][13] ;
-  wire \rst_ref_sync_r_reg_n_0_[0][1] ;
-  wire \rst_ref_sync_r_reg_n_0_[0][2] ;
-  wire \rst_ref_sync_r_reg_n_0_[0][3] ;
-  wire \rst_ref_sync_r_reg_n_0_[0][4] ;
-  wire \rst_ref_sync_r_reg_n_0_[0][5] ;
-  wire \rst_ref_sync_r_reg_n_0_[0][6] ;
-  wire \rst_ref_sync_r_reg_n_0_[0][7] ;
-  wire \rst_ref_sync_r_reg_n_0_[0][8] ;
-  wire \rst_ref_sync_r_reg_n_0_[0][9] ;
   wire rst_tmp;
   wire \rstdiv2_sync_r_reg[11] ;
   (* RTL_KEEP = "true" *) wire sys_rst_i;
 
   assign sys_rst_i = sys_rst;
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFG \clk_ref_200.u_bufg_clk_ref 
+       (.I(clk_ref_ibufg),
+        .O(clk_ref));
   LUT1 #(
     .INIT(2'h1)) 
-    plle2_i_i_1
+    \rst_ref_sync_r[0][14]_i_1 
        (.I0(sys_rst_i),
         .O(AS));
   (* syn_maxfan = "10" *) 
   FDPE \rst_ref_sync_r_reg[0][0] 
-       (.C(CLK),
+       (.C(clk_ref),
         .CE(1'b1),
         .D(1'b0),
         .PRE(AS),
-        .Q(\rst_ref_sync_r_reg_n_0_[0][0] ));
+        .Q(p_0_in[1]));
   (* syn_maxfan = "10" *) 
   FDPE \rst_ref_sync_r_reg[0][10] 
-       (.C(CLK),
+       (.C(clk_ref),
         .CE(1'b1),
-        .D(\rst_ref_sync_r_reg_n_0_[0][9] ),
+        .D(p_0_in[10]),
         .PRE(AS),
-        .Q(\rst_ref_sync_r_reg_n_0_[0][10] ));
+        .Q(p_0_in[11]));
   (* syn_maxfan = "10" *) 
   FDPE \rst_ref_sync_r_reg[0][11] 
-       (.C(CLK),
+       (.C(clk_ref),
         .CE(1'b1),
-        .D(\rst_ref_sync_r_reg_n_0_[0][10] ),
+        .D(p_0_in[11]),
         .PRE(AS),
-        .Q(\rst_ref_sync_r_reg_n_0_[0][11] ));
+        .Q(p_0_in[12]));
   (* syn_maxfan = "10" *) 
   FDPE \rst_ref_sync_r_reg[0][12] 
-       (.C(CLK),
+       (.C(clk_ref),
         .CE(1'b1),
-        .D(\rst_ref_sync_r_reg_n_0_[0][11] ),
+        .D(p_0_in[12]),
         .PRE(AS),
-        .Q(\rst_ref_sync_r_reg_n_0_[0][12] ));
+        .Q(p_0_in[13]));
   (* syn_maxfan = "10" *) 
   FDPE \rst_ref_sync_r_reg[0][13] 
-       (.C(CLK),
+       (.C(clk_ref),
         .CE(1'b1),
-        .D(\rst_ref_sync_r_reg_n_0_[0][12] ),
+        .D(p_0_in[13]),
         .PRE(AS),
-        .Q(\rst_ref_sync_r_reg_n_0_[0][13] ));
+        .Q(p_0_in[14]));
   (* syn_maxfan = "10" *) 
   FDPE \rst_ref_sync_r_reg[0][14] 
-       (.C(CLK),
+       (.C(clk_ref),
         .CE(1'b1),
-        .D(\rst_ref_sync_r_reg_n_0_[0][13] ),
+        .D(p_0_in[14]),
         .PRE(AS),
         .Q(rst_ref));
   (* syn_maxfan = "10" *) 
   FDPE \rst_ref_sync_r_reg[0][1] 
-       (.C(CLK),
+       (.C(clk_ref),
         .CE(1'b1),
-        .D(\rst_ref_sync_r_reg_n_0_[0][0] ),
+        .D(p_0_in[1]),
         .PRE(AS),
-        .Q(\rst_ref_sync_r_reg_n_0_[0][1] ));
+        .Q(p_0_in[2]));
   (* syn_maxfan = "10" *) 
   FDPE \rst_ref_sync_r_reg[0][2] 
-       (.C(CLK),
+       (.C(clk_ref),
         .CE(1'b1),
-        .D(\rst_ref_sync_r_reg_n_0_[0][1] ),
+        .D(p_0_in[2]),
         .PRE(AS),
-        .Q(\rst_ref_sync_r_reg_n_0_[0][2] ));
+        .Q(p_0_in[3]));
   (* syn_maxfan = "10" *) 
   FDPE \rst_ref_sync_r_reg[0][3] 
-       (.C(CLK),
+       (.C(clk_ref),
         .CE(1'b1),
-        .D(\rst_ref_sync_r_reg_n_0_[0][2] ),
+        .D(p_0_in[3]),
         .PRE(AS),
-        .Q(\rst_ref_sync_r_reg_n_0_[0][3] ));
+        .Q(p_0_in[4]));
   (* syn_maxfan = "10" *) 
   FDPE \rst_ref_sync_r_reg[0][4] 
-       (.C(CLK),
+       (.C(clk_ref),
         .CE(1'b1),
-        .D(\rst_ref_sync_r_reg_n_0_[0][3] ),
+        .D(p_0_in[4]),
         .PRE(AS),
-        .Q(\rst_ref_sync_r_reg_n_0_[0][4] ));
+        .Q(p_0_in[5]));
   (* syn_maxfan = "10" *) 
   FDPE \rst_ref_sync_r_reg[0][5] 
-       (.C(CLK),
+       (.C(clk_ref),
         .CE(1'b1),
-        .D(\rst_ref_sync_r_reg_n_0_[0][4] ),
+        .D(p_0_in[5]),
         .PRE(AS),
-        .Q(\rst_ref_sync_r_reg_n_0_[0][5] ));
+        .Q(p_0_in[6]));
   (* syn_maxfan = "10" *) 
   FDPE \rst_ref_sync_r_reg[0][6] 
-       (.C(CLK),
+       (.C(clk_ref),
         .CE(1'b1),
-        .D(\rst_ref_sync_r_reg_n_0_[0][5] ),
+        .D(p_0_in[6]),
         .PRE(AS),
-        .Q(\rst_ref_sync_r_reg_n_0_[0][6] ));
+        .Q(p_0_in[7]));
   (* syn_maxfan = "10" *) 
   FDPE \rst_ref_sync_r_reg[0][7] 
-       (.C(CLK),
+       (.C(clk_ref),
         .CE(1'b1),
-        .D(\rst_ref_sync_r_reg_n_0_[0][6] ),
+        .D(p_0_in[7]),
         .PRE(AS),
-        .Q(\rst_ref_sync_r_reg_n_0_[0][7] ));
+        .Q(p_0_in[8]));
   (* syn_maxfan = "10" *) 
   FDPE \rst_ref_sync_r_reg[0][8] 
-       (.C(CLK),
+       (.C(clk_ref),
         .CE(1'b1),
-        .D(\rst_ref_sync_r_reg_n_0_[0][7] ),
+        .D(p_0_in[8]),
         .PRE(AS),
-        .Q(\rst_ref_sync_r_reg_n_0_[0][8] ));
+        .Q(p_0_in[9]));
   (* syn_maxfan = "10" *) 
   FDPE \rst_ref_sync_r_reg[0][9] 
-       (.C(CLK),
+       (.C(clk_ref),
         .CE(1'b1),
-        .D(\rst_ref_sync_r_reg_n_0_[0][8] ),
+        .D(p_0_in[9]),
         .PRE(AS),
-        .Q(\rst_ref_sync_r_reg_n_0_[0][9] ));
+        .Q(p_0_in[10]));
   LUT4 #(
     .INIT(16'h7FFF)) 
     \rstdiv2_sync_r[11]_i_1 
@@ -68144,12 +68148,21 @@ module mig_7series_0_mig_7series_v4_2_iodelay_ctrl
         .I3(ref_dll_lock),
         .O(rst_tmp));
   (* BOX_TYPE = "PRIMITIVE" *) 
+  (* CAPACITANCE = "DONT_CARE" *) 
+  (* IBUF_DELAY_VALUE = "0" *) 
+  (* XILINX_LEGACY_PRIM = "IBUFG" *) 
+  IBUF #(
+    .IOSTANDARD("DEFAULT")) 
+    \se_clk_ref.u_ibufg_clk_ref 
+       (.I(clk_ref_i),
+        .O(clk_ref_ibufg));
+  (* BOX_TYPE = "PRIMITIVE" *) 
   (* IODELAY_GROUP = "MIG_7SERIES_0_IODELAY_MIG0" *) 
   IDELAYCTRL #(
     .SIM_DEVICE("7SERIES")) 
     u_idelayctrl_200
        (.RDY(iodelay_ctrl_rdy),
-        .REFCLK(CLK),
+        .REFCLK(clk_ref),
         .RST(rst_ref));
 endmodule
 
@@ -68997,7 +69010,7 @@ module mig_7series_0_mig_7series_v4_2_mc
         .\read_fifo.fifo_ram[0].RAM32M0_1 (\read_fifo.fifo_ram[0].RAM32M0 ),
         .\read_fifo.fifo_ram[1].RAM32M0_0 (\read_fifo.fifo_ram[1].RAM32M0 ),
         .\read_fifo.fifo_ram[1].RAM32M0_1 (bank_mach0_n_92),
-        .\read_fifo.head_r_reg[0]_0 (\sr_cntrl.sre_request_logic.sre_request_r_reg ),
+        .\read_fifo.head_r_reg[4]_0 (\sr_cntrl.sre_request_logic.sre_request_r_reg ),
         .\read_fifo.tail_r_reg[0]_0 (\read_fifo.tail_r_reg[0] ),
         .\read_fifo.tail_r_reg[0]_1 (\read_fifo.tail_r_reg[0]_0 ),
         .\read_fifo.tail_r_reg[3]_0 (col_mach0_n_10),
@@ -70402,7 +70415,7 @@ module mig_7series_0_mig_7series_v4_2_memc_ui_top_std
         .E(ram_init_done_r),
         .Q({wr_data_mask,wr_data}),
         .RST0(RST0),
-        .S(u_ui_top_n_7),
+        .S(u_ui_top_n_6),
         .SR(SR),
         .SS(SS),
         .act_wait_r_lcl_reg(act_wait_r_lcl_reg),
@@ -70535,9 +70548,9 @@ module mig_7series_0_mig_7series_v4_2_memc_ui_top_std
         .\rfc_zq_xsdll_timer.rfc_zq_xsdll_timer_r_reg[8] (\rfc_zq_xsdll_timer.rfc_zq_xsdll_timer_r_reg[8] ),
         .\right_edge_taps_r_reg[0] (\right_edge_taps_r_reg[0] ),
         .row(row),
-        .row_hit_r_reg(u_ui_top_n_8),
-        .row_hit_r_reg_0(u_ui_top_n_6),
-        .row_hit_r_reg_1(u_ui_top_n_5),
+        .row_hit_r_reg(u_ui_top_n_5),
+        .row_hit_r_reg_0(u_ui_top_n_7),
+        .row_hit_r_reg_1(u_ui_top_n_8),
         .samp_edge_cnt0_en_r(samp_edge_cnt0_en_r),
         .\samp_edge_cnt1_r_reg[0] (\samp_edge_cnt1_r_reg[0] ),
         .\sr_cntrl.sre_request_logic.sre_request_r_reg (\sr_cntrl.sre_request_logic.sre_request_r_reg ),
@@ -70570,12 +70583,12 @@ module mig_7series_0_mig_7series_v4_2_memc_ui_top_std
         .D(data_buf_addr),
         .E(\ui_wr_data0/new_rd_data ),
         .Q({wr_data_mask,wr_data}),
-        .S(u_ui_top_n_7),
+        .S(u_ui_top_n_6),
         .app_addr(app_addr),
         .\app_addr_r1_reg[25] (bank),
         .\app_addr_r1_reg[9] (col),
         .\app_addr_r2_reg[22] (u_ui_top_n_5),
-        .\app_addr_r2_reg[22]_0 (u_ui_top_n_6),
+        .\app_addr_r2_reg[22]_0 (u_ui_top_n_7),
         .\app_addr_r2_reg[22]_1 (u_ui_top_n_8),
         .\app_addr_r2_reg[23] (u_ui_top_n_10),
         .\app_addr_r2_reg[23]_0 (u_ui_top_n_11),
@@ -74594,11 +74607,11 @@ endmodule
 (* ORIG_REF_NAME = "mig_7series_v4_2_tempmon" *) 
 module mig_7series_0_mig_7series_v4_2_tempmon
    (D,
-    mmcm_clk,
+    clk_ref,
     \xadc_supplied_temperature.rst_r1_reg_0 ,
     \device_temp_sync_r5_reg[11]_0 );
   output [11:0]D;
-  input mmcm_clk;
+  input [0:0]clk_ref;
   input \xadc_supplied_temperature.rst_r1_reg_0 ;
   input \device_temp_sync_r5_reg[11]_0 ;
 
@@ -74606,6 +74619,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   wire \FSM_onehot_xadc_supplied_temperature.tempmon_state[3]_i_1_n_0 ;
   wire \FSM_onehot_xadc_supplied_temperature.tempmon_state_reg_n_0_[0] ;
   wire \FSM_onehot_xadc_supplied_temperature.tempmon_state_reg_n_0_[2] ;
+  wire [0:0]clk_ref;
   wire \device_temp_101[11]_i_2_n_0 ;
   wire \device_temp_101[11]_i_4_n_0 ;
   wire \device_temp_101[11]_i_5_n_0 ;
@@ -74627,7 +74641,6 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   wire device_temp_sync_r4_neq_r3_reg_i_1_n_3;
   (* async_reg = "true" *) wire [11:0]device_temp_sync_r5;
   wire \device_temp_sync_r5_reg[11]_0 ;
-  wire mmcm_clk;
   wire [11:0]p_0_in;
   wire [10:0]p_0_in__0;
   wire [3:0]p_0_in__1;
@@ -74680,7 +74693,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDSE #(
     .INIT(1'b1)) 
     \FSM_onehot_xadc_supplied_temperature.tempmon_state_reg[0] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\FSM_onehot_xadc_supplied_temperature.tempmon_state[3]_i_1_n_0 ),
         .D(\xadc_supplied_temperature.temperature ),
         .Q(\FSM_onehot_xadc_supplied_temperature.tempmon_state_reg_n_0_[0] ),
@@ -74689,7 +74702,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \FSM_onehot_xadc_supplied_temperature.tempmon_state_reg[1] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\FSM_onehot_xadc_supplied_temperature.tempmon_state[3]_i_1_n_0 ),
         .D(\FSM_onehot_xadc_supplied_temperature.tempmon_state_reg_n_0_[2] ),
         .Q(\xadc_supplied_temperature.temperature ),
@@ -74698,7 +74711,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \FSM_onehot_xadc_supplied_temperature.tempmon_state_reg[2] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\FSM_onehot_xadc_supplied_temperature.tempmon_state[3]_i_1_n_0 ),
         .D(\xadc_supplied_temperature.sample_timer_clr ),
         .Q(\FSM_onehot_xadc_supplied_temperature.tempmon_state_reg_n_0_[2] ),
@@ -74707,7 +74720,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \FSM_onehot_xadc_supplied_temperature.tempmon_state_reg[3] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\FSM_onehot_xadc_supplied_temperature.tempmon_state[3]_i_1_n_0 ),
         .D(\FSM_onehot_xadc_supplied_temperature.tempmon_state_reg_n_0_[0] ),
         .Q(\xadc_supplied_temperature.sample_timer_clr ),
@@ -75616,7 +75629,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
         .CONVST(1'b0),
         .CONVSTCLK(1'b0),
         .DADDR({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .DCLK(mmcm_clk),
+        .DCLK(clk_ref),
         .DEN(\xadc_supplied_temperature.xadc_den ),
         .DI({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .DO(\xadc_supplied_temperature.xadc_do ),
@@ -75637,7 +75650,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   (* ASYNC_REG *) 
   (* KEEP = "yes" *) 
   FDRE \xadc_supplied_temperature.rst_r1_reg 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(1'b1),
         .D(\xadc_supplied_temperature.rst_r1_reg_0 ),
         .Q(\xadc_supplied_temperature.rst_r1 ),
@@ -75645,7 +75658,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   (* ASYNC_REG *) 
   (* KEEP = "yes" *) 
   FDRE \xadc_supplied_temperature.rst_r2_reg 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(1'b1),
         .D(\xadc_supplied_temperature.rst_r1 ),
         .Q(\xadc_supplied_temperature.rst_r2 ),
@@ -75673,7 +75686,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.sample_en_reg 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(1'b1),
         .D(\xadc_supplied_temperature.sample_en_i_1_n_0 ),
         .Q(\xadc_supplied_temperature.sample_en ),
@@ -75798,7 +75811,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.sample_timer_clr_reg 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(1'b1),
         .D(\xadc_supplied_temperature.sample_timer_clr_i_1_n_0 ),
         .Q(\xadc_supplied_temperature.xadc_den ),
@@ -75815,7 +75828,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.sample_timer_en_reg 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(1'b1),
         .D(\xadc_supplied_temperature.sample_timer_en_i_1_n_0 ),
         .Q(\xadc_supplied_temperature.sample_timer_en ),
@@ -75823,7 +75836,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.sample_timer_reg[0] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.sample_timer_en ),
         .D(p_0_in__0[0]),
         .Q(\xadc_supplied_temperature.sample_timer_reg [0]),
@@ -75831,7 +75844,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.sample_timer_reg[10] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.sample_timer_en ),
         .D(p_0_in__0[10]),
         .Q(\xadc_supplied_temperature.sample_timer_reg [10]),
@@ -75839,7 +75852,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.sample_timer_reg[1] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.sample_timer_en ),
         .D(p_0_in__0[1]),
         .Q(\xadc_supplied_temperature.sample_timer_reg [1]),
@@ -75847,7 +75860,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.sample_timer_reg[2] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.sample_timer_en ),
         .D(p_0_in__0[2]),
         .Q(\xadc_supplied_temperature.sample_timer_reg [2]),
@@ -75855,7 +75868,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.sample_timer_reg[3] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.sample_timer_en ),
         .D(p_0_in__0[3]),
         .Q(\xadc_supplied_temperature.sample_timer_reg [3]),
@@ -75863,7 +75876,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.sample_timer_reg[4] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.sample_timer_en ),
         .D(p_0_in__0[4]),
         .Q(\xadc_supplied_temperature.sample_timer_reg [4]),
@@ -75871,7 +75884,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.sample_timer_reg[5] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.sample_timer_en ),
         .D(p_0_in__0[5]),
         .Q(\xadc_supplied_temperature.sample_timer_reg [5]),
@@ -75879,7 +75892,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.sample_timer_reg[6] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.sample_timer_en ),
         .D(p_0_in__0[6]),
         .Q(\xadc_supplied_temperature.sample_timer_reg [6]),
@@ -75887,7 +75900,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.sample_timer_reg[7] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.sample_timer_en ),
         .D(p_0_in__0[7]),
         .Q(\xadc_supplied_temperature.sample_timer_reg [7]),
@@ -75895,7 +75908,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.sample_timer_reg[8] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.sample_timer_en ),
         .D(p_0_in__0[8]),
         .Q(\xadc_supplied_temperature.sample_timer_reg [8]),
@@ -75903,7 +75916,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.sample_timer_reg[9] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.sample_timer_en ),
         .D(p_0_in__0[9]),
         .Q(\xadc_supplied_temperature.sample_timer_reg [9]),
@@ -75911,7 +75924,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.temperature_reg[0] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.temperature ),
         .D(p_0_in[0]),
         .Q(device_temp_lcl[0]),
@@ -75919,7 +75932,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.temperature_reg[10] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.temperature ),
         .D(p_0_in[10]),
         .Q(device_temp_lcl[10]),
@@ -75927,7 +75940,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.temperature_reg[11] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.temperature ),
         .D(p_0_in[11]),
         .Q(device_temp_lcl[11]),
@@ -75935,7 +75948,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.temperature_reg[1] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.temperature ),
         .D(p_0_in[1]),
         .Q(device_temp_lcl[1]),
@@ -75943,7 +75956,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.temperature_reg[2] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.temperature ),
         .D(p_0_in[2]),
         .Q(device_temp_lcl[2]),
@@ -75951,7 +75964,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.temperature_reg[3] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.temperature ),
         .D(p_0_in[3]),
         .Q(device_temp_lcl[3]),
@@ -75959,7 +75972,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.temperature_reg[4] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.temperature ),
         .D(p_0_in[4]),
         .Q(device_temp_lcl[4]),
@@ -75967,7 +75980,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.temperature_reg[5] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.temperature ),
         .D(p_0_in[5]),
         .Q(device_temp_lcl[5]),
@@ -75975,7 +75988,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.temperature_reg[6] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.temperature ),
         .D(p_0_in[6]),
         .Q(device_temp_lcl[6]),
@@ -75983,7 +75996,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.temperature_reg[7] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.temperature ),
         .D(p_0_in[7]),
         .Q(device_temp_lcl[7]),
@@ -75991,7 +76004,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.temperature_reg[8] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.temperature ),
         .D(p_0_in[8]),
         .Q(device_temp_lcl[8]),
@@ -75999,7 +76012,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.temperature_reg[9] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(\xadc_supplied_temperature.temperature ),
         .D(p_0_in[9]),
         .Q(device_temp_lcl[9]),
@@ -76007,7 +76020,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.xadc_do_r_reg[10] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(1'b1),
         .D(\xadc_supplied_temperature.xadc_do [10]),
         .Q(p_0_in[6]),
@@ -76015,7 +76028,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.xadc_do_r_reg[11] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(1'b1),
         .D(\xadc_supplied_temperature.xadc_do [11]),
         .Q(p_0_in[7]),
@@ -76023,7 +76036,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.xadc_do_r_reg[12] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(1'b1),
         .D(\xadc_supplied_temperature.xadc_do [12]),
         .Q(p_0_in[8]),
@@ -76031,7 +76044,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.xadc_do_r_reg[13] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(1'b1),
         .D(\xadc_supplied_temperature.xadc_do [13]),
         .Q(p_0_in[9]),
@@ -76039,7 +76052,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.xadc_do_r_reg[14] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(1'b1),
         .D(\xadc_supplied_temperature.xadc_do [14]),
         .Q(p_0_in[10]),
@@ -76047,7 +76060,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.xadc_do_r_reg[15] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(1'b1),
         .D(\xadc_supplied_temperature.xadc_do [15]),
         .Q(p_0_in[11]),
@@ -76055,7 +76068,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.xadc_do_r_reg[4] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(1'b1),
         .D(\xadc_supplied_temperature.xadc_do [4]),
         .Q(p_0_in[0]),
@@ -76063,7 +76076,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.xadc_do_r_reg[5] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(1'b1),
         .D(\xadc_supplied_temperature.xadc_do [5]),
         .Q(p_0_in[1]),
@@ -76071,7 +76084,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.xadc_do_r_reg[6] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(1'b1),
         .D(\xadc_supplied_temperature.xadc_do [6]),
         .Q(p_0_in[2]),
@@ -76079,7 +76092,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.xadc_do_r_reg[7] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(1'b1),
         .D(\xadc_supplied_temperature.xadc_do [7]),
         .Q(p_0_in[3]),
@@ -76087,7 +76100,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.xadc_do_r_reg[8] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(1'b1),
         .D(\xadc_supplied_temperature.xadc_do [8]),
         .Q(p_0_in[4]),
@@ -76095,7 +76108,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.xadc_do_r_reg[9] 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(1'b1),
         .D(\xadc_supplied_temperature.xadc_do [9]),
         .Q(p_0_in[5]),
@@ -76103,7 +76116,7 @@ module mig_7series_0_mig_7series_v4_2_tempmon
   FDRE #(
     .INIT(1'b0)) 
     \xadc_supplied_temperature.xadc_drdy_r_reg 
-       (.C(mmcm_clk),
+       (.C(clk_ref),
         .CE(1'b1),
         .D(\xadc_supplied_temperature.xadc_drdy ),
         .Q(\xadc_supplied_temperature.xadc_drdy_r ),
@@ -76118,8 +76131,8 @@ module mig_7series_0_mig_7series_v4_2_ui_cmd
     D,
     \strict_mode.rd_data_buf_addr_r_lcl_reg[0] ,
     \app_addr_r2_reg[22]_0 ,
-    \app_addr_r2_reg[22]_1 ,
     S,
+    \app_addr_r2_reg[22]_1 ,
     \app_addr_r2_reg[22]_2 ,
     \req_bank_r_lcl_reg[2] ,
     \app_addr_r2_reg[23]_0 ,
@@ -76157,8 +76170,8 @@ module mig_7series_0_mig_7series_v4_2_ui_cmd
   output [2:0]D;
   output \strict_mode.rd_data_buf_addr_r_lcl_reg[0] ;
   output [0:0]\app_addr_r2_reg[22]_0 ;
-  output [0:0]\app_addr_r2_reg[22]_1 ;
   output [0:0]S;
+  output [0:0]\app_addr_r2_reg[22]_1 ;
   output [0:0]\app_addr_r2_reg[22]_2 ;
   output \req_bank_r_lcl_reg[2] ;
   output \app_addr_r2_reg[23]_0 ;
@@ -77148,7 +77161,7 @@ module mig_7series_0_mig_7series_v4_2_ui_cmd
        (.I0(\app_addr_r2_reg_n_0_[22] ),
         .I1(E),
         .I2(\app_addr_r1_reg_n_0_[22] ),
-        .I3(row_hit_r_reg[3]),
+        .I3(row_hit_r_reg[1]),
         .O(\app_addr_r2_reg[22]_0 ));
   LUT4 #(
     .INIT(16'hE21D)) 
@@ -77156,23 +77169,23 @@ module mig_7series_0_mig_7series_v4_2_ui_cmd
        (.I0(\app_addr_r2_reg_n_0_[22] ),
         .I1(E),
         .I2(\app_addr_r1_reg_n_0_[22] ),
-        .I3(row_hit_r_reg[2]),
-        .O(\app_addr_r2_reg[22]_1 ));
+        .I3(row_hit_r_reg[0]),
+        .O(S));
   LUT4 #(
     .INIT(16'hE21D)) 
     row_hit_ns_carry__0_i_1__1
        (.I0(\app_addr_r2_reg_n_0_[22] ),
         .I1(E),
         .I2(\app_addr_r1_reg_n_0_[22] ),
-        .I3(row_hit_r_reg[0]),
-        .O(S));
+        .I3(row_hit_r_reg[2]),
+        .O(\app_addr_r2_reg[22]_1 ));
   LUT4 #(
     .INIT(16'hE21D)) 
     row_hit_ns_carry__0_i_1__2
        (.I0(\app_addr_r2_reg_n_0_[22] ),
         .I1(E),
         .I2(\app_addr_r1_reg_n_0_[22] ),
-        .I3(row_hit_r_reg[1]),
+        .I3(row_hit_r_reg[3]),
         .O(\app_addr_r2_reg[22]_2 ));
   LUT6 #(
     .INIT(64'h5555155500004000)) 
@@ -77220,7 +77233,7 @@ module mig_7series_0_mig_7series_v4_2_ui_rd_data
     ADDRD,
     \pointer_ram.pointer_wr_data ,
     CLK,
-    \rd_buf_indx.rd_buf_indx_r_reg[0]_0 ,
+    \rd_buf_indx.rd_buf_indx_r_reg[4]_0 ,
     \req_data_buf_addr_r_reg[3] ,
     \req_data_buf_addr_r_reg[3]_0 ,
     DOB,
@@ -77233,7 +77246,7 @@ module mig_7series_0_mig_7series_v4_2_ui_rd_data
   output [3:0]ADDRD;
   output [3:0]\pointer_ram.pointer_wr_data ;
   input CLK;
-  input \rd_buf_indx.rd_buf_indx_r_reg[0]_0 ;
+  input \rd_buf_indx.rd_buf_indx_r_reg[4]_0 ;
   input \req_data_buf_addr_r_reg[3] ;
   input \req_data_buf_addr_r_reg[3]_0 ;
   input [0:0]DOB;
@@ -77255,7 +77268,7 @@ module mig_7series_0_mig_7series_v4_2_ui_rd_data
   wire \rd_buf_indx.ram_init_done_r_lcl_inv_i_2_n_0 ;
   wire \rd_buf_indx.ram_init_done_r_lcl_reg_inv_0 ;
   wire [4:4]\rd_buf_indx.rd_buf_indx_r_reg ;
-  wire \rd_buf_indx.rd_buf_indx_r_reg[0]_0 ;
+  wire \rd_buf_indx.rd_buf_indx_r_reg[4]_0 ;
   wire \req_data_buf_addr_r_reg[3] ;
   wire \req_data_buf_addr_r_reg[3]_0 ;
   wire [3:3]\strict_mode.rd_data_buf_addr_r_lcl ;
@@ -77321,7 +77334,7 @@ module mig_7series_0_mig_7series_v4_2_ui_rd_data
   LUT4 #(
     .INIT(16'hBFAA)) 
     \rd_buf_indx.ram_init_done_r_lcl_inv_i_1 
-       (.I0(\rd_buf_indx.rd_buf_indx_r_reg[0]_0 ),
+       (.I0(\rd_buf_indx.rd_buf_indx_r_reg[4]_0 ),
         .I1(\rd_buf_indx.rd_buf_indx_r_reg ),
         .I2(\rd_buf_indx.ram_init_done_r_lcl_inv_i_2_n_0 ),
         .I3(\rd_buf_indx.ram_init_done_r_lcl_reg_inv_0 ),
@@ -77390,35 +77403,35 @@ module mig_7series_0_mig_7series_v4_2_ui_rd_data
         .CE(\rd_buf_indx.ram_init_done_r_lcl_reg_inv_0 ),
         .D(p_0_in__2[0]),
         .Q(ram_init_addr[0]),
-        .R(\rd_buf_indx.rd_buf_indx_r_reg[0]_0 ));
+        .R(\rd_buf_indx.rd_buf_indx_r_reg[4]_0 ));
   FDRE \rd_buf_indx.rd_buf_indx_r_reg[1] 
        (.C(CLK),
         .CE(\rd_buf_indx.ram_init_done_r_lcl_reg_inv_0 ),
         .D(p_0_in__2[1]),
         .Q(ram_init_addr[1]),
-        .R(\rd_buf_indx.rd_buf_indx_r_reg[0]_0 ));
+        .R(\rd_buf_indx.rd_buf_indx_r_reg[4]_0 ));
   FDRE \rd_buf_indx.rd_buf_indx_r_reg[2] 
        (.C(CLK),
         .CE(\rd_buf_indx.ram_init_done_r_lcl_reg_inv_0 ),
         .D(p_0_in__2[2]),
         .Q(ram_init_addr[2]),
-        .R(\rd_buf_indx.rd_buf_indx_r_reg[0]_0 ));
+        .R(\rd_buf_indx.rd_buf_indx_r_reg[4]_0 ));
   FDRE \rd_buf_indx.rd_buf_indx_r_reg[3] 
        (.C(CLK),
         .CE(\rd_buf_indx.ram_init_done_r_lcl_reg_inv_0 ),
         .D(p_0_in__2[3]),
         .Q(ram_init_addr[3]),
-        .R(\rd_buf_indx.rd_buf_indx_r_reg[0]_0 ));
+        .R(\rd_buf_indx.rd_buf_indx_r_reg[4]_0 ));
   FDRE \rd_buf_indx.rd_buf_indx_r_reg[4] 
        (.C(CLK),
         .CE(\rd_buf_indx.ram_init_done_r_lcl_reg_inv_0 ),
         .D(p_0_in__2[4]),
         .Q(\rd_buf_indx.rd_buf_indx_r_reg ),
-        .R(\rd_buf_indx.rd_buf_indx_r_reg[0]_0 ));
+        .R(\rd_buf_indx.rd_buf_indx_r_reg[4]_0 ));
   LUT6 #(
     .INIT(64'h1540FFFF15400000)) 
     \req_data_buf_addr_r[3]_i_1 
-       (.I0(\rd_buf_indx.rd_buf_indx_r_reg[0]_0 ),
+       (.I0(\rd_buf_indx.rd_buf_indx_r_reg[4]_0 ),
         .I1(Q[2]),
         .I2(\req_data_buf_addr_r_reg[3] ),
         .I3(\strict_mode.rd_data_buf_addr_r_lcl ),
@@ -77428,7 +77441,7 @@ module mig_7series_0_mig_7series_v4_2_ui_rd_data
   LUT4 #(
     .INIT(16'h1540)) 
     \strict_mode.rd_data_buf_addr_r_lcl[3]_i_1 
-       (.I0(\rd_buf_indx.rd_buf_indx_r_reg[0]_0 ),
+       (.I0(\rd_buf_indx.rd_buf_indx_r_reg[4]_0 ),
         .I1(Q[2]),
         .I2(\req_data_buf_addr_r_reg[3] ),
         .I3(\strict_mode.rd_data_buf_addr_r_lcl ),
@@ -77467,8 +77480,8 @@ module mig_7series_0_mig_7series_v4_2_ui_top
     app_en_r2,
     \app_cmd_r2_reg[0] ,
     \app_addr_r2_reg[22] ,
-    \app_addr_r2_reg[22]_0 ,
     S,
+    \app_addr_r2_reg[22]_0 ,
     \app_addr_r2_reg[22]_1 ,
     \req_bank_r_lcl_reg[2] ,
     \app_addr_r2_reg[23] ,
@@ -77510,8 +77523,8 @@ module mig_7series_0_mig_7series_v4_2_ui_top
   output app_en_r2;
   output \app_cmd_r2_reg[0] ;
   output [0:0]\app_addr_r2_reg[22] ;
-  output [0:0]\app_addr_r2_reg[22]_0 ;
   output [0:0]S;
+  output [0:0]\app_addr_r2_reg[22]_0 ;
   output [0:0]\app_addr_r2_reg[22]_1 ;
   output \req_bank_r_lcl_reg[2] ;
   output \app_addr_r2_reg[23] ;
@@ -77654,7 +77667,7 @@ module mig_7series_0_mig_7series_v4_2_ui_top
         .\pointer_ram.pointer_wr_data (\pointer_ram.pointer_wr_data ),
         .\pointer_ram.rams[0].RAM32M0 (\read_data_indx.rd_data_indx_r_reg ),
         .\rd_buf_indx.ram_init_done_r_lcl_reg_inv_0 (\rd_buf_indx.ram_init_done_r_lcl_reg_inv ),
-        .\rd_buf_indx.rd_buf_indx_r_reg[0]_0 (\write_data_control.wb_wr_data_addr_r_reg[1] ),
+        .\rd_buf_indx.rd_buf_indx_r_reg[4]_0 (\write_data_control.wb_wr_data_addr_r_reg[1] ),
         .\req_data_buf_addr_r_reg[3] (ui_cmd0_n_6),
         .\req_data_buf_addr_r_reg[3]_0 (ui_cmd0_n_22),
         .\strict_mode.rd_data_buf_addr_r_lcl_reg[2]_0 ({rd_data_buf_addr_r,ui_cmd0_n_4,ui_cmd0_n_5}));

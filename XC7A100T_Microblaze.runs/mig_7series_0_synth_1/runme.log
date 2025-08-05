@@ -7,7 +7,7 @@
   **** SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
   **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
   **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-  **** Start of session at: Tue Aug  5 23:09:27 2025
+  **** Start of session at: Wed Aug  6 00:16:41 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -19,42 +19,47 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 85381
+INFO: [Synth 8-7075] Helper process launched with PID 205568
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2414.316 ; gain = 185.859 ; free physical = 41312 ; free virtual = 55771
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2413.426 ; gain = 184.859 ; free physical = 42827 ; free virtual = 57412
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-10515] begin/end is required for generate-for in this mode of Verilog [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/controller/mig_7series_v4_2_arb_row_col.v:253]
-INFO: [Synth 8-638] synthesizing module 'mig_7series_0' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0.vhd:115]
-INFO: [Synth 8-3491] module 'mig_7series_0_mig' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:76' bound to instance 'u_mig_7series_0_mig' of component 'mig_7series_0_mig' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'mig_7series_0_mig' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:518]
+INFO: [Synth 8-638] synthesizing module 'mig_7series_0' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0.vhd:117]
+INFO: [Synth 8-3491] module 'mig_7series_0_mig' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:76' bound to instance 'u_mig_7series_0_mig' of component 'mig_7series_0_mig' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0.vhd:171]
+INFO: [Synth 8-638] synthesizing module 'mig_7series_0_mig' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:519]
 	Parameter TCQ bound to: 100 - type: integer 
 	Parameter IODELAY_GRP0 bound to: MIG_7SERIES_0_IODELAY_MIG0 - type: string 
 	Parameter IODELAY_GRP1 bound to: MIG_7SERIES_0_IODELAY_MIG1 - type: string 
-	Parameter REFCLK_TYPE bound to: USE_SYSTEM_CLOCK - type: string 
+	Parameter REFCLK_TYPE bound to: SINGLE_ENDED - type: string 
 	Parameter SYSCLK_TYPE bound to: NO_BUFFER - type: string 
 	Parameter SYS_RST_PORT bound to: FALSE - type: string 
 	Parameter RST_ACT_LOW bound to: 1 - type: integer 
 	Parameter DIFF_TERM_REFCLK bound to: TRUE - type: string 
 	Parameter FPGA_SPEED_GRADE bound to: 1 - type: integer 
 	Parameter REF_CLK_MMCM_IODELAY_CTRL bound to: FALSE - type: string 
-INFO: [Synth 8-3491] module 'mig_7series_v4_2_iodelay_ctrl' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_iodelay_ctrl.v:80' bound to instance 'u_iodelay_ctrl' of component 'mig_7series_v4_2_iodelay_ctrl' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1153]
+INFO: [Synth 8-3491] module 'mig_7series_v4_2_iodelay_ctrl' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_iodelay_ctrl.v:80' bound to instance 'u_iodelay_ctrl' of component 'mig_7series_v4_2_iodelay_ctrl' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1154]
 INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_iodelay_ctrl' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_iodelay_ctrl.v:80]
 	Parameter TCQ bound to: 100 - type: integer 
 	Parameter IODELAY_GRP0 bound to: MIG_7SERIES_0_IODELAY_MIG0 - type: string 
 	Parameter IODELAY_GRP1 bound to: MIG_7SERIES_0_IODELAY_MIG1 - type: string 
-	Parameter REFCLK_TYPE bound to: USE_SYSTEM_CLOCK - type: string 
+	Parameter REFCLK_TYPE bound to: SINGLE_ENDED - type: string 
 	Parameter SYSCLK_TYPE bound to: NO_BUFFER - type: string 
 	Parameter SYS_RST_PORT bound to: FALSE - type: string 
 	Parameter RST_ACT_LOW bound to: 1 - type: integer 
 	Parameter DIFF_TERM_REFCLK bound to: TRUE - type: string 
 	Parameter FPGA_SPEED_GRADE bound to: 1 - type: integer 
 	Parameter REF_CLK_MMCM_IODELAY_CTRL bound to: FALSE - type: string 
+INFO: [Synth 8-6157] synthesizing module 'IBUFG' [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:77352]
+	Parameter IBUF_LOW_PWR bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IBUFG' (0#1) [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:77352]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:2678]
 INFO: [Synth 8-6157] synthesizing module 'IDELAYCTRL' [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:78964]
 INFO: [Synth 8-6155] done synthesizing module 'IDELAYCTRL' (0#1) [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:78964]
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_iodelay_ctrl' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_iodelay_ctrl.v:80]
 	Parameter SYSCLK_TYPE bound to: NO_BUFFER - type: string 
 	Parameter DIFF_TERM_SYSCLK bound to: TRUE - type: string 
-INFO: [Synth 8-3491] module 'mig_7series_v4_2_clk_ibuf' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_clk_ibuf.v:68' bound to instance 'u_ddr2_clk_ibuf' of component 'mig_7series_v4_2_clk_ibuf' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1179]
+INFO: [Synth 8-3491] module 'mig_7series_v4_2_clk_ibuf' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_clk_ibuf.v:68' bound to instance 'u_ddr2_clk_ibuf' of component 'mig_7series_v4_2_clk_ibuf' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1180]
 INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_clk_ibuf' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_clk_ibuf.v:68]
 	Parameter SYSCLK_TYPE bound to: NO_BUFFER - type: string 
 	Parameter DIFF_TERM_SYSCLK bound to: TRUE - type: string 
@@ -63,7 +68,7 @@ INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_clk_ibuf' (0#1) 
 	Parameter TEMP_MON_CONTROL bound to: INTERNAL - type: string 
 	Parameter XADC_CLK_PERIOD bound to: 5000 - type: integer 
 	Parameter tTEMPSAMPLE bound to: 10000000 - type: integer 
-INFO: [Synth 8-3491] module 'mig_7series_v4_2_tempmon' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_tempmon.v:69' bound to instance 'u_tempmon' of component 'mig_7series_v4_2_tempmon' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1195]
+INFO: [Synth 8-3491] module 'mig_7series_v4_2_tempmon' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_tempmon.v:69' bound to instance 'u_tempmon' of component 'mig_7series_v4_2_tempmon' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1196]
 INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_tempmon' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_tempmon.v:69]
 	Parameter TCQ bound to: 100 - type: integer 
 	Parameter TEMP_MON_CONTROL bound to: INTERNAL - type: string 
@@ -95,10 +100,10 @@ INFO: [Synth 8-6157] synthesizing module 'XADC' [/tools/Xilinx/2025.1/Vivado/scr
 INFO: [Synth 8-6155] done synthesizing module 'XADC' (0#1) [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:164403]
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_tempmon' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_tempmon.v:69]
 	Parameter TCQ bound to: 100 - type: integer 
-	Parameter CLKIN_PERIOD bound to: 4999 - type: integer 
+	Parameter CLKIN_PERIOD bound to: 9999 - type: integer 
 	Parameter nCK_PER_CLK bound to: 2 - type: integer 
 	Parameter SYSCLK_TYPE bound to: NO_BUFFER - type: string 
-	Parameter CLKFBOUT_MULT bound to: 6 - type: integer 
+	Parameter CLKFBOUT_MULT bound to: 12 - type: integer 
 	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
 	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
 	Parameter CLKOUT0_DIVIDE bound to: 2 - type: integer 
@@ -111,13 +116,13 @@ INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_tempmon' (0#1) [
 	Parameter RST_ACT_LOW bound to: 1 - type: integer 
 	Parameter tCK bound to: 3333 - type: integer 
 	Parameter MEM_TYPE bound to: DDR2 - type: string 
-INFO: [Synth 8-3491] module 'mig_7series_v4_2_infrastructure' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_infrastructure.v:78' bound to instance 'u_ddr2_infrastructure' of component 'mig_7series_v4_2_infrastructure' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1218]
+INFO: [Synth 8-3491] module 'mig_7series_v4_2_infrastructure' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_infrastructure.v:78' bound to instance 'u_ddr2_infrastructure' of component 'mig_7series_v4_2_infrastructure' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1219]
 INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_infrastructure' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_infrastructure.v:78]
 	Parameter TCQ bound to: 100 - type: integer 
-	Parameter CLKIN_PERIOD bound to: 4999 - type: integer 
+	Parameter CLKIN_PERIOD bound to: 9999 - type: integer 
 	Parameter nCK_PER_CLK bound to: 2 - type: integer 
 	Parameter SYSCLK_TYPE bound to: NO_BUFFER - type: string 
-	Parameter CLKFBOUT_MULT bound to: 6 - type: integer 
+	Parameter CLKFBOUT_MULT bound to: 12 - type: integer 
 	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
 	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
 	Parameter CLKOUT0_DIVIDE bound to: 2 - type: integer 
@@ -150,13 +155,11 @@ INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/tools/Xilinx/2025.1/Viva
 	Parameter REF_JITTER1 bound to: 0.000000 - type: double 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (0#1) [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:89421]
-INFO: [Synth 8-6157] synthesizing module 'BUFG' [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:2678]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:2678]
 INFO: [Synth 8-6157] synthesizing module 'PLLE2_ADV' [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:124587]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
-	Parameter CLKFBOUT_MULT bound to: 6 - type: integer 
+	Parameter CLKFBOUT_MULT bound to: 12 - type: integer 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
-	Parameter CLKIN1_PERIOD bound to: 4.999000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 9.999000 - type: double 
 	Parameter CLKOUT0_DIVIDE bound to: 2 - type: integer 
 	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
 	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
@@ -317,7 +320,7 @@ INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_infrastructure' 
 	Parameter TAPSPERKCLK bound to: 56 - type: integer 
 	Parameter SKIP_CALIB bound to: FALSE - type: string 
 	Parameter FPGA_VOLT_TYPE bound to: N - type: string 
-INFO: [Synth 8-3491] module 'mig_7series_v4_2_memc_ui_top_std' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/ip_top/mig_7series_v4_2_memc_ui_top_std.v:70' bound to instance 'u_memc_ui_top_std' of component 'mig_7series_v4_2_memc_ui_top_std' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1272]
+INFO: [Synth 8-3491] module 'mig_7series_v4_2_memc_ui_top_std' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/ip_top/mig_7series_v4_2_memc_ui_top_std.v:70' bound to instance 'u_memc_ui_top_std' of component 'mig_7series_v4_2_memc_ui_top_std' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1273]
 INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_memc_ui_top_std' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/ip_top/mig_7series_v4_2_memc_ui_top_std.v:70]
 	Parameter TCQ bound to: 100 - type: integer 
 	Parameter PAYLOAD_WIDTH bound to: 16 - type: integer 
@@ -787,8 +790,8 @@ INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ui_rd_data' [/home/ck
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ui_rd_data' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/ui/mig_7series_v4_2_ui_rd_data.v:139]
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ui_top' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/ui/mig_7series_v4_2_ui_top.v:70]
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_memc_ui_top_std' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/ip_top/mig_7series_v4_2_memc_ui_top_std.v:70]
-INFO: [Synth 8-256] done synthesizing module 'mig_7series_0_mig' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:518]
-INFO: [Synth 8-256] done synthesizing module 'mig_7series_0' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0.vhd:115]
+INFO: [Synth 8-256] done synthesizing module 'mig_7series_0_mig' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:519]
+INFO: [Synth 8-256] done synthesizing module 'mig_7series_0' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0.vhd:117]
 WARNING: [Synth 8-3848] Net ui_addn_clk_0 in module/entity mig_7series_v4_2_infrastructure does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_infrastructure.v:140]
 WARNING: [Synth 8-3848] Net ui_addn_clk_1 in module/entity mig_7series_v4_2_infrastructure does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_infrastructure.v:141]
 WARNING: [Synth 8-3848] Net ui_addn_clk_2 in module/entity mig_7series_v4_2_infrastructure does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_infrastructure.v:142]
@@ -950,8 +953,6 @@ WARNING: [Synth 8-3848] Net oclk_center_write_resume in module/entity mig_7serie
 WARNING: [Synth 8-3848] Net oclkdelay_center_calib_done in module/entity mig_7series_v4_2_ddr_calib_top does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_calib_top.v:615]
 WARNING: [Synth 8-6014] Unused sequential element app_wdf_rdy_r_copy4_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/ui/mig_7series_v4_2_ui_wr_data.v:267]
 WARNING: [Synth 8-3848] Net error in module/entity mig_7series_v4_2_memc_ui_top_std does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/ip_top/mig_7series_v4_2_memc_ui_top_std.v:416]
-WARNING: [Synth 8-3848] Net clk_ref_p in module/entity mig_7series_0_mig does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1036]
-WARNING: [Synth 8-3848] Net clk_ref_n in module/entity mig_7series_0_mig does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1037]
 WARNING: [Synth 8-3848] Net device_temp_i in module/entity mig_7series_0_mig does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1040]
 WARNING: [Synth 8-7129] Port rd_data_addr[3] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
 WARNING: [Synth 8-7129] Port rd_data_addr[2] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
@@ -1055,19 +1056,20 @@ WARNING: [Synth 8-7129] Port dbg_phy_init[206] in module mig_7series_v4_2_ddr_ph
 WARNING: [Synth 8-7129] Port dbg_phy_init[205] in module mig_7series_v4_2_ddr_phy_init is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2645.824 ; gain = 417.367 ; free physical = 41083 ; free virtual = 55545
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2645.934 ; gain = 417.367 ; free physical = 42573 ; free virtual = 57160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2645.824 ; gain = 417.367 ; free physical = 41083 ; free virtual = 55545
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2645.934 ; gain = 417.367 ; free physical = 42573 ; free virtual = 57160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2645.824 ; gain = 417.367 ; free physical = 41083 ; free virtual = 55545
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2645.934 ; gain = 417.367 ; free physical = 42573 ; free virtual = 57160
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2645.824 ; gain = 0.000 ; free physical = 41083 ; free virtual = 55545
-INFO: [Netlist 29-17] Analyzing 75 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2645.934 ; gain = 0.000 ; free physical = 42588 ; free virtual = 57175
+INFO: [Netlist 29-17] Analyzing 76 Unisim elements for replacement
+WARNING: [Netlist 29-432] The IBUFG primitive 'u_mig_7series_0_mig/u_iodelay_ctrl/se_clk_ref.u_ibufg_clk_ref' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -1076,38 +1078,39 @@ Initializing timing engine
 Parsing XDC File [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0_ooc.xdc]
 Finished Parsing XDC File [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0_ooc.xdc]
 Parsing XDC File [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc]
-WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc:334]
-WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc:341]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc:340]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc:347]
 Finished Parsing XDC File [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mig_7series_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/mig_7series_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2740.656 ; gain = 0.000 ; free physical = 41082 ; free virtual = 55544
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2746.398 ; gain = 0.000 ; free physical = 42600 ; free virtual = 57187
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 34 instances were transformed.
+  A total of 35 instances were transformed.
+  IBUFG => IBUF: 1 instance 
   IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2), INV, OBUFTDS(x2)): 2 instances
   IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 16 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2740.691 ; gain = 0.000 ; free physical = 41082 ; free virtual = 55544
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2746.434 ; gain = 0.000 ; free physical = 42600 ; free virtual = 57187
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2740.691 ; gain = 512.234 ; free physical = 41075 ; free virtual = 55537
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2746.434 ; gain = 517.867 ; free physical = 42603 ; free virtual = 57192
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2748.660 ; gain = 520.203 ; free physical = 41075 ; free virtual = 55537
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2754.402 ; gain = 525.836 ; free physical = 42603 ; free virtual = 57192
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2748.660 ; gain = 520.203 ; free physical = 41086 ; free virtual = 55548
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2754.402 ; gain = 525.836 ; free physical = 42603 ; free virtual = 57192
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'xadc_supplied_temperature.tempmon_state_reg' in module 'mig_7series_v4_2_tempmon'
 INFO: [Synth 8-802] inferred FSM for state register 'fine_adj_state_r_reg' in module 'mig_7series_v4_2_ddr_phy_dqs_found_cal_hr'
@@ -1257,7 +1260,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'cal2_state_r_reg' using en
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'tempmon_state_reg' in module 'mig_7series_v4_2_ddr_phy_tempmon'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2748.660 ; gain = 520.203 ; free physical = 41096 ; free virtual = 55561
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2754.402 ; gain = 525.836 ; free physical = 42647 ; free virtual = 57237
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1398,7 +1401,7 @@ WARNING: [Synth 8-3936] Found unconnected internal register 'wrcal_start_dly_r_r
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_cal1_state_r_reg[25]) is unused and will be removed from module mig_7series_v4_2_ddr_phy_rdlvl.
 WARNING: [Synth 8-3332] Sequential element (FSM_sequential_init_state_r_reg[6]) is unused and will be removed from module mig_7series_v4_2_ddr_phy_init.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2864.699 ; gain = 636.242 ; free physical = 41069 ; free virtual = 55535
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2864.434 ; gain = 635.867 ; free physical = 42738 ; free virtual = 57323
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1432,15 +1435,15 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3321] set_false_path : Empty through list for constraint at line 347 of /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc:347]
+WARNING: [Synth 8-3321] set_false_path : Empty through list for constraint at line 353 of /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc:353]
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2864.699 ; gain = 636.242 ; free physical = 41071 ; free virtual = 55537
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2864.434 ; gain = 635.867 ; free physical = 42737 ; free virtual = 57323
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2864.699 ; gain = 636.242 ; free physical = 41071 ; free virtual = 55537
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 2948.285 ; gain = 719.719 ; free physical = 42658 ; free virtual = 57242
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1465,7 +1468,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 2864.699 ; gain = 636.242 ; free physical = 41072 ; free virtual = 55537
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:34 . Memory (MB): peak = 2948.285 ; gain = 719.719 ; free physical = 42654 ; free virtual = 57241
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1513,37 +1516,37 @@ WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std
 WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/pi_stg2_reg_l_div2r3_inferred:in0[0] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/pi_dqs_find_rst_inferred:in0 to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2945.512 ; gain = 717.055 ; free physical = 41018 ; free virtual = 55484
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2951.254 ; gain = 722.688 ; free physical = 42678 ; free virtual = 57263
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2945.512 ; gain = 717.055 ; free physical = 41011 ; free virtual = 55476
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 2951.254 ; gain = 722.688 ; free physical = 42678 ; free virtual = 57263
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2945.512 ; gain = 717.055 ; free physical = 41011 ; free virtual = 55476
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 2951.254 ; gain = 722.688 ; free physical = 42678 ; free virtual = 57263
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2945.512 ; gain = 717.055 ; free physical = 41010 ; free virtual = 55476
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 2951.254 ; gain = 722.688 ; free physical = 42678 ; free virtual = 57263
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2945.512 ; gain = 717.055 ; free physical = 41010 ; free virtual = 55476
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 2951.254 ; gain = 722.688 ; free physical = 42679 ; free virtual = 57263
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2945.512 ; gain = 717.055 ; free physical = 41010 ; free virtual = 55476
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 2951.254 ; gain = 722.688 ; free physical = 42679 ; free virtual = 57263
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1582,7 +1585,7 @@ Report Cell Usage:
 +------+----------------------+------+
 |      |Cell                  |Count |
 +------+----------------------+------+
-|1     |BUFG                  |     3|
+|1     |BUFG                  |     4|
 |2     |BUFH                  |     1|
 |3     |BUFIO                 |     1|
 |4     |CARRY4                |   101|
@@ -1613,41 +1616,44 @@ Report Cell Usage:
 |32    |FDPE                  |    70|
 |33    |FDRE                  |  2605|
 |34    |FDSE                  |    75|
-|35    |IOBUFDS_INTERMDISABLE |     2|
-|36    |IOBUF_INTERMDISABLE   |    16|
-|37    |OBUF                  |    22|
-|38    |OBUFDS                |     1|
-|39    |OBUFT                 |     2|
+|35    |IBUFG                 |     1|
+|36    |IOBUFDS_INTERMDISABLE |     2|
+|37    |IOBUF_INTERMDISABLE   |    16|
+|38    |OBUF                  |    22|
+|39    |OBUFDS                |     1|
+|40    |OBUFT                 |     2|
 +------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2945.512 ; gain = 717.055 ; free physical = 41010 ; free virtual = 55476
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 2951.254 ; gain = 722.688 ; free physical = 42679 ; free virtual = 57263
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 37 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2945.512 ; gain = 622.188 ; free physical = 41010 ; free virtual = 55476
-Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2945.520 ; gain = 717.055 ; free physical = 41010 ; free virtual = 55476
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2951.254 ; gain = 622.188 ; free physical = 42681 ; free virtual = 57266
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 2951.262 ; gain = 722.688 ; free physical = 42681 ; free virtual = 57266
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2945.520 ; gain = 0.000 ; free physical = 41177 ; free virtual = 55642
-INFO: [Netlist 29-17] Analyzing 224 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2951.262 ; gain = 0.000 ; free physical = 42844 ; free virtual = 57428
+INFO: [Netlist 29-17] Analyzing 225 Unisim elements for replacement
+WARNING: [Netlist 29-432] The IBUFG primitive 'u_mig_7series_0_mig/u_iodelay_ctrl/se_clk_ref.u_ibufg_clk_ref' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 2 inverter(s) to 16 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3029.258 ; gain = 0.000 ; free physical = 41149 ; free virtual = 55615
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3037.000 ; gain = 0.000 ; free physical = 42828 ; free virtual = 57413
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 83 instances were transformed.
+  A total of 84 instances were transformed.
+  IBUFG => IBUF: 1 instance 
   IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2), INV, OBUFTDS(x2)): 2 instances
   IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 64 instances
 
-Synth Design complete | Checksum: 9a73de73
+Synth Design complete | Checksum: 82203f77
 INFO: [Common 17-83] Releasing license: Synthesis
-225 Infos, 324 Warnings, 0 Critical Warnings and 0 Errors encountered.
+227 Infos, 324 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:34 . Memory (MB): peak = 3029.293 ; gain = 1173.141 ; free physical = 41144 ; free virtual = 55610
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2235.241; main = 2111.959; forked = 246.728
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3829.473; main = 3029.262; forked = 964.770
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:38 . Memory (MB): peak = 3037.035 ; gain = 1174.773 ; free physical = 42827 ; free virtual = 57412
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2227.113; main = 2109.057; forked = 246.973
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3829.207; main = 3037.004; forked = 964.770
 INFO: [Coretcl 2-1174] Renamed 68 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3053.270 ; gain = 0.000 ; free physical = 41144 ; free virtual = 55610
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3061.012 ; gain = 0.000 ; free physical = 42822 ; free virtual = 57407
 INFO: [Common 17-1381] The checkpoint '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/mig_7series_0_synth_1/mig_7series_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file mig_7series_0_utilization_synth.rpt -pb mig_7series_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Aug  5 23:10:04 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed Aug  6 00:17:22 2025...

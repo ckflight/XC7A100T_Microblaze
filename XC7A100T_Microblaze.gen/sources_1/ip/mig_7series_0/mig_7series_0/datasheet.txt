@@ -13,7 +13,7 @@ MIG Output Options:
 
 FPGA Options:
    System Clock Type               : No Buffer
-   Reference Clock Type            : Use System Clock
+   Reference Clock Type            : Single-Ended
    Debug Port                      : OFF
    Internal Vref                   : enabled
    IO Power Reduction              : ON
@@ -31,8 +31,8 @@ Controller Options :
    Interface                     : NATIVE
    Design Clock Frequency        : 3333 ps (  0.00 MHz)
    Phy to Controller Clock Ratio : 2:1
-   Input Clock Period            : 4999 ps
-   CLKFBOUT_MULT (PLL)           : 6
+   Input Clock Period            : 9999 ps
+   CLKFBOUT_MULT (PLL)           : 12
    DIVCLK_DIVIDE (PLL)           : 1
    VCC_AUX IO                    : 1.8V
    Memory Type                   : Components
@@ -64,6 +64,10 @@ Bank Selections:
 		Byte Group T1:	DQ[8-15]
 		Byte Group T2:	Address/Ctrl-0
 		Byte Group T3:	DQ[0-7]
+
+Reference_Clock: 
+	SignalName: clk_ref_i
+		PadLocation: E3(MRCC_P)  Bank: 35
 
 System_Control: 
 	SignalName: sys_rst

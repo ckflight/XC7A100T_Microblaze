@@ -108,6 +108,8 @@ entity mig_7series_0 is
     init_calib_complete       : out   std_logic;
     -- System Clock Ports
     sys_clk_i                      : in    std_logic;
+    -- Reference Clock Ports
+    clk_ref_i                                : in    std_logic;
     sys_rst                     : in    std_logic
   );
 end entity mig_7series_0;
@@ -155,6 +157,8 @@ component mig_7series_0_mig
     init_calib_complete       : out   std_logic;
     -- System Clock Ports
     sys_clk_i                      : in    std_logic;
+    -- Reference Clock Ports
+    clk_ref_i                                : in    std_logic;
     sys_rst             : in std_logic
     );
 end component mig_7series_0_mig;
@@ -205,6 +209,8 @@ begin
       app_wdf_mask                   => app_wdf_mask,
       -- System Clock Ports
       sys_clk_i                       => sys_clk_i,
+      -- Reference Clock Ports
+      clk_ref_i                      => clk_ref_i,
       sys_rst                        => sys_rst
     );
 -- End of IP top instance

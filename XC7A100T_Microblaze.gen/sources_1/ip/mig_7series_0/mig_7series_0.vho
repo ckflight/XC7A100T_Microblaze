@@ -107,6 +107,8 @@ component mig_7series_0
     init_calib_complete       : out   std_logic;
     -- System Clock Ports
     sys_clk_i                      : in    std_logic;
+    -- Reference Clock Ports
+    clk_ref_i                                : in    std_logic;
     sys_rst                     : in    std_logic
   );
 end component mig_7series_0;
@@ -155,6 +157,8 @@ end component mig_7series_0;
       app_wdf_mask                   => app_wdf_mask,
       -- System Clock Ports
       sys_clk_i                       => sys_clk_i,
+      -- Reference Clock Ports
+      clk_ref_i                      => clk_ref_i,
       sys_rst                        => sys_rst
     );
 

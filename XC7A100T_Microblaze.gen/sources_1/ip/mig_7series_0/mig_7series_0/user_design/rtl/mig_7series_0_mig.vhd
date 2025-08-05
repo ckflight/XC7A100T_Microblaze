@@ -207,9 +207,9 @@ entity mig_7series_0_mig is
    -- The following parameters are multiplier and divisor factors for PLLE2.
    -- Based on the selected design frequency these parameters vary.
    --***************************************************************************
-   CLKIN_PERIOD          : integer := 4999;
+   CLKIN_PERIOD          : integer := 9999;
                                      -- Input Clock Period
-   CLKFBOUT_MULT         : integer := 6;
+   CLKFBOUT_MULT         : integer := 12;
                                      -- write PLL VCO multiplier
    DIVCLK_DIVIDE         : integer := 1;
                                      -- write PLL VCO divisor
@@ -401,7 +401,7 @@ entity mig_7series_0_mig is
    SYSCLK_TYPE           : string  := "NO_BUFFER";
                                      -- System clock type DIFFERENTIAL, SINGLE_ENDED,
                                      -- NO_BUFFER
-   REFCLK_TYPE           : string  := "USE_SYSTEM_CLOCK";
+   REFCLK_TYPE           : string  := "SINGLE_ENDED";
                                      -- Reference clock type DIFFERENTIAL, SINGLE_ENDED
                                      -- NO_BUFFER, USE_SYSTEM_CLOCK
    SYS_RST_PORT          : string  := "FALSE";
@@ -479,7 +479,8 @@ entity mig_7series_0_mig is
    -- Inputs
    -- Single-ended system clock
    sys_clk_i                      : in    std_logic;
-   
+   -- Single-ended iodelayctrl clk (reference clock)
+   clk_ref_i                                : in    std_logic;
    -- user interface signals
    app_addr             : in    std_logic_vector(ADDR_WIDTH-1 downto 0);
    app_cmd              : in    std_logic_vector(2 downto 0);
@@ -1035,7 +1036,6 @@ architecture arch_mig_7series_0_mig of mig_7series_0_mig is
   signal mmcm_clk           : std_logic;
   signal clk_ref_p               : std_logic;
   signal clk_ref_n               : std_logic;
-  signal clk_ref_i               : std_logic;
   signal device_temp_s           : std_logic_vector(11 downto 0);
   signal device_temp_i           : std_logic_vector(11 downto 0);
 
@@ -1137,7 +1137,8 @@ begin
   
   sys_clk_p <= '0';
   sys_clk_n <= '0';
-  clk_ref_i <= '0';
+  clk_ref_p <= '0';
+  clk_ref_n <= '0';
   init_calib_complete         <= init_calib_complete_i;
       
 

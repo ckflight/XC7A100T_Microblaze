@@ -3,6 +3,8 @@
 
 # XDC: new/pinout.xdc
 
+# XDC: /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc
+
 # Block Designs: bd/microblaze/microblaze.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze || ORIG_REF_NAME==microblaze} -quiet] -quiet
 

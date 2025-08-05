@@ -210,7 +210,8 @@ entity example_top is
    -- Inputs
    -- Single-ended system clock
    sys_clk_i                      : in    std_logic;
-   
+   -- Single-ended iodelayctrl clk (reference clock)
+   clk_ref_i                                : in    std_logic;
    tg_compare_error              : out std_logic;
    init_calib_complete           : out std_logic;
    
@@ -330,6 +331,8 @@ architecture arch_example_top of example_top is
        
       -- System Clock Ports
       sys_clk_i                      : in    std_logic;
+      -- Reference Clock Ports
+      clk_ref_i                                : in    std_logic;
       
       sys_rst             : in std_logic
       );
@@ -589,6 +592,8 @@ begin
        
 -- System Clock Ports
        sys_clk_i                       => sys_clk_i,
+-- Reference Clock Ports
+       clk_ref_i                      => clk_ref_i,
       
         sys_rst                        => sys_rst
         );

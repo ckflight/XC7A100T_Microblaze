@@ -2,7 +2,7 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
--- Date        : Tue Aug  5 23:10:04 2025
+-- Date        : Wed Aug  6 00:17:21 2025
 -- Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0_sim_netlist.vhdl
@@ -9106,7 +9106,7 @@ entity mig_7series_0_mig_7series_v4_2_col_mach is
     \read_fifo.fifo_ram[0].RAM32M0_1\ : in STD_LOGIC;
     \read_fifo.fifo_ram[1].RAM32M0_1\ : in STD_LOGIC;
     maint_ref_zq_wip : in STD_LOGIC;
-    \read_fifo.head_r_reg[0]_0\ : in STD_LOGIC;
+    \read_fifo.head_r_reg[4]_0\ : in STD_LOGIC;
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     \read_fifo.tail_r_reg[0]_1\ : in STD_LOGIC
   );
@@ -9491,7 +9491,7 @@ mc_ref_zq_wip_r_i_2: unisim.vcomponents.LUT6
       CE => E(0),
       D => p_0_in(0),
       Q => \read_fifo.head_r_reg\(0),
-      R => \read_fifo.head_r_reg[0]_0\
+      R => \read_fifo.head_r_reg[4]_0\
     );
 \read_fifo.head_r_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -9499,7 +9499,7 @@ mc_ref_zq_wip_r_i_2: unisim.vcomponents.LUT6
       CE => E(0),
       D => p_0_in(1),
       Q => \read_fifo.head_r_reg\(1),
-      R => \read_fifo.head_r_reg[0]_0\
+      R => \read_fifo.head_r_reg[4]_0\
     );
 \read_fifo.head_r_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -9507,7 +9507,7 @@ mc_ref_zq_wip_r_i_2: unisim.vcomponents.LUT6
       CE => E(0),
       D => p_0_in(2),
       Q => \read_fifo.head_r_reg\(2),
-      R => \read_fifo.head_r_reg[0]_0\
+      R => \read_fifo.head_r_reg[4]_0\
     );
 \read_fifo.head_r_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -9515,7 +9515,7 @@ mc_ref_zq_wip_r_i_2: unisim.vcomponents.LUT6
       CE => E(0),
       D => p_0_in(3),
       Q => \read_fifo.head_r_reg\(3),
-      R => \read_fifo.head_r_reg[0]_0\
+      R => \read_fifo.head_r_reg[4]_0\
     );
 \read_fifo.head_r_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -9523,7 +9523,7 @@ mc_ref_zq_wip_r_i_2: unisim.vcomponents.LUT6
       CE => E(0),
       D => p_0_in(4),
       Q => \read_fifo.head_r_reg\(4),
-      R => \read_fifo.head_r_reg[0]_0\
+      R => \read_fifo.head_r_reg[4]_0\
     );
 \read_fifo.tail_r[1]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -9577,7 +9577,7 @@ mc_ref_zq_wip_r_i_2: unisim.vcomponents.LUT6
       CE => '1',
       D => \read_fifo.tail_r_reg[0]_1\,
       Q => \^read_fifo.tail_r_reg[0]_0\,
-      R => \read_fifo.head_r_reg[0]_0\
+      R => \read_fifo.head_r_reg[4]_0\
     );
 \read_fifo.tail_r_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -9585,7 +9585,7 @@ mc_ref_zq_wip_r_i_2: unisim.vcomponents.LUT6
       CE => '1',
       D => \read_fifo.tail_r[1]_i_1_n_0\,
       Q => \read_fifo.tail_r_reg\(1),
-      R => \read_fifo.head_r_reg[0]_0\
+      R => \read_fifo.head_r_reg[4]_0\
     );
 \read_fifo.tail_r_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -9593,7 +9593,7 @@ mc_ref_zq_wip_r_i_2: unisim.vcomponents.LUT6
       CE => '1',
       D => \read_fifo.tail_r[2]_i_1_n_0\,
       Q => \read_fifo.tail_r_reg\(2),
-      R => \read_fifo.head_r_reg[0]_0\
+      R => \read_fifo.head_r_reg[4]_0\
     );
 \read_fifo.tail_r_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -9601,7 +9601,7 @@ mc_ref_zq_wip_r_i_2: unisim.vcomponents.LUT6
       CE => '1',
       D => \read_fifo.tail_r[3]_i_1_n_0\,
       Q => \read_fifo.tail_r_reg\(3),
-      R => \read_fifo.head_r_reg[0]_0\
+      R => \read_fifo.head_r_reg[4]_0\
     );
 \read_fifo.tail_r_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -9609,7 +9609,7 @@ mc_ref_zq_wip_r_i_2: unisim.vcomponents.LUT6
       CE => '1',
       D => \read_fifo.tail_r[4]_i_1_n_0\,
       Q => \read_fifo.tail_r_reg\(4),
-      R => \read_fifo.head_r_reg[0]_0\
+      R => \read_fifo.head_r_reg[4]_0\
     );
 sent_col_r1_reg: unisim.vcomponents.FDRE
      port map (
@@ -61064,7 +61064,7 @@ entity mig_7series_0_mig_7series_v4_2_infrastructure is
     samp_edge_cnt0_en_r_reg : out STD_LOGIC;
     SS : out STD_LOGIC_VECTOR ( 0 to 0 );
     prbs_rdlvl_done_pulse_reg : out STD_LOGIC_VECTOR ( 0 to 0 );
-    plle2_i_0 : in STD_LOGIC;
+    mmcm_clk : in STD_LOGIC;
     AS : in STD_LOGIC_VECTOR ( 0 to 0 );
     rst_tmp : in STD_LOGIC;
     pass_open_bank_r : in STD_LOGIC;
@@ -61372,9 +61372,9 @@ phy_control_i_i_2: unisim.vcomponents.LUT2
 plle2_i: unisim.vcomponents.PLLE2_ADV
     generic map(
       BANDWIDTH => "OPTIMIZED",
-      CLKFBOUT_MULT => 6,
+      CLKFBOUT_MULT => 12,
       CLKFBOUT_PHASE => 0.000000,
-      CLKIN1_PERIOD => 4.999000,
+      CLKIN1_PERIOD => 9.999000,
       CLKIN2_PERIOD => 0.000000,
       CLKOUT0_DIVIDE => 2,
       CLKOUT0_DUTY_CYCLE => 0.500000,
@@ -61406,7 +61406,7 @@ plle2_i: unisim.vcomponents.PLLE2_ADV
         port map (
       CLKFBIN => pll_clkfbout,
       CLKFBOUT => pll_clkfbout,
-      CLKIN1 => plle2_i_0,
+      CLKIN1 => mmcm_clk,
       CLKIN2 => '0',
       CLKINSEL => '1',
       CLKOUT0 => freq_refclk,
@@ -62074,11 +62074,12 @@ use UNISIM.VCOMPONENTS.ALL;
 entity mig_7series_0_mig_7series_v4_2_iodelay_ctrl is
   port (
     rst_tmp : out STD_LOGIC;
+    clk_ref : out STD_LOGIC_VECTOR ( 0 to 0 );
     AS : out STD_LOGIC_VECTOR ( 0 to 0 );
-    CLK : in STD_LOGIC;
-    sys_rst : in STD_LOGIC;
     \rstdiv2_sync_r_reg[11]\ : in STD_LOGIC;
-    ref_dll_lock : in STD_LOGIC
+    ref_dll_lock : in STD_LOGIC;
+    clk_ref_i : in STD_LOGIC;
+    sys_rst : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of mig_7series_0_mig_7series_v4_2_iodelay_ctrl : entity is "mig_7series_v4_2_iodelay_ctrl";
@@ -62086,25 +62087,16 @@ end mig_7series_0_mig_7series_v4_2_iodelay_ctrl;
 
 architecture STRUCTURE of mig_7series_0_mig_7series_v4_2_iodelay_ctrl is
   signal \^as\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \^clk_ref\ : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal clk_ref_ibufg : STD_LOGIC;
   signal iodelay_ctrl_rdy : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal p_0_in : STD_LOGIC_VECTOR ( 14 downto 1 );
   signal rst_ref : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal \rst_ref_sync_r_reg_n_0_[0][0]\ : STD_LOGIC;
-  signal \rst_ref_sync_r_reg_n_0_[0][10]\ : STD_LOGIC;
-  signal \rst_ref_sync_r_reg_n_0_[0][11]\ : STD_LOGIC;
-  signal \rst_ref_sync_r_reg_n_0_[0][12]\ : STD_LOGIC;
-  signal \rst_ref_sync_r_reg_n_0_[0][13]\ : STD_LOGIC;
-  signal \rst_ref_sync_r_reg_n_0_[0][1]\ : STD_LOGIC;
-  signal \rst_ref_sync_r_reg_n_0_[0][2]\ : STD_LOGIC;
-  signal \rst_ref_sync_r_reg_n_0_[0][3]\ : STD_LOGIC;
-  signal \rst_ref_sync_r_reg_n_0_[0][4]\ : STD_LOGIC;
-  signal \rst_ref_sync_r_reg_n_0_[0][5]\ : STD_LOGIC;
-  signal \rst_ref_sync_r_reg_n_0_[0][6]\ : STD_LOGIC;
-  signal \rst_ref_sync_r_reg_n_0_[0][7]\ : STD_LOGIC;
-  signal \rst_ref_sync_r_reg_n_0_[0][8]\ : STD_LOGIC;
-  signal \rst_ref_sync_r_reg_n_0_[0][9]\ : STD_LOGIC;
   signal sys_rst_i : STD_LOGIC;
   attribute RTL_KEEP : string;
   attribute RTL_KEEP of sys_rst_i : signal is "true";
+  attribute BOX_TYPE : string;
+  attribute BOX_TYPE of \clk_ref_200.u_bufg_clk_ref\ : label is "PRIMITIVE";
   attribute syn_maxfan : string;
   attribute syn_maxfan of \rst_ref_sync_r_reg[0][0]\ : label is "10";
   attribute syn_maxfan of \rst_ref_sync_r_reg[0][10]\ : label is "10";
@@ -62121,14 +62113,26 @@ architecture STRUCTURE of mig_7series_0_mig_7series_v4_2_iodelay_ctrl is
   attribute syn_maxfan of \rst_ref_sync_r_reg[0][7]\ : label is "10";
   attribute syn_maxfan of \rst_ref_sync_r_reg[0][8]\ : label is "10";
   attribute syn_maxfan of \rst_ref_sync_r_reg[0][9]\ : label is "10";
-  attribute BOX_TYPE : string;
+  attribute BOX_TYPE of \se_clk_ref.u_ibufg_clk_ref\ : label is "PRIMITIVE";
+  attribute CAPACITANCE : string;
+  attribute CAPACITANCE of \se_clk_ref.u_ibufg_clk_ref\ : label is "DONT_CARE";
+  attribute IBUF_DELAY_VALUE : string;
+  attribute IBUF_DELAY_VALUE of \se_clk_ref.u_ibufg_clk_ref\ : label is "0";
+  attribute XILINX_LEGACY_PRIM : string;
+  attribute XILINX_LEGACY_PRIM of \se_clk_ref.u_ibufg_clk_ref\ : label is "IBUFG";
   attribute BOX_TYPE of u_idelayctrl_200 : label is "PRIMITIVE";
   attribute IODELAY_GROUP : string;
   attribute IODELAY_GROUP of u_idelayctrl_200 : label is "MIG_7SERIES_0_IODELAY_MIG0";
 begin
   AS(0) <= \^as\(0);
+  clk_ref(0) <= \^clk_ref\(0);
   sys_rst_i <= sys_rst;
-plle2_i_i_1: unisim.vcomponents.LUT1
+\clk_ref_200.u_bufg_clk_ref\: unisim.vcomponents.BUFG
+     port map (
+      I => clk_ref_ibufg,
+      O => \^clk_ref\(0)
+    );
+\rst_ref_sync_r[0][14]_i_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
@@ -62138,123 +62142,123 @@ plle2_i_i_1: unisim.vcomponents.LUT1
     );
 \rst_ref_sync_r_reg[0][0]\: unisim.vcomponents.FDPE
      port map (
-      C => CLK,
+      C => \^clk_ref\(0),
       CE => '1',
       D => '0',
       PRE => \^as\(0),
-      Q => \rst_ref_sync_r_reg_n_0_[0][0]\
+      Q => p_0_in(1)
     );
 \rst_ref_sync_r_reg[0][10]\: unisim.vcomponents.FDPE
      port map (
-      C => CLK,
+      C => \^clk_ref\(0),
       CE => '1',
-      D => \rst_ref_sync_r_reg_n_0_[0][9]\,
+      D => p_0_in(10),
       PRE => \^as\(0),
-      Q => \rst_ref_sync_r_reg_n_0_[0][10]\
+      Q => p_0_in(11)
     );
 \rst_ref_sync_r_reg[0][11]\: unisim.vcomponents.FDPE
      port map (
-      C => CLK,
+      C => \^clk_ref\(0),
       CE => '1',
-      D => \rst_ref_sync_r_reg_n_0_[0][10]\,
+      D => p_0_in(11),
       PRE => \^as\(0),
-      Q => \rst_ref_sync_r_reg_n_0_[0][11]\
+      Q => p_0_in(12)
     );
 \rst_ref_sync_r_reg[0][12]\: unisim.vcomponents.FDPE
      port map (
-      C => CLK,
+      C => \^clk_ref\(0),
       CE => '1',
-      D => \rst_ref_sync_r_reg_n_0_[0][11]\,
+      D => p_0_in(12),
       PRE => \^as\(0),
-      Q => \rst_ref_sync_r_reg_n_0_[0][12]\
+      Q => p_0_in(13)
     );
 \rst_ref_sync_r_reg[0][13]\: unisim.vcomponents.FDPE
      port map (
-      C => CLK,
+      C => \^clk_ref\(0),
       CE => '1',
-      D => \rst_ref_sync_r_reg_n_0_[0][12]\,
+      D => p_0_in(13),
       PRE => \^as\(0),
-      Q => \rst_ref_sync_r_reg_n_0_[0][13]\
+      Q => p_0_in(14)
     );
 \rst_ref_sync_r_reg[0][14]\: unisim.vcomponents.FDPE
      port map (
-      C => CLK,
+      C => \^clk_ref\(0),
       CE => '1',
-      D => \rst_ref_sync_r_reg_n_0_[0][13]\,
+      D => p_0_in(14),
       PRE => \^as\(0),
       Q => rst_ref(0)
     );
 \rst_ref_sync_r_reg[0][1]\: unisim.vcomponents.FDPE
      port map (
-      C => CLK,
+      C => \^clk_ref\(0),
       CE => '1',
-      D => \rst_ref_sync_r_reg_n_0_[0][0]\,
+      D => p_0_in(1),
       PRE => \^as\(0),
-      Q => \rst_ref_sync_r_reg_n_0_[0][1]\
+      Q => p_0_in(2)
     );
 \rst_ref_sync_r_reg[0][2]\: unisim.vcomponents.FDPE
      port map (
-      C => CLK,
+      C => \^clk_ref\(0),
       CE => '1',
-      D => \rst_ref_sync_r_reg_n_0_[0][1]\,
+      D => p_0_in(2),
       PRE => \^as\(0),
-      Q => \rst_ref_sync_r_reg_n_0_[0][2]\
+      Q => p_0_in(3)
     );
 \rst_ref_sync_r_reg[0][3]\: unisim.vcomponents.FDPE
      port map (
-      C => CLK,
+      C => \^clk_ref\(0),
       CE => '1',
-      D => \rst_ref_sync_r_reg_n_0_[0][2]\,
+      D => p_0_in(3),
       PRE => \^as\(0),
-      Q => \rst_ref_sync_r_reg_n_0_[0][3]\
+      Q => p_0_in(4)
     );
 \rst_ref_sync_r_reg[0][4]\: unisim.vcomponents.FDPE
      port map (
-      C => CLK,
+      C => \^clk_ref\(0),
       CE => '1',
-      D => \rst_ref_sync_r_reg_n_0_[0][3]\,
+      D => p_0_in(4),
       PRE => \^as\(0),
-      Q => \rst_ref_sync_r_reg_n_0_[0][4]\
+      Q => p_0_in(5)
     );
 \rst_ref_sync_r_reg[0][5]\: unisim.vcomponents.FDPE
      port map (
-      C => CLK,
+      C => \^clk_ref\(0),
       CE => '1',
-      D => \rst_ref_sync_r_reg_n_0_[0][4]\,
+      D => p_0_in(5),
       PRE => \^as\(0),
-      Q => \rst_ref_sync_r_reg_n_0_[0][5]\
+      Q => p_0_in(6)
     );
 \rst_ref_sync_r_reg[0][6]\: unisim.vcomponents.FDPE
      port map (
-      C => CLK,
+      C => \^clk_ref\(0),
       CE => '1',
-      D => \rst_ref_sync_r_reg_n_0_[0][5]\,
+      D => p_0_in(6),
       PRE => \^as\(0),
-      Q => \rst_ref_sync_r_reg_n_0_[0][6]\
+      Q => p_0_in(7)
     );
 \rst_ref_sync_r_reg[0][7]\: unisim.vcomponents.FDPE
      port map (
-      C => CLK,
+      C => \^clk_ref\(0),
       CE => '1',
-      D => \rst_ref_sync_r_reg_n_0_[0][6]\,
+      D => p_0_in(7),
       PRE => \^as\(0),
-      Q => \rst_ref_sync_r_reg_n_0_[0][7]\
+      Q => p_0_in(8)
     );
 \rst_ref_sync_r_reg[0][8]\: unisim.vcomponents.FDPE
      port map (
-      C => CLK,
+      C => \^clk_ref\(0),
       CE => '1',
-      D => \rst_ref_sync_r_reg_n_0_[0][7]\,
+      D => p_0_in(8),
       PRE => \^as\(0),
-      Q => \rst_ref_sync_r_reg_n_0_[0][8]\
+      Q => p_0_in(9)
     );
 \rst_ref_sync_r_reg[0][9]\: unisim.vcomponents.FDPE
      port map (
-      C => CLK,
+      C => \^clk_ref\(0),
       CE => '1',
-      D => \rst_ref_sync_r_reg_n_0_[0][8]\,
+      D => p_0_in(9),
       PRE => \^as\(0),
-      Q => \rst_ref_sync_r_reg_n_0_[0][9]\
+      Q => p_0_in(10)
     );
 \rstdiv2_sync_r[11]_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -62267,13 +62271,21 @@ plle2_i_i_1: unisim.vcomponents.LUT1
       I3 => ref_dll_lock,
       O => rst_tmp
     );
+\se_clk_ref.u_ibufg_clk_ref\: unisim.vcomponents.IBUF
+    generic map(
+      IOSTANDARD => "DEFAULT"
+    )
+        port map (
+      I => clk_ref_i,
+      O => clk_ref_ibufg
+    );
 u_idelayctrl_200: unisim.vcomponents.IDELAYCTRL
     generic map(
       SIM_DEVICE => "7SERIES"
     )
         port map (
       RDY => iodelay_ctrl_rdy(0),
-      REFCLK => CLK,
+      REFCLK => \^clk_ref\(0),
       RST => rst_ref(0)
     );
 end STRUCTURE;
@@ -65521,7 +65533,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity mig_7series_0_mig_7series_v4_2_tempmon is
   port (
     D : out STD_LOGIC_VECTOR ( 11 downto 0 );
-    mmcm_clk : in STD_LOGIC;
+    clk_ref : in STD_LOGIC_VECTOR ( 0 to 0 );
     \xadc_supplied_temperature.rst_r1_reg_0\ : in STD_LOGIC;
     \device_temp_sync_r5_reg[11]_0\ : in STD_LOGIC
   );
@@ -65801,7 +65813,7 @@ begin
       INIT => '1'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \FSM_onehot_xadc_supplied_temperature.tempmon_state[3]_i_1_n_0\,
       D => \xadc_supplied_temperature.temperature\,
       Q => \FSM_onehot_xadc_supplied_temperature.tempmon_state_reg_n_0_[0]\,
@@ -65812,7 +65824,7 @@ begin
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \FSM_onehot_xadc_supplied_temperature.tempmon_state[3]_i_1_n_0\,
       D => \FSM_onehot_xadc_supplied_temperature.tempmon_state_reg_n_0_[2]\,
       Q => \xadc_supplied_temperature.temperature\,
@@ -65823,7 +65835,7 @@ begin
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \FSM_onehot_xadc_supplied_temperature.tempmon_state[3]_i_1_n_0\,
       D => \xadc_supplied_temperature.sample_timer_clr\,
       Q => \FSM_onehot_xadc_supplied_temperature.tempmon_state_reg_n_0_[2]\,
@@ -65834,7 +65846,7 @@ begin
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \FSM_onehot_xadc_supplied_temperature.tempmon_state[3]_i_1_n_0\,
       D => \FSM_onehot_xadc_supplied_temperature.tempmon_state_reg_n_0_[0]\,
       Q => \xadc_supplied_temperature.sample_timer_clr\,
@@ -66832,7 +66844,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       CONVST => '0',
       CONVSTCLK => '0',
       DADDR(6 downto 0) => B"0000000",
-      DCLK => mmcm_clk,
+      DCLK => clk_ref(0),
       DEN => \xadc_supplied_temperature.xadc_den\,
       DI(15 downto 0) => B"0000000000000000",
       DO(15 downto 0) => \xadc_supplied_temperature.xadc_do\(15 downto 0),
@@ -66853,7 +66865,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
     );
 \xadc_supplied_temperature.rst_r1_reg\: unisim.vcomponents.FDRE
      port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => '1',
       D => \xadc_supplied_temperature.rst_r1_reg_0\,
       Q => \xadc_supplied_temperature.rst_r1\,
@@ -66861,7 +66873,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
     );
 \xadc_supplied_temperature.rst_r2_reg\: unisim.vcomponents.FDRE
      port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => '1',
       D => \xadc_supplied_temperature.rst_r1\,
       Q => \xadc_supplied_temperature.rst_r2\,
@@ -66898,7 +66910,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => '1',
       D => \xadc_supplied_temperature.sample_en_i_1_n_0\,
       Q => \xadc_supplied_temperature.sample_en\,
@@ -67060,7 +67072,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => '1',
       D => \xadc_supplied_temperature.sample_timer_clr_i_1_n_0\,
       Q => \xadc_supplied_temperature.xadc_den\,
@@ -67083,7 +67095,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => '1',
       D => \xadc_supplied_temperature.sample_timer_en_i_1_n_0\,
       Q => \xadc_supplied_temperature.sample_timer_en\,
@@ -67094,7 +67106,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.sample_timer_en\,
       D => \p_0_in__0\(0),
       Q => \xadc_supplied_temperature.sample_timer_reg\(0),
@@ -67105,7 +67117,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.sample_timer_en\,
       D => \p_0_in__0\(10),
       Q => \xadc_supplied_temperature.sample_timer_reg\(10),
@@ -67116,7 +67128,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.sample_timer_en\,
       D => \p_0_in__0\(1),
       Q => \xadc_supplied_temperature.sample_timer_reg\(1),
@@ -67127,7 +67139,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.sample_timer_en\,
       D => \p_0_in__0\(2),
       Q => \xadc_supplied_temperature.sample_timer_reg\(2),
@@ -67138,7 +67150,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.sample_timer_en\,
       D => \p_0_in__0\(3),
       Q => \xadc_supplied_temperature.sample_timer_reg\(3),
@@ -67149,7 +67161,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.sample_timer_en\,
       D => \p_0_in__0\(4),
       Q => \xadc_supplied_temperature.sample_timer_reg\(4),
@@ -67160,7 +67172,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.sample_timer_en\,
       D => \p_0_in__0\(5),
       Q => \xadc_supplied_temperature.sample_timer_reg\(5),
@@ -67171,7 +67183,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.sample_timer_en\,
       D => \p_0_in__0\(6),
       Q => \xadc_supplied_temperature.sample_timer_reg\(6),
@@ -67182,7 +67194,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.sample_timer_en\,
       D => \p_0_in__0\(7),
       Q => \xadc_supplied_temperature.sample_timer_reg\(7),
@@ -67193,7 +67205,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.sample_timer_en\,
       D => \p_0_in__0\(8),
       Q => \xadc_supplied_temperature.sample_timer_reg\(8),
@@ -67204,7 +67216,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.sample_timer_en\,
       D => \p_0_in__0\(9),
       Q => \xadc_supplied_temperature.sample_timer_reg\(9),
@@ -67215,7 +67227,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.temperature\,
       D => p_0_in(0),
       Q => device_temp_lcl(0),
@@ -67226,7 +67238,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.temperature\,
       D => p_0_in(10),
       Q => device_temp_lcl(10),
@@ -67237,7 +67249,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.temperature\,
       D => p_0_in(11),
       Q => device_temp_lcl(11),
@@ -67248,7 +67260,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.temperature\,
       D => p_0_in(1),
       Q => device_temp_lcl(1),
@@ -67259,7 +67271,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.temperature\,
       D => p_0_in(2),
       Q => device_temp_lcl(2),
@@ -67270,7 +67282,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.temperature\,
       D => p_0_in(3),
       Q => device_temp_lcl(3),
@@ -67281,7 +67293,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.temperature\,
       D => p_0_in(4),
       Q => device_temp_lcl(4),
@@ -67292,7 +67304,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.temperature\,
       D => p_0_in(5),
       Q => device_temp_lcl(5),
@@ -67303,7 +67315,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.temperature\,
       D => p_0_in(6),
       Q => device_temp_lcl(6),
@@ -67314,7 +67326,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.temperature\,
       D => p_0_in(7),
       Q => device_temp_lcl(7),
@@ -67325,7 +67337,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.temperature\,
       D => p_0_in(8),
       Q => device_temp_lcl(8),
@@ -67336,7 +67348,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => \xadc_supplied_temperature.temperature\,
       D => p_0_in(9),
       Q => device_temp_lcl(9),
@@ -67347,7 +67359,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => '1',
       D => \xadc_supplied_temperature.xadc_do\(10),
       Q => p_0_in(6),
@@ -67358,7 +67370,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => '1',
       D => \xadc_supplied_temperature.xadc_do\(11),
       Q => p_0_in(7),
@@ -67369,7 +67381,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => '1',
       D => \xadc_supplied_temperature.xadc_do\(12),
       Q => p_0_in(8),
@@ -67380,7 +67392,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => '1',
       D => \xadc_supplied_temperature.xadc_do\(13),
       Q => p_0_in(9),
@@ -67391,7 +67403,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => '1',
       D => \xadc_supplied_temperature.xadc_do\(14),
       Q => p_0_in(10),
@@ -67402,7 +67414,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => '1',
       D => \xadc_supplied_temperature.xadc_do\(15),
       Q => p_0_in(11),
@@ -67413,7 +67425,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => '1',
       D => \xadc_supplied_temperature.xadc_do\(4),
       Q => p_0_in(0),
@@ -67424,7 +67436,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => '1',
       D => \xadc_supplied_temperature.xadc_do\(5),
       Q => p_0_in(1),
@@ -67435,7 +67447,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => '1',
       D => \xadc_supplied_temperature.xadc_do\(6),
       Q => p_0_in(2),
@@ -67446,7 +67458,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => '1',
       D => \xadc_supplied_temperature.xadc_do\(7),
       Q => p_0_in(3),
@@ -67457,7 +67469,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => '1',
       D => \xadc_supplied_temperature.xadc_do\(8),
       Q => p_0_in(4),
@@ -67468,7 +67480,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => '1',
       D => \xadc_supplied_temperature.xadc_do\(9),
       Q => p_0_in(5),
@@ -67479,7 +67491,7 @@ device_temp_sync_r4_neq_r3_reg_i_1: unisim.vcomponents.CARRY4
       INIT => '0'
     )
         port map (
-      C => mmcm_clk,
+      C => clk_ref(0),
       CE => '1',
       D => \xadc_supplied_temperature.xadc_drdy\,
       Q => \xadc_supplied_temperature.xadc_drdy_r\,
@@ -67498,8 +67510,8 @@ entity mig_7series_0_mig_7series_v4_2_ui_cmd is
     D : out STD_LOGIC_VECTOR ( 2 downto 0 );
     \strict_mode.rd_data_buf_addr_r_lcl_reg[0]\ : out STD_LOGIC;
     \app_addr_r2_reg[22]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \app_addr_r2_reg[22]_1\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     S : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \app_addr_r2_reg[22]_1\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     \app_addr_r2_reg[22]_2\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     \req_bank_r_lcl_reg[2]\ : out STD_LOGIC;
     \app_addr_r2_reg[23]_0\ : out STD_LOGIC;
@@ -68778,7 +68790,7 @@ req_wr_r_lcl_i_2: unisim.vcomponents.LUT6
       I0 => \app_addr_r2_reg_n_0_[22]\,
       I1 => \^e\(0),
       I2 => \app_addr_r1_reg_n_0_[22]\,
-      I3 => row_hit_r_reg(3),
+      I3 => row_hit_r_reg(1),
       O => \app_addr_r2_reg[22]_0\(0)
     );
 \row_hit_ns_carry__0_i_1__0\: unisim.vcomponents.LUT4
@@ -68789,8 +68801,8 @@ req_wr_r_lcl_i_2: unisim.vcomponents.LUT6
       I0 => \app_addr_r2_reg_n_0_[22]\,
       I1 => \^e\(0),
       I2 => \app_addr_r1_reg_n_0_[22]\,
-      I3 => row_hit_r_reg(2),
-      O => \app_addr_r2_reg[22]_1\(0)
+      I3 => row_hit_r_reg(0),
+      O => S(0)
     );
 \row_hit_ns_carry__0_i_1__1\: unisim.vcomponents.LUT4
     generic map(
@@ -68800,8 +68812,8 @@ req_wr_r_lcl_i_2: unisim.vcomponents.LUT6
       I0 => \app_addr_r2_reg_n_0_[22]\,
       I1 => \^e\(0),
       I2 => \app_addr_r1_reg_n_0_[22]\,
-      I3 => row_hit_r_reg(0),
-      O => S(0)
+      I3 => row_hit_r_reg(2),
+      O => \app_addr_r2_reg[22]_1\(0)
     );
 \row_hit_ns_carry__0_i_1__2\: unisim.vcomponents.LUT4
     generic map(
@@ -68811,7 +68823,7 @@ req_wr_r_lcl_i_2: unisim.vcomponents.LUT6
       I0 => \app_addr_r2_reg_n_0_[22]\,
       I1 => \^e\(0),
       I2 => \app_addr_r1_reg_n_0_[22]\,
-      I3 => row_hit_r_reg(1),
+      I3 => row_hit_r_reg(3),
       O => \app_addr_r2_reg[22]_2\(0)
     );
 \strict_mode.rd_data_buf_addr_r_lcl[0]_i_1\: unisim.vcomponents.LUT6
@@ -68875,7 +68887,7 @@ entity mig_7series_0_mig_7series_v4_2_ui_rd_data is
     ADDRD : out STD_LOGIC_VECTOR ( 3 downto 0 );
     \pointer_ram.pointer_wr_data\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     CLK : in STD_LOGIC;
-    \rd_buf_indx.rd_buf_indx_r_reg[0]_0\ : in STD_LOGIC;
+    \rd_buf_indx.rd_buf_indx_r_reg[4]_0\ : in STD_LOGIC;
     \req_data_buf_addr_r_reg[3]\ : in STD_LOGIC;
     \req_data_buf_addr_r_reg[3]_0\ : in STD_LOGIC;
     DOB : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -68996,7 +69008,7 @@ begin
       INIT => X"BFAA"
     )
         port map (
-      I0 => \rd_buf_indx.rd_buf_indx_r_reg[0]_0\,
+      I0 => \rd_buf_indx.rd_buf_indx_r_reg[4]_0\,
       I1 => \rd_buf_indx.rd_buf_indx_r_reg\(4),
       I2 => \rd_buf_indx.ram_init_done_r_lcl_inv_i_2_n_0\,
       I3 => \^rd_buf_indx.ram_init_done_r_lcl_reg_inv_0\,
@@ -69080,7 +69092,7 @@ begin
       CE => \^rd_buf_indx.ram_init_done_r_lcl_reg_inv_0\,
       D => \p_0_in__2\(0),
       Q => ram_init_addr(0),
-      R => \rd_buf_indx.rd_buf_indx_r_reg[0]_0\
+      R => \rd_buf_indx.rd_buf_indx_r_reg[4]_0\
     );
 \rd_buf_indx.rd_buf_indx_r_reg[1]\: unisim.vcomponents.FDRE
      port map (
@@ -69088,7 +69100,7 @@ begin
       CE => \^rd_buf_indx.ram_init_done_r_lcl_reg_inv_0\,
       D => \p_0_in__2\(1),
       Q => ram_init_addr(1),
-      R => \rd_buf_indx.rd_buf_indx_r_reg[0]_0\
+      R => \rd_buf_indx.rd_buf_indx_r_reg[4]_0\
     );
 \rd_buf_indx.rd_buf_indx_r_reg[2]\: unisim.vcomponents.FDRE
      port map (
@@ -69096,7 +69108,7 @@ begin
       CE => \^rd_buf_indx.ram_init_done_r_lcl_reg_inv_0\,
       D => \p_0_in__2\(2),
       Q => ram_init_addr(2),
-      R => \rd_buf_indx.rd_buf_indx_r_reg[0]_0\
+      R => \rd_buf_indx.rd_buf_indx_r_reg[4]_0\
     );
 \rd_buf_indx.rd_buf_indx_r_reg[3]\: unisim.vcomponents.FDRE
      port map (
@@ -69104,7 +69116,7 @@ begin
       CE => \^rd_buf_indx.ram_init_done_r_lcl_reg_inv_0\,
       D => \p_0_in__2\(3),
       Q => ram_init_addr(3),
-      R => \rd_buf_indx.rd_buf_indx_r_reg[0]_0\
+      R => \rd_buf_indx.rd_buf_indx_r_reg[4]_0\
     );
 \rd_buf_indx.rd_buf_indx_r_reg[4]\: unisim.vcomponents.FDRE
      port map (
@@ -69112,14 +69124,14 @@ begin
       CE => \^rd_buf_indx.ram_init_done_r_lcl_reg_inv_0\,
       D => \p_0_in__2\(4),
       Q => \rd_buf_indx.rd_buf_indx_r_reg\(4),
-      R => \rd_buf_indx.rd_buf_indx_r_reg[0]_0\
+      R => \rd_buf_indx.rd_buf_indx_r_reg[4]_0\
     );
 \req_data_buf_addr_r[3]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"1540FFFF15400000"
     )
         port map (
-      I0 => \rd_buf_indx.rd_buf_indx_r_reg[0]_0\,
+      I0 => \rd_buf_indx.rd_buf_indx_r_reg[4]_0\,
       I1 => \^q\(2),
       I2 => \req_data_buf_addr_r_reg[3]\,
       I3 => \strict_mode.rd_data_buf_addr_r_lcl\(3),
@@ -69132,7 +69144,7 @@ begin
       INIT => X"1540"
     )
         port map (
-      I0 => \rd_buf_indx.rd_buf_indx_r_reg[0]_0\,
+      I0 => \rd_buf_indx.rd_buf_indx_r_reg[4]_0\,
       I1 => \^q\(2),
       I2 => \req_data_buf_addr_r_reg[3]\,
       I3 => \strict_mode.rd_data_buf_addr_r_lcl\(3),
@@ -79835,8 +79847,8 @@ entity mig_7series_0_mig_7series_v4_2_ui_top is
     app_en_r2 : out STD_LOGIC;
     \app_cmd_r2_reg[0]\ : out STD_LOGIC;
     \app_addr_r2_reg[22]\ : out STD_LOGIC_VECTOR ( 0 to 0 );
-    \app_addr_r2_reg[22]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     S : out STD_LOGIC_VECTOR ( 0 to 0 );
+    \app_addr_r2_reg[22]_0\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     \app_addr_r2_reg[22]_1\ : out STD_LOGIC_VECTOR ( 0 to 0 );
     \req_bank_r_lcl_reg[2]\ : out STD_LOGIC;
     \app_addr_r2_reg[23]\ : out STD_LOGIC;
@@ -79949,7 +79961,7 @@ ui_rd_data0: entity work.mig_7series_0_mig_7series_v4_2_ui_rd_data
       \pointer_ram.pointer_wr_data\(3 downto 0) => \pointer_ram.pointer_wr_data\(3 downto 0),
       \pointer_ram.rams[0].RAM32M0\(3 downto 0) => \read_data_indx.rd_data_indx_r_reg\(3 downto 0),
       \rd_buf_indx.ram_init_done_r_lcl_reg_inv_0\ => \^rd_buf_indx.ram_init_done_r_lcl_reg_inv\(0),
-      \rd_buf_indx.rd_buf_indx_r_reg[0]_0\ => \write_data_control.wb_wr_data_addr_r_reg[1]\,
+      \rd_buf_indx.rd_buf_indx_r_reg[4]_0\ => \write_data_control.wb_wr_data_addr_r_reg[1]\,
       \req_data_buf_addr_r_reg[3]\ => ui_cmd0_n_6,
       \req_data_buf_addr_r_reg[3]_0\ => ui_cmd0_n_22,
       \strict_mode.rd_data_buf_addr_r_lcl_reg[2]_0\(2) => rd_data_buf_addr_r(2),
@@ -85197,7 +85209,7 @@ col_mach0: entity work.mig_7series_0_mig_7series_v4_2_col_mach
       \read_fifo.fifo_ram[0].RAM32M0_1\ => \read_fifo.fifo_ram[0].RAM32M0\,
       \read_fifo.fifo_ram[1].RAM32M0_0\ => \read_fifo.fifo_ram[1].RAM32M0\,
       \read_fifo.fifo_ram[1].RAM32M0_1\ => bank_mach0_n_92,
-      \read_fifo.head_r_reg[0]_0\ => \sr_cntrl.sre_request_logic.sre_request_r_reg\,
+      \read_fifo.head_r_reg[4]_0\ => \sr_cntrl.sre_request_logic.sre_request_r_reg\,
       \read_fifo.tail_r_reg[0]_0\ => \read_fifo.tail_r_reg[0]\(0),
       \read_fifo.tail_r_reg[0]_1\ => \read_fifo.tail_r_reg[0]_0\,
       \read_fifo.tail_r_reg[3]_0\ => col_mach0_n_10,
@@ -87355,7 +87367,7 @@ mem_intfc0: entity work.mig_7series_0_mig_7series_v4_2_mem_intfc
       Q(71 downto 64) => wr_data_mask(7 downto 0),
       Q(63 downto 0) => wr_data(63 downto 0),
       RST0 => RST0,
-      S(0) => u_ui_top_n_7,
+      S(0) => u_ui_top_n_6,
       SR(0) => SR(0),
       SS(0) => SS(0),
       act_wait_r_lcl_reg => act_wait_r_lcl_reg,
@@ -87491,9 +87503,9 @@ mem_intfc0: entity work.mig_7series_0_mig_7series_v4_2_mem_intfc
       \rfc_zq_xsdll_timer.rfc_zq_xsdll_timer_r_reg[8]\ => \rfc_zq_xsdll_timer.rfc_zq_xsdll_timer_r_reg[8]\,
       \right_edge_taps_r_reg[0]\(0) => \right_edge_taps_r_reg[0]\(0),
       row(12 downto 0) => row(12 downto 0),
-      row_hit_r_reg(0) => u_ui_top_n_8,
-      row_hit_r_reg_0(0) => u_ui_top_n_6,
-      row_hit_r_reg_1(0) => u_ui_top_n_5,
+      row_hit_r_reg(0) => u_ui_top_n_5,
+      row_hit_r_reg_0(0) => u_ui_top_n_7,
+      row_hit_r_reg_1(0) => u_ui_top_n_8,
       samp_edge_cnt0_en_r => samp_edge_cnt0_en_r,
       \samp_edge_cnt1_r_reg[0]\ => \samp_edge_cnt1_r_reg[0]\,
       \sr_cntrl.sre_request_logic.sre_request_r_reg\ => \sr_cntrl.sre_request_logic.sre_request_r_reg\,
@@ -87531,12 +87543,12 @@ u_ui_top: entity work.mig_7series_0_mig_7series_v4_2_ui_top
       E(0) => \ui_wr_data0/new_rd_data\,
       Q(71 downto 64) => wr_data_mask(7 downto 0),
       Q(63 downto 0) => wr_data(63 downto 0),
-      S(0) => u_ui_top_n_7,
+      S(0) => u_ui_top_n_6,
       app_addr(25 downto 0) => app_addr(25 downto 0),
       \app_addr_r1_reg[25]\(2 downto 0) => bank(2 downto 0),
       \app_addr_r1_reg[9]\(9 downto 0) => col(9 downto 0),
       \app_addr_r2_reg[22]\(0) => u_ui_top_n_5,
-      \app_addr_r2_reg[22]_0\(0) => u_ui_top_n_6,
+      \app_addr_r2_reg[22]_0\(0) => u_ui_top_n_7,
       \app_addr_r2_reg[22]_1\(0) => u_ui_top_n_8,
       \app_addr_r2_reg[23]\ => u_ui_top_n_10,
       \app_addr_r2_reg[23]_0\ => u_ui_top_n_11,
@@ -87642,7 +87654,6 @@ entity mig_7series_0_mig is
     CLKB0_4 : in STD_LOGIC;
     app_zq_req : in STD_LOGIC;
     app_en : in STD_LOGIC;
-    sys_rst : in STD_LOGIC;
     app_wdf_wren : in STD_LOGIC;
     app_wdf_end : in STD_LOGIC;
     app_sr_req : in STD_LOGIC;
@@ -87680,6 +87691,8 @@ entity mig_7series_0_mig is
     out_fifo_19 : in STD_LOGIC_VECTOR ( 1 downto 0 );
     out_fifo_20 : in STD_LOGIC_VECTOR ( 1 downto 0 );
     out_fifo_21 : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    clk_ref_i : in STD_LOGIC;
+    sys_rst : in STD_LOGIC;
     mem_out_5 : in STD_LOGIC_VECTOR ( 47 downto 0 )
   );
 end mig_7series_0_mig;
@@ -87700,6 +87713,7 @@ architecture STRUCTURE of mig_7series_0_mig is
   signal \mem_intfc0/mc0/bank_mach0/bank_cntrl[3].bank0/bank_state0/bm_end_r1\ : STD_LOGIC;
   signal \mem_intfc0/mc0/bank_mach0/bank_cntrl[3].bank0/pass_open_bank_r\ : STD_LOGIC;
   signal mem_refclk : STD_LOGIC;
+  signal mmcm_clk : STD_LOGIC;
   signal pll_locked : STD_LOGIC;
   signal ref_dll_lock : STD_LOGIC;
   signal rst_tmp : STD_LOGIC;
@@ -87707,7 +87721,6 @@ architecture STRUCTURE of mig_7series_0_mig is
   signal sync_pulse : STD_LOGIC;
   signal sys_rst_act_hi : STD_LOGIC;
   signal \^u_bufg_clkdiv0\ : STD_LOGIC;
-  signal u_ddr2_clk_ibuf_n_0 : STD_LOGIC;
   signal u_ddr2_infrastructure_n_0 : STD_LOGIC;
   signal u_ddr2_infrastructure_n_10 : STD_LOGIC;
   signal u_ddr2_infrastructure_n_11 : STD_LOGIC;
@@ -87733,6 +87746,7 @@ architecture STRUCTURE of mig_7series_0_mig is
   signal u_ddr2_infrastructure_n_7 : STD_LOGIC;
   signal u_ddr2_infrastructure_n_8 : STD_LOGIC;
   signal u_ddr2_infrastructure_n_9 : STD_LOGIC;
+  signal u_iodelay_ctrl_n_1 : STD_LOGIC;
   signal u_memc_ui_top_std_n_54 : STD_LOGIC;
   attribute X_CORE_INFO : string;
   attribute X_CORE_INFO of u_memc_ui_top_std : label is "mig_7series_v4_2_ddr2_7Series, mig_7series_0, 2018.3";
@@ -87742,13 +87756,13 @@ begin
 \temp_mon_enabled.u_tempmon\: entity work.mig_7series_0_mig_7series_v4_2_tempmon
      port map (
       D(11 downto 0) => \mem_intfc0/ddr_phy_top0/u_ddr_calib_top/ddr_phy_tempmon_0/device_temp_100\(11 downto 0),
+      clk_ref(0) => u_iodelay_ctrl_n_1,
       \device_temp_sync_r5_reg[11]_0\ => \^u_bufg_clkdiv0\,
-      mmcm_clk => u_ddr2_clk_ibuf_n_0,
       \xadc_supplied_temperature.rst_r1_reg_0\ => \^rstdiv0_sync_r1_reg_rep\
     );
 u_ddr2_clk_ibuf: entity work.mig_7series_0_mig_7series_v4_2_clk_ibuf
      port map (
-      mmcm_clk => u_ddr2_clk_ibuf_n_0,
+      mmcm_clk => mmcm_clk,
       sys_clk_i => sys_clk_i
     );
 u_ddr2_infrastructure: entity work.mig_7series_0_mig_7series_v4_2_infrastructure
@@ -87767,6 +87781,7 @@ u_ddr2_infrastructure: entity work.mig_7series_0_mig_7series_v4_2_infrastructure
       freq_refclk => freq_refclk,
       \gen_mmcm.mmcm_i_0\ => u_ddr2_infrastructure_n_0,
       mem_refclk => mem_refclk,
+      mmcm_clk => mmcm_clk,
       new_cnt_cpt_r_reg(0) => \mem_intfc0/ddr_phy_top0/u_ddr_calib_top/ddr_phy_rdlvl_gen.u_ddr_phy_rdlvl/idelay_tap_limit_r0\,
       pass_open_bank_r => \mem_intfc0/mc0/bank_mach0/bank_cntrl[1].bank0/pass_open_bank_r\,
       pass_open_bank_r_0 => \mem_intfc0/mc0/bank_mach0/bank_cntrl[2].bank0/pass_open_bank_r\,
@@ -87776,7 +87791,6 @@ u_ddr2_infrastructure: entity work.mig_7series_0_mig_7series_v4_2_infrastructure
       pass_open_bank_r_lcl_reg_1 => u_ddr2_infrastructure_n_26,
       pi_cnt_dec => \mem_intfc0/ddr_phy_top0/u_ddr_calib_top/ddr_phy_rdlvl_gen.u_ddr_phy_rdlvl/pi_cnt_dec\,
       pll_locked => pll_locked,
-      plle2_i_0 => u_ddr2_clk_ibuf_n_0,
       prbs_rdlvl_done_pulse => \mem_intfc0/ddr_phy_top0/u_ddr_calib_top/u_ddr_phy_init/prbs_rdlvl_done_pulse\,
       prbs_rdlvl_done_pulse_reg(0) => \mem_intfc0/ddr_phy_top0/u_ddr_calib_top/u_ddr_phy_init/complex_row0_rd_done1\,
       rst_tmp => rst_tmp,
@@ -87804,7 +87818,8 @@ u_ddr2_infrastructure: entity work.mig_7series_0_mig_7series_v4_2_infrastructure
 u_iodelay_ctrl: entity work.mig_7series_0_mig_7series_v4_2_iodelay_ctrl
      port map (
       AS(0) => sys_rst_act_hi,
-      CLK => u_ddr2_clk_ibuf_n_0,
+      clk_ref(0) => u_iodelay_ctrl_n_1,
+      clk_ref_i => clk_ref_i,
       ref_dll_lock => ref_dll_lock,
       rst_tmp => rst_tmp,
       \rstdiv2_sync_r_reg[11]\ => u_ddr2_infrastructure_n_0,
@@ -88003,6 +88018,7 @@ entity mig_7series_0 is
     ui_clk_sync_rst : out STD_LOGIC;
     init_calib_complete : out STD_LOGIC;
     sys_clk_i : in STD_LOGIC;
+    clk_ref_i : in STD_LOGIC;
     sys_rst : in STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
@@ -89851,6 +89867,7 @@ u_mig_7series_0_mig: entity work.mig_7series_0_mig
       app_wdf_wren => app_wdf_wren,
       app_zq_ack => app_zq_ack,
       app_zq_req => app_zq_req,
+      clk_ref_i => clk_ref_i,
       \cmd_pipe_plus.mc_address_reg[22]\(6) => \u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/mux_address\(22),
       \cmd_pipe_plus.mc_address_reg[22]\(5) => \u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/mux_address\(12),
       \cmd_pipe_plus.mc_address_reg[22]\(4) => \u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/mux_address\(9),

@@ -1,0 +1,8 @@
++====================+===================+=============================+
+| Launch Setup Clock | Launch Hold Clock | Pin                         |
++====================+===================+=============================+
+| clk_pll_i          | sys_clk_pin       | ssd/number_current_reg[0]/D |
+| clk_pll_i          | sys_clk_pin       | ssd/number_current_reg[2]/D |
+| clk_pll_i          | sys_clk_pin       | ssd/number_current_reg[1]/D |
+| clk_pll_i          | sys_clk_pin       | ssd/number_current_reg[3]/D |
++--------------------+-------------------+-----------------------------+
