@@ -2,7 +2,7 @@
 // Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-// Date        : Sun Aug  3 23:03:47 2025
+// Date        : Tue Aug  5 15:55:15 2025
 // Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
 // Command     : write_verilog -force -mode synth_stub
 //               /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0_stub.v
@@ -19,9 +19,10 @@ module mig_7series_0(ddr2_dq, ddr2_dqs_p, ddr2_dqs_n, ddr2_addr,
   ddr2_odt, app_addr, app_cmd, app_en, app_wdf_data, app_wdf_end, app_wdf_mask, app_wdf_wren, 
   app_rd_data, app_rd_data_end, app_rd_data_valid, app_rdy, app_wdf_rdy, app_sr_req, 
   app_ref_req, app_zq_req, app_sr_active, app_ref_ack, app_zq_ack, ui_clk, ui_clk_sync_rst, 
-  init_calib_complete, sys_clk_i, clk_ref_i, sys_rst)
-/* synthesis syn_black_box black_box_pad_pin="ddr2_dq[15:0],ddr2_dqs_p[1:0],ddr2_dqs_n[1:0],ddr2_addr[12:0],ddr2_ba[2:0],ddr2_ras_n,ddr2_cas_n,ddr2_we_n,ddr2_ck_p[0:0],ddr2_ck_n[0:0],ddr2_cke[0:0],ddr2_cs_n[0:0],ddr2_dm[1:0],ddr2_odt[0:0],app_addr[26:0],app_cmd[2:0],app_en,app_wdf_data[127:0],app_wdf_end,app_wdf_mask[15:0],app_wdf_wren,app_rd_data[127:0],app_rd_data_end,app_rd_data_valid,app_rdy,app_wdf_rdy,app_sr_req,app_ref_req,app_zq_req,app_sr_active,app_ref_ack,app_zq_ack,ui_clk_sync_rst,init_calib_complete,sys_clk_i,clk_ref_i,sys_rst" */
-/* synthesis syn_force_seq_prim="ui_clk" */;
+  init_calib_complete, sys_clk_i, sys_rst)
+/* synthesis syn_black_box black_box_pad_pin="ddr2_dq[15:0],ddr2_dqs_p[1:0],ddr2_dqs_n[1:0],ddr2_addr[12:0],ddr2_ba[2:0],ddr2_ras_n,ddr2_cas_n,ddr2_we_n,ddr2_ck_p[0:0],ddr2_ck_n[0:0],ddr2_cke[0:0],ddr2_cs_n[0:0],ddr2_dm[1:0],ddr2_odt[0:0],app_addr[26:0],app_cmd[2:0],app_en,app_wdf_data[63:0],app_wdf_end,app_wdf_mask[7:0],app_wdf_wren,app_rd_data[63:0],app_rd_data_end,app_rd_data_valid,app_rdy,app_wdf_rdy,app_sr_req,app_ref_req,app_zq_req,app_sr_active,app_ref_ack,app_zq_ack,ui_clk_sync_rst,init_calib_complete,sys_rst" */
+/* synthesis syn_force_seq_prim="ui_clk" */
+/* synthesis syn_force_seq_prim="sys_clk_i" */;
   inout [15:0]ddr2_dq;
   inout [1:0]ddr2_dqs_p;
   inout [1:0]ddr2_dqs_n;
@@ -39,11 +40,11 @@ module mig_7series_0(ddr2_dq, ddr2_dqs_p, ddr2_dqs_n, ddr2_addr,
   input [26:0]app_addr;
   input [2:0]app_cmd;
   input app_en;
-  input [127:0]app_wdf_data;
+  input [63:0]app_wdf_data;
   input app_wdf_end;
-  input [15:0]app_wdf_mask;
+  input [7:0]app_wdf_mask;
   input app_wdf_wren;
-  output [127:0]app_rd_data;
+  output [63:0]app_rd_data;
   output app_rd_data_end;
   output app_rd_data_valid;
   output app_rdy;
@@ -57,7 +58,6 @@ module mig_7series_0(ddr2_dq, ddr2_dqs_p, ddr2_dqs_n, ddr2_addr,
   output ui_clk /* synthesis syn_isclock = 1 */;
   output ui_clk_sync_rst;
   output init_calib_complete;
-  input sys_clk_i;
-  input clk_ref_i;
+  input sys_clk_i /* synthesis syn_isclock = 1 */;
   input sys_rst;
 endmodule

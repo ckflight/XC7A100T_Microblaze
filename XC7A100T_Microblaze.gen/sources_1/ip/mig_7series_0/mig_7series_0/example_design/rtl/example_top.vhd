@@ -167,7 +167,7 @@ entity example_top is
    --***************************************************************************
    -- System clock frequency parameters
    --***************************************************************************
-   nCK_PER_CLK           : integer := 4;
+   nCK_PER_CLK           : integer := 2;
                                      -- # of memory CKs per fabric CLK
 
    --***************************************************************************
@@ -210,8 +210,7 @@ entity example_top is
    -- Inputs
    -- Single-ended system clock
    sys_clk_i                      : in    std_logic;
-   -- Single-ended iodelayctrl clk (reference clock)
-   clk_ref_i                                : in    std_logic;
+   
    tg_compare_error              : out std_logic;
    init_calib_complete           : out std_logic;
    
@@ -309,11 +308,11 @@ architecture arch_example_top of example_top is
       app_addr                  : in    std_logic_vector(26 downto 0);
       app_cmd                   : in    std_logic_vector(2 downto 0);
       app_en                    : in    std_logic;
-      app_wdf_data              : in    std_logic_vector(127 downto 0);
+      app_wdf_data              : in    std_logic_vector(63 downto 0);
       app_wdf_end               : in    std_logic;
-      app_wdf_mask         : in    std_logic_vector(15 downto 0);
+      app_wdf_mask         : in    std_logic_vector(7 downto 0);
       app_wdf_wren              : in    std_logic;
-      app_rd_data               : out   std_logic_vector(127 downto 0);
+      app_rd_data               : out   std_logic_vector(63 downto 0);
       app_rd_data_end           : out   std_logic;
       app_rd_data_valid         : out   std_logic;
       app_rdy                   : out   std_logic;
@@ -331,8 +330,6 @@ architecture arch_example_top of example_top is
        
       -- System Clock Ports
       sys_clk_i                      : in    std_logic;
-      -- Reference Clock Ports
-      clk_ref_i                                : in    std_logic;
       
       sys_rst             : in std_logic
       );
@@ -592,8 +589,6 @@ begin
        
 -- System Clock Ports
        sys_clk_i                       => sys_clk_i,
--- Reference Clock Ports
-       clk_ref_i                      => clk_ref_i,
       
         sys_rst                        => sys_rst
         );

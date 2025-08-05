@@ -1,0 +1,4 @@
+ERROR : The port ddr2_ck_n[0] is allocated in the bank 34 where the input ports are allocated. Enable the Internal Vref to use the Vref as GPIO.
+ERROR : The port \b"ddr2_dq[7]"\d is the \b"inout"\d port. Enable the Internal Vref to use the Vref pin as GPIO.
+
+Note: Select vref in the previous page it solved it 

@@ -153,7 +153,7 @@ module sim_tb_top;
    // The following parameters are multiplier and divisor factors for PLLE2.
    // Based on the selected design frequency these parameters vary.
    //***************************************************************************
-   parameter CLKIN_PERIOD          = 3000;
+   parameter CLKIN_PERIOD          = 4999;
                                      // Input Clock Period
 
    //***************************************************************************
@@ -186,7 +186,7 @@ module sim_tb_top;
    //***************************************************************************
    // System clock frequency parameters
    //***************************************************************************
-   parameter tCK                   = 3000;
+   parameter tCK                   = 3333;
                                      // memory tCK paramter.
                      // # = Clock Period in pS.
 
@@ -480,8 +480,6 @@ module sim_tb_top;
     
      
      .sys_clk_i            (sys_clk_i),
-    
-     .clk_ref_i            (clk_ref_i),
     
       .init_calib_complete (init_calib_complete),
       .tg_compare_error    (tg_compare_error),

@@ -2,7 +2,7 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
--- Date        : Sun Aug  3 23:03:47 2025
+-- Date        : Tue Aug  5 15:55:15 2025
 -- Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0_stub.vhdl
@@ -32,11 +32,11 @@ entity mig_7series_0 is
     app_addr : in STD_LOGIC_VECTOR ( 26 downto 0 );
     app_cmd : in STD_LOGIC_VECTOR ( 2 downto 0 );
     app_en : in STD_LOGIC;
-    app_wdf_data : in STD_LOGIC_VECTOR ( 127 downto 0 );
+    app_wdf_data : in STD_LOGIC_VECTOR ( 63 downto 0 );
     app_wdf_end : in STD_LOGIC;
-    app_wdf_mask : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    app_wdf_mask : in STD_LOGIC_VECTOR ( 7 downto 0 );
     app_wdf_wren : in STD_LOGIC;
-    app_rd_data : out STD_LOGIC_VECTOR ( 127 downto 0 );
+    app_rd_data : out STD_LOGIC_VECTOR ( 63 downto 0 );
     app_rd_data_end : out STD_LOGIC;
     app_rd_data_valid : out STD_LOGIC;
     app_rdy : out STD_LOGIC;
@@ -51,7 +51,6 @@ entity mig_7series_0 is
     ui_clk_sync_rst : out STD_LOGIC;
     init_calib_complete : out STD_LOGIC;
     sys_clk_i : in STD_LOGIC;
-    clk_ref_i : in STD_LOGIC;
     sys_rst : in STD_LOGIC
   );
 
@@ -61,6 +60,6 @@ architecture stub of mig_7series_0 is
   attribute syn_black_box : boolean;
   attribute black_box_pad_pin : string;
   attribute syn_black_box of stub : architecture is true;
-  attribute black_box_pad_pin of stub : architecture is "ddr2_dq[15:0],ddr2_dqs_p[1:0],ddr2_dqs_n[1:0],ddr2_addr[12:0],ddr2_ba[2:0],ddr2_ras_n,ddr2_cas_n,ddr2_we_n,ddr2_ck_p[0:0],ddr2_ck_n[0:0],ddr2_cke[0:0],ddr2_cs_n[0:0],ddr2_dm[1:0],ddr2_odt[0:0],app_addr[26:0],app_cmd[2:0],app_en,app_wdf_data[127:0],app_wdf_end,app_wdf_mask[15:0],app_wdf_wren,app_rd_data[127:0],app_rd_data_end,app_rd_data_valid,app_rdy,app_wdf_rdy,app_sr_req,app_ref_req,app_zq_req,app_sr_active,app_ref_ack,app_zq_ack,ui_clk,ui_clk_sync_rst,init_calib_complete,sys_clk_i,clk_ref_i,sys_rst";
+  attribute black_box_pad_pin of stub : architecture is "ddr2_dq[15:0],ddr2_dqs_p[1:0],ddr2_dqs_n[1:0],ddr2_addr[12:0],ddr2_ba[2:0],ddr2_ras_n,ddr2_cas_n,ddr2_we_n,ddr2_ck_p[0:0],ddr2_ck_n[0:0],ddr2_cke[0:0],ddr2_cs_n[0:0],ddr2_dm[1:0],ddr2_odt[0:0],app_addr[26:0],app_cmd[2:0],app_en,app_wdf_data[63:0],app_wdf_end,app_wdf_mask[7:0],app_wdf_wren,app_rd_data[63:0],app_rd_data_end,app_rd_data_valid,app_rdy,app_wdf_rdy,app_sr_req,app_ref_req,app_zq_req,app_sr_active,app_ref_ack,app_zq_ack,ui_clk,ui_clk_sync_rst,init_calib_complete,sys_clk_i,sys_rst";
 begin
 end;

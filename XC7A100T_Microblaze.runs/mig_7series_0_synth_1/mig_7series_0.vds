@@ -3,8 +3,8 @@
 # SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Sun Aug  3 23:03:03 2025
-# Process ID         : 205737
+# Start of session at: Tue Aug  5 15:54:39 2025
+# Process ID         : 14151
 # Current directory  : /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/mig_7series_0_synth_1
 # Command line       : vivado -log mig_7series_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mig_7series_0.tcl
 # Log file           : /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/mig_7series_0_synth_1/mig_7series_0.vds
@@ -13,13 +13,13 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 25.04
 # Processor Detail   : AMD Ryzen 9 9950X 16-Core Processor
-# CPU Frequency      : 624.000 MHz
+# CPU Frequency      : 5407.567 MHz
 # CPU Physical cores : 16
 # CPU Logical cores  : 32
 # Host memory        : 63756 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 72346 MB
-# Available Virtual  : 61399 MB
+# Available Virtual  : 61701 MB
 #-----------------------------------------------------------
 source mig_7series_0.tcl -notrace
 Command: synth_design -top mig_7series_0 -part xc7a100tcsg324-1 -incremental_mode off -mode out_of_context
@@ -29,56 +29,51 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 205783
+INFO: [Synth 8-7075] Helper process launched with PID 14193
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2413.734 ; gain = 183.859 ; free physical = 42532 ; free virtual = 56999
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2414.254 ; gain = 183.859 ; free physical = 43686 ; free virtual = 57518
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-10515] begin/end is required for generate-for in this mode of Verilog [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/controller/mig_7series_v4_2_arb_row_col.v:253]
-INFO: [Synth 8-638] synthesizing module 'mig_7series_0' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0.vhd:117]
-INFO: [Synth 8-3491] module 'mig_7series_0_mig' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:76' bound to instance 'u_mig_7series_0_mig' of component 'mig_7series_0_mig' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0.vhd:171]
-INFO: [Synth 8-638] synthesizing module 'mig_7series_0_mig' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:519]
+INFO: [Synth 8-638] synthesizing module 'mig_7series_0' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0.vhd:115]
+INFO: [Synth 8-3491] module 'mig_7series_0_mig' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:76' bound to instance 'u_mig_7series_0_mig' of component 'mig_7series_0_mig' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'mig_7series_0_mig' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:518]
 	Parameter TCQ bound to: 100 - type: integer 
 	Parameter IODELAY_GRP0 bound to: MIG_7SERIES_0_IODELAY_MIG0 - type: string 
 	Parameter IODELAY_GRP1 bound to: MIG_7SERIES_0_IODELAY_MIG1 - type: string 
-	Parameter REFCLK_TYPE bound to: SINGLE_ENDED - type: string 
-	Parameter SYSCLK_TYPE bound to: SINGLE_ENDED - type: string 
+	Parameter REFCLK_TYPE bound to: USE_SYSTEM_CLOCK - type: string 
+	Parameter SYSCLK_TYPE bound to: NO_BUFFER - type: string 
 	Parameter SYS_RST_PORT bound to: FALSE - type: string 
 	Parameter RST_ACT_LOW bound to: 1 - type: integer 
-	Parameter DIFF_TERM_REFCLK bound to: FALSE - type: string 
+	Parameter DIFF_TERM_REFCLK bound to: TRUE - type: string 
 	Parameter FPGA_SPEED_GRADE bound to: 1 - type: integer 
 	Parameter REF_CLK_MMCM_IODELAY_CTRL bound to: FALSE - type: string 
-INFO: [Synth 8-3491] module 'mig_7series_v4_2_iodelay_ctrl' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_iodelay_ctrl.v:80' bound to instance 'u_iodelay_ctrl' of component 'mig_7series_v4_2_iodelay_ctrl' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1154]
+INFO: [Synth 8-3491] module 'mig_7series_v4_2_iodelay_ctrl' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_iodelay_ctrl.v:80' bound to instance 'u_iodelay_ctrl' of component 'mig_7series_v4_2_iodelay_ctrl' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1153]
 INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_iodelay_ctrl' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_iodelay_ctrl.v:80]
 	Parameter TCQ bound to: 100 - type: integer 
 	Parameter IODELAY_GRP0 bound to: MIG_7SERIES_0_IODELAY_MIG0 - type: string 
 	Parameter IODELAY_GRP1 bound to: MIG_7SERIES_0_IODELAY_MIG1 - type: string 
-	Parameter REFCLK_TYPE bound to: SINGLE_ENDED - type: string 
-	Parameter SYSCLK_TYPE bound to: SINGLE_ENDED - type: string 
+	Parameter REFCLK_TYPE bound to: USE_SYSTEM_CLOCK - type: string 
+	Parameter SYSCLK_TYPE bound to: NO_BUFFER - type: string 
 	Parameter SYS_RST_PORT bound to: FALSE - type: string 
 	Parameter RST_ACT_LOW bound to: 1 - type: integer 
-	Parameter DIFF_TERM_REFCLK bound to: FALSE - type: string 
+	Parameter DIFF_TERM_REFCLK bound to: TRUE - type: string 
 	Parameter FPGA_SPEED_GRADE bound to: 1 - type: integer 
 	Parameter REF_CLK_MMCM_IODELAY_CTRL bound to: FALSE - type: string 
-INFO: [Synth 8-6157] synthesizing module 'IBUFG' [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:77352]
-	Parameter IBUF_LOW_PWR bound to: FALSE - type: string 
-INFO: [Synth 8-6155] done synthesizing module 'IBUFG' (0#1) [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:77352]
-INFO: [Synth 8-6157] synthesizing module 'BUFG' [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:2678]
-INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:2678]
 INFO: [Synth 8-6157] synthesizing module 'IDELAYCTRL' [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:78964]
 INFO: [Synth 8-6155] done synthesizing module 'IDELAYCTRL' (0#1) [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:78964]
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_iodelay_ctrl' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_iodelay_ctrl.v:80]
-	Parameter SYSCLK_TYPE bound to: SINGLE_ENDED - type: string 
-	Parameter DIFF_TERM_SYSCLK bound to: FALSE - type: string 
-INFO: [Synth 8-3491] module 'mig_7series_v4_2_clk_ibuf' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_clk_ibuf.v:68' bound to instance 'u_ddr2_clk_ibuf' of component 'mig_7series_v4_2_clk_ibuf' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1180]
+	Parameter SYSCLK_TYPE bound to: NO_BUFFER - type: string 
+	Parameter DIFF_TERM_SYSCLK bound to: TRUE - type: string 
+INFO: [Synth 8-3491] module 'mig_7series_v4_2_clk_ibuf' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_clk_ibuf.v:68' bound to instance 'u_ddr2_clk_ibuf' of component 'mig_7series_v4_2_clk_ibuf' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1179]
 INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_clk_ibuf' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_clk_ibuf.v:68]
-	Parameter SYSCLK_TYPE bound to: SINGLE_ENDED - type: string 
-	Parameter DIFF_TERM_SYSCLK bound to: FALSE - type: string 
+	Parameter SYSCLK_TYPE bound to: NO_BUFFER - type: string 
+	Parameter DIFF_TERM_SYSCLK bound to: TRUE - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_clk_ibuf' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_clk_ibuf.v:68]
 	Parameter TCQ bound to: 100 - type: integer 
 	Parameter TEMP_MON_CONTROL bound to: INTERNAL - type: string 
 	Parameter XADC_CLK_PERIOD bound to: 5000 - type: integer 
 	Parameter tTEMPSAMPLE bound to: 10000000 - type: integer 
-INFO: [Synth 8-3491] module 'mig_7series_v4_2_tempmon' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_tempmon.v:69' bound to instance 'u_tempmon' of component 'mig_7series_v4_2_tempmon' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1196]
+INFO: [Synth 8-3491] module 'mig_7series_v4_2_tempmon' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_tempmon.v:69' bound to instance 'u_tempmon' of component 'mig_7series_v4_2_tempmon' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1195]
 INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_tempmon' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_tempmon.v:69]
 	Parameter TCQ bound to: 100 - type: integer 
 	Parameter TEMP_MON_CONTROL bound to: INTERNAL - type: string 
@@ -110,52 +105,52 @@ INFO: [Synth 8-6157] synthesizing module 'XADC' [/tools/Xilinx/2025.1/Vivado/scr
 INFO: [Synth 8-6155] done synthesizing module 'XADC' (0#1) [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:164403]
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_tempmon' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_tempmon.v:69]
 	Parameter TCQ bound to: 100 - type: integer 
-	Parameter CLKIN_PERIOD bound to: 3000 - type: integer 
-	Parameter nCK_PER_CLK bound to: 4 - type: integer 
-	Parameter SYSCLK_TYPE bound to: SINGLE_ENDED - type: string 
-	Parameter CLKFBOUT_MULT bound to: 4 - type: integer 
+	Parameter CLKIN_PERIOD bound to: 4999 - type: integer 
+	Parameter nCK_PER_CLK bound to: 2 - type: integer 
+	Parameter SYSCLK_TYPE bound to: NO_BUFFER - type: string 
+	Parameter CLKFBOUT_MULT bound to: 6 - type: integer 
 	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
 	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
 	Parameter CLKOUT0_DIVIDE bound to: 2 - type: integer 
 	Parameter CLKOUT1_DIVIDE bound to: 4 - type: integer 
 	Parameter CLKOUT2_DIVIDE bound to: 64 - type: integer 
-	Parameter CLKOUT3_DIVIDE bound to: 16 - type: integer 
+	Parameter CLKOUT3_DIVIDE bound to: 8 - type: integer 
 	Parameter MMCM_VCO bound to: 1200 - type: integer 
-	Parameter MMCM_MULT_F bound to: 14 - type: integer 
+	Parameter MMCM_MULT_F bound to: 7 - type: integer 
 	Parameter MMCM_DIVCLK_DIVIDE bound to: 1 - type: integer 
 	Parameter RST_ACT_LOW bound to: 1 - type: integer 
-	Parameter tCK bound to: 3000 - type: integer 
+	Parameter tCK bound to: 3333 - type: integer 
 	Parameter MEM_TYPE bound to: DDR2 - type: string 
-INFO: [Synth 8-3491] module 'mig_7series_v4_2_infrastructure' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_infrastructure.v:78' bound to instance 'u_ddr2_infrastructure' of component 'mig_7series_v4_2_infrastructure' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1219]
+INFO: [Synth 8-3491] module 'mig_7series_v4_2_infrastructure' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_infrastructure.v:78' bound to instance 'u_ddr2_infrastructure' of component 'mig_7series_v4_2_infrastructure' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1218]
 INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_infrastructure' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_infrastructure.v:78]
 	Parameter TCQ bound to: 100 - type: integer 
-	Parameter CLKIN_PERIOD bound to: 3000 - type: integer 
-	Parameter nCK_PER_CLK bound to: 4 - type: integer 
-	Parameter SYSCLK_TYPE bound to: SINGLE_ENDED - type: string 
-	Parameter CLKFBOUT_MULT bound to: 4 - type: integer 
+	Parameter CLKIN_PERIOD bound to: 4999 - type: integer 
+	Parameter nCK_PER_CLK bound to: 2 - type: integer 
+	Parameter SYSCLK_TYPE bound to: NO_BUFFER - type: string 
+	Parameter CLKFBOUT_MULT bound to: 6 - type: integer 
 	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
 	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
 	Parameter CLKOUT0_DIVIDE bound to: 2 - type: integer 
 	Parameter CLKOUT1_DIVIDE bound to: 4 - type: integer 
 	Parameter CLKOUT2_DIVIDE bound to: 64 - type: integer 
-	Parameter CLKOUT3_DIVIDE bound to: 16 - type: integer 
+	Parameter CLKOUT3_DIVIDE bound to: 8 - type: integer 
 	Parameter MMCM_VCO bound to: 1200 - type: integer 
-	Parameter MMCM_MULT_F bound to: 14 - type: integer 
+	Parameter MMCM_MULT_F bound to: 7 - type: integer 
 	Parameter MMCM_DIVCLK_DIVIDE bound to: 1 - type: integer 
 	Parameter RST_ACT_LOW bound to: 1 - type: integer 
-	Parameter tCK bound to: 3000 - type: integer 
+	Parameter tCK bound to: 3333 - type: integer 
 	Parameter MEM_TYPE bound to: DDR2 - type: string 
 INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:89421]
 	Parameter BANDWIDTH bound to: HIGH - type: string 
-	Parameter CLKFBOUT_MULT_F bound to: 14.000000 - type: double 
+	Parameter CLKFBOUT_MULT_F bound to: 7.000000 - type: double 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
 	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
-	Parameter CLKIN1_PERIOD bound to: 12.000000 - type: double 
-	Parameter CLKOUT0_DIVIDE_F bound to: 28.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 6.664000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 14.000000 - type: double 
 	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
 	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
 	Parameter CLKOUT0_USE_FINE_PS bound to: TRUE - type: string 
-	Parameter CLKOUT1_DIVIDE bound to: 7 - type: integer 
+	Parameter CLKOUT1_DIVIDE bound to: 3 - type: integer 
 	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: double 
 	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: double 
 	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
@@ -165,11 +160,13 @@ INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [/tools/Xilinx/2025.1/Viva
 	Parameter REF_JITTER1 bound to: 0.000000 - type: double 
 	Parameter STARTUP_WAIT bound to: FALSE - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (0#1) [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:89421]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:2678]
 INFO: [Synth 8-6157] synthesizing module 'PLLE2_ADV' [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:124587]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
-	Parameter CLKFBOUT_MULT bound to: 4 - type: integer 
+	Parameter CLKFBOUT_MULT bound to: 6 - type: integer 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
-	Parameter CLKIN1_PERIOD bound to: 3.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 4.999000 - type: double 
 	Parameter CLKOUT0_DIVIDE bound to: 2 - type: integer 
 	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
 	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
@@ -179,7 +176,7 @@ INFO: [Synth 8-6157] synthesizing module 'PLLE2_ADV' [/tools/Xilinx/2025.1/Vivad
 	Parameter CLKOUT2_DIVIDE bound to: 64 - type: integer 
 	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.062500 - type: double 
 	Parameter CLKOUT2_PHASE bound to: 9.843750 - type: double 
-	Parameter CLKOUT3_DIVIDE bound to: 16 - type: integer 
+	Parameter CLKOUT3_DIVIDE bound to: 8 - type: integer 
 	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: double 
 	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: double 
 	Parameter CLKOUT4_DIVIDE bound to: 8 - type: integer 
@@ -211,7 +208,7 @@ INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_infrastructure' 
 	Parameter CS_WIDTH bound to: 1 - type: integer 
 	Parameter CKE_WIDTH bound to: 1 - type: integer 
 	Parameter DATA_WIDTH bound to: 16 - type: integer 
-	Parameter DATA_BUF_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter DATA_BUF_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter DM_WIDTH bound to: 2 - type: integer 
 	Parameter DQ_CNT_WIDTH bound to: 4 - type: integer 
 	Parameter DQ_WIDTH bound to: 16 - type: integer 
@@ -226,7 +223,7 @@ INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_infrastructure' 
 	Parameter MASTER_PHY_CTL bound to: 0 - type: integer 
 	Parameter nAL bound to: 0 - type: integer 
 	Parameter nBANK_MACHS bound to: 4 - type: integer 
-	Parameter nCK_PER_CLK bound to: 4 - type: integer 
+	Parameter nCK_PER_CLK bound to: 2 - type: integer 
 	Parameter nCS_PER_RANK bound to: 1 - type: integer 
 	Parameter ORDERING bound to: STRICT - type: string 
 	Parameter IBUF_LPWR_MODE bound to: OFF - type: string 
@@ -238,9 +235,9 @@ INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_infrastructure' 
 	Parameter FPGA_SPEED_GRADE bound to: 1 - type: integer 
 	Parameter OUTPUT_DRV bound to: HIGH - type: string 
 	Parameter REG_CTRL bound to: OFF - type: string 
-	Parameter RTT_NOM bound to: 75 - type: string 
+	Parameter RTT_NOM bound to: 50 - type: string 
 	Parameter STARVE_LIMIT bound to: 2 - type: integer 
-	Parameter tCK bound to: 3000 - type: integer 
+	Parameter tCK bound to: 3333 - type: integer 
 	Parameter tCKE bound to: 7500 - type: integer 
 	Parameter tFAW bound to: 45000 - type: integer 
 	Parameter tPRDI bound to: 1000000 - type: integer 
@@ -264,36 +261,36 @@ INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_infrastructure' 
 	Parameter ODT_WIDTH bound to: 1 - type: integer 
 	Parameter ROW_WIDTH bound to: 13 - type: integer 
 	Parameter ADDR_WIDTH bound to: 27 - type: integer 
-	Parameter APP_MASK_WIDTH bound to: 16 - type: integer 
-	Parameter APP_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter APP_MASK_WIDTH bound to: 8 - type: integer 
+	Parameter APP_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter BYTE_LANES_B0 bound to: 4'b1111 
-	Parameter BYTE_LANES_B1 bound to: 4'b1000 
+	Parameter BYTE_LANES_B1 bound to: 4'b0000 
 	Parameter BYTE_LANES_B2 bound to: 4'b0000 
 	Parameter BYTE_LANES_B3 bound to: 4'b0000 
 	Parameter BYTE_LANES_B4 bound to: 4'b0000 
-	Parameter DATA_CTL_B0 bound to: 4'b0001 
-	Parameter DATA_CTL_B1 bound to: 4'b1000 
+	Parameter DATA_CTL_B0 bound to: 4'b0101 
+	Parameter DATA_CTL_B1 bound to: 4'b0000 
 	Parameter DATA_CTL_B2 bound to: 4'b0000 
 	Parameter DATA_CTL_B3 bound to: 4'b0000 
 	Parameter DATA_CTL_B4 bound to: 4'b0000 
-	Parameter PHY_0_BITLANES bound to: 48'b001111111110111111111110110000000000001011111111 
-	Parameter PHY_1_BITLANES bound to: 48'b001111111110000000000000000000000000000000000000 
+	Parameter PHY_0_BITLANES bound to: 48'b111111111100001111110111111111111111001111111110 
+	Parameter PHY_1_BITLANES bound to: 48'b000000000000000000000000000000000000000000000000 
 	Parameter PHY_2_BITLANES bound to: 48'b000000000000000000000000000000000000000000000000 
 	Parameter CK_BYTE_MAP bound to: 144'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011 
-	Parameter ADDR_MAP bound to: 192'b000000000000000000000000000000000000000000111001000000111000000000110111000000110110000000110101000000110100000000110011000000110010000000110001000000101001000000101000000000100111000000100110 
-	Parameter BANK_MAP bound to: 36'b000000101011000000101010000000100101 
-	Parameter CAS_MAP bound to: 12'b000000100011 
+	Parameter ADDR_MAP bound to: 192'b000000000000000000000000000000000000000000010000000000110011000000011010000000011001000000110010000000111010000000110100000000011000000000110110000000010010000000010001000000010111000000010101 
+	Parameter BANK_MAP bound to: 36'b000000010011000000010110000000011011 
+	Parameter CAS_MAP bound to: 12'b000000111001 
 	Parameter CKE_ODT_BYTE_MAP bound to: 8'b00000000 
-	Parameter CKE_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011011 
-	Parameter ODT_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011010 
+	Parameter CKE_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111000 
+	Parameter ODT_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110101 
 	Parameter CKE_ODT_AUX bound to: FALSE - type: string 
-	Parameter CS_MAP bound to: 120'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100001 
+	Parameter CS_MAP bound to: 120'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110111 
 	Parameter PARITY_MAP bound to: 12'b000000000000 
-	Parameter RAS_MAP bound to: 12'b000000100100 
-	Parameter WE_MAP bound to: 12'b000000100010 
-	Parameter DQS_BYTE_MAP bound to: 144'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001001100000000 
-	Parameter DATA0_MAP bound to: 96'b000000000000000000000001000000000010000000000011000000000100000000000101000000000110000000000111 
-	Parameter DATA1_MAP bound to: 96'b000100110001000100110010000100110011000100110100000100110101000100110110000100110111000100111000 
+	Parameter RAS_MAP bound to: 12'b000000010100 
+	Parameter WE_MAP bound to: 12'b000000111011 
+	Parameter DQS_BYTE_MAP bound to: 144'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000 
+	Parameter DATA0_MAP bound to: 96'b000000001000000000000100000000001001000000000111000000000101000000000001000000000110000000000011 
+	Parameter DATA1_MAP bound to: 96'b000000100010000000101000000000100000000000100100000000100111000000100101000000100110000000100001 
 	Parameter DATA2_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter DATA3_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter DATA4_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -310,7 +307,7 @@ INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_infrastructure' 
 	Parameter DATA15_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter DATA16_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter DATA17_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter MASK0_MAP bound to: 108'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100111001000000001001 
+	Parameter MASK0_MAP bound to: 108'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101001000000000010 
 	Parameter MASK1_MAP bound to: 108'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter SLOT_0_CONFIG bound to: 8'b00000001 
 	Parameter SLOT_1_CONFIG bound to: 8'b00000000 
@@ -330,7 +327,7 @@ INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_infrastructure' 
 	Parameter TAPSPERKCLK bound to: 56 - type: integer 
 	Parameter SKIP_CALIB bound to: FALSE - type: string 
 	Parameter FPGA_VOLT_TYPE bound to: N - type: string 
-INFO: [Synth 8-3491] module 'mig_7series_v4_2_memc_ui_top_std' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/ip_top/mig_7series_v4_2_memc_ui_top_std.v:70' bound to instance 'u_memc_ui_top_std' of component 'mig_7series_v4_2_memc_ui_top_std' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1273]
+INFO: [Synth 8-3491] module 'mig_7series_v4_2_memc_ui_top_std' declared at '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/ip_top/mig_7series_v4_2_memc_ui_top_std.v:70' bound to instance 'u_memc_ui_top_std' of component 'mig_7series_v4_2_memc_ui_top_std' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1272]
 INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_memc_ui_top_std' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/ip_top/mig_7series_v4_2_memc_ui_top_std.v:70]
 	Parameter TCQ bound to: 100 - type: integer 
 	Parameter PAYLOAD_WIDTH bound to: 16 - type: integer 
@@ -347,7 +344,7 @@ INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_memc_ui_top_std' [/ho
 	Parameter CS_WIDTH bound to: 1 - type: integer 
 	Parameter CKE_WIDTH bound to: 1 - type: integer 
 	Parameter DATA_WIDTH bound to: 16 - type: integer 
-	Parameter DATA_BUF_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter DATA_BUF_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter DM_WIDTH bound to: 2 - type: integer 
 	Parameter DQ_CNT_WIDTH bound to: 4 - type: integer 
 	Parameter DQ_WIDTH bound to: 16 - type: integer 
@@ -362,7 +359,7 @@ INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_memc_ui_top_std' [/ho
 	Parameter MASTER_PHY_CTL bound to: 0 - type: integer 
 	Parameter nAL bound to: 0 - type: integer 
 	Parameter nBANK_MACHS bound to: 4 - type: integer 
-	Parameter nCK_PER_CLK bound to: 4 - type: integer 
+	Parameter nCK_PER_CLK bound to: 2 - type: integer 
 	Parameter nCS_PER_RANK bound to: 1 - type: integer 
 	Parameter ORDERING bound to: STRICT - type: string 
 	Parameter IBUF_LPWR_MODE bound to: OFF - type: string 
@@ -374,9 +371,9 @@ INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_memc_ui_top_std' [/ho
 	Parameter FPGA_SPEED_GRADE bound to: 1 - type: integer 
 	Parameter OUTPUT_DRV bound to: HIGH - type: string 
 	Parameter REG_CTRL bound to: OFF - type: string 
-	Parameter RTT_NOM bound to: 75 - type: string 
+	Parameter RTT_NOM bound to: 50 - type: string 
 	Parameter STARVE_LIMIT bound to: 2 - type: integer 
-	Parameter tCK bound to: 3000 - type: integer 
+	Parameter tCK bound to: 3333 - type: integer 
 	Parameter tCKE bound to: 7500 - type: integer 
 	Parameter tFAW bound to: 45000 - type: integer 
 	Parameter tPRDI bound to: 1000000 - type: integer 
@@ -400,36 +397,36 @@ INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_memc_ui_top_std' [/ho
 	Parameter ODT_WIDTH bound to: 1 - type: integer 
 	Parameter ROW_WIDTH bound to: 13 - type: integer 
 	Parameter ADDR_WIDTH bound to: 27 - type: integer 
-	Parameter APP_MASK_WIDTH bound to: 16 - type: integer 
-	Parameter APP_DATA_WIDTH bound to: 128 - type: integer 
+	Parameter APP_MASK_WIDTH bound to: 8 - type: integer 
+	Parameter APP_DATA_WIDTH bound to: 64 - type: integer 
 	Parameter BYTE_LANES_B0 bound to: 4'b1111 
-	Parameter BYTE_LANES_B1 bound to: 4'b1000 
+	Parameter BYTE_LANES_B1 bound to: 4'b0000 
 	Parameter BYTE_LANES_B2 bound to: 4'b0000 
 	Parameter BYTE_LANES_B3 bound to: 4'b0000 
 	Parameter BYTE_LANES_B4 bound to: 4'b0000 
-	Parameter DATA_CTL_B0 bound to: 4'b0001 
-	Parameter DATA_CTL_B1 bound to: 4'b1000 
+	Parameter DATA_CTL_B0 bound to: 4'b0101 
+	Parameter DATA_CTL_B1 bound to: 4'b0000 
 	Parameter DATA_CTL_B2 bound to: 4'b0000 
 	Parameter DATA_CTL_B3 bound to: 4'b0000 
 	Parameter DATA_CTL_B4 bound to: 4'b0000 
-	Parameter PHY_0_BITLANES bound to: 48'b001111111110111111111110110000000000001011111111 
-	Parameter PHY_1_BITLANES bound to: 48'b001111111110000000000000000000000000000000000000 
+	Parameter PHY_0_BITLANES bound to: 48'b111111111100001111110111111111111111001111111110 
+	Parameter PHY_1_BITLANES bound to: 48'b000000000000000000000000000000000000000000000000 
 	Parameter PHY_2_BITLANES bound to: 48'b000000000000000000000000000000000000000000000000 
 	Parameter CK_BYTE_MAP bound to: 144'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011 
-	Parameter ADDR_MAP bound to: 192'b000000000000000000000000000000000000000000111001000000111000000000110111000000110110000000110101000000110100000000110011000000110010000000110001000000101001000000101000000000100111000000100110 
-	Parameter BANK_MAP bound to: 36'b000000101011000000101010000000100101 
-	Parameter CAS_MAP bound to: 12'b000000100011 
+	Parameter ADDR_MAP bound to: 192'b000000000000000000000000000000000000000000010000000000110011000000011010000000011001000000110010000000111010000000110100000000011000000000110110000000010010000000010001000000010111000000010101 
+	Parameter BANK_MAP bound to: 36'b000000010011000000010110000000011011 
+	Parameter CAS_MAP bound to: 12'b000000111001 
 	Parameter CKE_ODT_BYTE_MAP bound to: 8'b00000000 
-	Parameter CKE_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011011 
-	Parameter ODT_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011010 
+	Parameter CKE_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111000 
+	Parameter ODT_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110101 
 	Parameter CKE_ODT_AUX bound to: FALSE - type: string 
-	Parameter CS_MAP bound to: 120'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100001 
+	Parameter CS_MAP bound to: 120'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110111 
 	Parameter PARITY_MAP bound to: 12'b000000000000 
-	Parameter RAS_MAP bound to: 12'b000000100100 
-	Parameter WE_MAP bound to: 12'b000000100010 
-	Parameter DQS_BYTE_MAP bound to: 144'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001001100000000 
-	Parameter DATA0_MAP bound to: 96'b000000000000000000000001000000000010000000000011000000000100000000000101000000000110000000000111 
-	Parameter DATA1_MAP bound to: 96'b000100110001000100110010000100110011000100110100000100110101000100110110000100110111000100111000 
+	Parameter RAS_MAP bound to: 12'b000000010100 
+	Parameter WE_MAP bound to: 12'b000000111011 
+	Parameter DQS_BYTE_MAP bound to: 144'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000 
+	Parameter DATA0_MAP bound to: 96'b000000001000000000000100000000001001000000000111000000000101000000000001000000000110000000000011 
+	Parameter DATA1_MAP bound to: 96'b000000100010000000101000000000100000000000100100000000100111000000100101000000100110000000100001 
 	Parameter DATA2_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter DATA3_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter DATA4_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -446,7 +443,7 @@ INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_memc_ui_top_std' [/ho
 	Parameter DATA15_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter DATA16_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter DATA17_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter MASK0_MAP bound to: 108'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100111001000000001001 
+	Parameter MASK0_MAP bound to: 108'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101001000000000010 
 	Parameter MASK1_MAP bound to: 108'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter SLOT_0_CONFIG bound to: 8'b00000001 
 	Parameter SLOT_1_CONFIG bound to: 8'b00000000 
@@ -528,13 +525,13 @@ INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_col_mach' (0#1) 
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_mc' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/controller/mig_7series_v4_2_mc.v:73]
 INFO: [Synth 8-638] synthesizing module 'mig_7series_v4_2_ddr_phy_top' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_top.vhd:370]
 	Parameter TCQ bound to: 100 - type: integer 
-	Parameter tCK bound to: 3000 - type: integer 
+	Parameter tCK bound to: 3333 - type: integer 
 	Parameter BANK_TYPE bound to: HR_IO - type: string 
 	Parameter DATA_IO_PRIM_TYPE bound to: HR_LP - type: string 
 	Parameter DATA_IO_IDLE_PWRDWN bound to: ON - type: string 
 	Parameter IODELAY_GRP bound to: MIG_7SERIES_0_IODELAY_MIG0 - type: string 
 	Parameter FPGA_SPEED_GRADE bound to: 1 - type: integer 
-	Parameter nCK_PER_CLK bound to: 4 - type: integer 
+	Parameter nCK_PER_CLK bound to: 2 - type: integer 
 	Parameter nCS_PER_RANK bound to: 1 - type: integer 
 	Parameter BANK_WIDTH bound to: 3 - type: integer 
 	Parameter CKE_WIDTH bound to: 1 - type: integer 
@@ -557,36 +554,36 @@ INFO: [Synth 8-638] synthesizing module 'mig_7series_v4_2_ddr_phy_top' [/home/ck
 	Parameter IBUF_LPWR_MODE bound to: OFF - type: string 
 	Parameter LP_DDR_CK_WIDTH bound to: 2 - type: integer 
 	Parameter PHYCTL_CMD_FIFO bound to: FALSE - type: string 
-	Parameter DATA_CTL_B0 bound to: 4'b0001 
-	Parameter DATA_CTL_B1 bound to: 4'b1000 
+	Parameter DATA_CTL_B0 bound to: 4'b0101 
+	Parameter DATA_CTL_B1 bound to: 4'b0000 
 	Parameter DATA_CTL_B2 bound to: 4'b0000 
 	Parameter DATA_CTL_B3 bound to: 4'b0000 
 	Parameter DATA_CTL_B4 bound to: 4'b0000 
 	Parameter BYTE_LANES_B0 bound to: 4'b1111 
-	Parameter BYTE_LANES_B1 bound to: 4'b1000 
+	Parameter BYTE_LANES_B1 bound to: 4'b0000 
 	Parameter BYTE_LANES_B2 bound to: 4'b0000 
 	Parameter BYTE_LANES_B3 bound to: 4'b0000 
 	Parameter BYTE_LANES_B4 bound to: 4'b0000 
-	Parameter PHY_0_BITLANES bound to: 48'b001111111110111111111110110000000000001011111111 
-	Parameter PHY_1_BITLANES bound to: 48'b001111111110000000000000000000000000000000000000 
+	Parameter PHY_0_BITLANES bound to: 48'b111111111100001111110111111111111111001111111110 
+	Parameter PHY_1_BITLANES bound to: 48'b000000000000000000000000000000000000000000000000 
 	Parameter PHY_2_BITLANES bound to: 48'b000000000000000000000000000000000000000000000000 
-	Parameter HIGHEST_BANK bound to: 2 - type: integer 
-	Parameter HIGHEST_LANE bound to: 8 - type: integer 
+	Parameter HIGHEST_BANK bound to: 1 - type: integer 
+	Parameter HIGHEST_LANE bound to: 4 - type: integer 
 	Parameter CK_BYTE_MAP bound to: 144'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011 
-	Parameter ADDR_MAP bound to: 192'b000000000000000000000000000000000000000000111001000000111000000000110111000000110110000000110101000000110100000000110011000000110010000000110001000000101001000000101000000000100111000000100110 
-	Parameter BANK_MAP bound to: 36'b000000101011000000101010000000100101 
-	Parameter CAS_MAP bound to: 12'b000000100011 
+	Parameter ADDR_MAP bound to: 192'b000000000000000000000000000000000000000000010000000000110011000000011010000000011001000000110010000000111010000000110100000000011000000000110110000000010010000000010001000000010111000000010101 
+	Parameter BANK_MAP bound to: 36'b000000010011000000010110000000011011 
+	Parameter CAS_MAP bound to: 12'b000000111001 
 	Parameter CKE_ODT_BYTE_MAP bound to: 8'b00000000 
-	Parameter CKE_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011011 
-	Parameter ODT_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011010 
+	Parameter CKE_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111000 
+	Parameter ODT_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110101 
 	Parameter CKE_ODT_AUX bound to: FALSE - type: string 
-	Parameter CS_MAP bound to: 120'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100001 
+	Parameter CS_MAP bound to: 120'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000110111 
 	Parameter PARITY_MAP bound to: 12'b000000000000 
-	Parameter RAS_MAP bound to: 12'b000000100100 
-	Parameter WE_MAP bound to: 12'b000000100010 
-	Parameter DQS_BYTE_MAP bound to: 144'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001001100000000 
-	Parameter DATA0_MAP bound to: 96'b000000000000000000000001000000000010000000000011000000000100000000000101000000000110000000000111 
-	Parameter DATA1_MAP bound to: 96'b000100110001000100110010000100110011000100110100000100110101000100110110000100110111000100111000 
+	Parameter RAS_MAP bound to: 12'b000000010100 
+	Parameter WE_MAP bound to: 12'b000000111011 
+	Parameter DQS_BYTE_MAP bound to: 144'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000 
+	Parameter DATA0_MAP bound to: 96'b000000001000000000000100000000001001000000000111000000000101000000000001000000000110000000000011 
+	Parameter DATA1_MAP bound to: 96'b000000100010000000101000000000100000000000100100000000100111000000100101000000100110000000100001 
 	Parameter DATA2_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter DATA3_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter DATA4_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -603,7 +600,7 @@ INFO: [Synth 8-638] synthesizing module 'mig_7series_v4_2_ddr_phy_top' [/home/ck
 	Parameter DATA15_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter DATA16_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter DATA17_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
-	Parameter MASK0_MAP bound to: 108'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100111001000000001001 
+	Parameter MASK0_MAP bound to: 108'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101001000000000010 
 	Parameter MASK1_MAP bound to: 108'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter SIM_CAL_OPTION bound to: NONE - type: string 
 	Parameter MASTER_PHY_CTL bound to: 0 - type: integer 
@@ -663,8 +660,6 @@ INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_byte_lane' (
 INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_byte_lane__parameterized0' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:68]
 INFO: [Synth 8-6157] synthesizing module 'PHASER_OUT_PHY__parameterized0' [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:124410]
 INFO: [Synth 8-6155] done synthesizing module 'PHASER_OUT_PHY__parameterized0' (0#1) [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:124410]
-INFO: [Synth 8-6157] synthesizing module 'OUT_FIFO__parameterized0' [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:108627]
-INFO: [Synth 8-6155] done synthesizing module 'OUT_FIFO__parameterized0' (0#1) [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:108627]
 INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_byte_group_io__parameterized0' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:68]
 INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized1' [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:108512]
 INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized1' (0#1) [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:108512]
@@ -688,44 +683,35 @@ INFO: [Synth 8-226] default block is never used [/home/ck/Desktop/Workspace/FPGA
 INFO: [Synth 8-6157] synthesizing module 'PHASER_REF' [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:124485]
 INFO: [Synth 8-6155] done synthesizing module 'PHASER_REF' (0#1) [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:124485]
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_phy_4lanes' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:72]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_phy_4lanes__parameterized0' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:72]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_byte_lane__parameterized3' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:68]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_byte_group_io__parameterized3' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_byte_group_io__parameterized3' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_byte_lane__parameterized3' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:68]
-INFO: [Synth 8-6157] synthesizing module 'PHY_CONTROL__parameterized0' [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:124501]
-INFO: [Synth 8-6155] done synthesizing module 'PHY_CONTROL__parameterized0' (0#1) [/tools/Xilinx/2025.1/Vivado/scripts/rt/data/unisim_comp.v:124501]
-INFO: [Synth 8-226] default block is never used [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:1557]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_phy_4lanes__parameterized0' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:72]
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_mc_phy' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:70]
-WARNING: [Synth 8-689] width (12) of port connection 'pi_dqs_found_lanes' does not match port width (8) of module 'mig_7series_v4_2_ddr_mc_phy' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1671]
-WARNING: [Synth 8-689] width (12) of port connection 'pi_phase_locked_lanes' does not match port width (8) of module 'mig_7series_v4_2_ddr_mc_phy' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1679]
+WARNING: [Synth 8-689] width (12) of port connection 'pi_dqs_found_lanes' does not match port width (4) of module 'mig_7series_v4_2_ddr_mc_phy' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1671]
+WARNING: [Synth 8-689] width (12) of port connection 'pi_phase_locked_lanes' does not match port width (4) of module 'mig_7series_v4_2_ddr_mc_phy' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1679]
 WARNING: [Synth 8-7071] port 'of_data_a_full' of module 'mig_7series_v4_2_ddr_mc_phy' is unconnected for instance 'u_ddr_mc_phy' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1579]
 WARNING: [Synth 8-7023] instance 'u_ddr_mc_phy' of module 'mig_7series_v4_2_ddr_mc_phy' has 89 connections declared, but only 88 given [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1579]
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_mc_phy_wrapper' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:71]
 	Parameter TCQ bound to: 100 - type: integer 
-	Parameter nCK_PER_CLK bound to: 4 - type: integer 
-	Parameter tCK bound to: 3000 - type: integer 
+	Parameter nCK_PER_CLK bound to: 2 - type: integer 
+	Parameter tCK bound to: 3333 - type: integer 
 	Parameter DDR3_VDD_OP_VOLT bound to: 135 - type: string 
-	Parameter CLK_PERIOD bound to: 12000 - type: integer 
-	Parameter N_CTL_LANES bound to: 3 - type: integer 
+	Parameter CLK_PERIOD bound to: 6666 - type: integer 
+	Parameter N_CTL_LANES bound to: 2 - type: integer 
 	Parameter DRAM_TYPE bound to: DDR2 - type: string 
 	Parameter PRBS_WIDTH bound to: 8 - type: integer 
-	Parameter HIGHEST_LANE bound to: 8 - type: integer 
-	Parameter HIGHEST_BANK bound to: 2 - type: integer 
+	Parameter HIGHEST_LANE bound to: 4 - type: integer 
+	Parameter HIGHEST_BANK bound to: 1 - type: integer 
 	Parameter BANK_TYPE bound to: HR_IO - type: string 
-	Parameter DATA_CTL_B0 bound to: 4'b0001 
-	Parameter DATA_CTL_B1 bound to: 4'b1000 
+	Parameter DATA_CTL_B0 bound to: 4'b0101 
+	Parameter DATA_CTL_B1 bound to: 4'b0000 
 	Parameter DATA_CTL_B2 bound to: 4'b0000 
 	Parameter DATA_CTL_B3 bound to: 4'b0000 
 	Parameter DATA_CTL_B4 bound to: 4'b0000 
 	Parameter BYTE_LANES_B0 bound to: 4'b1111 
-	Parameter BYTE_LANES_B1 bound to: 4'b1000 
+	Parameter BYTE_LANES_B1 bound to: 4'b0000 
 	Parameter BYTE_LANES_B2 bound to: 4'b0000 
 	Parameter BYTE_LANES_B3 bound to: 4'b0000 
 	Parameter BYTE_LANES_B4 bound to: 4'b0000 
-	Parameter DQS_BYTE_MAP bound to: 144'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001001100000000 
-	Parameter CTL_BYTE_LANE bound to: 8'b00111001 
+	Parameter DQS_BYTE_MAP bound to: 144'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000 
+	Parameter CTL_BYTE_LANE bound to: 8'b00001101 
 	Parameter CTL_BANK bound to: 3'b000 
 	Parameter SLOT_1_CONFIG bound to: 8'b00000000 
 	Parameter BANK_WIDTH bound to: 3 - type: integer 
@@ -755,7 +741,7 @@ INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_mc_phy_wrapp
 	Parameter tREFI bound to: 7800000 - type: integer 
 	Parameter OUTPUT_DRV bound to: HIGH - type: string 
 	Parameter REG_CTRL bound to: OFF - type: string 
-	Parameter RTT_NOM bound to: 75 - type: string 
+	Parameter RTT_NOM bound to: 50 - type: string 
 	Parameter RTT_WR bound to: 120 - type: string 
 	Parameter USE_ODT_PORT bound to: 1 - type: integer 
 	Parameter WRLVL bound to: OFF - type: string 
@@ -776,10 +762,9 @@ INFO: [Synth 8-3491] module 'mig_7series_v4_2_ddr_calib_top' declared at '/home/
 INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_calib_top' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_calib_top.v:81]
 INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_phy_wrlvl_off_delay' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_wrlvl_off_delay.v:67]
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_phy_wrlvl_off_delay' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_wrlvl_off_delay.v:67]
-WARNING: [Synth 8-689] width (3) of port connection 'ctl_lane_cnt' does not match port width (2) of module 'mig_7series_v4_2_ddr_phy_wrlvl_off_delay' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_calib_top.v:1703]
 INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_phy_dqs_found_cal_hr' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_dqs_found_cal_hr.v:79]
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_phy_dqs_found_cal_hr' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_dqs_found_cal_hr.v:79]
-WARNING: [Synth 8-689] width (3) of port connection 'fine_adjust_lane_cnt' does not match port width (1) of module 'mig_7series_v4_2_ddr_phy_dqs_found_cal_hr' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_calib_top.v:1962]
+WARNING: [Synth 8-689] width (2) of port connection 'fine_adjust_lane_cnt' does not match port width (1) of module 'mig_7series_v4_2_ddr_phy_dqs_found_cal_hr' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_calib_top.v:1962]
 INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_phy_rdlvl' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_rdlvl.v:78]
 WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
 INFO: [Synth 8-155] case statement is not full and has no default [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_rdlvl.v:2745]
@@ -812,14 +797,13 @@ INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ui_rd_data' [/home/ck
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ui_rd_data' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/ui/mig_7series_v4_2_ui_rd_data.v:139]
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ui_top' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/ui/mig_7series_v4_2_ui_top.v:70]
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_memc_ui_top_std' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/ip_top/mig_7series_v4_2_memc_ui_top_std.v:70]
-INFO: [Synth 8-256] done synthesizing module 'mig_7series_0_mig' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:519]
-INFO: [Synth 8-256] done synthesizing module 'mig_7series_0' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0.vhd:117]
+INFO: [Synth 8-256] done synthesizing module 'mig_7series_0_mig' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:518]
+INFO: [Synth 8-256] done synthesizing module 'mig_7series_0' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0.vhd:115]
 WARNING: [Synth 8-3848] Net ui_addn_clk_0 in module/entity mig_7series_v4_2_infrastructure does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_infrastructure.v:140]
 WARNING: [Synth 8-3848] Net ui_addn_clk_1 in module/entity mig_7series_v4_2_infrastructure does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_infrastructure.v:141]
 WARNING: [Synth 8-3848] Net ui_addn_clk_2 in module/entity mig_7series_v4_2_infrastructure does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_infrastructure.v:142]
 WARNING: [Synth 8-3848] Net ui_addn_clk_3 in module/entity mig_7series_v4_2_infrastructure does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_infrastructure.v:143]
 WARNING: [Synth 8-3848] Net ui_addn_clk_4 in module/entity mig_7series_v4_2_infrastructure does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/clocking/mig_7series_v4_2_infrastructure.v:144]
-WARNING: [Synth 8-6014] Unused sequential element periodic_rd_generation.read_this_rank_r1_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/controller/mig_7series_v4_2_rank_cntrl.v:487]
 WARNING: [Synth 8-3936] Found unconnected internal register 'dbl_req_reg' and it is trimmed from '6' to '5' bits. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/controller/mig_7series_v4_2_round_robin_arb.v:145]
 WARNING: [Synth 8-3936] Found unconnected internal register 'dbl_last_master_ns_reg' and it is trimmed from '6' to '4' bits. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/controller/mig_7series_v4_2_round_robin_arb.v:143]
 WARNING: [Synth 8-6014] Unused sequential element last_master_r_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/controller/mig_7series_v4_2_round_robin_arb.v:181]
@@ -828,10 +812,10 @@ WARNING: [Synth 8-3936] Found unconnected internal register 'col_addr_template_r
 WARNING: [Synth 8-3936] Found unconnected internal register 'dbl_req_reg' and it is trimmed from '8' to '7' bits. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/controller/mig_7series_v4_2_round_robin_arb.v:145]
 WARNING: [Synth 8-3936] Found unconnected internal register 'dbl_last_master_ns_reg' and it is trimmed from '8' to '6' bits. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/controller/mig_7series_v4_2_round_robin_arb.v:143]
 WARNING: [Synth 8-6014] Unused sequential element sent_row_or_maint_r_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/controller/mig_7series_v4_2_arb_row_col.v:357]
-WARNING: [Synth 8-6014] Unused sequential element mc_aux_out_r_1_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/controller/mig_7series_v4_2_arb_select.v:680]
-WARNING: [Synth 8-6014] Unused sequential element mc_aux_out_r_2_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/controller/mig_7series_v4_2_arb_select.v:681]
+WARNING: [Synth 8-3848] Net grant_pre_r in module/entity mig_7series_v4_2_arb_row_col does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/controller/mig_7series_v4_2_arb_row_col.v:186]
+WARNING: [Synth 8-3848] Net sending_pre in module/entity mig_7series_v4_2_arb_row_col does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/controller/mig_7series_v4_2_arb_row_col.v:187]
 WARNING: [Synth 8-3848] Net col_mux.col_row_r in module/entity mig_7series_v4_2_arb_select does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/controller/mig_7series_v4_2_arb_select.v:390]
-WARNING: [Synth 8-3936] Found unconnected internal register 'read_fifo.fifo_out_data_r_reg' and it is trimmed from '12' to '8' bits. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/controller/mig_7series_v4_2_col_mach.v:396]
+WARNING: [Synth 8-3936] Found unconnected internal register 'read_fifo.fifo_out_data_r_reg' and it is trimmed from '12' to '7' bits. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/controller/mig_7series_v4_2_col_mach.v:396]
 WARNING: [Synth 8-6014] Unused sequential element fine_delay_r_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:184]
 WARNING: [Synth 8-3848] Net dummy_i5 in module/entity mig_7series_v4_2_ddr_byte_lane does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:267]
 WARNING: [Synth 8-3848] Net dummy_i6 in module/entity mig_7series_v4_2_ddr_byte_lane does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:268]
@@ -847,18 +831,9 @@ WARNING: [Synth 8-3848] Net pi_counter_read_val_w in module/entity mig_7series_v
 WARNING: [Synth 8-3848] Net dqs_out_of_range in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized0 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:196]
 WARNING: [Synth 8-3848] Net iserdes_clk in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized0 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:273]
 WARNING: [Synth 8-3848] Net iserdes_clkdiv in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized0 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:274]
-WARNING: [Synth 8-3848] Net oserdes_dqts_buf in module/entity mig_7series_v4_2_ddr_byte_group_io__parameterized1 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:142]
-WARNING: [Synth 8-3848] Net oserdes_dqs_buf in module/entity mig_7series_v4_2_ddr_byte_group_io__parameterized1 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:143]
-WARNING: [Synth 8-3848] Net oserdes_dqsts_buf in module/entity mig_7series_v4_2_ddr_byte_group_io__parameterized1 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:144]
-WARNING: [Synth 8-3848] Net iserdes_dout in module/entity mig_7series_v4_2_ddr_byte_group_io__parameterized1 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:91]
-WARNING: [Synth 8-6014] Unused sequential element ififo_rst_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:305]
-WARNING: [Synth 8-3848] Net rclk in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized1 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:145]
-WARNING: [Synth 8-3848] Net pi_iserdes_rst in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized1 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:191]
-WARNING: [Synth 8-3848] Net pi_fine_overflow in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized1 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:193]
-WARNING: [Synth 8-3848] Net pi_counter_read_val_w in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized1 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:429]
-WARNING: [Synth 8-3848] Net dqs_out_of_range in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized1 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:196]
-WARNING: [Synth 8-3848] Net iserdes_clk in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized1 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:273]
-WARNING: [Synth 8-3848] Net iserdes_clkdiv in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized1 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:274]
+WARNING: [Synth 8-6014] Unused sequential element fine_delay_r_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:184]
+WARNING: [Synth 8-3848] Net dummy_i5 in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized1 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:267]
+WARNING: [Synth 8-3848] Net dummy_i6 in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized1 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:268]
 WARNING: [Synth 8-3848] Net oserdes_dqts_buf in module/entity mig_7series_v4_2_ddr_byte_group_io__parameterized2 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:142]
 WARNING: [Synth 8-3848] Net oserdes_dqs_buf in module/entity mig_7series_v4_2_ddr_byte_group_io__parameterized2 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:143]
 WARNING: [Synth 8-3848] Net oserdes_dqsts_buf in module/entity mig_7series_v4_2_ddr_byte_group_io__parameterized2 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:144]
@@ -874,23 +849,18 @@ WARNING: [Synth 8-3848] Net iserdes_clkdiv in module/entity mig_7series_v4_2_ddr
 WARNING: [Synth 8-6014] Unused sequential element B_rst_primitives_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:737]
 WARNING: [Synth 8-6014] Unused sequential element C_rst_primitives_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:738]
 WARNING: [Synth 8-6014] Unused sequential element D_rst_primitives_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:739]
-WARNING: [Synth 8-6014] Unused sequential element fine_delay_r_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:184]
-WARNING: [Synth 8-3848] Net dummy_i5 in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized3 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:267]
-WARNING: [Synth 8-3848] Net dummy_i6 in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized3 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:268]
-WARNING: [Synth 8-6014] Unused sequential element A_rst_primitives_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:736]
-WARNING: [Synth 8-6014] Unused sequential element B_rst_primitives_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:737]
-WARNING: [Synth 8-6014] Unused sequential element C_rst_primitives_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:738]
-WARNING: [Synth 8-3848] Net A_pi_dqs_out_of_range in module/entity mig_7series_v4_2_ddr_phy_4lanes__parameterized0 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:420]
-WARNING: [Synth 8-3848] Net B_pi_dqs_out_of_range in module/entity mig_7series_v4_2_ddr_phy_4lanes__parameterized0 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:453]
-WARNING: [Synth 8-3848] Net C_pi_dqs_out_of_range in module/entity mig_7series_v4_2_ddr_phy_4lanes__parameterized0 does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:515]
 WARNING: [Synth 8-7137] Register ddr_phy_4lanes_0.aux_out_reg in module mig_7series_v4_2_ddr_mc_phy has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1143]
 WARNING: [Synth 8-7137] Register ddr_phy_4lanes_0.aux_out_reg in module mig_7series_v4_2_ddr_mc_phy has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1143]
 WARNING: [Synth 8-7137] Register ddr_phy_4lanes_0.aux_out_reg in module mig_7series_v4_2_ddr_mc_phy has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1132]
 WARNING: [Synth 8-7137] Register ddr_phy_4lanes_0.aux_out_reg in module mig_7series_v4_2_ddr_mc_phy has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1132]
-WARNING: [Synth 8-7137] Register ddr_phy_4lanes_1.aux_out_reg in module mig_7series_v4_2_ddr_mc_phy has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1398]
-WARNING: [Synth 8-7137] Register ddr_phy_4lanes_1.aux_out_reg in module mig_7series_v4_2_ddr_mc_phy has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1398]
-WARNING: [Synth 8-7137] Register ddr_phy_4lanes_1.aux_out_reg in module mig_7series_v4_2_ddr_mc_phy has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1387]
-WARNING: [Synth 8-7137] Register ddr_phy_4lanes_1.aux_out_reg in module mig_7series_v4_2_ddr_mc_phy has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1387]
+WARNING: [Synth 8-6014] Unused sequential element phy_ctl_wd_i1_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1401]
+WARNING: [Synth 8-6014] Unused sequential element phy_ctl_wr_i1_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1402]
+WARNING: [Synth 8-6014] Unused sequential element phy_ctl_wd_i2_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1403]
+WARNING: [Synth 8-6014] Unused sequential element phy_ctl_wr_i2_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1404]
+WARNING: [Synth 8-6014] Unused sequential element data_offset_1_i1_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1405]
+WARNING: [Synth 8-6014] Unused sequential element data_offset_1_i2_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1406]
+WARNING: [Synth 8-6014] Unused sequential element data_offset_2_i1_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1407]
+WARNING: [Synth 8-6014] Unused sequential element data_offset_2_i2_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1408]
 WARNING: [Synth 8-3936] Found unconnected internal register 'byte_sel_data_map_reg' and it is trimmed from '96' to '88' bits. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:731]
 WARNING: [Synth 8-3848] Net phy_data_full in module/entity mig_7series_v4_2_ddr_mc_phy_wrapper does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:227]
 WARNING: [Synth 8-6014] Unused sequential element rank_final_loop[0].final_do_max_reg[0] was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_dqs_found_cal_hr.v:1116]
@@ -911,12 +881,20 @@ WARNING: [Synth 8-6014] Unused sequential element rdlvl_stg1_done_int_r3_reg was
 WARNING: [Synth 8-6014] Unused sequential element rdlvl_last_byte_done_int_r1_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_rdlvl.v:688]
 WARNING: [Synth 8-6014] Unused sequential element rdlvl_last_byte_done_int_r2_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_rdlvl.v:689]
 WARNING: [Synth 8-6014] Unused sequential element rdlvl_last_byte_done_int_r3_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_rdlvl.v:690]
+WARNING: [Synth 8-6014] Unused sequential element mpr_rd_rise2_prev_r_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_rdlvl.v:779]
+WARNING: [Synth 8-6014] Unused sequential element mpr_rd_fall2_prev_r_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_rdlvl.v:780]
+WARNING: [Synth 8-6014] Unused sequential element mpr_rd_rise3_prev_r_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_rdlvl.v:781]
+WARNING: [Synth 8-6014] Unused sequential element mpr_rd_fall3_prev_r_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_rdlvl.v:782]
 WARNING: [Synth 8-6014] Unused sequential element fine_dly_dec_done_r3_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_rdlvl.v:939]
 WARNING: [Synth 8-6014] Unused sequential element fine_dly_dec_done_r4_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_rdlvl.v:940]
 WARNING: [Synth 8-6014] Unused sequential element regl_rank_done_r_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_rdlvl.v:1043]
 WARNING: [Synth 8-6014] Unused sequential element cal1_state_r2_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_rdlvl.v:2695]
 WARNING: [Synth 8-6014] Unused sequential element cal1_state_r3_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_rdlvl.v:2696]
 WARNING: [Synth 8-6014] Unused sequential element cal1_cnt_cpt_timing_r_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_rdlvl.v:609]
+WARNING: [Synth 8-3848] Net rd_data_rise2 in module/entity mig_7series_v4_2_ddr_phy_rdlvl does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_rdlvl.v:364]
+WARNING: [Synth 8-3848] Net rd_data_fall2 in module/entity mig_7series_v4_2_ddr_phy_rdlvl does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_rdlvl.v:365]
+WARNING: [Synth 8-3848] Net rd_data_rise3 in module/entity mig_7series_v4_2_ddr_phy_rdlvl does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_rdlvl.v:366]
+WARNING: [Synth 8-3848] Net rd_data_fall3 in module/entity mig_7series_v4_2_ddr_phy_rdlvl does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_rdlvl.v:367]
 WARNING: [Synth 8-6014] Unused sequential element sample_cnt_r_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_prbs_gen.v:155]
 WARNING: [Synth 8-6014] Unused sequential element reseed_prbs_r_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_prbs_gen.v:156]
 WARNING: [Synth 8-6014] Unused sequential element lfsr_q_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_prbs_gen.v:173]
@@ -935,7 +913,6 @@ WARNING: [Synth 8-6014] Unused sequential element pi_dqs_found_rank_done_r_reg w
 WARNING: [Synth 8-6014] Unused sequential element pi_dqs_found_all_r_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_init.v:2782]
 WARNING: [Synth 8-6014] Unused sequential element complex_row0_rd_done_r1_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_init.v:3338]
 WARNING: [Synth 8-6014] Unused sequential element rdlvl_wr_r_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_init.v:3631]
-WARNING: [Synth 8-6014] Unused sequential element extend_cal_pat_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_init.v:3637]
 WARNING: [Synth 8-6014] Unused sequential element cnt_init_data_r_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_init.v:3713]
 WARNING: [Synth 8-6014] Unused sequential element victim_byte_cnt_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_init.v:817]
 WARNING: [Synth 8-6014] Unused sequential element calib_cas_slot_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_init.v:4172]
@@ -951,10 +928,6 @@ WARNING: [Synth 8-6014] Unused sequential element gen_single_slot_odt.tmp_mr1_r_
 WARNING: [Synth 8-6014] Unused sequential element prech_done_r1_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_init.v:1302]
 WARNING: [Synth 8-6014] Unused sequential element calib_cmd_wren_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_init.v:4228]
 WARNING: [Synth 8-3848] Net calib_aux_out in module/entity mig_7series_v4_2_ddr_phy_init does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_init.v:275]
-WARNING: [Synth 8-6014] Unused sequential element rd_active_r4_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_wrcal.v:534]
-WARNING: [Synth 8-6014] Unused sequential element rd_active_r5_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_wrcal.v:535]
-WARNING: [Synth 8-6014] Unused sequential element pat1_detect_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_wrcal.v:1124]
-WARNING: [Synth 8-6014] Unused sequential element early1_detect_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_wrcal.v:1125]
 WARNING: [Synth 8-6014] Unused sequential element rd_mux_sel_r_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_wrcal.v:438]
 WARNING: [Synth 8-3848] Net i in module/entity mig_7series_v4_2_ddr_phy_wrcal does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_wrcal.v:155]
 WARNING: [Synth 8-6014] Unused sequential element calib_complete_r_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_tempmon.v:181]
@@ -987,38 +960,26 @@ WARNING: [Synth 8-3848] Net oclk_center_write_resume in module/entity mig_7serie
 WARNING: [Synth 8-3848] Net oclkdelay_center_calib_done in module/entity mig_7series_v4_2_ddr_calib_top does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_calib_top.v:615]
 WARNING: [Synth 8-6014] Unused sequential element app_wdf_rdy_r_copy4_reg was removed.  [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/ui/mig_7series_v4_2_ui_wr_data.v:267]
 WARNING: [Synth 8-3848] Net error in module/entity mig_7series_v4_2_memc_ui_top_std does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/ip_top/mig_7series_v4_2_memc_ui_top_std.v:416]
+WARNING: [Synth 8-3848] Net clk_ref_p in module/entity mig_7series_0_mig does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1036]
+WARNING: [Synth 8-3848] Net clk_ref_n in module/entity mig_7series_0_mig does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1037]
 WARNING: [Synth 8-3848] Net device_temp_i in module/entity mig_7series_0_mig does not have driver. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/mig_7series_0_mig.vhd:1040]
-WARNING: [Synth 8-7129] Port rd_data_addr[4] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
 WARNING: [Synth 8-7129] Port rd_data_addr[3] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
 WARNING: [Synth 8-7129] Port rd_data_addr[2] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
 WARNING: [Synth 8-7129] Port rd_data_addr[1] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
 WARNING: [Synth 8-7129] Port rd_data_addr[0] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
 WARNING: [Synth 8-7129] Port rd_data_offset in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ecc_multiple[7] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ecc_multiple[6] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ecc_multiple[5] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ecc_multiple[4] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ecc_multiple[3] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ecc_multiple[2] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ecc_multiple[1] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ecc_multiple[0] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ecc_single[7] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ecc_single[6] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ecc_single[5] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ecc_single[4] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ecc_single[3] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ecc_single[2] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ecc_single[1] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
 WARNING: [Synth 8-7129] Port ecc_single[0] in module mig_7series_v4_2_ui_rd_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port app_raw_not_ecc[7] in module mig_7series_v4_2_ui_wr_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port app_raw_not_ecc[6] in module mig_7series_v4_2_ui_wr_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port app_raw_not_ecc[5] in module mig_7series_v4_2_ui_wr_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port app_raw_not_ecc[4] in module mig_7series_v4_2_ui_wr_data is either unconnected or has no load
 WARNING: [Synth 8-7129] Port app_raw_not_ecc[3] in module mig_7series_v4_2_ui_wr_data is either unconnected or has no load
 WARNING: [Synth 8-7129] Port app_raw_not_ecc[2] in module mig_7series_v4_2_ui_wr_data is either unconnected or has no load
 WARNING: [Synth 8-7129] Port app_raw_not_ecc[1] in module mig_7series_v4_2_ui_wr_data is either unconnected or has no load
 WARNING: [Synth 8-7129] Port app_raw_not_ecc[0] in module mig_7series_v4_2_ui_wr_data is either unconnected or has no load
-WARNING: [Synth 8-7129] Port wr_data_addr[4] in module mig_7series_v4_2_ui_top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port accept in module mig_7series_v4_2_ui_top is either unconnected or has no load
 WARNING: [Synth 8-7129] Port calib_device_temp[11] in module mig_7series_v4_2_ddr_phy_tempmon is either unconnected or has no load
 WARNING: [Synth 8-7129] Port calib_device_temp[10] in module mig_7series_v4_2_ddr_phy_tempmon is either unconnected or has no load
@@ -1088,23 +1049,35 @@ WARNING: [Synth 8-7129] Port dbg_phy_init[222] in module mig_7series_v4_2_ddr_ph
 WARNING: [Synth 8-7129] Port dbg_phy_init[221] in module mig_7series_v4_2_ddr_phy_init is either unconnected or has no load
 WARNING: [Synth 8-7129] Port dbg_phy_init[220] in module mig_7series_v4_2_ddr_phy_init is either unconnected or has no load
 WARNING: [Synth 8-7129] Port dbg_phy_init[219] in module mig_7series_v4_2_ddr_phy_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dbg_phy_init[218] in module mig_7series_v4_2_ddr_phy_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dbg_phy_init[217] in module mig_7series_v4_2_ddr_phy_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dbg_phy_init[216] in module mig_7series_v4_2_ddr_phy_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dbg_phy_init[215] in module mig_7series_v4_2_ddr_phy_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dbg_phy_init[214] in module mig_7series_v4_2_ddr_phy_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dbg_phy_init[213] in module mig_7series_v4_2_ddr_phy_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dbg_phy_init[212] in module mig_7series_v4_2_ddr_phy_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dbg_phy_init[211] in module mig_7series_v4_2_ddr_phy_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dbg_phy_init[210] in module mig_7series_v4_2_ddr_phy_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dbg_phy_init[209] in module mig_7series_v4_2_ddr_phy_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dbg_phy_init[208] in module mig_7series_v4_2_ddr_phy_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dbg_phy_init[207] in module mig_7series_v4_2_ddr_phy_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dbg_phy_init[206] in module mig_7series_v4_2_ddr_phy_init is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dbg_phy_init[205] in module mig_7series_v4_2_ddr_phy_init is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2661.242 ; gain = 431.367 ; free physical = 42263 ; free virtual = 56732
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2645.762 ; gain = 415.367 ; free physical = 43441 ; free virtual = 57279
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2661.242 ; gain = 431.367 ; free physical = 42263 ; free virtual = 56732
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2645.762 ; gain = 415.367 ; free physical = 43442 ; free virtual = 57280
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2661.242 ; gain = 431.367 ; free physical = 42263 ; free virtual = 56732
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2645.762 ; gain = 415.367 ; free physical = 43442 ; free virtual = 57280
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2661.242 ; gain = 0.000 ; free physical = 42269 ; free virtual = 56738
-INFO: [Netlist 29-17] Analyzing 89 Unisim elements for replacement
-WARNING: [Netlist 29-432] The IBUFG primitive 'u_mig_7series_0_mig/u_ddr2_clk_ibuf/se_input_clk.u_ibufg_sys_clk' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
-WARNING: [Netlist 29-432] The IBUFG primitive 'u_mig_7series_0_mig/u_iodelay_ctrl/se_clk_ref.u_ibufg_clk_ref' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2645.762 ; gain = 0.000 ; free physical = 43451 ; free virtual = 57289
+INFO: [Netlist 29-17] Analyzing 75 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -1113,39 +1086,38 @@ Initializing timing engine
 Parsing XDC File [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0_ooc.xdc]
 Finished Parsing XDC File [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0_ooc.xdc]
 Parsing XDC File [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc]
-WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc:348]
-WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc:355]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc:334]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc:341]
 Finished Parsing XDC File [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mig_7series_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/mig_7series_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2755.074 ; gain = 0.000 ; free physical = 42292 ; free virtual = 56761
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2745.594 ; gain = 0.000 ; free physical = 43468 ; free virtual = 57321
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 48 instances were transformed.
-  IBUFG => IBUF: 2 instances
+  A total of 34 instances were transformed.
   IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2), INV, OBUFTDS(x2)): 2 instances
   IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
-  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 28 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 16 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2755.109 ; gain = 0.000 ; free physical = 42292 ; free virtual = 56761
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2745.629 ; gain = 0.000 ; free physical = 43469 ; free virtual = 57322
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2755.109 ; gain = 525.234 ; free physical = 42350 ; free virtual = 56821
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2745.629 ; gain = 515.234 ; free physical = 43502 ; free virtual = 57355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2763.078 ; gain = 533.203 ; free physical = 42350 ; free virtual = 56821
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2753.598 ; gain = 523.203 ; free physical = 43502 ; free virtual = 57355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2763.078 ; gain = 533.203 ; free physical = 42350 ; free virtual = 56821
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2753.598 ; gain = 523.203 ; free physical = 43502 ; free virtual = 57355
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'xadc_supplied_temperature.tempmon_state_reg' in module 'mig_7series_v4_2_tempmon'
 INFO: [Synth 8-802] inferred FSM for state register 'fine_adj_state_r_reg' in module 'mig_7series_v4_2_ddr_phy_dqs_found_cal_hr'
@@ -1295,7 +1267,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'cal2_state_r_reg' using en
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'tempmon_state_reg' in module 'mig_7series_v4_2_ddr_phy_tempmon'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2763.078 ; gain = 533.203 ; free physical = 42465 ; free virtual = 56938
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2753.598 ; gain = 523.203 ; free physical = 43560 ; free virtual = 57416
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1306,17 +1278,17 @@ Detailed RTL Component Info :
 	   2 Input   13 Bit       Adders := 1     
 	   2 Input   12 Bit       Adders := 15    
 	   2 Input   11 Bit       Adders := 1     
-	   2 Input   10 Bit       Adders := 6     
-	   2 Input    9 Bit       Adders := 2     
-	   2 Input    8 Bit       Adders := 6     
+	   2 Input   10 Bit       Adders := 4     
+	   2 Input    9 Bit       Adders := 4     
+	   2 Input    8 Bit       Adders := 5     
 	   2 Input    7 Bit       Adders := 1     
-	   2 Input    6 Bit       Adders := 21    
+	   2 Input    6 Bit       Adders := 20    
 	   3 Input    6 Bit       Adders := 3     
-	   2 Input    5 Bit       Adders := 38    
-	   2 Input    4 Bit       Adders := 24    
-	   2 Input    3 Bit       Adders := 15    
+	   2 Input    5 Bit       Adders := 34    
+	   2 Input    4 Bit       Adders := 25    
+	   2 Input    3 Bit       Adders := 21    
 	   3 Input    3 Bit       Adders := 1     
-	   2 Input    2 Bit       Adders := 46    
+	   2 Input    2 Bit       Adders := 43    
 	   3 Input    2 Bit       Adders := 3     
 	   4 Input    2 Bit       Adders := 5     
 	   5 Input    2 Bit       Adders := 1     
@@ -1332,89 +1304,87 @@ Detailed RTL Component Info :
 +---XORs : 
 	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
-	              144 Bit    Registers := 1     
-	              128 Bit    Registers := 2     
 	               88 Bit    Registers := 1     
 	               80 Bit    Registers := 3     
-	               52 Bit    Registers := 1     
-	               32 Bit    Registers := 4     
+	               72 Bit    Registers := 1     
+	               64 Bit    Registers := 2     
+	               32 Bit    Registers := 1     
 	               30 Bit    Registers := 1     
 	               27 Bit    Registers := 2     
-	               16 Bit    Registers := 11    
+	               26 Bit    Registers := 1     
+	               16 Bit    Registers := 10    
 	               15 Bit    Registers := 4     
 	               13 Bit    Registers := 7     
-	               12 Bit    Registers := 32    
+	               12 Bit    Registers := 31    
 	               11 Bit    Registers := 1     
-	               10 Bit    Registers := 4     
+	               10 Bit    Registers := 2     
 	                9 Bit    Registers := 12    
-	                8 Bit    Registers := 14    
-	                7 Bit    Registers := 2     
-	                6 Bit    Registers := 49    
-	                5 Bit    Registers := 42    
-	                4 Bit    Registers := 67    
-	                3 Bit    Registers := 35    
-	                2 Bit    Registers := 61    
-	                1 Bit    Registers := 1520  
+	                8 Bit    Registers := 10    
+	                7 Bit    Registers := 3     
+	                6 Bit    Registers := 41    
+	                5 Bit    Registers := 33    
+	                4 Bit    Registers := 65    
+	                3 Bit    Registers := 41    
+	                2 Bit    Registers := 157   
+	                1 Bit    Registers := 1105  
 +---Muxes : 
-	   2 Input  128 Bit        Muxes := 4     
-	   4 Input  128 Bit        Muxes := 1     
-	   2 Input  127 Bit        Muxes := 1     
-	   2 Input   80 Bit        Muxes := 7     
-	   2 Input   52 Bit        Muxes := 1     
+	   2 Input   80 Bit        Muxes := 6     
+	   2 Input   64 Bit        Muxes := 5     
+	   4 Input   64 Bit        Muxes := 2     
 	  24 Input   35 Bit        Muxes := 1     
 	   2 Input   35 Bit        Muxes := 20    
 	   2 Input   32 Bit        Muxes := 1     
-	   2 Input   30 Bit        Muxes := 15    
-	   4 Input   30 Bit        Muxes := 5     
-	   2 Input   20 Bit        Muxes := 10    
-	   2 Input   16 Bit        Muxes := 3     
+	   2 Input   30 Bit        Muxes := 12    
+	   4 Input   30 Bit        Muxes := 4     
+	   2 Input   26 Bit        Muxes := 1     
+	   2 Input   20 Bit        Muxes := 6     
 	   3 Input   16 Bit        Muxes := 1     
 	   2 Input   13 Bit        Muxes := 7     
 	   3 Input   13 Bit        Muxes := 1     
-	   2 Input   12 Bit        Muxes := 7     
+	   2 Input   12 Bit        Muxes := 6     
 	   4 Input   12 Bit        Muxes := 1     
 	  12 Input   11 Bit        Muxes := 1     
 	   2 Input   11 Bit        Muxes := 1     
 	   2 Input   10 Bit        Muxes := 8     
-	   4 Input    9 Bit        Muxes := 8     
-	   2 Input    9 Bit        Muxes := 19    
-	   2 Input    8 Bit        Muxes := 10    
-	   5 Input    8 Bit        Muxes := 1     
-	   2 Input    7 Bit        Muxes := 8     
+	   2 Input    9 Bit        Muxes := 17    
+	   5 Input    9 Bit        Muxes := 1     
+	   4 Input    9 Bit        Muxes := 6     
+	   2 Input    8 Bit        Muxes := 12    
+	   2 Input    7 Bit        Muxes := 9     
 	  46 Input    7 Bit        Muxes := 1     
 	 101 Input    7 Bit        Muxes := 1     
-	   2 Input    6 Bit        Muxes := 66    
-	   4 Input    6 Bit        Muxes := 8     
+	   2 Input    6 Bit        Muxes := 63    
+	   4 Input    6 Bit        Muxes := 6     
 	   5 Input    6 Bit        Muxes := 1     
 	  16 Input    6 Bit        Muxes := 1     
 	  24 Input    6 Bit        Muxes := 5     
-	   2 Input    5 Bit        Muxes := 32    
+	   2 Input    5 Bit        Muxes := 26    
 	   8 Input    5 Bit        Muxes := 2     
 	  24 Input    5 Bit        Muxes := 1     
 	   4 Input    5 Bit        Muxes := 1     
-	   3 Input    5 Bit        Muxes := 2     
-	   2 Input    4 Bit        Muxes := 52    
+	   3 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 48    
 	  32 Input    4 Bit        Muxes := 1     
 	   9 Input    4 Bit        Muxes := 1     
-	  22 Input    4 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 60    
-	   4 Input    3 Bit        Muxes := 3     
-	   2 Input    2 Bit        Muxes := 76    
-	   3 Input    2 Bit        Muxes := 4     
+	  23 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 81    
+	   4 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 58    
+	   3 Input    2 Bit        Muxes := 3     
 	   8 Input    2 Bit        Muxes := 4     
 	  24 Input    2 Bit        Muxes := 2     
 	   6 Input    2 Bit        Muxes := 1     
 	   4 Input    2 Bit        Muxes := 3     
 	   9 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 470   
+	   2 Input    1 Bit        Muxes := 565   
 	   3 Input    1 Bit        Muxes := 10    
 	   8 Input    1 Bit        Muxes := 4     
-	   4 Input    1 Bit        Muxes := 225   
+	   4 Input    1 Bit        Muxes := 172   
 	   5 Input    1 Bit        Muxes := 1     
 	  16 Input    1 Bit        Muxes := 21    
 	  24 Input    1 Bit        Muxes := 30    
 	  46 Input    1 Bit        Muxes := 1     
-	   9 Input    1 Bit        Muxes := 21    
+	   9 Input    1 Bit        Muxes := 23    
 	  12 Input    1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -1435,10 +1405,10 @@ WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-3936] Found unconnected internal register 'byte_sel_data_map_reg' and it is trimmed from '88' to '4' bits. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:731]
 WARNING: [Synth 8-3936] Found unconnected internal register 'oclkdelay_start_dly_r_reg' and it is trimmed from '15' to '14' bits. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_init.v:1231]
 WARNING: [Synth 8-3936] Found unconnected internal register 'wrcal_start_dly_r_reg' and it is trimmed from '15' to '14' bits. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_init.v:1229]
-WARNING: [Synth 8-3332] Sequential element (FSM_onehot_cal1_state_r_reg[33]) is unused and will be removed from module mig_7series_v4_2_ddr_phy_rdlvl.
+WARNING: [Synth 8-3332] Sequential element (FSM_onehot_cal1_state_r_reg[25]) is unused and will be removed from module mig_7series_v4_2_ddr_phy_rdlvl.
 WARNING: [Synth 8-3332] Sequential element (FSM_sequential_init_state_r_reg[6]) is unused and will be removed from module mig_7series_v4_2_ddr_phy_init.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 3005.133 ; gain = 775.258 ; free physical = 42293 ; free virtual = 56767
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2865.629 ; gain = 635.234 ; free physical = 43630 ; free virtual = 57489
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1454,17 +1424,16 @@ ROM: Preliminary Mapping Report
 
 
 Distributed RAM: Preliminary Mapping Report (see note below)
-+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------+----------------------+--------------+
-|Module Name   | RTL Object                                                                                                              | Inference | Size (Depth x Width) | Primitives   | 
-+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------+----------------------+--------------+
-|mig_7series_0 | of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg                                                                               | Implied   | 16 x 80              | RAM32M x 14  | 
-|mig_7series_0 | ddr_byte_lane_A.ddr_byte_lane_A/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg                                   | Implied   | 4 x 80               | RAM32M x 14  | 
-|mig_7series_0 | ddr_byte_lane_A.ddr_byte_lane_A/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg                                               | Implied   | 16 x 80              | RAM32M x 14  | 
-|mig_7series_0 | ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg                                               | Implied   | 16 x 80              | RAM32M x 14  | 
-|mig_7series_0 | ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg                                               | Implied   | 16 x 80              | RAM32M x 14  | 
-|mig_7series_0 | ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg | Implied   | 4 x 80               | RAM32M x 14  | 
-|mig_7series_0 | ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg             | Implied   | 16 x 80              | RAM32M x 14  | 
-+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------+----------------------+--------------+
++--------------+---------------------------------------------------------------------------------------+-----------+----------------------+--------------+
+|Module Name   | RTL Object                                                                            | Inference | Size (Depth x Width) | Primitives   | 
++--------------+---------------------------------------------------------------------------------------+-----------+----------------------+--------------+
+|mig_7series_0 | of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg                                             | Implied   | 16 x 80              | RAM32M x 14  | 
+|mig_7series_0 | ddr_byte_lane_A.ddr_byte_lane_A/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg | Implied   | 4 x 80               | RAM32M x 14  | 
+|mig_7series_0 | ddr_byte_lane_A.ddr_byte_lane_A/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg             | Implied   | 16 x 80              | RAM32M x 14  | 
+|mig_7series_0 | ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg             | Implied   | 16 x 80              | RAM32M x 14  | 
+|mig_7series_0 | ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg | Implied   | 4 x 80               | RAM32M x 14  | 
+|mig_7series_0 | ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg             | Implied   | 16 x 80              | RAM32M x 14  | 
++--------------+---------------------------------------------------------------------------------------+-----------+----------------------+--------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 ---------------------------------------------------------------------------------
@@ -1473,32 +1442,31 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3321] set_false_path : Empty through list for constraint at line 361 of /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc:361]
+WARNING: [Synth 8-3321] set_false_path : Empty through list for constraint at line 347 of /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc:347]
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 3005.133 ; gain = 775.258 ; free physical = 42348 ; free virtual = 56824
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2865.629 ; gain = 635.234 ; free physical = 43646 ; free virtual = 57513
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:36 . Memory (MB): peak = 3005.133 ; gain = 775.258 ; free physical = 42345 ; free virtual = 56824
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:29 . Memory (MB): peak = 2865.629 ; gain = 635.234 ; free physical = 43654 ; free virtual = 57520
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Final Mapping Report
-+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------+----------------------+--------------+
-|Module Name   | RTL Object                                                                                                              | Inference | Size (Depth x Width) | Primitives   | 
-+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------+----------------------+--------------+
-|mig_7series_0 | of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg                                                                               | Implied   | 16 x 80              | RAM32M x 14  | 
-|mig_7series_0 | ddr_byte_lane_A.ddr_byte_lane_A/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg                                   | Implied   | 4 x 80               | RAM32M x 14  | 
-|mig_7series_0 | ddr_byte_lane_A.ddr_byte_lane_A/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg                                               | Implied   | 16 x 80              | RAM32M x 14  | 
-|mig_7series_0 | ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg                                               | Implied   | 16 x 80              | RAM32M x 14  | 
-|mig_7series_0 | ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg                                               | Implied   | 16 x 80              | RAM32M x 14  | 
-|mig_7series_0 | ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg | Implied   | 4 x 80               | RAM32M x 14  | 
-|mig_7series_0 | ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg             | Implied   | 16 x 80              | RAM32M x 14  | 
-+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------+----------------------+--------------+
++--------------+---------------------------------------------------------------------------------------+-----------+----------------------+--------------+
+|Module Name   | RTL Object                                                                            | Inference | Size (Depth x Width) | Primitives   | 
++--------------+---------------------------------------------------------------------------------------+-----------+----------------------+--------------+
+|mig_7series_0 | of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg                                             | Implied   | 16 x 80              | RAM32M x 14  | 
+|mig_7series_0 | ddr_byte_lane_A.ddr_byte_lane_A/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg | Implied   | 4 x 80               | RAM32M x 14  | 
+|mig_7series_0 | ddr_byte_lane_A.ddr_byte_lane_A/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg             | Implied   | 16 x 80              | RAM32M x 14  | 
+|mig_7series_0 | ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg             | Implied   | 16 x 80              | RAM32M x 14  | 
+|mig_7series_0 | ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg | Implied   | 4 x 80               | RAM32M x 14  | 
+|mig_7series_0 | ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg             | Implied   | 16 x 80              | RAM32M x 14  | 
++--------------+---------------------------------------------------------------------------------------+-----------+----------------------+--------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1507,7 +1475,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 3005.133 ; gain = 775.258 ; free physical = 42371 ; free virtual = 56850
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:30 . Memory (MB): peak = 2865.629 ; gain = 635.234 ; free physical = 43661 ; free virtual = 57527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1533,10 +1501,8 @@ WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std
 WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/pi_stg2_load_div2r1_inferred:in0 to constant 0
 WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/pi_stg2_load_div2r2_inferred:in0 to constant 0
 WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/pi_stg2_load_div2r3_inferred:in0 to constant 0
-WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/rst_stg1_cal_div2r1_inferred:in0[1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/rst_stg1_cal_div2r1_inferred:in0[0] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/rst_stg1_cal_div2r2_inferred:in0[1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/rst_stg1_cal_div2r2_inferred:in0[0] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/rst_stg1_cal_div2r1_inferred:in0 to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/rst_stg1_cal_div2r2_inferred:in0 to constant 0
 WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/pi_stg2_reg_l_div2r1_inferred:in0[5] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/pi_stg2_reg_l_div2r1_inferred:in0[4] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/pi_stg2_reg_l_div2r1_inferred:in0[3] to constant 0
@@ -1555,40 +1521,39 @@ WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std
 WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/pi_stg2_reg_l_div2r3_inferred:in0[2] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/pi_stg2_reg_l_div2r3_inferred:in0[1] to constant 0
 WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/pi_stg2_reg_l_div2r3_inferred:in0[0] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/pi_dqs_find_rst_inferred:in0[1] to constant 0
-WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/pi_dqs_find_rst_inferred:in0[0] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/pi_dqs_find_rst_inferred:in0 to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 3005.133 ; gain = 775.258 ; free physical = 42388 ; free virtual = 56864
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2945.441 ; gain = 715.047 ; free physical = 43628 ; free virtual = 57494
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 3005.133 ; gain = 775.258 ; free physical = 42388 ; free virtual = 56864
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2945.441 ; gain = 715.047 ; free physical = 43628 ; free virtual = 57494
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 3005.133 ; gain = 775.258 ; free physical = 42388 ; free virtual = 56864
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2945.441 ; gain = 715.047 ; free physical = 43628 ; free virtual = 57494
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 3005.133 ; gain = 775.258 ; free physical = 42388 ; free virtual = 56864
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2945.441 ; gain = 715.047 ; free physical = 43628 ; free virtual = 57494
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 3005.133 ; gain = 775.258 ; free physical = 42388 ; free virtual = 56864
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2945.441 ; gain = 715.047 ; free physical = 43628 ; free virtual = 57494
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 3005.133 ; gain = 775.258 ; free physical = 42388 ; free virtual = 56864
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2945.441 ; gain = 715.047 ; free physical = 43628 ; free virtual = 57494
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1598,6 +1563,8 @@ Static Shift Register Report:
 +--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 |Module Name   | RTL Name                                                                                                                                                                                       | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
 +--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|mig_7series_0 | u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/rclk_delay_reg[11]                                           | 12     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|mig_7series_0 | u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/rst_r4_reg | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
 |mig_7series_0 | u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_calib_top/mb_wrlvl_off.u_phy_wrlvl_off_delay/cmd_delay_start_r6_reg                                                        | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
 |mig_7series_0 | u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_calib_top/mb_wrlvl_off.u_phy_wrlvl_off_delay/delay_done_r4_reg                                                             | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
 |mig_7series_0 | u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_calib_top/mb_wrlvl_off.u_phy_wrlvl_off_delay/po_delay_done_r4_reg                                                          | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
@@ -1605,13 +1572,7 @@ Static Shift Register Report:
 |mig_7series_0 | u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_calib_top/u_ddr_phy_init/prech_done_reg                                                                                    | 17     | 1     | NO           | NO                 | YES               | 1      | 0       | 
 |mig_7series_0 | u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_calib_top/u_ddr_phy_init/wrcal_start_dly_r_reg[5]                                                                          | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
 |mig_7series_0 | u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_calib_top/u_ddr_phy_init/rdlvl_start_dly0_r_reg[14]                                                                        | 15     | 1     | NO           | NO                 | YES               | 1      | 0       | 
-|mig_7series_0 | u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_calib_top/u_ddr_phy_wrcal/gen_pat_match_div4.pat_data_match_valid_r_reg                                                    | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-|mig_7series_0 | u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_calib_top/u_ddr_phy_wrcal/gen_pat_match_div4.gen_pat_match[0].pat_match_rise2_r_reg[0]                                     | 3      | 4     | NO           | NO                 | YES               | 4      | 0       | 
 |mig_7series_0 | u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_calib_top/reset_if_r9_reg                                                                                                  | 9      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-|mig_7series_0 | u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/ddr_byte_group_io/rst_r4_reg | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-|mig_7series_0 | u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/rst_r4_reg | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-|mig_7series_0 | u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/rclk_delay_reg[11]                                           | 12     | 1     | NO           | NO                 | YES               | 1      | 0       | 
-|mig_7series_0 | u_mig_7series_0_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/rclk_delay_reg[11]                                           | 12     | 1     | NO           | NO                 | YES               | 1      | 0       | 
 +--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
@@ -1631,79 +1592,72 @@ Report Cell Usage:
 +------+----------------------+------+
 |      |Cell                  |Count |
 +------+----------------------+------+
-|1     |BUFG                  |     4|
+|1     |BUFG                  |     3|
 |2     |BUFH                  |     1|
-|3     |BUFIO                 |     2|
+|3     |BUFIO                 |     1|
 |4     |CARRY4                |   101|
 |5     |IDELAYCTRL            |     1|
 |6     |IDELAYE2              |    16|
 |7     |IN_FIFO               |     2|
 |8     |ISERDESE2             |    16|
-|9     |LUT1                  |   382|
-|10    |LUT2                  |   402|
-|11    |LUT3                  |   761|
-|12    |LUT4                  |   865|
-|13    |LUT5                  |   779|
-|14    |LUT6                  |   933|
+|9     |LUT1                  |   273|
+|10    |LUT2                  |   334|
+|11    |LUT3                  |   554|
+|12    |LUT4                  |   638|
+|13    |LUT5                  |   739|
+|14    |LUT6                  |   871|
 |15    |MMCME2_ADV            |     1|
-|16    |MUXF7                 |     1|
-|17    |ODDR                  |     5|
-|18    |OSERDESE2             |    42|
-|21    |OUT_FIFO              |     5|
-|23    |PHASER_IN_PHY         |     2|
-|24    |PHASER_OUT_PHY        |     5|
-|26    |PHASER_REF            |     2|
-|27    |PHY_CONTROL           |     2|
-|28    |PLLE2_ADV             |     1|
-|29    |RAM32M                |    87|
-|30    |RAM32X1D              |     4|
-|31    |SRL16E                |    17|
-|32    |SRLC32E               |     1|
-|33    |XADC                  |     1|
-|34    |FDCE                  |     2|
-|35    |FDPE                  |    70|
-|36    |FDRE                  |  3187|
-|37    |FDSE                  |    95|
-|38    |IBUFG                 |     2|
-|39    |IOBUFDS_INTERMDISABLE |     2|
-|40    |IOBUF_INTERMDISABLE   |    16|
-|41    |OBUF                  |    22|
-|42    |OBUFDS                |     1|
-|43    |OBUFT                 |     2|
+|16    |ODDR                  |     5|
+|17    |OSERDESE2             |    42|
+|20    |OUT_FIFO              |     4|
+|21    |PHASER_IN_PHY         |     2|
+|22    |PHASER_OUT_PHY        |     4|
+|24    |PHASER_REF            |     1|
+|25    |PHY_CONTROL           |     1|
+|26    |PLLE2_ADV             |     1|
+|27    |RAM32M                |    64|
+|28    |SRL16E                |    10|
+|29    |SRLC32E               |     1|
+|30    |XADC                  |     1|
+|31    |FDCE                  |     1|
+|32    |FDPE                  |    70|
+|33    |FDRE                  |  2605|
+|34    |FDSE                  |    75|
+|35    |IOBUFDS_INTERMDISABLE |     2|
+|36    |IOBUF_INTERMDISABLE   |    16|
+|37    |OBUF                  |    22|
+|38    |OBUFDS                |     1|
+|39    |OBUFT                 |     2|
 +------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 3005.133 ; gain = 775.258 ; free physical = 42388 ; free virtual = 56864
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2945.441 ; gain = 715.047 ; free physical = 43628 ; free virtual = 57494
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 40 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:37 . Memory (MB): peak = 3005.133 ; gain = 681.391 ; free physical = 42388 ; free virtual = 56864
-Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:39 . Memory (MB): peak = 3005.141 ; gain = 775.258 ; free physical = 42388 ; free virtual = 56864
+Synthesis finished with 0 errors, 0 critical warnings and 37 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2945.441 ; gain = 615.180 ; free physical = 43629 ; free virtual = 57496
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2945.449 ; gain = 715.047 ; free physical = 43629 ; free virtual = 57495
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3005.141 ; gain = 0.000 ; free physical = 42526 ; free virtual = 57002
-INFO: [Netlist 29-17] Analyzing 254 Unisim elements for replacement
-WARNING: [Netlist 29-432] The IBUFG primitive 'u_mig_7series_0_mig/u_ddr2_clk_ibuf/se_input_clk.u_ibufg_sys_clk' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
-WARNING: [Netlist 29-432] The IBUFG primitive 'u_mig_7series_0_mig/u_iodelay_ctrl/se_clk_ref.u_ibufg_clk_ref' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2945.449 ; gain = 0.000 ; free physical = 43791 ; free virtual = 57659
+INFO: [Netlist 29-17] Analyzing 224 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 2 inverter(s) to 16 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3061.160 ; gain = 0.000 ; free physical = 42535 ; free virtual = 57008
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3030.219 ; gain = 0.000 ; free physical = 43764 ; free virtual = 57633
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 112 instances were transformed.
-  IBUFG => IBUF: 2 instances
+  A total of 83 instances were transformed.
   IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2), INV, OBUFTDS(x2)): 2 instances
   IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
-  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 87 instances
-  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 64 instances
 
-Synth Design complete | Checksum: bb6bf8de
+Synth Design complete | Checksum: 9a73de73
 INFO: [Common 17-83] Releasing license: Synthesis
-238 Infos, 342 Warnings, 0 Critical Warnings and 0 Errors encountered.
+225 Infos, 324 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:41 . Memory (MB): peak = 3061.195 ; gain = 1255.859 ; free physical = 42528 ; free virtual = 57003
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2405.069; main = 2206.498; forked = 276.105
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3953.891; main = 3061.164; forked = 964.770
-INFO: [Coretcl 2-1174] Renamed 73 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3085.172 ; gain = 0.000 ; free physical = 42527 ; free virtual = 57003
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:34 . Memory (MB): peak = 3030.254 ; gain = 1168.164 ; free physical = 43755 ; free virtual = 57624
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2294.312; main = 2169.148; forked = 275.736
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3830.402; main = 3030.223; forked = 964.770
+INFO: [Coretcl 2-1174] Renamed 68 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3054.230 ; gain = 0.000 ; free physical = 43754 ; free virtual = 57623
 INFO: [Common 17-1381] The checkpoint '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/mig_7series_0_synth_1/mig_7series_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file mig_7series_0_utilization_synth.rpt -pb mig_7series_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Aug  3 23:03:47 2025...
+INFO: [Common 17-206] Exiting Vivado at Tue Aug  5 15:55:16 2025...

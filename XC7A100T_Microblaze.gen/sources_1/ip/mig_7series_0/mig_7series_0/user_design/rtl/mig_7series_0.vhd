@@ -88,11 +88,11 @@ entity mig_7series_0 is
     app_addr                  : in    std_logic_vector(26 downto 0);
     app_cmd                   : in    std_logic_vector(2 downto 0);
     app_en                    : in    std_logic;
-    app_wdf_data              : in    std_logic_vector(127 downto 0);
+    app_wdf_data              : in    std_logic_vector(63 downto 0);
     app_wdf_end               : in    std_logic;
-    app_wdf_mask         : in    std_logic_vector(15 downto 0);
+    app_wdf_mask         : in    std_logic_vector(7 downto 0);
     app_wdf_wren              : in    std_logic;
-    app_rd_data               : out   std_logic_vector(127 downto 0);
+    app_rd_data               : out   std_logic_vector(63 downto 0);
     app_rd_data_end           : out   std_logic;
     app_rd_data_valid         : out   std_logic;
     app_rdy                   : out   std_logic;
@@ -108,8 +108,6 @@ entity mig_7series_0 is
     init_calib_complete       : out   std_logic;
     -- System Clock Ports
     sys_clk_i                      : in    std_logic;
-    -- Reference Clock Ports
-    clk_ref_i                                : in    std_logic;
     sys_rst                     : in    std_logic
   );
 end entity mig_7series_0;
@@ -137,11 +135,11 @@ component mig_7series_0_mig
     app_addr                  : in    std_logic_vector(26 downto 0);
     app_cmd                   : in    std_logic_vector(2 downto 0);
     app_en                    : in    std_logic;
-    app_wdf_data              : in    std_logic_vector(127 downto 0);
+    app_wdf_data              : in    std_logic_vector(63 downto 0);
     app_wdf_end               : in    std_logic;
-    app_wdf_mask         : in    std_logic_vector(15 downto 0);
+    app_wdf_mask         : in    std_logic_vector(7 downto 0);
     app_wdf_wren              : in    std_logic;
-    app_rd_data               : out   std_logic_vector(127 downto 0);
+    app_rd_data               : out   std_logic_vector(63 downto 0);
     app_rd_data_end           : out   std_logic;
     app_rd_data_valid         : out   std_logic;
     app_rdy                   : out   std_logic;
@@ -157,8 +155,6 @@ component mig_7series_0_mig
     init_calib_complete       : out   std_logic;
     -- System Clock Ports
     sys_clk_i                      : in    std_logic;
-    -- Reference Clock Ports
-    clk_ref_i                                : in    std_logic;
     sys_rst             : in std_logic
     );
 end component mig_7series_0_mig;
@@ -209,8 +205,6 @@ begin
       app_wdf_mask                   => app_wdf_mask,
       -- System Clock Ports
       sys_clk_i                       => sys_clk_i,
-      -- Reference Clock Ports
-      clk_ref_i                      => clk_ref_i,
       sys_rst                        => sys_rst
     );
 -- End of IP top instance
