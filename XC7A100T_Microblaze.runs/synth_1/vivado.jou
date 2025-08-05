@@ -3,8 +3,8 @@
 # SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Wed Aug  6 00:19:35 2025
-# Process ID         : 207612
+# Start of session at: Wed Aug  6 00:23:24 2025
+# Process ID         : 265397
 # Current directory  : /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1
 # Command line       : vivado -log top_module.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_module.tcl
 # Log file           : /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/top_module.vds
@@ -13,12 +13,12 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 25.04
 # Processor Detail   : AMD Ryzen 9 9950X 16-Core Processor
-# CPU Frequency      : 5694.623 MHz
+# CPU Frequency      : 4015.892 MHz
 # CPU Physical cores : 16
 # CPU Logical cores  : 32
 # Host memory        : 63756 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 72346 MB
-# Available Virtual  : 61850 MB
+# Available Virtual  : 61562 MB
 #-----------------------------------------------------------
 source top_module.tcl -notrace

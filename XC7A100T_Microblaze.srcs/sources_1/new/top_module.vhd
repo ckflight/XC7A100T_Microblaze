@@ -417,7 +417,7 @@ begin
                     when 3 => -- Start read command
                         if s_app_rdy = '1' then
                             s_app_addr <= (others => '0');
-                            s_app_cmd <= "001"; -- READ
+                            s_app_cmd <= "000"; -- READ
                             s_app_en <= '1';
                             fsm_state <= 4;
                         end if;
