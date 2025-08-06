@@ -40,6 +40,8 @@ set_property -dict { PACKAGE_PIN F6   IOSTANDARD LVCMOS33 } [get_ports { JC2_SPI
 set_property -dict { PACKAGE_PIN J2   IOSTANDARD LVCMOS33 } [get_ports { JC3_SPI1_CLK }];
 set_property -dict { PACKAGE_PIN G6   IOSTANDARD LVCMOS33 } [get_ports { JC4_SPI1_CS[0] }];
 
+set_property -dict { PACKAGE_PIN E7    IOSTANDARD LVCMOS33 } [get_ports { JC7_DEBUG }]; #IO_L6P_T0_35 Sch=jc[7]
+
 #I2C0 Onboard temperature sensor
 set_property -dict { PACKAGE_PIN C14    IOSTANDARD LVCMOS33 } [get_ports { I2C_SCL }];
 set_property -dict { PACKAGE_PIN C15    IOSTANDARD LVCMOS33 } [get_ports { I2C_SDA }];

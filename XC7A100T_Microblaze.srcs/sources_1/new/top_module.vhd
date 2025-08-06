@@ -56,7 +56,9 @@ entity top_module is
         
         LED17_B       : out std_logic;
         LED17_G       : out std_logic;
-        LED17_R       : out std_logic
+        LED17_R       : out std_logic;
+        
+        JC7_DEBUG     : out std_logic
 
     );
 end top_module;
@@ -235,7 +237,7 @@ architecture Behavioral of top_module is
     
     -- Signals for control
     signal fsm_state         : integer range 0 to 7 := 0;
-    signal data_written      : std_logic_vector(63 downto 0) := x"1234567891234567";
+    signal data_written      : std_logic_vector(63 downto 0) := x"0000000000000000";
     signal data_read         : std_logic_vector(63 downto 0);
     
     signal s_LED16_B        : std_logic := '0';
@@ -246,10 +248,9 @@ architecture Behavioral of top_module is
     signal s_LED17_G        : std_logic := '0';
     signal s_LED17_R        : std_logic := '0';
     
-    
 begin 
     
-    reset_n              <= not RESET;
+    reset_n              <= not RESET;      -- active low reset generation
     USB_UART_TX          <= s_uart_tx;       -- send tx data sent from microblaze to nexy4 onboard f
     
     JC1_SPI1_MOSI        <= s_spi1_mosi;
@@ -374,14 +375,14 @@ begin
     ssd : ssd_module
     PORT MAP(
         SYSCLK  => s_clk_100mhz,
-        NUMBER1 => unsigned(data_read(31 downto 28)),
-        NUMBER2 => unsigned(data_read(27 downto 24)),
-        NUMBER3 => unsigned(data_read(23 downto 20)),
-        NUMBER4 => unsigned(data_read(19 downto 16)),
-        NUMBER5 => unsigned(data_read(15 downto 12)),
-        NUMBER6 => unsigned(data_read(11 downto 8)),
-        NUMBER7 => unsigned(data_read(7 downto 4)),
-        NUMBER8 => unsigned(data_read(3 downto 0)),
+        NUMBER1 => unsigned(data_read(3 downto 0)),
+        NUMBER2 => unsigned(data_read(7 downto 4)),
+        NUMBER3 => unsigned(data_read(11 downto 8)),
+        NUMBER4 => unsigned(data_read(15 downto 12)),
+        NUMBER5 => unsigned(data_read(19 downto 16)),
+        NUMBER6 => unsigned(data_read(23 downto 20)),
+        NUMBER7 => unsigned(data_read(27 downto 24)),
+        NUMBER8 => unsigned(data_read(31 downto 28)),
         AN      => AN,
         SEG     => SEG        
     );
@@ -425,6 +426,8 @@ begin
 
         -- FSM to write and then read DDR2 memory
     process(s_ui_clk)
+    constant FSM_DELAY_CYCLES : integer := 0; -- adjust based on your clock
+    variable fsm_delay_counter : integer range 0 to 1 := 0;
     begin
         if rising_edge(s_ui_clk) then
             if s_ui_clk_sync_rst = '1' or s_init_calib_complete = '0' then
@@ -436,15 +439,17 @@ begin
                 s_app_addr <= (others => '0');
                 s_app_wdf_data <= (others => '0');
                 s_app_wdf_mask <= (others => '0');
+                fsm_delay_counter := 0;
                 s_LED16_B <= '1';
                 s_LED17_B <= '1';
+                data_written <= x"0000000000000000";
                 
             else
                 case fsm_state is
                     when 0 => -- Wait for MIG calibration complete
                         if s_init_calib_complete = '1' then
                             fsm_state <= 1;
-                            
+                            fsm_delay_counter := 0;
                             s_LED16_B <= '0';
                             s_LED17_B <= '0';
                             s_LED16_G <= '1';
@@ -468,6 +473,7 @@ begin
                             s_LED17_G <= '0';
                             s_LED16_R <= '1';
                             s_LED17_R <= '1';
+                            JC7_DEBUG <= '1';
                         end if;
                 
                     when 2 => -- Deassert control signals after write
@@ -477,11 +483,13 @@ begin
                         fsm_state <= 3;
                         s_LED16_R <= '0';
                         s_LED17_R <= '0';
-                
+                        JC7_DEBUG <= '0';
+                        
                     when 3 => -- Wait a few cycles
                         fsm_state <= 4;
                         s_LED16_R <= '1';
                         s_LED17_R <= '1';
+                        JC7_DEBUG <= '1';
                 
                     when 4 => -- Start read
                         if s_app_rdy = '1' then
@@ -491,6 +499,7 @@ begin
                             fsm_state  <= 5;
                             s_LED16_R <= '0';
                             s_LED17_R <= '0';
+                            JC7_DEBUG <= '0';
                         end if;
                 
                     when 5 =>
@@ -498,6 +507,7 @@ begin
                         fsm_state <= 6;
                         s_LED16_R <= '1';
                         s_LED17_R <= '1';
+                        JC7_DEBUG <= '1';
                 
                     when 6 => -- Wait for read data valid
                         if s_app_rd_data_valid = '1' then
@@ -505,10 +515,18 @@ begin
                             fsm_state <= 7;
                             s_LED16_R <= '0';
                             s_LED17_R <= '0';
+                            JC7_DEBUG <= '0';
                         end if;
                     
                     when 7 =>
-                        fsm_state <= 0;
+                        if fsm_delay_counter < FSM_DELAY_CYCLES then
+                            fsm_delay_counter := fsm_delay_counter + 1;
+                        else
+                            fsm_delay_counter := 0;
+                            fsm_state <= 0;
+                            data_written <= std_logic_vector(unsigned(data_written) + 1);
+
+                        end if;
 
                     when others =>
                         fsm_state <= 0;

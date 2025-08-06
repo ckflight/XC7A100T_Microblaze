@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date             : Wed Aug  6 10:47:22 2025
+| Date             : Wed Aug  6 13:10:50 2025
 | Host             : TPC-0073 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_module_power_routed.rpt -pb top_module_power_summary_routed.pb -rpx top_module_power_routed.rpx
 | Design           : top_module
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.305        |
+| Total On-Chip Power (W)  | 1.312        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.195        |
+| Dynamic (W)              | 1.202        |
 | Device Static (W)        | 0.110        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 79.0         |
@@ -52,25 +52,25 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.052 |       51 |       --- |             --- |
-| Slice Logic              |     0.020 |    18436 |       --- |             --- |
-|   LUT as Logic           |     0.018 |     6897 |     63400 |           10.88 |
-|   Register               |     0.001 |     7205 |    126800 |            5.68 |
+| Clocks                   |     0.053 |       51 |       --- |             --- |
+| Slice Logic              |     0.021 |    18668 |       --- |             --- |
+|   LUT as Logic           |     0.018 |     6915 |     63400 |           10.91 |
 |   LUT as Distributed RAM |     0.001 |      436 |     19000 |            2.29 |
-|   CARRY4                 |    <0.001 |      286 |     15850 |            1.80 |
+|   Register               |     0.001 |     7378 |    126800 |            5.82 |
+|   CARRY4                 |    <0.001 |      302 |     15850 |            1.91 |
 |   F7/F8 Muxes            |    <0.001 |       56 |     63400 |            0.09 |
 |   LUT as Shift Register  |    <0.001 |      175 |     19000 |            0.92 |
 |   Others                 |     0.000 |     1292 |       --- |             --- |
-| Signals                  |     0.026 |    13239 |       --- |             --- |
+| Signals                  |     0.026 |    13466 |       --- |             --- |
 | Block RAM                |     0.001 |     32.5 |       135 |           24.07 |
 | MMCM                     |     0.321 |        3 |         6 |           50.00 |
 | PLL                      |     0.111 |        1 |         6 |           16.67 |
 | DSPs                     |     0.004 |        5 |       240 |            2.08 |
-| I/O                      |     0.551 |      103 |       210 |           49.05 |
+| I/O                      |     0.555 |      104 |       210 |           49.52 |
 | PHASER                   |     0.106 |       14 |       --- |             --- |
 | XADC                     |     0.004 |        1 |       --- |             --- |
 | Static Power             |     0.110 |          |           |                 |
-| Total                    |     1.305 |          |           |                 |
+| Total                    |     1.312 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -80,9 +80,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.162 |       0.142 |      0.019 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.164 |       0.144 |      0.019 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.355 |       0.336 |      0.018 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.007 |       0.003 |      0.004 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.009 |       0.005 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.245 |       0.241 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -198,27 +198,27 @@ Table of Contents
 +----------------------------------+-----------+
 | Name                             | Power (W) |
 +----------------------------------+-----------+
-| top_module                       |     1.195 |
+| top_module                       |     1.202 |
 |   clk_mmcm_inst                  |     0.107 |
 |     inst                         |     0.107 |
-|   microblaze                     |     0.161 |
-|     microblaze_i                 |     0.161 |
+|   microblaze                     |     0.159 |
+|     microblaze_i                 |     0.159 |
 |       axi_iic_0                  |     0.002 |
 |       axi_iic_1                  |     0.002 |
-|       axi_quad_spi_0             |     0.006 |
-|       axi_quad_spi_1             |     0.006 |
+|       axi_quad_spi_0             |     0.005 |
+|       axi_quad_spi_1             |     0.005 |
 |       axi_timer_0                |     0.004 |
 |       clk_wiz_1                  |     0.107 |
-|       mdm_1                      |     0.001 |
-|       microblaze_0               |     0.028 |
+|       microblaze_0               |     0.027 |
 |       microblaze_0_axi_intc      |     0.001 |
 |       microblaze_0_axi_periph    |     0.002 |
-|   u_mig_7series_0_mig            |     0.911 |
-|     u_mig_7series_0_mig          |     0.908 |
+|   ssd                            |     0.001 |
+|   u_mig_7series_0_mig            |     0.913 |
+|     u_mig_7series_0_mig          |     0.910 |
 |       temp_mon_enabled.u_tempmon |     0.007 |
 |       u_ddr2_infrastructure      |     0.220 |
-|       u_memc_ui_top_std          |     0.681 |
-|   uart_rx                        |     0.002 |
+|       u_memc_ui_top_std          |     0.683 |
+|   uart_rx                        |     0.003 |
 |     fifo                         |     0.002 |
 +----------------------------------+-----------+
 
