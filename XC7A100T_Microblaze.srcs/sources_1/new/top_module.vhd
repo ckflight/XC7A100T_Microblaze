@@ -524,6 +524,73 @@ begin
         end if;
     end process;
 
+-- Burst (8x64 bit) write code by chatgpt. Test it.
+--process(s_ui_clk)
+--    variable burst_counter : integer range 0 to 7 := 0;
+--begin
+--    if rising_edge(s_ui_clk) then
+--        if s_ui_clk_sync_rst = '1' or s_init_calib_complete = '0' then
+--            fsm_state         <= 0;
+--            s_app_en          <= '0';
+--            s_app_cmd         <= "000";
+--            s_app_addr        <= (others => '0');
+--            s_app_wdf_data    <= (others => '0');
+--            s_app_wdf_mask    <= (others => '0');
+--            s_app_wdf_wren    <= '0';
+--            s_app_wdf_end     <= '0';
+--            data_written      <= x"0000000000000000";
+--            burst_counter     := 0;
+
+--        else
+--            case fsm_state is
+--                when 0 => -- Wait for MIG calibration complete
+--                    if s_init_calib_complete = '1' then
+--                        fsm_state <= 1;
+--                    end if;
+
+--                when 1 => -- Wait for MIG to be ready to accept command and data
+--                    if s_app_rdy = '1' and s_app_wdf_rdy = '1' then
+--                        s_app_en       <= '1';
+--                        s_app_cmd      <= "000"; -- Write command
+--                        s_app_addr     <= std_logic_vector(unsigned(s_app_addr) + 1); -- Address per burst
+--                        s_app_wdf_data <= data_written;
+--                        s_app_wdf_wren <= '1';
+--                        s_app_wdf_end  <= '0';
+--                        burst_counter  := 1; -- Already sending 1st word
+--                        fsm_state      <= 2;
+--                    end if;
+
+--                when 2 => -- Continue burst (send 2nd to 8th word)
+--                    if s_app_wdf_rdy = '1' then
+--                        s_app_en <= '0'; -- Only asserted for 1 cycle
+
+--                        s_app_wdf_data <= data_written;
+--                        data_written   <= std_logic_vector(unsigned(data_written) + 1);
+
+--                        s_app_wdf_wren <= '1';
+
+--                        if burst_counter = 7 then
+--                            s_app_wdf_end <= '1'; -- Last word of burst
+--                            fsm_state     <= 3;
+--                        else
+--                            s_app_wdf_end <= '0';
+--                        end if;
+
+--                        burst_counter := burst_counter + 1;
+--                    end if;
+
+--                when 3 => -- Deassert write data signals
+--                    s_app_wdf_wren <= '0';
+--                    s_app_wdf_end  <= '0';
+--                    fsm_state      <= 1; -- Next burst
+
+--                when others =>
+--                    fsm_state <= 0;
+--            end case;
+--        end if;
+--    end if;
+--end process;
+
 
 
 end Behavioral;
