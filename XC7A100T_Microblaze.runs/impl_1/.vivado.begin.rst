@@ -1,100 +1,10 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="6084" HostCore="20" HostMemory="016997011456">
+    <Process Command="vivado" Owner="ck" Host="ck-MS-7E62" Pid="7771" HostCore="32" HostMemory="62262272">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="3800" HostCore="20" HostMemory="016997011456">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="13156" HostCore="20" HostMemory="016997011456">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="3732" HostCore="20" HostMemory="016997011456">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="5756" HostCore="20" HostMemory="016997011456">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="10124" HostCore="20" HostMemory="016997011456">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="2160" HostCore="20" HostMemory="016997011456">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="10700" HostCore="20" HostMemory="016997011456">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="3144" HostCore="20" HostMemory="016997011456">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="6040" HostCore="20" HostMemory="016997011456">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="9476" HostCore="20" HostMemory="016997011456">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="14640" HostCore="20" HostMemory="016997011456">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="10452" HostCore="20" HostMemory="016997011456">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="11976" HostCore="20" HostMemory="016997011456">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="13848" HostCore="20" HostMemory="016997011456">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="9284" HostCore="20" HostMemory="016997011456">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="6928" HostCore="20" HostMemory="016997011456">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="14540" HostCore="20" HostMemory="016997011456">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="6608" HostCore="20" HostMemory="016997011456">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="cenk.keskin" Host="TPC-0073" Pid="14284" HostCore="20" HostMemory="016997011456">
+    <Process Command="vivado" Owner="ck" Host="ck-MS-7E62" Pid="9052" HostCore="32" HostMemory="62262272">
     </Process>
 </ProcessHandle>

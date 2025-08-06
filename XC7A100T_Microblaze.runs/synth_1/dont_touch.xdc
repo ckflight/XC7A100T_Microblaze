@@ -3,7 +3,7 @@
 
 # XDC: new/pinout.xdc
 
-# XDC: C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc
+# XDC: /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc
 
 # Block Designs: bd/microblaze/microblaze.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze || ORIG_REF_NAME==microblaze} -quiet] -quiet
@@ -74,7 +74,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_
 # IP: bd/microblaze/ip/microblaze_axi_iic_1_0/microblaze_axi_iic_1_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_axi_iic_1_0 || ORIG_REF_NAME==microblaze_axi_iic_1_0} -quiet] -quiet
 
-# IP: ip/clk_wiz_0/clk_wiz_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==clk_wiz_0 || ORIG_REF_NAME==clk_wiz_0} -quiet] -quiet
-
-# XDC: c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/microblaze_ooc.xdc
+# XDC: /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/microblaze_ooc.xdc

@@ -1,5 +1,5 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/constrs_1/new/pinout.xdc rfile:../../../XC7A100T_Microblaze.srcs/constrs_1/new/pinout.xdc id:1} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc rfile:../../../XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/constrs_1/new/pinout.xdc rfile:../../../XC7A100T_Microblaze.srcs/constrs_1/new/pinout.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc rfile:../../../XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc id:2} [current_design]
 set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN E3   IOSTANDARD LVCMOS33 } [get_ports { SYSCLK }];
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
