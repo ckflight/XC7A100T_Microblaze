@@ -426,8 +426,7 @@ begin
 
         -- FSM to write and then read DDR2 memory
     process(s_ui_clk)
-    constant FSM_DELAY_CYCLES : integer := 0; -- adjust based on your clock
-    variable fsm_delay_counter : integer range 0 to 1 := 0;
+    variable toggle_counter : integer range 0 to 1 := 0;
     begin
         if rising_edge(s_ui_clk) then
             if s_ui_clk_sync_rst = '1' or s_init_calib_complete = '0' then
@@ -439,9 +438,8 @@ begin
                 s_app_addr <= (others => '0');
                 s_app_wdf_data <= (others => '0');
                 s_app_wdf_mask <= (others => '0');
-                fsm_delay_counter := 0;
-                s_LED16_B <= '1';
-                s_LED17_B <= '1';
+                toggle_counter := 0;
+
                 data_written <= x"0000000000000000";
                 
             else
@@ -449,11 +447,7 @@ begin
                     when 0 => -- Wait for MIG calibration complete
                         if s_init_calib_complete = '1' then
                             fsm_state <= 1;
-                            fsm_delay_counter := 0;
-                            s_LED16_B <= '0';
-                            s_LED17_B <= '0';
-                            s_LED16_G <= '1';
-                            s_LED17_G <= '1';
+                            
                         end if;
                 
                     when 1 => -- Wait until MIG is ready for write
@@ -467,12 +461,7 @@ begin
                             s_app_wdf_end  <= '1';
                             fsm_state <= 2;
                             
-                            s_LED16_B <= '0';
-                            s_LED17_B <= '0';
-                            s_LED16_G <= '0';
-                            s_LED17_G <= '0';
-                            s_LED16_R <= '1';
-                            s_LED17_R <= '1';
+                            
                             JC7_DEBUG <= '1';
                         end if;
                 
@@ -481,14 +470,10 @@ begin
                         s_app_wdf_wren <= '0';
                         s_app_wdf_end <= '0';
                         fsm_state <= 3;
-                        s_LED16_R <= '0';
-                        s_LED17_R <= '0';
                         JC7_DEBUG <= '0';
                         
                     when 3 => -- Wait a few cycles
                         fsm_state <= 4;
-                        s_LED16_R <= '1';
-                        s_LED17_R <= '1';
                         JC7_DEBUG <= '1';
                 
                     when 4 => -- Start read
@@ -497,35 +482,37 @@ begin
                             s_app_addr <= (others => '0');
                             s_app_en   <= '1';
                             fsm_state  <= 5;
-                            s_LED16_R <= '0';
-                            s_LED17_R <= '0';
                             JC7_DEBUG <= '0';
                         end if;
                 
                     when 5 =>
                         s_app_en <= '0';
                         fsm_state <= 6;
-                        s_LED16_R <= '1';
-                        s_LED17_R <= '1';
                         JC7_DEBUG <= '1';
                 
                     when 6 => -- Wait for read data valid
                         if s_app_rd_data_valid = '1' then
                             data_read <= s_app_rd_data;
                             fsm_state <= 7;
-                            s_LED16_R <= '0';
-                            s_LED17_R <= '0';
                             JC7_DEBUG <= '0';
                         end if;
                     
                     when 7 =>
-                        if fsm_delay_counter < FSM_DELAY_CYCLES then
-                            fsm_delay_counter := fsm_delay_counter + 1;
+                        data_written <= std_logic_vector(unsigned(data_written) + 1);
+                        fsm_state <= 0;
+                        
+                        if toggle_counter = 0 then
+                            s_LED16_B <= '0';
+                            s_LED17_B <= '0';
+                            s_LED16_G <= '0';
+                            s_LED17_G <= '0';
+                            toggle_counter := toggle_counter + 1;
                         else
-                            fsm_delay_counter := 0;
-                            fsm_state <= 0;
-                            data_written <= std_logic_vector(unsigned(data_written) + 1);
-
+                            s_LED16_B <= '1';
+                            s_LED17_B <= '1';
+                            s_LED16_G <= '1';
+                            s_LED17_G <= '1';
+                            toggle_counter := 0;
                         end if;
 
                     when others =>
