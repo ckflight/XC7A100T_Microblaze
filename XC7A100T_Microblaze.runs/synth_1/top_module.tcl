@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/top_module.tcl"
+  variable script "C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/synth_1/top_module.tcl"
   variable category "vivado_synth"
 }
 
@@ -56,13 +56,9 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param chipscope.maxJobs 8
+set_param chipscope.maxJobs 5
 set_param general.usePosixSpawnForFork 1
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -70,71 +66,76 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.cache/wt [current_project]
-set_property parent.project_path /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.cache/wt [current_project]
+set_property parent.project_path C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property ip_output_repo /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.cache/ip [current_project]
+set_property ip_output_repo c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/fifo_module.vhd
-  /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/hdl/microblaze_wrapper.vhd
-  /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/ssd_module.vhd
-  /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/uart_rx_module.vhd
-  /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/uart_tx_module.vhd
-  /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/top_module.vhd
+  C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/fifo_module.vhd
+  C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/hdl/microblaze_wrapper.vhd
+  C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/ssd_module.vhd
+  C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/uart_rx_module.vhd
+  C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/uart_tx_module.vhd
+  C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/new/top_module.vhd
 }
-add_files /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/bd/microblaze/microblaze.bd
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_0/microblaze_microblaze_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_0/microblaze_microblaze_0_0_ooc_debug.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_0/microblaze_microblaze_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_dlmb_v10_0/microblaze_dlmb_v10_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_ilmb_v10_0/microblaze_ilmb_v10_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_dlmb_bram_if_cntlr_0/microblaze_dlmb_bram_if_cntlr_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_ilmb_bram_if_cntlr_0/microblaze_ilmb_bram_if_cntlr_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_lmb_bram_0/microblaze_lmb_bram_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_xbar_0/microblaze_microblaze_0_axi_periph_imp_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_intc_0/microblaze_microblaze_0_axi_intc_0.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_intc_0/microblaze_microblaze_0_axi_intc_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_intc_0/microblaze_microblaze_0_axi_intc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_mdm_1_0/microblaze_mdm_1_0.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_mdm_1_0/microblaze_mdm_1_0_ooc_trace.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_mdm_1_0/microblaze_mdm_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_rst_clk_wiz_1_100M_0/microblaze_rst_clk_wiz_1_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_rst_clk_wiz_1_100M_0/microblaze_rst_clk_wiz_1_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_gpio_0_0/microblaze_axi_gpio_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_gpio_0_0/microblaze_axi_gpio_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_gpio_1_0/microblaze_axi_gpio_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_gpio_1_0/microblaze_axi_gpio_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_gpio_2_0/microblaze_axi_gpio_2_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_gpio_2_0/microblaze_axi_gpio_2_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_quad_spi_0_0/microblaze_axi_quad_spi_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_quad_spi_0_0/microblaze_axi_quad_spi_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_quad_spi_0_0/microblaze_axi_quad_spi_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_quad_spi_0_0/microblaze_axi_quad_spi_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_quad_spi_1_0/microblaze_axi_quad_spi_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_quad_spi_1_0/microblaze_axi_quad_spi_1_0.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_quad_spi_1_0/microblaze_axi_quad_spi_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_quad_spi_1_0/microblaze_axi_quad_spi_1_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_uartlite_0_0/microblaze_axi_uartlite_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_uartlite_0_0/microblaze_axi_uartlite_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_timer_0_0/microblaze_axi_timer_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_iic_0_0/microblaze_axi_iic_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_iic_0_0/microblaze_axi_iic_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_iic_1_0/microblaze_axi_iic_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_iic_1_0/microblaze_axi_iic_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/microblaze_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_0/data/mb_bootloop_le.elf]
+add_files C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/bd/microblaze/microblaze.bd
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_0/microblaze_microblaze_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_0/microblaze_microblaze_0_0_ooc_debug.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_0/microblaze_microblaze_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_dlmb_v10_0/microblaze_dlmb_v10_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_ilmb_v10_0/microblaze_ilmb_v10_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_dlmb_bram_if_cntlr_0/microblaze_dlmb_bram_if_cntlr_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_ilmb_bram_if_cntlr_0/microblaze_ilmb_bram_if_cntlr_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_lmb_bram_0/microblaze_lmb_bram_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_xbar_0/microblaze_microblaze_0_axi_periph_imp_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_intc_0/microblaze_microblaze_0_axi_intc_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_intc_0/microblaze_microblaze_0_axi_intc_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_intc_0/microblaze_microblaze_0_axi_intc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_mdm_1_0/microblaze_mdm_1_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_mdm_1_0/microblaze_mdm_1_0_ooc_trace.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_mdm_1_0/microblaze_mdm_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_rst_clk_wiz_1_100M_0/microblaze_rst_clk_wiz_1_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_rst_clk_wiz_1_100M_0/microblaze_rst_clk_wiz_1_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_gpio_0_0/microblaze_axi_gpio_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_gpio_0_0/microblaze_axi_gpio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_gpio_1_0/microblaze_axi_gpio_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_gpio_1_0/microblaze_axi_gpio_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_gpio_2_0/microblaze_axi_gpio_2_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_gpio_2_0/microblaze_axi_gpio_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_quad_spi_0_0/microblaze_axi_quad_spi_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_quad_spi_0_0/microblaze_axi_quad_spi_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_quad_spi_0_0/microblaze_axi_quad_spi_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_quad_spi_0_0/microblaze_axi_quad_spi_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_quad_spi_1_0/microblaze_axi_quad_spi_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_quad_spi_1_0/microblaze_axi_quad_spi_1_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_quad_spi_1_0/microblaze_axi_quad_spi_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_quad_spi_1_0/microblaze_axi_quad_spi_1_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_uartlite_0_0/microblaze_axi_uartlite_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_uartlite_0_0/microblaze_axi_uartlite_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_timer_0_0/microblaze_axi_timer_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_iic_0_0/microblaze_axi_iic_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_iic_0_0/microblaze_axi_iic_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_iic_1_0/microblaze_axi_iic_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_iic_1_0/microblaze_axi_iic_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/microblaze_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_0/data/mb_bootloop_le.elf]
 
-read_ip -quiet /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/ip/mig_7series_0/mig_7series_0.xci
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc]
+read_ip -quiet c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
+
+read_ip -quiet C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/sources_1/ip/mig_7series_0/mig_7series_0.xci
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -145,17 +146,17 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/constrs_1/new/pinout.xdc
-set_property used_in_implementation false [get_files /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/constrs_1/new/pinout.xdc]
+read_xdc C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/constrs_1/new/pinout.xdc
+set_property used_in_implementation false [get_files C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/constrs_1/new/pinout.xdc]
 
-read_xdc /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc
-set_property used_in_implementation false [get_files /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc]
+read_xdc C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc
+set_property used_in_implementation false [get_files C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/ip/mig_7series_0/mig_7series_0/user_design/constraints/mig_7series_0.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/utils_1/imports/synth_1/top_module.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.srcs/utils_1/imports/synth_1/top_module.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
