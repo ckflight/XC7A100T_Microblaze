@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="microblaze_axi_gpio_3_0_synth_1" LaunchDir="C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_axi_gpio_3_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="microblaze_clk_wiz_1_0_synth_1" LaunchDir="C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_clk_wiz_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="microblaze_dlmb_bram_if_cntlr_0_synth_1" LaunchDir="C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_dlmb_bram_if_cntlr_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="microblaze_microblaze_0_axi_periph_imp_auto_cc_0_synth_1" LaunchDir="C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_auto_cc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_0_synth_1" LaunchDir="C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_auto_ds_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_10_synth_1" LaunchDir="C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_auto_ds_10_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_0_synth_1"/>
+	</Run>
+	<Run Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_11_synth_1" LaunchDir="C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_auto_ds_11_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_0_synth_1"/>
+	</Run>
+	<Run Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_1_synth_1" LaunchDir="C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_auto_ds_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_0_synth_1"/>
+	</Run>
+	<Run Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_2_synth_1" LaunchDir="C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_auto_ds_2_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_0_synth_1"/>
+	</Run>
+	<Run Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_3_synth_1" LaunchDir="C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_auto_ds_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_0_synth_1"/>
+	</Run>
+	<Run Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_4_synth_1" LaunchDir="C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_auto_ds_4_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_0_synth_1"/>
+	</Run>
+	<Run Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_5_synth_1" LaunchDir="C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_auto_ds_5_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_0_synth_1"/>
+	</Run>
+	<Run Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_6_synth_1" LaunchDir="C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_auto_ds_6_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_0_synth_1"/>
+	</Run>
+	<Run Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_7_synth_1" LaunchDir="C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_auto_ds_7_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_0_synth_1"/>
+	</Run>
+	<Run Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_8_synth_1" LaunchDir="C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_auto_ds_8_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_0_synth_1"/>
+	</Run>
+	<Run Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_9_synth_1" LaunchDir="C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_auto_ds_9_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="microblaze_microblaze_0_axi_periph_imp_auto_ds_0_synth_1"/>
+	</Run>
+	<Run Id="microblaze_microblaze_0_axi_periph_imp_auto_pc_0_synth_1" LaunchDir="C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="microblaze_microblaze_0_axi_periph_imp_auto_us_0_synth_1" LaunchDir="C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_auto_us_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="microblaze_microblaze_0_axi_periph_imp_xbar_0_synth_1" LaunchDir="C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="microblaze_mig_7series_0_0_synth_1" LaunchDir="C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_mig_7series_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="microblaze_rst_mig_7series_0_150M_0_synth_1" LaunchDir="C:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_rst_mig_7series_0_150M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+		<Parameter Name="general.shortenLongPath" Val="true" Type="bool"/>
+		<Parameter Name="general.usePosixSpawnForFork" Val="true" Type="bool"/>
+	</Parameters>
+	<ProductInfo Name="vivado"/>
+</Runs>
+

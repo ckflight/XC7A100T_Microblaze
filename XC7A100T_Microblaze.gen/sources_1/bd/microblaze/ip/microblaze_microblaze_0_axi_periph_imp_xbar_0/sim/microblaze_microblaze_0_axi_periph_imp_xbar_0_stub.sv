@@ -72,8 +72,8 @@ module microblaze_microblaze_0_axi_periph_imp_xbar_0 (
   input bit [2 : 0] s_axi_awprot,
   input bit [0 : 0] s_axi_awvalid,
   output bit [0 : 0] s_axi_awready,
-  input bit [31 : 0] s_axi_wdata,
-  input bit [3 : 0] s_axi_wstrb,
+  input bit [63 : 0] s_axi_wdata,
+  input bit [7 : 0] s_axi_wstrb,
   input bit [0 : 0] s_axi_wvalid,
   output bit [0 : 0] s_axi_wready,
   output bit [1 : 0] s_axi_bresp,
@@ -83,29 +83,29 @@ module microblaze_microblaze_0_axi_periph_imp_xbar_0 (
   input bit [2 : 0] s_axi_arprot,
   input bit [0 : 0] s_axi_arvalid,
   output bit [0 : 0] s_axi_arready,
-  output bit [31 : 0] s_axi_rdata,
+  output bit [63 : 0] s_axi_rdata,
   output bit [1 : 0] s_axi_rresp,
   output bit [0 : 0] s_axi_rvalid,
   input bit [0 : 0] s_axi_rready,
-  output bit [351 : 0] m_axi_awaddr,
-  output bit [32 : 0] m_axi_awprot,
-  output bit [10 : 0] m_axi_awvalid,
-  input bit [10 : 0] m_axi_awready,
-  output bit [351 : 0] m_axi_wdata,
-  output bit [43 : 0] m_axi_wstrb,
-  output bit [10 : 0] m_axi_wvalid,
-  input bit [10 : 0] m_axi_wready,
-  input bit [21 : 0] m_axi_bresp,
-  input bit [10 : 0] m_axi_bvalid,
-  output bit [10 : 0] m_axi_bready,
-  output bit [351 : 0] m_axi_araddr,
-  output bit [32 : 0] m_axi_arprot,
-  output bit [10 : 0] m_axi_arvalid,
-  input bit [10 : 0] m_axi_arready,
-  input bit [351 : 0] m_axi_rdata,
-  input bit [21 : 0] m_axi_rresp,
-  input bit [10 : 0] m_axi_rvalid,
-  output bit [10 : 0] m_axi_rready
+  output bit [447 : 0] m_axi_awaddr,
+  output bit [41 : 0] m_axi_awprot,
+  output bit [13 : 0] m_axi_awvalid,
+  input bit [13 : 0] m_axi_awready,
+  output bit [895 : 0] m_axi_wdata,
+  output bit [111 : 0] m_axi_wstrb,
+  output bit [13 : 0] m_axi_wvalid,
+  input bit [13 : 0] m_axi_wready,
+  input bit [27 : 0] m_axi_bresp,
+  input bit [13 : 0] m_axi_bvalid,
+  output bit [13 : 0] m_axi_bready,
+  output bit [447 : 0] m_axi_araddr,
+  output bit [41 : 0] m_axi_arprot,
+  output bit [13 : 0] m_axi_arvalid,
+  input bit [13 : 0] m_axi_arready,
+  input bit [895 : 0] m_axi_rdata,
+  input bit [27 : 0] m_axi_rresp,
+  input bit [13 : 0] m_axi_rvalid,
+  output bit [13 : 0] m_axi_rready
 );
 endmodule
 `endif
@@ -121,8 +121,8 @@ module microblaze_microblaze_0_axi_periph_imp_xbar_0 (aclk,aresetn,s_axi_awaddr,
   input bit [2 : 0] s_axi_awprot;
   input bit [0 : 0] s_axi_awvalid;
   output wire [0 : 0] s_axi_awready;
-  input bit [31 : 0] s_axi_wdata;
-  input bit [3 : 0] s_axi_wstrb;
+  input bit [63 : 0] s_axi_wdata;
+  input bit [7 : 0] s_axi_wstrb;
   input bit [0 : 0] s_axi_wvalid;
   output wire [0 : 0] s_axi_wready;
   output wire [1 : 0] s_axi_bresp;
@@ -132,28 +132,28 @@ module microblaze_microblaze_0_axi_periph_imp_xbar_0 (aclk,aresetn,s_axi_awaddr,
   input bit [2 : 0] s_axi_arprot;
   input bit [0 : 0] s_axi_arvalid;
   output wire [0 : 0] s_axi_arready;
-  output wire [31 : 0] s_axi_rdata;
+  output wire [63 : 0] s_axi_rdata;
   output wire [1 : 0] s_axi_rresp;
   output wire [0 : 0] s_axi_rvalid;
   input bit [0 : 0] s_axi_rready;
-  output wire [351 : 0] m_axi_awaddr;
-  output wire [32 : 0] m_axi_awprot;
-  output wire [10 : 0] m_axi_awvalid;
-  input bit [10 : 0] m_axi_awready;
-  output wire [351 : 0] m_axi_wdata;
-  output wire [43 : 0] m_axi_wstrb;
-  output wire [10 : 0] m_axi_wvalid;
-  input bit [10 : 0] m_axi_wready;
-  input bit [21 : 0] m_axi_bresp;
-  input bit [10 : 0] m_axi_bvalid;
-  output wire [10 : 0] m_axi_bready;
-  output wire [351 : 0] m_axi_araddr;
-  output wire [32 : 0] m_axi_arprot;
-  output wire [10 : 0] m_axi_arvalid;
-  input bit [10 : 0] m_axi_arready;
-  input bit [351 : 0] m_axi_rdata;
-  input bit [21 : 0] m_axi_rresp;
-  input bit [10 : 0] m_axi_rvalid;
-  output wire [10 : 0] m_axi_rready;
+  output wire [447 : 0] m_axi_awaddr;
+  output wire [41 : 0] m_axi_awprot;
+  output wire [13 : 0] m_axi_awvalid;
+  input bit [13 : 0] m_axi_awready;
+  output wire [895 : 0] m_axi_wdata;
+  output wire [111 : 0] m_axi_wstrb;
+  output wire [13 : 0] m_axi_wvalid;
+  input bit [13 : 0] m_axi_wready;
+  input bit [27 : 0] m_axi_bresp;
+  input bit [13 : 0] m_axi_bvalid;
+  output wire [13 : 0] m_axi_bready;
+  output wire [447 : 0] m_axi_araddr;
+  output wire [41 : 0] m_axi_arprot;
+  output wire [13 : 0] m_axi_arvalid;
+  input bit [13 : 0] m_axi_arready;
+  input bit [895 : 0] m_axi_rdata;
+  input bit [27 : 0] m_axi_rresp;
+  input bit [13 : 0] m_axi_rvalid;
+  output wire [13 : 0] m_axi_rready;
 endmodule
 `endif

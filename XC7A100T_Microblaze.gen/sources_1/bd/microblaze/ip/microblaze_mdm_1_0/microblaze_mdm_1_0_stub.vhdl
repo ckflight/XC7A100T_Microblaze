@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
 -- Date        : Thu Jul 31 21:13:25 2025
 -- Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
--- Command     : write_vhdl -force -mode synth_stub
---               /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_mdm_1_0/microblaze_mdm_1_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top microblaze_mdm_1_0 -prefix
+--               microblaze_mdm_1_0_ microblaze_mdm_1_0_stub.vhdl
 -- Design      : microblaze_mdm_1_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1

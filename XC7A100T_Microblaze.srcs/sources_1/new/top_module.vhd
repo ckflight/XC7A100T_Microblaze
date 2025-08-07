@@ -65,52 +65,41 @@ end top_module;
 
 architecture Behavioral of top_module is
 
-    component clk_wiz_0
-    port (
-        clk_out1 : out std_logic;  -- 200 MHz
-        clk_out2 : out std_logic;  -- 100 MHz (system clock)
-        reset    : in  std_logic;
-        locked   : out std_logic;
-        clk_in1  : in  std_logic   -- 100 MHz from E3 pin
-    );
-    end component;
-
     component microblaze_wrapper
     port (
-        DDR2_0_addr             : out STD_LOGIC_VECTOR ( 12 downto 0 );
-        DDR2_0_ba               : out STD_LOGIC_VECTOR ( 2 downto 0 );
-        DDR2_0_cas_n            : out STD_LOGIC;
-        DDR2_0_ck_n             : out STD_LOGIC_VECTOR ( 0 to 0 );
-        DDR2_0_ck_p             : out STD_LOGIC_VECTOR ( 0 to 0 );
-        DDR2_0_cke              : out STD_LOGIC_VECTOR ( 0 to 0 );
-        DDR2_0_cs_n             : out STD_LOGIC_VECTOR ( 0 to 0 );
-        DDR2_0_dm               : out STD_LOGIC_VECTOR ( 1 downto 0 );
-        DDR2_0_dq               : inout STD_LOGIC_VECTOR ( 15 downto 0 );
-        DDR2_0_dqs_n            : inout STD_LOGIC_VECTOR ( 1 downto 0 );
-        DDR2_0_dqs_p            : inout STD_LOGIC_VECTOR ( 1 downto 0 );
-        DDR2_0_odt              : out STD_LOGIC_VECTOR ( 0 to 0 );
-        DDR2_0_ras_n            : out STD_LOGIC;
-        DDR2_0_we_n             : out STD_LOGIC;
-        init_calib_complete_0   : out STD_LOGIC;
-        clk_100MHz              : in STD_LOGIC;
-        gpio_rtl_0_tri_o        : out STD_LOGIC_VECTOR ( 15 downto 0 );
-        gpio_rtl_1_tri_o        : out STD_LOGIC_VECTOR ( 1 downto 0 );
-        gpio_rtl_2_tri_i        : in STD_LOGIC_VECTOR ( 1 downto 0 );
-        iic_rtl_0_scl_io        : inout STD_LOGIC;
-        iic_rtl_0_sda_io        : inout STD_LOGIC;
-        iic_rtl_1_scl_io        : inout STD_LOGIC;
-        iic_rtl_1_sda_io        : inout STD_LOGIC;
-        reset_rtl_0             : in STD_LOGIC;
-        spi0_cs                 : out STD_LOGIC_VECTOR ( 0 to 0 );
-        spi0_miso               : in STD_LOGIC;
-        spi0_mosi               : out STD_LOGIC;
-        spi0_sck                : out STD_LOGIC;
-        spi1_cs                 : out STD_LOGIC_VECTOR ( 0 to 0 );
-        spi1_miso               : in STD_LOGIC;
-        spi1_mosi               : out STD_LOGIC;
-        spi1_sck                : out STD_LOGIC;
-        uart_rtl_0_rxd          : in STD_LOGIC;
-        uart_rtl_0_txd          : out STD_LOGIC
+        DDR2_0_addr : out STD_LOGIC_VECTOR ( 12 downto 0 );
+        DDR2_0_ba : out STD_LOGIC_VECTOR ( 2 downto 0 );
+        DDR2_0_cas_n : out STD_LOGIC;
+        DDR2_0_ck_n : out STD_LOGIC_VECTOR ( 0 to 0 );
+        DDR2_0_ck_p : out STD_LOGIC_VECTOR ( 0 to 0 );
+        DDR2_0_cke : out STD_LOGIC_VECTOR ( 0 to 0 );
+        DDR2_0_cs_n : out STD_LOGIC_VECTOR ( 0 to 0 );
+        DDR2_0_dm : out STD_LOGIC_VECTOR ( 1 downto 0 );
+        DDR2_0_dq : inout STD_LOGIC_VECTOR ( 15 downto 0 );
+        DDR2_0_dqs_n : inout STD_LOGIC_VECTOR ( 1 downto 0 );
+        DDR2_0_dqs_p : inout STD_LOGIC_VECTOR ( 1 downto 0 );
+        DDR2_0_odt : out STD_LOGIC_VECTOR ( 0 to 0 );
+        DDR2_0_ras_n : out STD_LOGIC;
+        DDR2_0_we_n : out STD_LOGIC;
+        clk_100MHz : in STD_LOGIC;
+        gpio_rtl_0_tri_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
+        gpio_rtl_1_tri_o : out STD_LOGIC_VECTOR ( 1 downto 0 );
+        gpio_rtl_2_tri_i : in STD_LOGIC_VECTOR ( 1 downto 0 );
+        iic_rtl_0_scl_io : inout STD_LOGIC;
+        iic_rtl_0_sda_io : inout STD_LOGIC;
+        iic_rtl_1_scl_io : inout STD_LOGIC;
+        iic_rtl_1_sda_io : inout STD_LOGIC;
+        reset_rtl_0 : in STD_LOGIC;
+        spi0_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
+        spi0_miso : in STD_LOGIC;
+        spi0_mosi : out STD_LOGIC;
+        spi0_sck : out STD_LOGIC;
+        spi1_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
+        spi1_miso : in STD_LOGIC;
+        spi1_mosi : out STD_LOGIC;
+        spi1_sck : out STD_LOGIC;
+        uart_rtl_0_rxd : in STD_LOGIC;
+        uart_rtl_0_txd : out STD_LOGIC
     );
     end component;
     
@@ -152,10 +141,6 @@ architecture Behavioral of top_module is
         SEG         : out std_logic_vector(7 downto 0)
     );
     END COMPONENT;
-    
-    signal s_clk_200mhz         : std_logic;
-    signal s_clk_100mhz         : std_logic;
-    signal s_mmcm_locked          : std_logic;
 
     signal s_uart_rx            : std_logic;
     signal s_uart_tx            : std_logic;
@@ -181,9 +166,7 @@ architecture Behavioral of top_module is
     signal s_spi1_miso          : std_logic;
     signal s_spi1_clk           : std_logic;
     signal s_spi1_cs            : std_logic_vector(0 to 0);
-   
-    signal s_init_calib_complete         : std_logic;
-    
+      
     signal s_LED16_B        : std_logic := '0';
     signal s_LED16_G        : std_logic := '0';
     signal s_LED16_R        : std_logic := '0';
@@ -191,6 +174,7 @@ architecture Behavioral of top_module is
     signal s_LED17_B        : std_logic := '0';
     signal s_LED17_G        : std_logic := '0';
     signal s_LED17_R        : std_logic := '0';
+
     
 begin 
     
@@ -215,16 +199,7 @@ begin
     LED17_G <= s_LED17_G;
     LED17_R <= s_LED17_R;
     
-    
-    clk_mmcm_inst : clk_wiz_0
-    port map (
-        clk_out1                => s_clk_200mhz,        -- Output for MIG
-        clk_out2                => s_clk_100mhz,        -- New system clock
-        reset                   => RESET,               -- Active high reset
-        locked                  => s_mmcm_locked,
-        clk_in1                 => SYSCLK               -- Input from E3 pin
-    );
-    
+  
     microblaze: microblaze_wrapper
     port map (
         DDR2_0_addr             => ddr2_addr,
@@ -241,8 +216,7 @@ begin
         DDR2_0_odt              => ddr2_odt,
         DDR2_0_ras_n            => ddr2_ras_n,
         DDR2_0_we_n             => ddr2_we_n,
-        init_calib_complete_0   => s_init_calib_complete,   
-        clk_100MHz              => s_clk_100mhz,
+        clk_100MHz              => SYSCLK,
         gpio_rtl_0_tri_o        => LED,
         gpio_rtl_1_tri_o        => JD_GPIO1_OUT, 
         gpio_rtl_2_tri_i        => JD_GPIO2_IN,
@@ -260,12 +234,13 @@ begin
         spi1_mosi               => s_spi1_mosi,
         spi1_sck                => s_spi1_clk,
         uart_rtl_0_rxd          => s_uart_rx,
-        uart_rtl_0_txd          => s_uart_tx 
+        uart_rtl_0_txd          => s_uart_tx
+         
     );
 
     uart_tx: uart_tx_module
     port map(
-        SYSCLK      => s_clk_100mhz,
+        SYSCLK      => SYSCLK,
         RESET       => RESET,
         UART_TX     => s_uart_rx,        
         DATA        => s_uart_tx_data,
@@ -276,7 +251,7 @@ begin
 
     uart_rx: uart_rx_module
     port map(
-        SYSCLK          => s_clk_100mhz,
+        SYSCLK          => SYSCLK,
         RESET           => RESET,  
         UART_RX         => s_uart_tx,     
         FIFO_OUT        => s_fifo_out,
@@ -286,7 +261,7 @@ begin
     
     ssd : ssd_module
     PORT MAP(
-        SYSCLK  => s_clk_100mhz,
+        SYSCLK  => SYSCLK,
         NUMBER1 => unsigned(s_fifo_out(3 downto 0)),
         NUMBER2 => unsigned(s_fifo_out(7 downto 4)),
         NUMBER3 => X"0",
@@ -299,12 +274,12 @@ begin
         SEG     => SEG        
     );
 
-    process(s_clk_100mhz)
+    process(SYSCLK)
     variable new_data : std_logic := '0';
     type states is (st1, st2, st3, st4);
     variable state : states := st1;
     begin
-        if rising_edge(s_clk_100mhz) then
+        if rising_edge(SYSCLK) then
             case state is
             
             when st1 =>

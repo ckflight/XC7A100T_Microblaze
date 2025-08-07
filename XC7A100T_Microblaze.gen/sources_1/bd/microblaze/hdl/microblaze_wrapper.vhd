@@ -2,7 +2,7 @@
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
---Date        : Thu Aug  7 09:03:34 2025
+--Date        : Thu Aug  7 13:00:06 2025
 --Host        : TPC-0073 running 64-bit major release  (build 9200)
 --Command     : generate_target microblaze_wrapper.bd
 --Design      : microblaze_wrapper
@@ -36,7 +36,6 @@ entity microblaze_wrapper is
     iic_rtl_0_sda_io : inout STD_LOGIC;
     iic_rtl_1_scl_io : inout STD_LOGIC;
     iic_rtl_1_sda_io : inout STD_LOGIC;
-    init_calib_complete_0 : out STD_LOGIC;
     reset_rtl_0 : in STD_LOGIC;
     spi0_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
     spi0_miso : in STD_LOGIC;
@@ -71,17 +70,6 @@ architecture STRUCTURE of microblaze_wrapper is
     iic_rtl_1_sda_i : in STD_LOGIC;
     iic_rtl_1_sda_o : out STD_LOGIC;
     iic_rtl_1_sda_t : out STD_LOGIC;
-    reset_rtl_0 : in STD_LOGIC;
-    spi1_mosi : out STD_LOGIC;
-    spi1_miso : in STD_LOGIC;
-    spi1_sck : out STD_LOGIC;
-    spi1_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
-    spi0_mosi : out STD_LOGIC;
-    spi0_miso : in STD_LOGIC;
-    spi0_sck : out STD_LOGIC;
-    spi0_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
-    clk_100MHz : in STD_LOGIC;
-    init_calib_complete_0 : out STD_LOGIC;
     DDR2_0_dq : inout STD_LOGIC_VECTOR ( 15 downto 0 );
     DDR2_0_dqs_p : inout STD_LOGIC_VECTOR ( 1 downto 0 );
     DDR2_0_dqs_n : inout STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -95,7 +83,17 @@ architecture STRUCTURE of microblaze_wrapper is
     DDR2_0_cke : out STD_LOGIC_VECTOR ( 0 to 0 );
     DDR2_0_cs_n : out STD_LOGIC_VECTOR ( 0 to 0 );
     DDR2_0_dm : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    DDR2_0_odt : out STD_LOGIC_VECTOR ( 0 to 0 )
+    DDR2_0_odt : out STD_LOGIC_VECTOR ( 0 to 0 );
+    reset_rtl_0 : in STD_LOGIC;
+    spi1_mosi : out STD_LOGIC;
+    spi1_miso : in STD_LOGIC;
+    spi1_sck : out STD_LOGIC;
+    spi1_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
+    spi0_mosi : out STD_LOGIC;
+    spi0_miso : in STD_LOGIC;
+    spi0_sck : out STD_LOGIC;
+    spi0_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
+    clk_100MHz : in STD_LOGIC
   );
   end component microblaze;
   component IOBUF is
@@ -179,7 +177,6 @@ microblaze_i: component microblaze
       iic_rtl_1_sda_i => iic_rtl_1_sda_i,
       iic_rtl_1_sda_o => iic_rtl_1_sda_o,
       iic_rtl_1_sda_t => iic_rtl_1_sda_t,
-      init_calib_complete_0 => init_calib_complete_0,
       reset_rtl_0 => reset_rtl_0,
       spi0_cs(0) => spi0_cs(0),
       spi0_miso => spi0_miso,

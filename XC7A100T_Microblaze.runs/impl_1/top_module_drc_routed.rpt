@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date         : Wed Aug  6 23:41:43 2025
-| Host         : ck-MS-7E62 running 64-bit Ubuntu 25.04
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Thu Aug  7 13:09:56 2025
+| Host         : TPC-0073 running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_module_drc_routed.rpt -pb top_module_drc_routed.pb -rpx top_module_drc_routed.rpx
 | Design       : top_module
 | Device       : xc7a100tcsg324-1
@@ -72,27 +72,27 @@ Related violations: <none>
 
 REQP-1709#1 Warning
 Clock output buffering  
-PLLE2_ADV connectivity violation. The signal u_mig_7series_0_mig/u_mig_7series_0_mig/u_ddr2_infrastructure/pll_clk3_out on the u_mig_7series_0_mig/u_mig_7series_0_mig/u_ddr2_infrastructure/plle2_i/CLKOUT3 pin of u_mig_7series_0_mig/u_mig_7series_0_mig/u_ddr2_infrastructure/plle2_i does not drive the same kind of BUFFER load as the other CLKOUT pins. Routing from the different buffer types will not be phase aligned.
+PLLE2_ADV connectivity violation. The signal microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/u_ddr2_infrastructure/pll_clk3_out on the microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/u_ddr2_infrastructure/plle2_i/CLKOUT3 pin of microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/u_ddr2_infrastructure/plle2_i does not drive the same kind of BUFFER load as the other CLKOUT pins. Routing from the different buffer types will not be phase aligned.
 Related violations: <none>
 
 RTSTAT-10#1 Warning
 No routable loads  
-56 net(s) have no routable loads. The problem bus(es) and/or net(s) are microblaze/microblaze_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/data_valid,
-microblaze/microblaze_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/overflow,
+64 net(s) have no routable loads. The problem bus(es) and/or net(s) are microblaze/microblaze_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/data_valid,
 microblaze/microblaze_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/data_valid,
-microblaze/microblaze_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/overflow,
 microblaze/microblaze_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/INTERRUPT_CONTROL_I/ip2intc_irpt,
 microblaze/microblaze_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/io0_t,
 microblaze/microblaze_i/axi_quad_spi_0/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/io1_t,
 microblaze/microblaze_i/axi_quad_spi_1/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/data_valid,
-microblaze/microblaze_i/axi_quad_spi_1/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/overflow,
 microblaze/microblaze_i/axi_quad_spi_1/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/data_valid,
-microblaze/microblaze_i/axi_quad_spi_1/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/overflow,
 microblaze/microblaze_i/axi_quad_spi_1/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/INTERRUPT_CONTROL_I/ip2intc_irpt,
 microblaze/microblaze_i/axi_quad_spi_1/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/io0_t,
 microblaze/microblaze_i/axi_quad_spi_1/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/io1_t,
-microblaze/microblaze_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Using_Ext_Databus.DAXI_Interface_I1/M_AXI_DP_WSTRB[3:0]
- (the first 15 of 37 listed nets/buses).
+microblaze/microblaze_i/microblaze_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_lite_downsizer.lite_downsizer_inst/m_axi_araddr[0],
+microblaze/microblaze_i/microblaze_0_axi_periph/m05_couplers/auto_ds/inst/gen_downsizer.gen_lite_downsizer.lite_downsizer_inst/m_axi_araddr[1],
+microblaze/microblaze_i/microblaze_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_lite_downsizer.lite_downsizer_inst/m_axi_araddr[0],
+microblaze/microblaze_i/microblaze_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_lite_downsizer.lite_downsizer_inst/m_axi_araddr[1],
+microblaze/microblaze_i/microblaze_0_axi_periph/m06_couplers/auto_ds/inst/gen_downsizer.gen_lite_downsizer.lite_downsizer_inst/m_axi_wstrb[3:0]
+ (the first 15 of 42 listed).
 Related violations: <none>
 
 

@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version              : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
-| Date                      : Wed Aug  6 23:41:26 2025
-| Host                      : ck-MS-7E62 running 64-bit Ubuntu 25.04
+| Tool Version              : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date                      : Thu Aug  7 13:08:51 2025
+| Host                      : TPC-0073 running 64-bit major release  (build 9200)
 | Command                   : report_io -file top_module_io_placed.rpt
 | Design                    : top_module
 | Device                    : xc7a100t
@@ -113,7 +113,7 @@ Table of Contents
 | E4         |                 |            | GND                          | GND         |                |         |            |      |                     |                      |     0.0 |            |           |          |          |                  |              |                   |              |
 | E5         |                 | High Range | IO_L5N_T0_AD13N_35           | User IO     |                |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
 | E6         |                 | High Range | IO_L5P_T0_AD13P_35           | User IO     |                |      35 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
-| E7         | JC7_DEBUG       | High Range | IO_L6P_T0_35                 | OUTPUT      | LVCMOS33       |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
+| E7         | JC7_DEBUG       | High Range | IO_L6P_T0_35                 | TRISTATE    | LVCMOS33       |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |          | NONE             |              |                   |              |
 | E8         |                 | Dedicated  | VCCBATT_0                    | Config      |                |       0 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
 | E9         |                 | Dedicated  | CCLK_0                       | Config      |                |       0 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |
 | E10        |                 | Dedicated  | TCK_0                        | Config      |                |       0 |            |      |                     |                      |         |            |           |          |          |                  |              |                   |              |

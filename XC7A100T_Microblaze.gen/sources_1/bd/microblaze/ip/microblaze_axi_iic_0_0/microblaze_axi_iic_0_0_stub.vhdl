@@ -2,10 +2,10 @@
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
--- Date        : Fri Aug  1 10:44:38 2025
+-- Date        : Fri Aug  1 10:44:37 2025
 -- Host        : TPC-0073 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_axi_iic_0_0/microblaze_axi_iic_0_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top microblaze_axi_iic_0_0 -prefix
+--               microblaze_axi_iic_0_0_ microblaze_axi_iic_0_0_stub.vhdl
 -- Design      : microblaze_axi_iic_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1
