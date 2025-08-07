@@ -77,68 +77,41 @@ architecture Behavioral of top_module is
 
     component microblaze_wrapper
     port (
-        clk_100MHz : in STD_LOGIC;
-        gpio_rtl_0_tri_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
-        gpio_rtl_1_tri_o : out STD_LOGIC_VECTOR ( 1 downto 0 );
-        gpio_rtl_2_tri_i : in STD_LOGIC_VECTOR ( 1 downto 0 );
-        iic_rtl_0_scl_io : inout STD_LOGIC;
-        iic_rtl_0_sda_io : inout STD_LOGIC;
-        iic_rtl_1_scl_io : inout STD_LOGIC;
-        iic_rtl_1_sda_io : inout STD_LOGIC;
-        reset_rtl_0 : in STD_LOGIC;
-        spi0_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
-        spi0_miso : in STD_LOGIC;
-        spi0_mosi : out STD_LOGIC;
-        spi0_sck : out STD_LOGIC;
-        spi1_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
-        spi1_miso : in STD_LOGIC;
-        spi1_mosi : out STD_LOGIC;
-        spi1_sck : out STD_LOGIC;
-        uart_rtl_0_rxd : in STD_LOGIC;
-        uart_rtl_0_txd : out STD_LOGIC
+        DDR2_0_addr             : out STD_LOGIC_VECTOR ( 12 downto 0 );
+        DDR2_0_ba               : out STD_LOGIC_VECTOR ( 2 downto 0 );
+        DDR2_0_cas_n            : out STD_LOGIC;
+        DDR2_0_ck_n             : out STD_LOGIC_VECTOR ( 0 to 0 );
+        DDR2_0_ck_p             : out STD_LOGIC_VECTOR ( 0 to 0 );
+        DDR2_0_cke              : out STD_LOGIC_VECTOR ( 0 to 0 );
+        DDR2_0_cs_n             : out STD_LOGIC_VECTOR ( 0 to 0 );
+        DDR2_0_dm               : out STD_LOGIC_VECTOR ( 1 downto 0 );
+        DDR2_0_dq               : inout STD_LOGIC_VECTOR ( 15 downto 0 );
+        DDR2_0_dqs_n            : inout STD_LOGIC_VECTOR ( 1 downto 0 );
+        DDR2_0_dqs_p            : inout STD_LOGIC_VECTOR ( 1 downto 0 );
+        DDR2_0_odt              : out STD_LOGIC_VECTOR ( 0 to 0 );
+        DDR2_0_ras_n            : out STD_LOGIC;
+        DDR2_0_we_n             : out STD_LOGIC;
+        init_calib_complete_0   : out STD_LOGIC;
+        clk_100MHz              : in STD_LOGIC;
+        gpio_rtl_0_tri_o        : out STD_LOGIC_VECTOR ( 15 downto 0 );
+        gpio_rtl_1_tri_o        : out STD_LOGIC_VECTOR ( 1 downto 0 );
+        gpio_rtl_2_tri_i        : in STD_LOGIC_VECTOR ( 1 downto 0 );
+        iic_rtl_0_scl_io        : inout STD_LOGIC;
+        iic_rtl_0_sda_io        : inout STD_LOGIC;
+        iic_rtl_1_scl_io        : inout STD_LOGIC;
+        iic_rtl_1_sda_io        : inout STD_LOGIC;
+        reset_rtl_0             : in STD_LOGIC;
+        spi0_cs                 : out STD_LOGIC_VECTOR ( 0 to 0 );
+        spi0_miso               : in STD_LOGIC;
+        spi0_mosi               : out STD_LOGIC;
+        spi0_sck                : out STD_LOGIC;
+        spi1_cs                 : out STD_LOGIC_VECTOR ( 0 to 0 );
+        spi1_miso               : in STD_LOGIC;
+        spi1_mosi               : out STD_LOGIC;
+        spi1_sck                : out STD_LOGIC;
+        uart_rtl_0_rxd          : in STD_LOGIC;
+        uart_rtl_0_txd          : out STD_LOGIC
     );
-    end component;
-    
-    component mig_7series_0
-      port(
-        ddr2_dq                 : inout std_logic_vector(15 downto 0);
-        ddr2_dqs_p              : inout std_logic_vector(1 downto 0);
-        ddr2_dqs_n              : inout std_logic_vector(1 downto 0);
-        ddr2_addr               : out   std_logic_vector(12 downto 0);
-        ddr2_ba                 : out   std_logic_vector(2 downto 0);
-        ddr2_ras_n              : out   std_logic;
-        ddr2_cas_n              : out   std_logic;
-        ddr2_we_n               : out   std_logic;
-        ddr2_ck_p               : out   std_logic_vector(0 downto 0);
-        ddr2_ck_n               : out   std_logic_vector(0 downto 0);
-        ddr2_cke                : out   std_logic_vector(0 downto 0);
-        ddr2_cs_n               : out   std_logic_vector(0 downto 0);
-        ddr2_dm                 : out   std_logic_vector(1 downto 0);
-        ddr2_odt                : out   std_logic_vector(0 downto 0);
-        app_addr                : in    std_logic_vector(26 downto 0);
-        app_cmd                 : in    std_logic_vector(2 downto 0);
-        app_en                  : in    std_logic;
-        app_wdf_data            : in    std_logic_vector(63 downto 0);
-        app_wdf_end             : in    std_logic;
-        app_wdf_mask            : in    std_logic_vector(7 downto 0);
-        app_wdf_wren            : in    std_logic;
-        app_rd_data             : out   std_logic_vector(63 downto 0);
-        app_rd_data_end         : out   std_logic;
-        app_rd_data_valid       : out   std_logic;
-        app_rdy                 : out   std_logic;
-        app_wdf_rdy             : out   std_logic;
-        app_sr_req              : in    std_logic;
-        app_ref_req             : in    std_logic;
-        app_zq_req              : in    std_logic;
-        app_sr_active           : out   std_logic;
-        app_ref_ack             : out   std_logic;
-        app_zq_ack              : out   std_logic;
-        ui_clk                  : out   std_logic;
-        ui_clk_sync_rst         : out   std_logic;
-        init_calib_complete     : out   std_logic;
-        sys_clk_i               : in    std_logic;
-        sys_rst                 : in    std_logic
-        );
     end component;
     
     component uart_tx_module
@@ -209,36 +182,7 @@ architecture Behavioral of top_module is
     signal s_spi1_clk           : std_logic;
     signal s_spi1_cs            : std_logic_vector(0 to 0);
    
-   
-    -- DDR2 interface signals
-
-    signal s_app_addr                    : std_logic_vector(26 downto 0);
-    signal s_app_cmd                     : std_logic_vector(2 downto 0);
-    signal s_app_en                      : std_logic;
-    signal s_app_wdf_data                : std_logic_vector(63 downto 0);
-    signal s_app_wdf_end                 : std_logic;
-    signal s_app_wdf_mask                : std_logic_vector(7 downto 0);
-    signal s_app_wdf_wren                : std_logic;
-    signal s_app_rd_data                 : std_logic_vector(63 downto 0);
-    signal s_app_rd_data_end             : std_logic;
-    signal s_app_rd_data_valid           : std_logic;
-    signal s_app_rdy                     : std_logic;
-    signal s_app_wdf_rdy                 : std_logic;
-    signal s_app_sr_req                  : std_logic;
-    signal s_app_ref_req                 : std_logic;
-    signal s_app_zq_req                  : std_logic;
-    signal s_app_sr_active               : std_logic;
-    signal s_app_ref_ack                 : std_logic;
-    signal s_app_zq_ack                  : std_logic;
-    signal s_ui_clk                      : std_logic;
-    signal s_ui_clk_sync_rst             : std_logic;
     signal s_init_calib_complete         : std_logic;
-
-    
-    -- Signals for control
-    signal fsm_state         : integer range 0 to 7 := 0;
-    signal data_written      : std_logic_vector(63 downto 0) := x"0000000000000000";
-    signal data_read         : std_logic_vector(63 downto 0);
     
     signal s_LED16_B        : std_logic := '0';
     signal s_LED16_G        : std_logic := '0';
@@ -262,11 +206,7 @@ begin
     s_spi0_miso          <= SPI0_MISO;
     SPI0_CLK             <= s_spi0_clk;
     SPI0_CS              <= s_spi0_cs;
-    
-    s_app_sr_req  <= '0';
-    s_app_ref_req <= '0';
-    s_app_zq_req  <= '0';
-    
+
     LED16_B <= s_LED16_B;
     LED16_G <= s_LED16_G;
     LED16_R <= s_LED16_R;
@@ -286,7 +226,22 @@ begin
     );
     
     microblaze: microblaze_wrapper
-    port map (      
+    port map (
+        DDR2_0_addr             => ddr2_addr,
+        DDR2_0_ba               => ddr2_ba,
+        DDR2_0_cas_n            => ddr2_cas_n,
+        DDR2_0_ck_n             => ddr2_ck_n,
+        DDR2_0_ck_p             => ddr2_ck_p,
+        DDR2_0_cke              => ddr2_cke,            
+        DDR2_0_cs_n             => ddr2_cs_n,
+        DDR2_0_dm               => ddr2_dm,
+        DDR2_0_dq               => ddr2_dq,
+        DDR2_0_dqs_n            => ddr2_dqs_n,
+        DDR2_0_dqs_p            => ddr2_dqs_p,
+        DDR2_0_odt              => ddr2_odt,
+        DDR2_0_ras_n            => ddr2_ras_n,
+        DDR2_0_we_n             => ddr2_we_n,
+        init_calib_complete_0   => s_init_calib_complete,   
         clk_100MHz              => s_clk_100mhz,
         gpio_rtl_0_tri_o        => LED,
         gpio_rtl_1_tri_o        => JD_GPIO1_OUT, 
@@ -307,50 +262,7 @@ begin
         uart_rtl_0_rxd          => s_uart_rx,
         uart_rtl_0_txd          => s_uart_tx 
     );
-    
-    u_mig_7series_0_mig : mig_7series_0
-    port map (
-        ddr2_addr                      => ddr2_addr,
-        ddr2_ba                        => ddr2_ba,
-        ddr2_cas_n                     => ddr2_cas_n,
-        ddr2_ck_n                      => ddr2_ck_n,
-        ddr2_ck_p                      => ddr2_ck_p,
-        ddr2_cke                       => ddr2_cke,
-        ddr2_ras_n                     => ddr2_ras_n,
-        ddr2_we_n                      => ddr2_we_n,
-        ddr2_dq                        => ddr2_dq,
-        ddr2_dqs_n                     => ddr2_dqs_n,
-        ddr2_dqs_p                     => ddr2_dqs_p,
-        init_calib_complete            => s_init_calib_complete,
-        ddr2_cs_n                      => ddr2_cs_n,
-        ddr2_dm                        => ddr2_dm,
-        ddr2_odt                       => ddr2_odt,
-        -- Application interface ports
-        app_addr                       => s_app_addr,
-        app_cmd                        => s_app_cmd,
-        app_en                         => s_app_en,
-        app_wdf_data                   => s_app_wdf_data,
-        app_wdf_end                    => s_app_wdf_end,
-        app_wdf_wren                   => s_app_wdf_wren,
-        app_rd_data                    => s_app_rd_data,
-        app_rd_data_end                => s_app_rd_data_end,
-        app_rd_data_valid              => s_app_rd_data_valid,
-        app_rdy                        => s_app_rdy,
-        app_wdf_rdy                    => s_app_wdf_rdy,
-        app_sr_req                     => s_app_sr_req,
-        app_ref_req                    => s_app_ref_req,
-        app_zq_req                     => s_app_zq_req,
-        app_sr_active                  => s_app_sr_active,
-        app_ref_ack                    => s_app_ref_ack,
-        app_zq_ack                     => s_app_zq_ack,
-        ui_clk                         => s_ui_clk,
-        ui_clk_sync_rst                => s_ui_clk_sync_rst,
-        app_wdf_mask                   => s_app_wdf_mask,
-      -- System Clock Ports
-        sys_clk_i                      => s_clk_200mhz,
-        sys_rst                        => reset_n
-    );
-    
+
     uart_tx: uart_tx_module
     port map(
         SYSCLK      => s_clk_100mhz,
@@ -375,14 +287,14 @@ begin
     ssd : ssd_module
     PORT MAP(
         SYSCLK  => s_clk_100mhz,
-        NUMBER1 => unsigned(data_read(3 downto 0)),
-        NUMBER2 => unsigned(data_read(7 downto 4)),
-        NUMBER3 => unsigned(data_read(11 downto 8)),
-        NUMBER4 => unsigned(data_read(15 downto 12)),
-        NUMBER5 => unsigned(data_read(19 downto 16)),
-        NUMBER6 => unsigned(data_read(23 downto 20)),
-        NUMBER7 => unsigned(data_read(27 downto 24)),
-        NUMBER8 => unsigned(data_read(31 downto 28)),
+        NUMBER1 => unsigned(s_fifo_out(3 downto 0)),
+        NUMBER2 => unsigned(s_fifo_out(7 downto 4)),
+        NUMBER3 => X"0",
+        NUMBER4 => X"0",
+        NUMBER5 => X"0",
+        NUMBER6 => X"0",
+        NUMBER7 => X"0",
+        NUMBER8 => X"0",
         AN      => AN,
         SEG     => SEG        
     );
@@ -424,171 +336,6 @@ begin
     
     end process;
 
-        -- FSM to write and then read DDR2 memory
-    process(s_ui_clk)
-    variable toggle_counter : integer range 0 to 1 := 0;
-    begin
-        if rising_edge(s_ui_clk) then
-            if s_ui_clk_sync_rst = '1' or s_init_calib_complete = '0' then
-                fsm_state <= 0;
-                s_app_en <= '0';
-                s_app_wdf_wren <= '0';
-                s_app_wdf_end <= '0';
-                s_app_cmd <= "000";
-                s_app_addr <= (others => '0');
-                s_app_wdf_data <= (others => '0');
-                s_app_wdf_mask <= (others => '0');
-                toggle_counter := 0;
-
-                data_written <= x"0000000000000000";
-                
-            else
-                case fsm_state is
-                    when 0 => -- Wait for MIG calibration complete
-                        if s_init_calib_complete = '1' then
-                            fsm_state <= 1;
-                            
-                        end if;
-                
-                    when 1 => -- Wait until MIG is ready for write
-                        if s_app_rdy = '1' and s_app_wdf_rdy = '1' then
-                            s_app_addr <= (others => '0'); -- Write base addr
-                            s_app_cmd  <= "000"; -- Write command
-                            s_app_en   <= '1';
-                            s_app_wdf_data <= data_written;
-                            s_app_wdf_mask <= (others => '0');
-                            s_app_wdf_wren <= '1';
-                            s_app_wdf_end  <= '1';
-                            fsm_state <= 2;
-                            
-                            
-                            JC7_DEBUG <= '1';
-                        end if;
-                
-                    when 2 => -- Deassert control signals after write
-                        s_app_en <= '0';
-                        s_app_wdf_wren <= '0';
-                        s_app_wdf_end <= '0';
-                        fsm_state <= 3;
-                        JC7_DEBUG <= '0';
-                        
-                    when 3 => -- Wait a few cycles
-                        fsm_state <= 4;
-                        JC7_DEBUG <= '1';
-                
-                    when 4 => -- Start read
-                        if s_app_rdy = '1' then
-                            s_app_cmd  <= "001"; -- Read command
-                            s_app_addr <= (others => '0');
-                            s_app_en   <= '1';
-                            fsm_state  <= 5;
-                            JC7_DEBUG <= '0';
-                        end if;
-                
-                    when 5 =>
-                        s_app_en <= '0';
-                        fsm_state <= 6;
-                        JC7_DEBUG <= '1';
-                
-                    when 6 => -- Wait for read data valid
-                        if s_app_rd_data_valid = '1' then
-                            data_read <= s_app_rd_data;
-                            fsm_state <= 7;
-                            JC7_DEBUG <= '0';
-                        end if;
-                    
-                    when 7 =>
-                        data_written <= std_logic_vector(unsigned(data_written) + 1);
-                        fsm_state <= 0;
-                        
-                        if toggle_counter = 0 then
-                            s_LED16_B <= '0';
-                            s_LED17_B <= '0';
-                            s_LED16_G <= '0';
-                            s_LED17_G <= '0';
-                            toggle_counter := toggle_counter + 1;
-                        else
-                            s_LED16_B <= '1';
-                            s_LED17_B <= '1';
-                            s_LED16_G <= '1';
-                            s_LED17_G <= '1';
-                            toggle_counter := 0;
-                        end if;
-
-                    when others =>
-                        fsm_state <= 0;
-                
-                end case;
-
-            end if;
-        end if;
-    end process;
-
--- Burst (8x64 bit) write code by chatgpt. Test it.
---process(s_ui_clk)
---    variable burst_counter : integer range 0 to 7 := 0;
---begin
---    if rising_edge(s_ui_clk) then
---        if s_ui_clk_sync_rst = '1' or s_init_calib_complete = '0' then
---            fsm_state         <= 0;
---            s_app_en          <= '0';
---            s_app_cmd         <= "000";
---            s_app_addr        <= (others => '0');
---            s_app_wdf_data    <= (others => '0');
---            s_app_wdf_mask    <= (others => '0');
---            s_app_wdf_wren    <= '0';
---            s_app_wdf_end     <= '0';
---            data_written      <= x"0000000000000000";
---            burst_counter     := 0;
-
---        else
---            case fsm_state is
---                when 0 => -- Wait for MIG calibration complete
---                    if s_init_calib_complete = '1' then
---                        fsm_state <= 1;
---                    end if;
-
---                when 1 => -- Wait for MIG to be ready to accept command and data
---                    if s_app_rdy = '1' and s_app_wdf_rdy = '1' then
---                        s_app_en       <= '1';
---                        s_app_cmd      <= "000"; -- Write command
---                        s_app_addr     <= std_logic_vector(unsigned(s_app_addr) + 1); -- Address per burst
---                        s_app_wdf_data <= data_written;
---                        s_app_wdf_wren <= '1';
---                        s_app_wdf_end  <= '0';
---                        burst_counter  := 1; -- Already sending 1st word
---                        fsm_state      <= 2;
---                    end if;
-
---                when 2 => -- Continue burst (send 2nd to 8th word)
---                    if s_app_wdf_rdy = '1' then
---                        s_app_en <= '0'; -- Only asserted for 1 cycle
-
---                        s_app_wdf_data <= data_written;
---                        data_written   <= std_logic_vector(unsigned(data_written) + 1);
-
---                        s_app_wdf_wren <= '1';
-
---                        if burst_counter = 7 then
---                            s_app_wdf_end <= '1'; -- Last word of burst
---                            fsm_state     <= 3;
---                        else
---                            s_app_wdf_end <= '0';
---                        end if;
-
---                        burst_counter := burst_counter + 1;
---                    end if;
-
---                when 3 => -- Deassert write data signals
---                    s_app_wdf_wren <= '0';
---                    s_app_wdf_end  <= '0';
---                    fsm_state      <= 1; -- Next burst
-
---                when others =>
---                    fsm_state <= 0;
---            end case;
---        end if;
---    end if;
 --end process;
 
 
