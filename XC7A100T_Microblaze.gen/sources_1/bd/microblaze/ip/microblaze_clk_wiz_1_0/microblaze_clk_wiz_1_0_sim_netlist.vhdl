@@ -1,11 +1,11 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
--- Date        : Thu Aug  7 10:34:56 2025
--- Host        : TPC-0073 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim -rename_top microblaze_clk_wiz_1_0 -prefix
---               microblaze_clk_wiz_1_0_ microblaze_clk_wiz_1_0_sim_netlist.vhdl
+-- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+-- Date        : Sat Aug  9 12:03:25 2025
+-- Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
+-- Command     : write_vhdl -force -mode funcsim
+--               /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_clk_wiz_1_0/microblaze_clk_wiz_1_0_sim_netlist.vhdl
 -- Design      : microblaze_clk_wiz_1_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,20 +15,22 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity microblaze_clk_wiz_1_0_microblaze_clk_wiz_1_0_clk_wiz is
+entity microblaze_clk_wiz_1_0_clk_wiz is
   port (
     clk_out1 : out STD_LOGIC;
     clk_out2 : out STD_LOGIC;
+    clk_out3 : out STD_LOGIC;
     reset : in STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-end microblaze_clk_wiz_1_0_microblaze_clk_wiz_1_0_clk_wiz;
+end microblaze_clk_wiz_1_0_clk_wiz;
 
-architecture STRUCTURE of microblaze_clk_wiz_1_0_microblaze_clk_wiz_1_0_clk_wiz is
+architecture STRUCTURE of microblaze_clk_wiz_1_0_clk_wiz is
   signal clk_in1_microblaze_clk_wiz_1_0 : STD_LOGIC;
   signal clk_out1_microblaze_clk_wiz_1_0 : STD_LOGIC;
   signal clk_out2_microblaze_clk_wiz_1_0 : STD_LOGIC;
+  signal clk_out3_microblaze_clk_wiz_1_0 : STD_LOGIC;
   signal clkfbout_buf_microblaze_clk_wiz_1_0 : STD_LOGIC;
   signal clkfbout_microblaze_clk_wiz_1_0 : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED : STD_LOGIC;
@@ -36,7 +38,6 @@ architecture STRUCTURE of microblaze_clk_wiz_1_0_microblaze_clk_wiz_1_0_clk_wiz 
   signal NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED : STD_LOGIC;
-  signal NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED : STD_LOGIC;
@@ -57,6 +58,7 @@ architecture STRUCTURE of microblaze_clk_wiz_1_0_microblaze_clk_wiz_1_0_clk_wiz 
   attribute IFD_DELAY_VALUE of clkin1_ibufg : label is "AUTO";
   attribute BOX_TYPE of clkout1_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of clkout2_buf : label is "PRIMITIVE";
+  attribute BOX_TYPE of clkout3_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of mmcm_adv_inst : label is "PRIMITIVE";
 begin
 clkf_buf: unisim.vcomponents.BUFG
@@ -82,6 +84,11 @@ clkout2_buf: unisim.vcomponents.BUFG
       I => clk_out2_microblaze_clk_wiz_1_0,
       O => clk_out2
     );
+clkout3_buf: unisim.vcomponents.BUFG
+     port map (
+      I => clk_out3_microblaze_clk_wiz_1_0,
+      O => clk_out3
+    );
 mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
     generic map(
       BANDWIDTH => "OPTIMIZED",
@@ -98,7 +105,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKOUT1_DUTY_CYCLE => 0.500000,
       CLKOUT1_PHASE => 0.000000,
       CLKOUT1_USE_FINE_PS => false,
-      CLKOUT2_DIVIDE => 1,
+      CLKOUT2_DIVIDE => 10,
       CLKOUT2_DUTY_CYCLE => 0.500000,
       CLKOUT2_PHASE => 0.000000,
       CLKOUT2_USE_FINE_PS => false,
@@ -146,7 +153,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKOUT0B => NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED,
       CLKOUT1 => clk_out2_microblaze_clk_wiz_1_0,
       CLKOUT1B => NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED,
-      CLKOUT2 => NLW_mmcm_adv_inst_CLKOUT2_UNCONNECTED,
+      CLKOUT2 => clk_out3_microblaze_clk_wiz_1_0,
       CLKOUT2B => NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED,
       CLKOUT3 => NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED,
       CLKOUT3B => NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED,
@@ -177,6 +184,7 @@ entity microblaze_clk_wiz_1_0 is
   port (
     clk_out1 : out STD_LOGIC;
     clk_out2 : out STD_LOGIC;
+    clk_out3 : out STD_LOGIC;
     reset : in STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
@@ -187,11 +195,12 @@ end microblaze_clk_wiz_1_0;
 
 architecture STRUCTURE of microblaze_clk_wiz_1_0 is
 begin
-inst: entity work.microblaze_clk_wiz_1_0_microblaze_clk_wiz_1_0_clk_wiz
+inst: entity work.microblaze_clk_wiz_1_0_clk_wiz
      port map (
       clk_in1 => clk_in1,
       clk_out1 => clk_out1,
       clk_out2 => clk_out2,
+      clk_out3 => clk_out3,
       locked => locked,
       reset => reset
     );

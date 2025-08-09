@@ -155,7 +155,7 @@ ARCHITECTURE microblaze_microblaze_0_axi_intc_0_arch OF microblaze_microblaze_0_
   ATTRIBUTE X_INTERFACE_INFO OF interrupt_address: SIGNAL IS "xilinx.com:interface:mbinterrupt:1.0 interrupt ADDRESS";
   ATTRIBUTE X_INTERFACE_INFO OF intr: SIGNAL IS "xilinx.com:signal:interrupt:1.0 interrupt_input INTERRUPT";
   ATTRIBUTE X_INTERFACE_MODE OF intr: SIGNAL IS "slave interrupt_input";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF intr: SIGNAL IS "XIL_INTERFACENAME interrupt_input, SENSITIVITY NULL:NULL:LEVEL_HIGH:LEVEL_HIGH, PortWidth 4";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF intr: SIGNAL IS "XIL_INTERFACENAME interrupt_input, SENSITIVITY NULL:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH, PortWidth 4";
   ATTRIBUTE X_INTERFACE_INFO OF irq: SIGNAL IS "xilinx.com:interface:mbinterrupt:1.0 interrupt INTERRUPT";
   ATTRIBUTE X_INTERFACE_MODE OF irq: SIGNAL IS "master interrupt";
   ATTRIBUTE X_INTERFACE_PARAMETER OF irq: SIGNAL IS "XIL_INTERFACENAME interrupt, SENSITIVITY LEVEL_HIGH, LOW_LATENCY 1";
@@ -201,10 +201,10 @@ BEGIN
       C_S_AXI_DATA_WIDTH => 32,
       C_NUM_INTR_INPUTS => 4,
       C_NUM_SW_INTR => 0,
-      C_KIND_OF_INTR => X"fffffffc",
+      C_KIND_OF_INTR => X"fffffff8",
       C_KIND_OF_EDGE => X"FFFFFFFF",
       C_KIND_OF_LVL => X"FFFFFFFF",
-      C_ASYNC_INTR => X"FFFFFFFC",
+      C_ASYNC_INTR => X"FFFFFFF8",
       C_NUM_SYNC_FF => 2,
       C_ADDR_WIDTH => 32,
       C_IVAR_RESET_VALUE => X"0000000000000010",

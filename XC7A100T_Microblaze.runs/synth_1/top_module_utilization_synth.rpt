@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date         : Thu Aug  7 13:07:22 2025
-| Host         : TPC-0073 running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date         : Sat Aug  9 12:24:36 2025
+| Host         : ck-MS-7E62 running 64-bit Ubuntu 25.04
 | Command      : report_utilization -file top_module_utilization_synth.rpt -pb top_module_utilization_synth.pb
 | Design       : top_module
 | Device       : xc7a100tcsg324-1
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |  137 |     0 |          0 |     63400 |  0.22 |
-|   LUT as Logic          |  137 |     0 |          0 |     63400 |  0.22 |
+| Slice LUTs*             |  222 |     0 |          0 |     63400 |  0.35 |
+|   LUT as Logic          |  222 |     0 |          0 |     63400 |  0.35 |
 |   LUT as Memory         |    0 |     0 |          0 |     19000 |  0.00 |
-| Slice Registers         |  148 |     0 |          0 |    126800 |  0.12 |
-|   Register as Flip Flop |  148 |     0 |          0 |    126800 |  0.12 |
+| Slice Registers         |  279 |     0 |          0 |    126800 |  0.22 |
+|   Register as Flip Flop |  279 |     0 |          0 |    126800 |  0.22 |
 |   Register as Latch     |    0 |     0 |          0 |    126800 |  0.00 |
 | F7 Muxes                |    1 |     0 |          0 |     31700 | <0.01 |
 | F8 Muxes                |    0 |     0 |          0 |     15850 |  0.00 |
@@ -58,7 +58,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 6     |          Yes |           - |        Reset |
+| 137   |          Yes |           - |        Reset |
 | 5     |          Yes |         Set |            - |
 | 137   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -151,16 +151,16 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |  137 |        Flop & Latch |
-| LUT6     |   62 |                 LUT |
+| FDCE     |  137 |        Flop & Latch |
+| LUT4     |  106 |                 LUT |
+| LUT6     |   74 |                 LUT |
 | OBUF     |   47 |                  IO |
-| LUT5     |   36 |                 LUT |
-| LUT4     |   31 |                 LUT |
-| LUT3     |   22 |                 LUT |
-| LUT2     |   22 |                 LUT |
+| CARRY4   |   40 |          CarryLogic |
+| LUT5     |   39 |                 LUT |
+| LUT3     |   25 |                 LUT |
+| LUT2     |   13 |                 LUT |
 | IBUF     |   10 |                  IO |
-| CARRY4   |    8 |          CarryLogic |
 | LUT1     |    6 |                 LUT |
-| FDCE     |    6 |        Flop & Latch |
 | OBUFT    |    5 |                  IO |
 | FDSE     |    5 |        Flop & Latch |
 | RAMB18E1 |    1 |        Block Memory |
@@ -178,7 +178,21 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | microblaze_rst_clk_wiz_1_100M_0                   |    1 |
 | microblaze_mig_7series_0_0                        |    1 |
 | microblaze_microblaze_0_axi_periph_imp_xbar_0     |    1 |
+| microblaze_microblaze_0_axi_periph_imp_auto_us_1  |    1 |
 | microblaze_microblaze_0_axi_periph_imp_auto_us_0  |    1 |
+| microblaze_microblaze_0_axi_periph_imp_auto_pc_9  |    1 |
+| microblaze_microblaze_0_axi_periph_imp_auto_pc_8  |    1 |
+| microblaze_microblaze_0_axi_periph_imp_auto_pc_7  |    1 |
+| microblaze_microblaze_0_axi_periph_imp_auto_pc_6  |    1 |
+| microblaze_microblaze_0_axi_periph_imp_auto_pc_5  |    1 |
+| microblaze_microblaze_0_axi_periph_imp_auto_pc_4  |    1 |
+| microblaze_microblaze_0_axi_periph_imp_auto_pc_3  |    1 |
+| microblaze_microblaze_0_axi_periph_imp_auto_pc_2  |    1 |
+| microblaze_microblaze_0_axi_periph_imp_auto_pc_13 |    1 |
+| microblaze_microblaze_0_axi_periph_imp_auto_pc_12 |    1 |
+| microblaze_microblaze_0_axi_periph_imp_auto_pc_11 |    1 |
+| microblaze_microblaze_0_axi_periph_imp_auto_pc_10 |    1 |
+| microblaze_microblaze_0_axi_periph_imp_auto_pc_1  |    1 |
 | microblaze_microblaze_0_axi_periph_imp_auto_pc_0  |    1 |
 | microblaze_microblaze_0_axi_periph_imp_auto_ds_9  |    1 |
 | microblaze_microblaze_0_axi_periph_imp_auto_ds_8  |    1 |
@@ -188,6 +202,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | microblaze_microblaze_0_axi_periph_imp_auto_ds_4  |    1 |
 | microblaze_microblaze_0_axi_periph_imp_auto_ds_3  |    1 |
 | microblaze_microblaze_0_axi_periph_imp_auto_ds_2  |    1 |
+| microblaze_microblaze_0_axi_periph_imp_auto_ds_12 |    1 |
 | microblaze_microblaze_0_axi_periph_imp_auto_ds_11 |    1 |
 | microblaze_microblaze_0_axi_periph_imp_auto_ds_10 |    1 |
 | microblaze_microblaze_0_axi_periph_imp_auto_ds_1  |    1 |
@@ -212,6 +227,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | microblaze_axi_gpio_2_0                           |    1 |
 | microblaze_axi_gpio_1_0                           |    1 |
 | microblaze_axi_gpio_0_0                           |    1 |
+| microblaze_axi_dma_0_0                            |    1 |
 +---------------------------------------------------+------+
 
 

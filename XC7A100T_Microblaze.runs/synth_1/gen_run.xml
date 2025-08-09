@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1754561192" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top_module.dcp">
-  <File Type="PA-TCL" Name="top_module.tcl"/>
-  <File Type="REPORTS-TCL" Name="top_module_reports.tcl"/>
-  <File Type="RDS-RDS" Name="top_module.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="top_module_drc_synth.rpt"/>
-  <File Type="RDS-UTIL" Name="top_module_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="top_module_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="top_module.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1754731456" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top_module.dcp">
   <File Type="VDS-TIMINGSUMMARY" Name="top_module_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="top_module.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="top_module_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="top_module_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_module_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="top_module.vds"/>
+  <File Type="REPORTS-TCL" Name="top_module_reports.tcl"/>
   <File Type="VDS-TIMING-PB" Name="top_module_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="top_module.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/microblaze/microblaze.bd">
@@ -102,5 +102,39 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_pc_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_pc_5"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_pc_6"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_ds_8"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_ds_9"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_pc_12"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_ds_7"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_ds_6"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_ds_11"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_pc_11"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_ds_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_ds_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_us_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_ds_12"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_ds_10"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_pc_13"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_ds_3"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_us_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_ds_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_pc_10"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_pc_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_pc_2"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_pc_7"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_pc_8"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_cc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_pc_9"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_intc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_ds_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_axi_dma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_ds_5"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_microblaze_0_axi_periph_imp_auto_pc_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="microblaze_clk_wiz_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="microblaze_mig_7series_0_0"/>
 </GenRun>

@@ -67,7 +67,7 @@ microblaze_microblaze_0_axi_periph_imp_auto_cc_0_sc::microblaze_microblaze_0_axi
     model_param_props.addLong("C_S_AXI_ACLK_RATIO", "1");
     model_param_props.addLong("C_M_AXI_ACLK_RATIO", "2");
     model_param_props.addLong("C_AXI_IS_ACLK_ASYNC", "1");
-    model_param_props.addLong("C_AXI_PROTOCOL", "2");
+    model_param_props.addLong("C_AXI_PROTOCOL", "0");
     model_param_props.addLong("C_AXI_SUPPORTS_USER_SIGNALS", "0");
     model_param_props.addLong("C_AXI_AWUSER_WIDTH", "1");
     model_param_props.addLong("C_AXI_ARUSER_WIDTH", "1");

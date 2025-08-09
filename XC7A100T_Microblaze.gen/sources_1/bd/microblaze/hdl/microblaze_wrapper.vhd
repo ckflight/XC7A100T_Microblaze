@@ -1,9 +1,9 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
---Date        : Thu Aug  7 13:00:06 2025
---Host        : TPC-0073 running 64-bit major release  (build 9200)
+--Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+--Date        : Sat Aug  9 12:02:54 2025
+--Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
 --Command     : generate_target microblaze_wrapper.bd
 --Design      : microblaze_wrapper
 --Purpose     : IP block netlist
@@ -28,7 +28,13 @@ entity microblaze_wrapper is
     DDR2_0_odt : out STD_LOGIC_VECTOR ( 0 to 0 );
     DDR2_0_ras_n : out STD_LOGIC;
     DDR2_0_we_n : out STD_LOGIC;
+    S_AXIS_S2MM_0_tdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    S_AXIS_S2MM_0_tkeep : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    S_AXIS_S2MM_0_tlast : in STD_LOGIC;
+    S_AXIS_S2MM_0_tready : out STD_LOGIC;
+    S_AXIS_S2MM_0_tvalid : in STD_LOGIC;
     clk_100MHz : in STD_LOGIC;
+    clk_out3_0 : out STD_LOGIC;
     gpio_rtl_0_tri_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
     gpio_rtl_1_tri_o : out STD_LOGIC_VECTOR ( 1 downto 0 );
     gpio_rtl_2_tri_i : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -93,7 +99,13 @@ architecture STRUCTURE of microblaze_wrapper is
     spi0_miso : in STD_LOGIC;
     spi0_sck : out STD_LOGIC;
     spi0_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
-    clk_100MHz : in STD_LOGIC
+    clk_100MHz : in STD_LOGIC;
+    S_AXIS_S2MM_0_tdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    S_AXIS_S2MM_0_tkeep : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    S_AXIS_S2MM_0_tlast : in STD_LOGIC;
+    S_AXIS_S2MM_0_tready : out STD_LOGIC;
+    S_AXIS_S2MM_0_tvalid : in STD_LOGIC;
+    clk_out3_0 : out STD_LOGIC
   );
   end component microblaze;
   component IOBUF is
@@ -161,7 +173,13 @@ microblaze_i: component microblaze
       DDR2_0_odt(0) => DDR2_0_odt(0),
       DDR2_0_ras_n => DDR2_0_ras_n,
       DDR2_0_we_n => DDR2_0_we_n,
+      S_AXIS_S2MM_0_tdata(63 downto 0) => S_AXIS_S2MM_0_tdata(63 downto 0),
+      S_AXIS_S2MM_0_tkeep(7 downto 0) => S_AXIS_S2MM_0_tkeep(7 downto 0),
+      S_AXIS_S2MM_0_tlast => S_AXIS_S2MM_0_tlast,
+      S_AXIS_S2MM_0_tready => S_AXIS_S2MM_0_tready,
+      S_AXIS_S2MM_0_tvalid => S_AXIS_S2MM_0_tvalid,
       clk_100MHz => clk_100MHz,
+      clk_out3_0 => clk_out3_0,
       gpio_rtl_0_tri_o(15 downto 0) => gpio_rtl_0_tri_o(15 downto 0),
       gpio_rtl_1_tri_o(1 downto 0) => gpio_rtl_1_tri_o(1 downto 0),
       gpio_rtl_2_tri_i(1 downto 0) => gpio_rtl_2_tri_i(1 downto 0),

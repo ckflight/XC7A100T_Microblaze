@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
-| Date             : Thu Aug  7 13:10:08 2025
-| Host             : TPC-0073 running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+| Date             : Sat Aug  9 12:26:29 2025
+| Host             : ck-MS-7E62 running 64-bit Ubuntu 25.04
 | Command          : report_power -file top_module_power_routed.rpt -pb top_module_power_summary_routed.pb -rpx top_module_power_routed.rpx
 | Design           : top_module
 | Device           : xc7a100tcsg324-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.223        |
+| Total On-Chip Power (W)  | 1.299        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.113        |
+| Dynamic (W)              | 1.188        |
 | Device Static (W)        | 0.110        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 79.4         |
-| Junction Temperature (C) | 30.6         |
+| Max Ambient (C)          | 79.1         |
+| Junction Temperature (C) | 30.9         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,25 +52,25 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.059 |       27 |       --- |             --- |
-| Slice Logic              |     0.024 |    22179 |       --- |             --- |
-|   LUT as Logic           |     0.020 |     8231 |     63400 |           12.98 |
-|   LUT as Distributed RAM |     0.002 |      436 |     19000 |            2.29 |
-|   Register               |     0.001 |     8833 |    126800 |            6.97 |
-|   CARRY4                 |    <0.001 |      308 |     15850 |            1.94 |
+| Clocks                   |     0.092 |       28 |       --- |             --- |
+| Slice Logic              |     0.045 |    51916 |       --- |             --- |
+|   LUT as Logic           |     0.037 |    17653 |     63400 |           27.84 |
+|   LUT as Distributed RAM |     0.004 |     1204 |     19000 |            6.34 |
+|   Register               |     0.002 |    22399 |    126800 |           17.66 |
+|   CARRY4                 |     0.002 |      607 |     15850 |            3.83 |
 |   F7/F8 Muxes            |    <0.001 |      138 |     63400 |            0.22 |
-|   LUT as Shift Register  |    <0.001 |      306 |     19000 |            1.61 |
-|   Others                 |     0.000 |     1383 |       --- |             --- |
-| Signals                  |     0.031 |    16110 |       --- |             --- |
-| Block RAM                |     0.001 |     32.5 |       135 |           24.07 |
-| MMCM                     |     0.215 |        2 |         6 |           33.33 |
+|   LUT as Shift Register  |    <0.001 |      872 |     19000 |            4.59 |
+|   Others                 |     0.000 |     2614 |       --- |             --- |
+| Signals                  |     0.055 |    37124 |       --- |             --- |
+| Block RAM                |     0.001 |     34.5 |       135 |           25.56 |
+| MMCM                     |     0.216 |        2 |         6 |           33.33 |
 | PLL                      |     0.111 |        1 |         6 |           16.67 |
 | DSPs                     |     0.003 |        5 |       240 |            2.08 |
-| I/O                      |     0.559 |      104 |       210 |           49.52 |
+| I/O                      |     0.556 |      104 |       210 |           49.52 |
 | PHASER                   |     0.106 |       14 |       --- |             --- |
 | XADC                     |     0.004 |        1 |       --- |             --- |
 | Static Power             |     0.110 |          |           |                 |
-| Total                    |     1.223 |          |           |                 |
+| Total                    |     1.299 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -80,9 +80,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.177 |       0.158 |      0.019 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.255 |       0.236 |      0.019 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.298 |       0.280 |      0.018 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.249 |       0.245 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -138,6 +138,7 @@ Table of Contents
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 | clk_out1_microblaze_clk_wiz_1_0                                                                                                                           | microblaze/microblaze_i/clk_wiz_1/inst/clk_out1_microblaze_clk_wiz_1_0                                                                                                                                                                         |            10.0 |
 | clk_out2_microblaze_clk_wiz_1_0                                                                                                                           | microblaze/microblaze_i/clk_wiz_1/inst/clk_out2_microblaze_clk_wiz_1_0                                                                                                                                                                         |             5.0 |
+| clk_out3_microblaze_clk_wiz_1_0                                                                                                                           | microblaze/microblaze_i/clk_wiz_1/inst/clk_out3_microblaze_clk_wiz_1_0                                                                                                                                                                         |            10.0 |
 | clk_pll_i                                                                                                                                                 | microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/u_ddr2_infrastructure/clk_pll_i                                                                                                                                         |             6.7 |
 | clkfbout_microblaze_clk_wiz_1_0                                                                                                                           | microblaze/microblaze_i/clk_wiz_1/inst/clkfbout_microblaze_clk_wiz_1_0                                                                                                                                                                         |            10.0 |
 | freq_refclk                                                                                                                                               | microblaze/microblaze_i/mig_7series_0/u_microblaze_mig_7series_0_0_mig/u_ddr2_infrastructure/freq_refclk                                                                                                                                       |             1.7 |
@@ -173,19 +174,20 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| top_module                    |     1.113 |
-|   microblaze                  |     1.101 |
-|     microblaze_i              |     1.101 |
+| top_module                    |     1.188 |
+|   microblaze                  |     1.179 |
+|     microblaze_i              |     1.179 |
+|       axi_dma_0               |     0.013 |
 |       axi_iic_0               |     0.002 |
 |       axi_iic_1               |     0.002 |
-|       axi_quad_spi_0          |     0.006 |
-|       axi_quad_spi_1          |     0.006 |
+|       axi_quad_spi_0          |     0.004 |
+|       axi_quad_spi_1          |     0.005 |
 |       axi_timer_0             |     0.004 |
 |       clk_wiz_1               |     0.108 |
 |       mdm_1                   |     0.001 |
-|       microblaze_0            |     0.027 |
+|       microblaze_0            |     0.025 |
 |       microblaze_0_axi_intc   |     0.002 |
-|       microblaze_0_axi_periph |     0.009 |
+|       microblaze_0_axi_periph |     0.080 |
 |       mig_7series_0           |     0.932 |
 |   uart_rx                     |     0.003 |
 |     fifo                      |     0.002 |

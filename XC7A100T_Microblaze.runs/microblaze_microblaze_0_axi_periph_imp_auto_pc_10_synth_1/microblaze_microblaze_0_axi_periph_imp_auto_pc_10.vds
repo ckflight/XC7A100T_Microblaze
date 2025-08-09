@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Sat Aug  9 12:03:50 2025
+# Process ID         : 103585
+# Current directory  : /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_auto_pc_10_synth_1
+# Command line       : vivado -log microblaze_microblaze_0_axi_periph_imp_auto_pc_10.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source microblaze_microblaze_0_axi_periph_imp_auto_pc_10.tcl
+# Log file           : /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_auto_pc_10_synth_1/microblaze_microblaze_0_axi_periph_imp_auto_pc_10.vds
+# Journal file       : /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_auto_pc_10_synth_1/vivado.jou
+# Running On         : ck-MS-7E62
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 25.04
+# Processor Detail   : AMD Ryzen 9 9950X 16-Core Processor
+# CPU Frequency      : 5481.833 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 63756 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 72346 MB
+# Available Virtual  : 51776 MB
+#-----------------------------------------------------------
+source microblaze_microblaze_0_axi_periph_imp_auto_pc_10.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP microblaze_microblaze_0_axi_periph_imp_auto_pc_10, cache-ID = b9a4170e64481f71.
+INFO: [Common 17-206] Exiting Vivado at Sat Aug  9 12:03:54 2025...

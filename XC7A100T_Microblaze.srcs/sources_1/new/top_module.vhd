@@ -67,39 +67,45 @@ architecture Behavioral of top_module is
 
     component microblaze_wrapper
     port (
-        DDR2_0_addr : out STD_LOGIC_VECTOR ( 12 downto 0 );
-        DDR2_0_ba : out STD_LOGIC_VECTOR ( 2 downto 0 );
-        DDR2_0_cas_n : out STD_LOGIC;
-        DDR2_0_ck_n : out STD_LOGIC_VECTOR ( 0 to 0 );
-        DDR2_0_ck_p : out STD_LOGIC_VECTOR ( 0 to 0 );
-        DDR2_0_cke : out STD_LOGIC_VECTOR ( 0 to 0 );
-        DDR2_0_cs_n : out STD_LOGIC_VECTOR ( 0 to 0 );
-        DDR2_0_dm : out STD_LOGIC_VECTOR ( 1 downto 0 );
-        DDR2_0_dq : inout STD_LOGIC_VECTOR ( 15 downto 0 );
-        DDR2_0_dqs_n : inout STD_LOGIC_VECTOR ( 1 downto 0 );
-        DDR2_0_dqs_p : inout STD_LOGIC_VECTOR ( 1 downto 0 );
-        DDR2_0_odt : out STD_LOGIC_VECTOR ( 0 to 0 );
-        DDR2_0_ras_n : out STD_LOGIC;
-        DDR2_0_we_n : out STD_LOGIC;
-        clk_100MHz : in STD_LOGIC;
-        gpio_rtl_0_tri_o : out STD_LOGIC_VECTOR ( 15 downto 0 );
-        gpio_rtl_1_tri_o : out STD_LOGIC_VECTOR ( 1 downto 0 );
-        gpio_rtl_2_tri_i : in STD_LOGIC_VECTOR ( 1 downto 0 );
-        iic_rtl_0_scl_io : inout STD_LOGIC;
-        iic_rtl_0_sda_io : inout STD_LOGIC;
-        iic_rtl_1_scl_io : inout STD_LOGIC;
-        iic_rtl_1_sda_io : inout STD_LOGIC;
-        reset_rtl_0 : in STD_LOGIC;
-        spi0_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
-        spi0_miso : in STD_LOGIC;
-        spi0_mosi : out STD_LOGIC;
-        spi0_sck : out STD_LOGIC;
-        spi1_cs : out STD_LOGIC_VECTOR ( 0 to 0 );
-        spi1_miso : in STD_LOGIC;
-        spi1_mosi : out STD_LOGIC;
-        spi1_sck : out STD_LOGIC;
-        uart_rtl_0_rxd : in STD_LOGIC;
-        uart_rtl_0_txd : out STD_LOGIC
+        DDR2_0_addr             : out STD_LOGIC_VECTOR ( 12 downto 0 );
+        DDR2_0_ba               : out STD_LOGIC_VECTOR ( 2 downto 0 );
+        DDR2_0_cas_n            : out STD_LOGIC;
+        DDR2_0_ck_n             : out STD_LOGIC_VECTOR ( 0 to 0 );
+        DDR2_0_ck_p             : out STD_LOGIC_VECTOR ( 0 to 0 );
+        DDR2_0_cke              : out STD_LOGIC_VECTOR ( 0 to 0 );
+        DDR2_0_cs_n             : out STD_LOGIC_VECTOR ( 0 to 0 );
+        DDR2_0_dm               : out STD_LOGIC_VECTOR ( 1 downto 0 );
+        DDR2_0_dq               : inout STD_LOGIC_VECTOR ( 15 downto 0 );
+        DDR2_0_dqs_n            : inout STD_LOGIC_VECTOR ( 1 downto 0 );
+        DDR2_0_dqs_p            : inout STD_LOGIC_VECTOR ( 1 downto 0 );
+        DDR2_0_odt              : out STD_LOGIC_VECTOR ( 0 to 0 );
+        DDR2_0_ras_n            : out STD_LOGIC;
+        DDR2_0_we_n             : out STD_LOGIC;
+        S_AXIS_S2MM_0_tdata     : in STD_LOGIC_VECTOR ( 63 downto 0 );
+        S_AXIS_S2MM_0_tkeep     : in STD_LOGIC_VECTOR ( 7 downto 0 );
+        S_AXIS_S2MM_0_tlast     : in STD_LOGIC;
+        S_AXIS_S2MM_0_tready    : out STD_LOGIC;
+        S_AXIS_S2MM_0_tvalid    : in STD_LOGIC;
+        clk_100MHz              : in STD_LOGIC;
+        clk_out3_0              : out STD_LOGIC;
+        gpio_rtl_0_tri_o        : out STD_LOGIC_VECTOR ( 15 downto 0 );
+        gpio_rtl_1_tri_o        : out STD_LOGIC_VECTOR ( 1 downto 0 );
+        gpio_rtl_2_tri_i        : in STD_LOGIC_VECTOR ( 1 downto 0 );
+        iic_rtl_0_scl_io        : inout STD_LOGIC;
+        iic_rtl_0_sda_io        : inout STD_LOGIC;
+        iic_rtl_1_scl_io        : inout STD_LOGIC;
+        iic_rtl_1_sda_io        : inout STD_LOGIC;
+        reset_rtl_0             : in STD_LOGIC;
+        spi0_cs                 : out STD_LOGIC_VECTOR ( 0 to 0 );
+        spi0_miso               : in STD_LOGIC;
+        spi0_mosi               : out STD_LOGIC;
+        spi0_sck                : out STD_LOGIC;
+        spi1_cs                 : out STD_LOGIC_VECTOR ( 0 to 0 );
+        spi1_miso               : in STD_LOGIC;
+        spi1_mosi               : out STD_LOGIC;
+        spi1_sck                : out STD_LOGIC;
+        uart_rtl_0_rxd          : in STD_LOGIC;
+        uart_rtl_0_txd          : out std_logic 
     );
     end component;
     
@@ -167,14 +173,21 @@ architecture Behavioral of top_module is
     signal s_spi1_clk           : std_logic;
     signal s_spi1_cs            : std_logic_vector(0 to 0);
       
-    signal s_LED16_B        : std_logic := '0';
-    signal s_LED16_G        : std_logic := '0';
-    signal s_LED16_R        : std_logic := '0';
+    signal s_LED16_B            : std_logic := '0';
+    signal s_LED16_G            : std_logic := '0';
+    signal s_LED16_R            : std_logic := '0';
     
-    signal s_LED17_B        : std_logic := '0';
-    signal s_LED17_G        : std_logic := '0';
-    signal s_LED17_R        : std_logic := '0';
+    signal s_LED17_B            : std_logic := '0';
+    signal s_LED17_G            : std_logic := '0';
+    signal s_LED17_R            : std_logic := '0';
 
+    signal s_clk_out3_0         : std_logic;
+    
+    signal s_AXIS_S2MM_0_tdata  : std_logic_vector( 63 downto 0 );
+    signal s_AXIS_S2MM_0_tkeep  : std_logic_vector( 7 downto 0 );
+    signal s_AXIS_S2MM_0_tlast  : std_logic;
+    signal s_AXIS_S2MM_0_tready : std_logic;
+    signal s_AXIS_S2MM_0_tvalid : std_logic;
     
 begin 
     
@@ -199,7 +212,7 @@ begin
     LED17_G <= s_LED17_G;
     LED17_R <= s_LED17_R;
     
-  
+
     microblaze: microblaze_wrapper
     port map (
         DDR2_0_addr             => ddr2_addr,
@@ -216,7 +229,13 @@ begin
         DDR2_0_odt              => ddr2_odt,
         DDR2_0_ras_n            => ddr2_ras_n,
         DDR2_0_we_n             => ddr2_we_n,
+        S_AXIS_S2MM_0_tdata     => s_AXIS_S2MM_0_tdata,
+        S_AXIS_S2MM_0_tkeep     => s_AXIS_S2MM_0_tkeep,
+        S_AXIS_S2MM_0_tlast     => s_AXIS_S2MM_0_tlast,
+        S_AXIS_S2MM_0_tready    => s_AXIS_S2MM_0_tready,
+        S_AXIS_S2MM_0_tvalid    => s_AXIS_S2MM_0_tvalid,
         clk_100MHz              => SYSCLK,
+        clk_out3_0              => s_clk_out3_0,
         gpio_rtl_0_tri_o        => LED,
         gpio_rtl_1_tri_o        => JD_GPIO1_OUT, 
         gpio_rtl_2_tri_i        => JD_GPIO2_IN,
@@ -310,9 +329,61 @@ begin
         end if;
     
     end process;
-
---end process;
-
+    
+    -- Control dma to send data
+    process(s_clk_out3_0, reset_n)
+        variable data_counter : unsigned(63 downto 0) := (others => '0'); -- 256 max count
+        variable sending : boolean := false;
+        variable send_done : boolean := false;  -- NEW flag
+    begin
+        
+        if reset_n = '0' then
+            s_AXIS_S2MM_0_tvalid <= '0';
+            s_AXIS_S2MM_0_tdata <= (others => '0');
+            s_AXIS_S2MM_0_tkeep <= (others => '1');
+            s_AXIS_S2MM_0_tlast <= '0';
+            data_counter := (others => '0');
+            sending := false;
+            send_done := false;  -- reset done flag
+        
+        elsif rising_edge(s_clk_out3_0) then
+            
+            if not sending and not send_done then
+            
+                -- Start sending data only if not done yet
+                s_AXIS_S2MM_0_tvalid <= '1';
+                s_AXIS_S2MM_0_tdata <= std_logic_vector(data_counter);
+                s_AXIS_S2MM_0_tkeep <= (others => '1');
+                s_AXIS_S2MM_0_tlast <= '0';
+                sending := true;
+            
+            elsif sending then
+                
+                if s_AXIS_S2MM_0_tvalid = '1' and s_AXIS_S2MM_0_tready = '1' then
+                    data_counter := data_counter + 1;
+                    s_AXIS_S2MM_0_tdata <= std_logic_vector(data_counter);
+                    
+                    if data_counter = 255 then
+                        s_AXIS_S2MM_0_tlast <= '1';
+                    else
+                        s_AXIS_S2MM_0_tlast <= '0';
+                    end if;
+                    
+                end if;
+                
+            end if;
+    
+            if s_AXIS_S2MM_0_tlast = '1' and s_AXIS_S2MM_0_tvalid = '1' and s_AXIS_S2MM_0_tready = '1' then
+                s_AXIS_S2MM_0_tvalid <= '0';
+                sending := false;
+                data_counter := (others => '0');
+                send_done := true;  -- mark burst done
+            end if;
+            
+        end if;
+        
+    end process;
+    
 
 
 end Behavioral;

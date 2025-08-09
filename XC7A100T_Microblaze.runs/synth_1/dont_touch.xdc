@@ -27,51 +27,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_
 # IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_xbar_0/microblaze_microblaze_0_axi_periph_imp_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_xbar_0 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_xbar_0} -quiet] -quiet
 
-# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_us_0/microblaze_microblaze_0_axi_periph_imp_auto_us_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_us_0 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_us_0} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_0/microblaze_microblaze_0_axi_periph_imp_auto_ds_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_0 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_0} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_1/microblaze_microblaze_0_axi_periph_imp_auto_ds_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_1 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_1} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_2/microblaze_microblaze_0_axi_periph_imp_auto_ds_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_2 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_2} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_3/microblaze_microblaze_0_axi_periph_imp_auto_ds_3.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_3 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_3} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_4/microblaze_microblaze_0_axi_periph_imp_auto_ds_4.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_4 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_4} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_5/microblaze_microblaze_0_axi_periph_imp_auto_ds_5.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_5 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_5} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_6/microblaze_microblaze_0_axi_periph_imp_auto_ds_6.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_6 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_6} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_7/microblaze_microblaze_0_axi_periph_imp_auto_ds_7.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_7 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_7} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_8/microblaze_microblaze_0_axi_periph_imp_auto_ds_8.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_8 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_8} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_9/microblaze_microblaze_0_axi_periph_imp_auto_ds_9.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_9 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_9} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_10/microblaze_microblaze_0_axi_periph_imp_auto_ds_10.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_10 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_10} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_cc_0/microblaze_microblaze_0_axi_periph_imp_auto_cc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_cc_0 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_cc_0} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_0/microblaze_microblaze_0_axi_periph_imp_auto_pc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_0 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_0} -quiet] -quiet
-
-# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_11/microblaze_microblaze_0_axi_periph_imp_auto_ds_11.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_11 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_11} -quiet] -quiet
-
 # IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_0/microblaze_microblaze_0_axi_periph_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_0 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_0} -quiet] -quiet
 
@@ -126,4 +81,97 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_
 # IP: bd/microblaze/ip/microblaze_axi_gpio_3_1/microblaze_axi_gpio_3_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_axi_gpio_3_1 || ORIG_REF_NAME==microblaze_axi_gpio_3_1} -quiet] -quiet
 
-# XDC: c:/Users/cenk.keskin/Desktop/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/microblaze_ooc.xdc
+# IP: bd/microblaze/ip/microblaze_axi_dma_0_0/microblaze_axi_dma_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_axi_dma_0_0 || ORIG_REF_NAME==microblaze_axi_dma_0_0} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_13/microblaze_microblaze_0_axi_periph_imp_auto_pc_13.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_13 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_13} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_us_0/microblaze_microblaze_0_axi_periph_imp_auto_us_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_us_0 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_us_0} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_us_1/microblaze_microblaze_0_axi_periph_imp_auto_us_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_us_1 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_us_1} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_0/microblaze_microblaze_0_axi_periph_imp_auto_ds_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_0 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_0} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_0/microblaze_microblaze_0_axi_periph_imp_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_0 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_0} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_1/microblaze_microblaze_0_axi_periph_imp_auto_ds_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_1 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_1} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_1/microblaze_microblaze_0_axi_periph_imp_auto_pc_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_1 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_1} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_2/microblaze_microblaze_0_axi_periph_imp_auto_ds_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_2 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_2} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_2/microblaze_microblaze_0_axi_periph_imp_auto_pc_2.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_2 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_2} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_3/microblaze_microblaze_0_axi_periph_imp_auto_ds_3.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_3 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_3} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_3/microblaze_microblaze_0_axi_periph_imp_auto_pc_3.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_3 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_3} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_4/microblaze_microblaze_0_axi_periph_imp_auto_ds_4.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_4 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_4} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_4/microblaze_microblaze_0_axi_periph_imp_auto_pc_4.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_4 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_4} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_5/microblaze_microblaze_0_axi_periph_imp_auto_ds_5.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_5 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_5} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_5/microblaze_microblaze_0_axi_periph_imp_auto_pc_5.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_5 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_5} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_6/microblaze_microblaze_0_axi_periph_imp_auto_ds_6.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_6 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_6} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_6/microblaze_microblaze_0_axi_periph_imp_auto_pc_6.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_6 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_6} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_7/microblaze_microblaze_0_axi_periph_imp_auto_ds_7.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_7 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_7} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_7/microblaze_microblaze_0_axi_periph_imp_auto_pc_7.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_7 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_7} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_8/microblaze_microblaze_0_axi_periph_imp_auto_ds_8.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_8 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_8} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_8/microblaze_microblaze_0_axi_periph_imp_auto_pc_8.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_8 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_8} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_9/microblaze_microblaze_0_axi_periph_imp_auto_ds_9.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_9 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_9} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_9/microblaze_microblaze_0_axi_periph_imp_auto_pc_9.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_9 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_9} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_10/microblaze_microblaze_0_axi_periph_imp_auto_ds_10.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_10 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_10} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_10/microblaze_microblaze_0_axi_periph_imp_auto_pc_10.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_10 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_10} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_cc_0/microblaze_microblaze_0_axi_periph_imp_auto_cc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_cc_0 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_cc_0} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_11/microblaze_microblaze_0_axi_periph_imp_auto_ds_11.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_11 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_11} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_11/microblaze_microblaze_0_axi_periph_imp_auto_pc_11.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_11 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_11} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_ds_12/microblaze_microblaze_0_axi_periph_imp_auto_ds_12.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_12 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_ds_12} -quiet] -quiet
+
+# IP: bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_pc_12/microblaze_microblaze_0_axi_periph_imp_auto_pc_12.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_12 || ORIG_REF_NAME==microblaze_microblaze_0_axi_periph_imp_auto_pc_12} -quiet] -quiet
+
+# XDC: /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/microblaze_ooc.xdc

@@ -1,0 +1,328 @@
+
+*** Running vivado
+    with args -log microblaze_microblaze_0_axi_periph_imp_auto_us_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source microblaze_microblaze_0_axi_periph_imp_auto_us_0.tcl
+
+
+****** Vivado v2025.1 (64-bit)
+  **** SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+  **** IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+  **** SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+  **** Start of session at: Sat Aug  9 12:03:09 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source microblaze_microblaze_0_axi_periph_imp_auto_us_0.tcl -notrace
+Command: synth_design -top microblaze_microblaze_0_axi_periph_imp_auto_us_0 -part xc7a100tcsg324-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 100063
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2400.242 ; gain = 186.773 ; free physical = 30243 ; free virtual = 45064
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'microblaze_microblaze_0_axi_periph_imp_auto_us_0' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_us_0/synth/microblaze_microblaze_0_axi_periph_imp_auto_us_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_36_top' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/db4c/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14527]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_36_axi_upsizer' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/db4c/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7025]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_36_w_upsizer' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/db4c/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5552]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_36_w_upsizer' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/db4c/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:5552]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_36_a_upsizer' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/db4c/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3594]
+INFO: [Synth 8-6157] synthesizing module 'generic_baseblocks_v2_1_2_command_fifo' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:648]
+INFO: [Synth 8-6155] done synthesizing module 'generic_baseblocks_v2_1_2_command_fifo' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/0c28/hdl/generic_baseblocks_v2_1_vl_rfs.v:648]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_36_a_upsizer' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/db4c/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3594]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_36_r_upsizer' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/db4c/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:4643]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_36_r_upsizer' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/db4c/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:4643]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_35_axi_register_slice' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:3721]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_35_axic_register_slice' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_35_axic_register_slice' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_35_axic_register_slice__parameterized0' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_35_axic_register_slice__parameterized0' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_35_axic_register_slice__parameterized1' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_35_axic_register_slice__parameterized1' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_35_axic_register_slice__parameterized2' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_35_axic_register_slice__parameterized2' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_35_axi_register_slice' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:3721]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_35_axi_register_slice' is unconnected for instance 'mi_register_slice_inst' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/db4c/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:8463]
+WARNING: [Synth 8-7023] instance 'mi_register_slice_inst' of module 'axi_register_slice_v2_1_35_axi_register_slice' has 93 connections declared, but only 92 given [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/db4c/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:8463]
+INFO: [Synth 8-6157] synthesizing module 'axi_dwidth_converter_v2_1_36_a_upsizer__parameterized0' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/db4c/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3594]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_36_a_upsizer__parameterized0' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/db4c/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:3594]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_35_axi_register_slice__parameterized0' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:3721]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector__parameterized0' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:59]
+INFO: [Synth 8-6157] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6155] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi__parameterized0' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/ec67/hdl/axi_infrastructure_v1_1_vl_rfs.v:473]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_35_axic_register_slice__parameterized3' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_35_axic_register_slice__parameterized3' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6157] synthesizing module 'axi_register_slice_v2_1_35_axic_register_slice__parameterized4' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_35_axic_register_slice__parameterized4' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:1492]
+INFO: [Synth 8-6155] done synthesizing module 'axi_register_slice_v2_1_35_axi_register_slice__parameterized0' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:3721]
+WARNING: [Synth 8-7071] port 'aclk2x' of module 'axi_register_slice_v2_1_35_axi_register_slice' is unconnected for instance 'si_register_slice_inst' [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/db4c/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7367]
+WARNING: [Synth 8-7023] instance 'si_register_slice_inst' of module 'axi_register_slice_v2_1_35_axi_register_slice' has 93 connections declared, but only 92 given [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/db4c/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7367]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_36_axi_upsizer' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/db4c/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:7025]
+INFO: [Synth 8-6155] done synthesizing module 'axi_dwidth_converter_v2_1_36_top' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/db4c/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:14527]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_microblaze_0_axi_periph_imp_auto_us_0' (0#1) [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_us_0/synth/microblaze_microblaze_0_axi_periph_imp_auto_us_0.v:53]
+WARNING: [Synth 8-7129] Port m_axi_buser[0] in module axi_infrastructure_v1_1_0_vector2axi__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_ruser[0] in module axi_infrastructure_v1_1_0_vector2axi__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awuser[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wuser[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[0] in module axi_infrastructure_v1_1_0_axi2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_35_axi_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cmd_id_ready in module axi_dwidth_converter_v2_1_36_a_upsizer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AID[0] in module axi_dwidth_converter_v2_1_36_a_upsizer__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_buser[0] in module axi_infrastructure_v1_1_0_vector2axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_ruser[0] in module axi_infrastructure_v1_1_0_vector2axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awuser[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wid[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_wuser[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_aruser[0] in module axi_infrastructure_v1_1_0_axi2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclk2x in module axi_register_slice_v2_1_35_axi_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cmd_id_ready in module axi_dwidth_converter_v2_1_36_a_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_AXI_AID[0] in module axi_dwidth_converter_v2_1_36_a_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_awlock[1] in module axi_dwidth_converter_v2_1_36_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axi_arlock[1] in module axi_dwidth_converter_v2_1_36_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_aresetn in module axi_dwidth_converter_v2_1_36_axi_upsizer is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axi_aclk in module axi_dwidth_converter_v2_1_36_axi_upsizer is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2600.180 ; gain = 386.711 ; free physical = 28694 ; free virtual = 43540
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2600.180 ; gain = 386.711 ; free physical = 28685 ; free virtual = 43534
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2600.180 ; gain = 386.711 ; free physical = 28685 ; free virtual = 43534
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2600.180 ; gain = 0.000 ; free physical = 28668 ; free virtual = 43521
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_us_0/microblaze_microblaze_0_axi_periph_imp_auto_us_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_periph_imp_auto_us_0/microblaze_microblaze_0_axi_periph_imp_auto_us_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_auto_us_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_auto_us_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2660.012 ; gain = 0.000 ; free physical = 28675 ; free virtual = 43525
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2660.047 ; gain = 0.000 ; free physical = 28671 ; free virtual = 43521
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2660.047 ; gain = 446.578 ; free physical = 28732 ; free virtual = 43603
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2668.016 ; gain = 454.547 ; free physical = 28732 ; free virtual = 43603
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2668.016 ; gain = 454.547 ; free physical = 28739 ; free virtual = 43608
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2668.016 ; gain = 454.547 ; free physical = 28710 ; free virtual = 43580
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    8 Bit       Adders := 4     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 4     
++---Registers : 
+	               73 Bit    Registers := 2     
+	               68 Bit    Registers := 2     
+	               64 Bit    Registers := 1     
+	               62 Bit    Registers := 4     
+	               37 Bit    Registers := 2     
+	               36 Bit    Registers := 2     
+	               30 Bit    Registers := 2     
+	                8 Bit    Registers := 18    
+	                5 Bit    Registers := 2     
+	                3 Bit    Registers := 6     
+	                2 Bit    Registers := 11    
+	                1 Bit    Registers := 53    
++---Muxes : 
+	   2 Input   73 Bit        Muxes := 2     
+	   2 Input   68 Bit        Muxes := 2     
+	   2 Input   37 Bit        Muxes := 2     
+	   2 Input   36 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 9     
+	   2 Input    8 Bit        Muxes := 22    
+	   8 Input    8 Bit        Muxes := 4     
+	   2 Input    3 Bit        Muxes := 11    
+	   8 Input    3 Bit        Muxes := 6     
+	   2 Input    2 Bit        Muxes := 7     
+	   2 Input    1 Bit        Muxes := 59    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3936] Found unconnected internal register 'gen_upsizer.gen_full_upsizer.axi_upsizer_inst/USE_READ.gen_non_fifo_r_upsizer.mi_register_slice_inst/r.r_pipe/m_payload_i_reg' and it is trimmed from '68' to '67' bits. [/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ipshared/c5b7/hdl/axi_register_slice_v2_1_vl_rfs.v:1726]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2668.016 ; gain = 454.547 ; free physical = 28405 ; free virtual = 43283
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2676.016 ; gain = 462.547 ; free physical = 28217 ; free virtual = 43095
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2698.039 ; gain = 484.570 ; free physical = 28174 ; free virtual = 43052
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2698.039 ; gain = 484.570 ; free physical = 28131 ; free virtual = 43009
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2859.852 ; gain = 646.383 ; free physical = 27982 ; free virtual = 42863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2859.852 ; gain = 646.383 ; free physical = 27982 ; free virtual = 42863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2859.852 ; gain = 646.383 ; free physical = 27981 ; free virtual = 42862
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2859.852 ; gain = 646.383 ; free physical = 27981 ; free virtual = 42862
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2859.852 ; gain = 646.383 ; free physical = 27973 ; free virtual = 42854
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2859.852 ; gain = 646.383 ; free physical = 27973 ; free virtual = 42854
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+-------------------------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name                      | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+-------------------------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | USE_RTL_FIFO.data_srl_reg[31] | 30     | 30         | 0      | 30      | 0      | 0      | 0      | 
+|dsrl__2     | USE_RTL_FIFO.data_srl_reg[31] | 30     | 30         | 0      | 30      | 0      | 0      | 0      | 
++------------+-------------------------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |LUT1    |     7|
+|2     |LUT2    |    27|
+|3     |LUT3    |   111|
+|4     |LUT4    |    47|
+|5     |LUT5    |   139|
+|6     |LUT6    |   176|
+|7     |SRLC32E |    56|
+|8     |FDRE    |   581|
+|9     |FDSE    |     4|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2859.852 ; gain = 646.383 ; free physical = 27973 ; free virtual = 42854
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2859.852 ; gain = 586.516 ; free physical = 27957 ; free virtual = 42838
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2859.859 ; gain = 646.383 ; free physical = 27956 ; free virtual = 42837
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2859.859 ; gain = 0.000 ; free physical = 28075 ; free virtual = 42955
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2915.879 ; gain = 0.000 ; free physical = 28228 ; free virtual = 43104
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: da6f8df6
+INFO: [Common 17-83] Releasing license: Synthesis
+54 Infos, 27 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:17 . Memory (MB): peak = 2915.914 ; gain = 1054.812 ; free physical = 28240 ; free virtual = 43115
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1802.231; main = 1802.231; forked = 179.080
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3632.785; main = 2915.883; forked = 964.766
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2939.891 ; gain = 0.000 ; free physical = 28240 ; free virtual = 43115
+INFO: [Common 17-1381] The checkpoint '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_auto_us_0_synth_1/microblaze_microblaze_0_axi_periph_imp_auto_us_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP microblaze_microblaze_0_axi_periph_imp_auto_us_0, cache-ID = b0dd3402cfdb7253
+INFO: [Coretcl 2-1174] Renamed 13 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2939.891 ; gain = 0.000 ; free physical = 28268 ; free virtual = 43145
+INFO: [Common 17-1381] The checkpoint '/home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.runs/microblaze_microblaze_0_axi_periph_imp_auto_us_0_synth_1/microblaze_microblaze_0_axi_periph_imp_auto_us_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file microblaze_microblaze_0_axi_periph_imp_auto_us_0_utilization_synth.rpt -pb microblaze_microblaze_0_axi_periph_imp_auto_us_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Aug  9 12:03:30 2025...

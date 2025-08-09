@@ -1,11 +1,11 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
--- Date        : Fri Aug  1 12:14:46 2025
--- Host        : TPC-0073 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top microblaze_microblaze_0_axi_intc_0 -prefix
---               microblaze_microblaze_0_axi_intc_0_ microblaze_microblaze_0_axi_intc_0_stub.vhdl
+-- Tool Version: Vivado v.2025.1 (lin64) Build 6140274 Wed May 21 22:58:25 MDT 2025
+-- Date        : Sat Aug  9 12:03:26 2025
+-- Host        : ck-MS-7E62 running 64-bit Ubuntu 25.04
+-- Command     : write_vhdl -force -mode synth_stub
+--               /home/ck/Desktop/Workspace/FPGA_Workspace/VIVADO_PROJECTS/XC7A100T_Microblaze/XC7A100T_Microblaze.gen/sources_1/bd/microblaze/ip/microblaze_microblaze_0_axi_intc_0/microblaze_microblaze_0_axi_intc_0_stub.vhdl
 -- Design      : microblaze_microblaze_0_axi_intc_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a100tcsg324-1
@@ -45,7 +45,7 @@ entity microblaze_microblaze_0_axi_intc_0 is
   attribute CHECK_LICENSE_TYPE : string;
   attribute CHECK_LICENSE_TYPE of microblaze_microblaze_0_axi_intc_0 : entity is "microblaze_microblaze_0_axi_intc_0,axi_intc,{}";
   attribute core_generation_info : string;
-  attribute core_generation_info of microblaze_microblaze_0_axi_intc_0 : entity is "microblaze_microblaze_0_axi_intc_0,axi_intc,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_intc,x_ipVersion=4.1,x_ipCoreRevision=21,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_INSTANCE=microblaze_microblaze_0_axi_intc_0,C_S_AXI_ADDR_WIDTH=9,C_S_AXI_DATA_WIDTH=32,C_NUM_INTR_INPUTS=4,C_NUM_SW_INTR=0,C_KIND_OF_INTR=0xfffffffc,C_KIND_OF_EDGE=0xFFFFFFFF,C_KIND_OF_LVL=0xFFFFFFFF,C_ASYNC_INTR=0xFFFFFFFC,C_NUM_SYNC_FF=2,C_ADDR_WIDTH=32,C_IVAR_RESET_VALUE=0x0000000000000010,C_ENABLE_ASYNC=0,C_HAS_IPR=1,C_HAS_SIE=1,C_HAS_CIE=1,C_HAS_IVR=1,C_HAS_ILR=0,C_IRQ_IS_LEVEL=1,C_IRQ_ACTIVE=0x1,C_DISABLE_SYNCHRONIZERS=1,C_MB_CLK_NOT_CONNECTED=1,C_HAS_FAST=1,C_EN_CASCADE_MODE=0,C_CASCADE_MASTER=0}";
+  attribute core_generation_info of microblaze_microblaze_0_axi_intc_0 : entity is "microblaze_microblaze_0_axi_intc_0,axi_intc,{x_ipProduct=Vivado 2025.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_intc,x_ipVersion=4.1,x_ipCoreRevision=21,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_FAMILY=artix7,C_INSTANCE=microblaze_microblaze_0_axi_intc_0,C_S_AXI_ADDR_WIDTH=9,C_S_AXI_DATA_WIDTH=32,C_NUM_INTR_INPUTS=4,C_NUM_SW_INTR=0,C_KIND_OF_INTR=0xfffffff8,C_KIND_OF_EDGE=0xFFFFFFFF,C_KIND_OF_LVL=0xFFFFFFFF,C_ASYNC_INTR=0xFFFFFFF8,C_NUM_SYNC_FF=2,C_ADDR_WIDTH=32,C_IVAR_RESET_VALUE=0x0000000000000010,C_ENABLE_ASYNC=0,C_HAS_IPR=1,C_HAS_SIE=1,C_HAS_CIE=1,C_HAS_IVR=1,C_HAS_ILR=0,C_IRQ_IS_LEVEL=1,C_IRQ_ACTIVE=0x1,C_DISABLE_SYNCHRONIZERS=1,C_MB_CLK_NOT_CONNECTED=1,C_HAS_FAST=1,C_EN_CASCADE_MODE=0,C_CASCADE_MASTER=0}";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of microblaze_microblaze_0_axi_intc_0 : entity is "yes";
 end microblaze_microblaze_0_axi_intc_0;
@@ -85,7 +85,7 @@ architecture stub of microblaze_microblaze_0_axi_intc_0 is
   attribute x_interface_info of s_axi_rready : signal is "xilinx.com:interface:aximm:1.0 s_axi RREADY";
   attribute x_interface_info of intr : signal is "xilinx.com:signal:interrupt:1.0 interrupt_input INTERRUPT";
   attribute x_interface_mode of intr : signal is "slave interrupt_input";
-  attribute x_interface_parameter of intr : signal is "XIL_INTERFACENAME interrupt_input, SENSITIVITY NULL:NULL:LEVEL_HIGH:LEVEL_HIGH, PortWidth 4";
+  attribute x_interface_parameter of intr : signal is "XIL_INTERFACENAME interrupt_input, SENSITIVITY NULL:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH, PortWidth 4";
   attribute x_interface_info of processor_clk : signal is "xilinx.com:signal:clock:1.0 proc_clock CLK";
   attribute x_interface_mode of processor_clk : signal is "slave proc_clock";
   attribute x_interface_parameter of processor_clk : signal is "XIL_INTERFACENAME proc_clock, ASSOCIATED_BUSIF interrupt, ASSOCIATED_RESET processor_rst, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, INSERT_VIP 0";
